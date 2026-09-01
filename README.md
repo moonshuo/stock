@@ -4,6 +4,14 @@
 
 ## 本地运行
 
+请先安装 Node.js 20 或更高版本，以及 Git LFS。克隆仓库前初始化 Git LFS：
+
+```powershell
+git lfs install
+git clone https://github.com/moonshuo/stock.git
+cd stock
+```
+
 最简单的方式：双击项目中的 `一键启动股票分类库.bat`，启动器会自动打开浏览器。
 
 也可以在终端运行：
@@ -16,6 +24,14 @@ npm.cmd run dev
 打开 `http://localhost:3000`。
 
 ## 数据文件
+
+`5分钟数据/` 中的 Parquet 历史行情通过 Git LFS 保存。请使用 `git clone` 获取仓库；若行情文件没有完整下载，可运行：
+
+```powershell
+git lfs pull
+```
+
+回填过程产生的 `*.parquet.backfill.csv`、`*.parquet.tmp.csv`、历史分析缓存和 `output/` 不会上传。
 
 稳定产业分类拆成两个 JSON：
 

@@ -28,7 +28,8 @@ tmp/
 
 # Generated analysis output and raw market data
 output/
-5分钟数据/
+5分钟数据/**/*.backfill.csv
+5分钟数据/**/*.tmp.csv
 data/backups/
 data/capacity_core/
 data/daily_themes/
