@@ -1,0 +1,1184 @@
+{
+  "sectors": [
+    {
+      "id": "mrx1fsg0-jopj3",
+      "name": "电子元器件",
+      "description": "",
+      "color": "#4778c7",
+      "groups": [
+        {
+          "id": "mrx1lazv-9ndi8",
+          "name": "被动元件",
+          "description": "",
+          "categories": [
+            {
+              "id": "mrx1lazv-wns93",
+              "name": "MLCC",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-y5mil",
+              "name": "高可靠陶瓷电容",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-0bl3a",
+              "name": "陶瓷电容",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-qmfri",
+              "name": "钽电容",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-75b51",
+              "name": "高可靠电容",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-t3r0e",
+              "name": "片式电感",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-kunoz",
+              "name": "铝电解电容",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-rliwq",
+              "name": "薄膜电容",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-3mloa",
+              "name": "石英晶振",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-k8gij",
+              "name": "磁性元件",
+              "description": ""
+            }
+          ],
+          "stocks": [
+            {
+              "id": "mrx1lazv-0hr15",
+              "code": "000636",
+              "name": "风华高科",
+              "categoryId": "mrx1lazv-wns93",
+              "note": "主营多层片式陶瓷电容器 · 是国内规模化MLCC核心厂商"
+            },
+            {
+              "id": "mrx1lazv-yn00h",
+              "code": "300408",
+              "name": "三环集团",
+              "categoryId": "mrx1lazv-wns93",
+              "note": "主营多层片式陶瓷电容器 · 覆盖消费电子、通信和汽车电子"
+            },
+            {
+              "id": "mrx1lazv-1pkm3",
+              "code": "603267",
+              "name": "鸿远电子",
+              "categoryId": "mrx1lazv-y5mil",
+              "note": "主营高可靠多层瓷介电容器 · 重点服务航空航天及高端装备"
+            },
+            {
+              "id": "mrx1lazv-jivhd",
+              "code": "603678",
+              "name": "火炬电子",
+              "categoryId": "mrx1lazv-0bl3a",
+              "note": "主营陶瓷电容器及高可靠电子元器件"
+            },
+            {
+              "id": "mrx1lazv-aibds",
+              "code": "300726",
+              "name": "宏达电子",
+              "categoryId": "mrx1lazv-qmfri",
+              "note": "主营高可靠钽电容器 · 是高端钽电容代表企业"
+            },
+            {
+              "id": "mrx1lazv-12nee",
+              "code": "000733",
+              "name": "振华科技",
+              "categoryId": "mrx1lazv-75b51",
+              "note": "产品覆盖高可靠电容器及其他电子元器件"
+            },
+            {
+              "id": "mrx1lazv-sti2r",
+              "code": "002138",
+              "name": "顺络电子",
+              "categoryId": "mrx1lazv-t3r0e",
+              "note": "主营片式电感、磁珠及叠层电子元件"
+            },
+            {
+              "id": "mrx1lazv-dka8o",
+              "code": "300319",
+              "name": "麦捷科技",
+              "categoryId": "mrx1lazv-t3r0e",
+              "note": "主营片式电感及小型化磁性元件"
+            },
+            {
+              "id": "mrx1lazv-92wul",
+              "code": "603989",
+              "name": "艾华集团",
+              "categoryId": "mrx1lazv-kunoz",
+              "note": "主营铝电解电容器及其上游电极箔材料"
+            },
+            {
+              "id": "mrx1lazv-h4z88",
+              "code": "002484",
+              "name": "江海股份",
+              "categoryId": "mrx1lazv-kunoz",
+              "note": "主营工业级铝电解电容器"
+            },
+            {
+              "id": "mrx1lazv-3a1h9",
+              "code": "600563",
+              "name": "法拉电子",
+              "categoryId": "mrx1lazv-rliwq",
+              "note": "主营薄膜电容器 · 广泛用于新能源车、光伏和工业控制"
+            },
+            {
+              "id": "mrx1lazv-lzpzm",
+              "code": "603738",
+              "name": "泰晶科技",
+              "categoryId": "mrx1lazv-3mloa",
+              "note": "主营石英晶体谐振器、振荡器等频率控制元件"
+            },
+            {
+              "id": "mrx1lazv-vsgj8",
+              "code": "300460",
+              "name": "惠伦晶体",
+              "categoryId": "mrx1lazv-3mloa",
+              "note": "主营小型化、高频化石英晶体谐振器"
+            },
+            {
+              "id": "mrx1lazv-0ulyl",
+              "code": "002199",
+              "name": "东晶电子",
+              "categoryId": "mrx1lazv-3mloa",
+              "note": "主营石英晶体谐振器、振荡器及频率控制元件"
+            },
+            {
+              "id": "mrx1lazv-cqgde",
+              "code": "002902",
+              "name": "铭普光磁",
+              "categoryId": "mrx1lazv-k8gij",
+              "note": "主营通信磁性元件、变压器及电源产品"
+            },
+            {
+              "id": "mrx1lazv-7d0ce",
+              "code": "002885",
+              "name": "京泉华",
+              "categoryId": "mrx1lazv-k8gij",
+              "note": "主营高频变压器、电感器及电源磁性器件"
+            }
+          ]
+        },
+        {
+          "id": "mrx1lazv-68lq8",
+          "name": "连接器",
+          "description": "",
+          "categories": [
+            {
+              "id": "mrx1lazv-1hlgf",
+              "name": "航空航天连接器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-3q67p",
+              "name": "高可靠连接器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-i58d9",
+              "name": "射频连接器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-dwpo5",
+              "name": "消费电子连接器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-r2jrg",
+              "name": "工业连接器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-x1n6f",
+              "name": "线缆组件",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-z3fz3",
+              "name": "精细电子线材",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-r48n9",
+              "name": "通信连接器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-h4kbp",
+              "name": "轨道交通连接器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-cnhud",
+              "name": "高速铜缆互连",
+              "description": ""
+            }
+          ],
+          "stocks": [
+            {
+              "id": "mrx1lazv-7hbin",
+              "code": "002179",
+              "name": "中航光电",
+              "categoryId": "mrx1lazv-1hlgf",
+              "note": "主营航空航天及高端装备用高可靠连接器"
+            },
+            {
+              "id": "mrx1lazv-o2vth",
+              "code": "002025",
+              "name": "航天电器",
+              "categoryId": "mrx1lazv-3q67p",
+              "note": "主营航空航天、通信及高端装备用连接器"
+            },
+            {
+              "id": "mrx1lazv-3t3ky",
+              "code": "300679",
+              "name": "电连技术",
+              "categoryId": "mrx1lazv-i58d9",
+              "note": "主营微型射频连接器及射频连接组件"
+            },
+            {
+              "id": "mrx1lazv-p7h0t",
+              "code": "002475",
+              "name": "立讯精密",
+              "categoryId": "mrx1lazv-dwpo5",
+              "note": "主营消费电子连接器及精密互连组件"
+            },
+            {
+              "id": "mrx1lazv-h0peo",
+              "code": "002055",
+              "name": "得润电子",
+              "categoryId": "mrx1lazv-dwpo5",
+              "note": "主营家电及消费电子连接器"
+            },
+            {
+              "id": "mrx1lazv-rwhlz",
+              "code": "301328",
+              "name": "维峰电子",
+              "categoryId": "mrx1lazv-r2jrg",
+              "note": "主营工业控制领域高可靠连接器"
+            },
+            {
+              "id": "mrx1lazv-z92ml",
+              "code": "300843",
+              "name": "胜蓝股份",
+              "categoryId": "mrx1lazv-dwpo5",
+              "note": "主营消费电子精密连接器及组件"
+            },
+            {
+              "id": "mrx1lazv-fl1aj",
+              "code": "301182",
+              "name": "凯旺科技",
+              "categoryId": "mrx1lazv-x1n6f",
+              "note": "主营安防、通信及消费电子精密线缆连接组件"
+            },
+            {
+              "id": "mrx1lazv-bywyx",
+              "code": "605277",
+              "name": "新亚电子",
+              "categoryId": "mrx1lazv-z3fz3",
+              "note": "主营消费电子、家电及工业控制用精细电子线材"
+            },
+            {
+              "id": "mrx1lazv-abpo4",
+              "code": "002897",
+              "name": "意华股份",
+              "categoryId": "mrx1lazv-r48n9",
+              "note": "主营通信网络和数据中心用连接器"
+            },
+            {
+              "id": "mrx1lazv-a6ffh",
+              "code": "300351",
+              "name": "永贵电器",
+              "categoryId": "mrx1lazv-h4kbp",
+              "note": "主营轨道交通高可靠连接器及电气连接系统"
+            },
+            {
+              "id": "mrx1lazv-c71ml",
+              "code": "300913",
+              "name": "兆龙互连",
+              "categoryId": "mrx1lazv-cnhud",
+              "note": "主营高速数据电缆、连接组件及数据中心高速铜缆"
+            }
+          ]
+        },
+        {
+          "id": "mrx1lazv-u6y9x",
+          "name": "传感器",
+          "description": "",
+          "categories": [
+            {
+              "id": "mrx1lazv-m86lj",
+              "name": "气体传感器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-84h4k",
+              "name": "力学传感器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-pqg38",
+              "name": "应变式传感器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-5dq1a",
+              "name": "汽车传感器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-xirmn",
+              "name": "红外传感器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-xr2pa",
+              "name": "3D视觉传感器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-msxbw",
+              "name": "力学测试传感器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-cbltl",
+              "name": "压力传感器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-xemom",
+              "name": "流量传感器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-lyoah",
+              "name": "压力与流量传感器",
+              "description": ""
+            }
+          ],
+          "stocks": [
+            {
+              "id": "mrx1lazv-79ozt",
+              "code": "300007",
+              "name": "汉威科技",
+              "categoryId": "mrx1lazv-m86lj",
+              "note": "主营气体传感器、检测仪表及物联网感知系统"
+            },
+            {
+              "id": "mrx1lazv-hmolr",
+              "code": "603662",
+              "name": "柯力传感",
+              "categoryId": "mrx1lazv-84h4k",
+              "note": "主营称重、压力及多维力学传感器"
+            },
+            {
+              "id": "mrx1lazv-svxo4",
+              "code": "300114",
+              "name": "中航电测",
+              "categoryId": "mrx1lazv-pqg38",
+              "note": "主营应变电测传感器、称重传感器及测控产品"
+            },
+            {
+              "id": "mrx1lazv-mlwie",
+              "code": "300507",
+              "name": "苏奥传感",
+              "categoryId": "mrx1lazv-5dq1a",
+              "note": "主营汽车油位、压力、温度等传感器"
+            },
+            {
+              "id": "mrx1lazv-qn03y",
+              "code": "300701",
+              "name": "森霸传感",
+              "categoryId": "mrx1lazv-xirmn",
+              "note": "主营热释电红外传感器及人体感应器件"
+            },
+            {
+              "id": "mrx1lazv-iwwjg",
+              "code": "688322",
+              "name": "奥比中光",
+              "categoryId": "mrx1lazv-xr2pa",
+              "note": "主营3D视觉传感器、深度相机及空间感知系统"
+            },
+            {
+              "id": "mrx1lazv-w7qwa",
+              "code": "300354",
+              "name": "东华测试",
+              "categoryId": "mrx1lazv-msxbw",
+              "note": "主营结构力学测试传感器及智能监测设备"
+            },
+            {
+              "id": "mrx1lazv-8mcvx",
+              "code": "300112",
+              "name": "万讯自控",
+              "categoryId": "mrx1lazv-cbltl",
+              "note": "主营工业压力传感器及自动化仪表"
+            },
+            {
+              "id": "mrx1lazv-db9ad",
+              "code": "300349",
+              "name": "金卡智能",
+              "categoryId": "mrx1lazv-xemom",
+              "note": "主营燃气流量计量、智能燃气表及物联网系统"
+            },
+            {
+              "id": "mrx1lazv-el13s",
+              "code": "002058",
+              "name": "威尔泰",
+              "categoryId": "mrx1lazv-lyoah",
+              "note": "主营压力、流量等工业检测仪表及传感设备"
+            }
+          ]
+        },
+        {
+          "id": "mrx1lazv-zsa4b",
+          "name": "光学元件",
+          "description": "",
+          "categories": [
+            {
+              "id": "mrx1lazv-yts0k",
+              "name": "光学滤光片",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-3ceeg",
+              "name": "摄像头模组",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-tle9t",
+              "name": "光学镜头",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-wlcjz",
+              "name": "安防镜头",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-73gd5",
+              "name": "高清光学镜头",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-i6lw0",
+              "name": "显微光学",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-zvcr1",
+              "name": "精密光学",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-yu03y",
+              "name": "光学传感组件",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-2s94n",
+              "name": "偏光片",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-7fxrd",
+              "name": "触控显示",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-n5r6k",
+              "name": "电子玻璃",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-dv3hs",
+              "name": "光电玻璃",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-dncco",
+              "name": "精密玻璃",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-fwow5",
+              "name": "玻璃非球面透镜",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-zf886",
+              "name": "精密光学元件",
+              "description": ""
+            }
+          ],
+          "stocks": [
+            {
+              "id": "mrx1lazv-18jkl",
+              "code": "002273",
+              "name": "水晶光电",
+              "categoryId": "mrx1lazv-yts0k",
+              "note": "主营红外截止滤光片及精密薄膜光学元件"
+            },
+            {
+              "id": "mrx1lazv-9b02h",
+              "code": "002456",
+              "name": "欧菲光",
+              "categoryId": "mrx1lazv-3ceeg",
+              "note": "主营手机、智能汽车及智能终端摄像头模组"
+            },
+            {
+              "id": "mrx1lazv-fxd1y",
+              "code": "002036",
+              "name": "联创电子",
+              "categoryId": "mrx1lazv-tle9t",
+              "note": "主营高清广角、运动相机及智能终端光学镜头"
+            },
+            {
+              "id": "mrx1lazv-vfc42",
+              "code": "300790",
+              "name": "宇瞳光学",
+              "categoryId": "mrx1lazv-wlcjz",
+              "note": "主营安防监控领域高清光学镜头"
+            },
+            {
+              "id": "mrx1lazv-eeahj",
+              "code": "300691",
+              "name": "联合光电",
+              "categoryId": "mrx1lazv-73gd5",
+              "note": "主营安防、投影及智能视觉高清镜头"
+            },
+            {
+              "id": "mrx1lazv-ax7i8",
+              "code": "603297",
+              "name": "永新光学",
+              "categoryId": "mrx1lazv-i6lw0",
+              "note": "主营高端显微镜及显微光学组件"
+            },
+            {
+              "id": "mrx1lazv-6y29d",
+              "code": "002189",
+              "name": "中光学",
+              "categoryId": "mrx1lazv-zvcr1",
+              "note": "主营精密光学元件和光电系统"
+            },
+            {
+              "id": "mrx1lazv-m13kg",
+              "code": "300632",
+              "name": "光莆股份",
+              "categoryId": "mrx1lazv-yu03y",
+              "note": "主营光学传感器件及光电模组"
+            },
+            {
+              "id": "mrx1lazv-sdufg",
+              "code": "002876",
+              "name": "三利谱",
+              "categoryId": "mrx1lazv-2s94n",
+              "note": "主营液晶显示用偏光片"
+            },
+            {
+              "id": "mrx1lazv-e2234",
+              "code": "300088",
+              "name": "长信科技",
+              "categoryId": "mrx1lazv-7fxrd",
+              "note": "主营触控显示模组及车载触控产品"
+            },
+            {
+              "id": "mrx1lazv-pjkeb",
+              "code": "002106",
+              "name": "莱宝高科",
+              "categoryId": "mrx1lazv-7fxrd",
+              "note": "主营触摸屏、触控模组及车载显示产品"
+            },
+            {
+              "id": "mrx1lazv-8v8h8",
+              "code": "600552",
+              "name": "凯盛科技",
+              "categoryId": "mrx1lazv-n5r6k",
+              "note": "主营超薄电子玻璃、柔性玻璃及显示材料"
+            },
+            {
+              "id": "mrx1lazv-f7zyf",
+              "code": "603773",
+              "name": "沃格光电",
+              "categoryId": "mrx1lazv-dv3hs",
+              "note": "主营光电玻璃精加工及显示触控器件"
+            },
+            {
+              "id": "mrx1lazv-polf0",
+              "code": "300433",
+              "name": "蓝思科技",
+              "categoryId": "mrx1lazv-dncco",
+              "note": "主营消费电子及智能汽车精密玻璃结构件"
+            },
+            {
+              "id": "mrx1lazv-5bzyt",
+              "code": "688127",
+              "name": "蓝特光学",
+              "categoryId": "mrx1lazv-fwow5",
+              "note": "主营玻璃非球面透镜及精密光学元件"
+            },
+            {
+              "id": "mrx1lazv-htbdg",
+              "code": "688195",
+              "name": "腾景科技",
+              "categoryId": "mrx1lazv-zf886",
+              "note": "主营精密透镜、棱镜及镀膜光学元件"
+            }
+          ]
+        },
+        {
+          "id": "mrx1lazv-g0vh4",
+          "name": "服务器PCB",
+          "description": "",
+          "categories": [],
+          "stocks": [
+            {
+              "id": "mrx1lazv-3s37k",
+              "code": "002463",
+              "name": "PCB",
+              "categoryId": "",
+              "note": "主营AI服务器及高性能计算设备用高多层PCB"
+            }
+          ]
+        },
+        {
+          "id": "mrx1lazv-665hm",
+          "name": "PCB",
+          "description": "",
+          "categories": [
+            {
+              "id": "mrx1lazv-sruc2",
+              "name": "通信PCB",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-rixi9",
+              "name": "高多层PCB",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-p3vci",
+              "name": "FPC",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-ktslu",
+              "name": "多层PCB",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-exieg",
+              "name": "PCB样板",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-iwjuk",
+              "name": "小批量PCB",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-6h7kb",
+              "name": "刚柔结合板",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-dm766",
+              "name": "汽车PCB",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-6kdmc",
+              "name": "高精密PCB",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-g256e",
+              "name": "高密度PCB",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-74hnu",
+              "name": "服务器PCB",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazv-mbz5k",
+              "name": "高频高速PCB",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-132ee",
+              "name": "HDI",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-ovt2u",
+              "name": "工业控制PCB",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-39g2f",
+              "name": "覆铜板",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-my164",
+              "name": "高频高速覆铜板",
+              "description": ""
+            }
+          ],
+          "stocks": [
+            {
+              "id": "mrx1lazv-60jxw",
+              "code": "002463",
+              "name": "沪电股份",
+              "categoryId": "mrx1lazv-sruc2",
+              "note": "主营交换机、路由器及通信基站用高多层PCB"
+            },
+            {
+              "id": "mrx1lazv-s7bi7",
+              "code": "002916",
+              "name": "深南电路",
+              "categoryId": "mrx1lazv-rixi9",
+              "note": "主营通信、服务器和汽车领域高多层PCB"
+            },
+            {
+              "id": "mrx1lazv-3ruyd",
+              "code": "002938",
+              "name": "鹏鼎控股",
+              "categoryId": "mrx1lazv-p3vci",
+              "note": "主营消费电子用柔性线路板"
+            },
+            {
+              "id": "mrx1lazv-iv4a4",
+              "code": "603228",
+              "name": "景旺电子",
+              "categoryId": "mrx1lazv-ktslu",
+              "note": "主营通信、工业和汽车领域多层印制电路板"
+            },
+            {
+              "id": "mrx1lazv-o0tlh",
+              "code": "002436",
+              "name": "兴森科技",
+              "categoryId": "mrx1lazv-exieg",
+              "note": "主营中高端PCB样板及小批量板"
+            },
+            {
+              "id": "mrx1lazv-yleez",
+              "code": "600601",
+              "name": "方正科技",
+              "categoryId": "mrx1lazv-rixi9",
+              "note": "主营通信、服务器及消费电子高多层PCB"
+            },
+            {
+              "id": "mrx1lazv-zi278",
+              "code": "300476",
+              "name": "胜宏科技",
+              "categoryId": "mrx1lazv-rixi9",
+              "note": "主营高阶、高多层印制电路板"
+            },
+            {
+              "id": "mrx1lazv-bbohu",
+              "code": "300657",
+              "name": "弘信电子",
+              "categoryId": "mrx1lazv-p3vci",
+              "note": "主营柔性线路板及相关模组"
+            },
+            {
+              "id": "mrx1lazv-kt6w9",
+              "code": "002815",
+              "name": "崇达技术",
+              "categoryId": "mrx1lazv-iwjuk",
+              "note": "主营多品种、小批量高端PCB"
+            },
+            {
+              "id": "mrx1lazv-44k0p",
+              "code": "002579",
+              "name": "中京电子",
+              "categoryId": "mrx1lazv-6h7kb",
+              "note": "主营刚性、柔性及刚柔结合线路板"
+            },
+            {
+              "id": "mrx1lazv-nbope",
+              "code": "300739",
+              "name": "明阳电路",
+              "categoryId": "mrx1lazv-iwjuk",
+              "note": "主营多品种、小批量印制电路板"
+            },
+            {
+              "id": "mrx1lazv-q3z0e",
+              "code": "301132",
+              "name": "满坤科技",
+              "categoryId": "mrx1lazv-dm766",
+              "note": "主营汽车电子印制电路板"
+            },
+            {
+              "id": "mrx1lazv-l2xzk",
+              "code": "605258",
+              "name": "协和电子",
+              "categoryId": "mrx1lazv-dm766",
+              "note": "主营汽车电子领域刚性和柔性线路板"
+            },
+            {
+              "id": "mrx1lazv-spbwq",
+              "code": "603936",
+              "name": "博敏电子",
+              "categoryId": "mrx1lazv-6kdmc",
+              "note": "主营高精密多层印制电路板"
+            },
+            {
+              "id": "mrx1lazv-todz5",
+              "code": "002913",
+              "name": "奥士康",
+              "categoryId": "mrx1lazv-g256e",
+              "note": "主营高密度、高多层印制电路板"
+            },
+            {
+              "id": "mrx1lazv-1van6",
+              "code": "603328",
+              "name": "依顿电子",
+              "categoryId": "mrx1lazv-ktslu",
+              "note": "主营高精度双层及多层印制电路板"
+            },
+            {
+              "id": "mrx1lazv-yr90a",
+              "code": "001389",
+              "name": "广合科技",
+              "categoryId": "mrx1lazv-74hnu",
+              "note": "主营服务器、数据中心及通信设备用高多层PCB"
+            },
+            {
+              "id": "mrx1lazv-3dyxi",
+              "code": "688183",
+              "name": "生益电子",
+              "categoryId": "mrx1lazv-sruc2",
+              "note": "主营通信基站及交换机用高多层PCB"
+            },
+            {
+              "id": "mrx1lazv-gqs13",
+              "code": "688655",
+              "name": "迅捷兴",
+              "categoryId": "mrx1lazv-mbz5k",
+              "note": "主营高频高速、高多层线路板"
+            },
+            {
+              "id": "mrx1lazv-lb452",
+              "code": "300964",
+              "name": "本川智能",
+              "categoryId": "mrx1lazv-sruc2",
+              "note": "主营通信设备用印制电路板"
+            },
+            {
+              "id": "mrx1lazv-znt9x",
+              "code": "300814",
+              "name": "中富电路",
+              "categoryId": "mrx1lazv-dm766",
+              "note": "主营新能源汽车及汽车电子线路板"
+            },
+            {
+              "id": "mrx1lazw-qaweh",
+              "code": "300903",
+              "name": "科翔股份",
+              "categoryId": "mrx1lazw-132ee",
+              "note": "布局高密度互连板业务"
+            },
+            {
+              "id": "mrx1lazw-z4t07",
+              "code": "301251",
+              "name": "威尔高",
+              "categoryId": "mrx1lazw-ovt2u",
+              "note": "主营工业控制领域印制电路板"
+            },
+            {
+              "id": "mrx1lazw-5xqq4",
+              "code": "600183",
+              "name": "生益科技",
+              "categoryId": "mrx1lazw-39g2f",
+              "note": "主营覆铜板和粘结片 · 是PCB核心基材供应商"
+            },
+            {
+              "id": "mrx1lazw-02yba",
+              "code": "002636",
+              "name": "金安国纪",
+              "categoryId": "mrx1lazw-39g2f",
+              "note": "主营覆铜板及电子绝缘材料"
+            },
+            {
+              "id": "mrx1lazw-i4swx",
+              "code": "603186",
+              "name": "华正新材",
+              "categoryId": "mrx1lazw-my164",
+              "note": "主营高速、高频及高导热覆铜板"
+            },
+            {
+              "id": "mrx1lazw-csfk7",
+              "code": "688519",
+              "name": "南亚新材",
+              "categoryId": "mrx1lazw-39g2f",
+              "note": "主营覆铜板和粘结片"
+            }
+          ]
+        },
+        {
+          "id": "mrx1lazw-6bmuy",
+          "name": "声学器件",
+          "description": "",
+          "categories": [
+            {
+              "id": "mrx1lazw-fz3kr",
+              "name": "微型扬声器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-rikk4",
+              "name": "扬声器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-wnlpk",
+              "name": "MEMS麦克风",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-jo15z",
+              "name": "耳机ODM",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-fak57",
+              "name": "专业音响",
+              "description": ""
+            }
+          ],
+          "stocks": [
+            {
+              "id": "mrx1lazw-6kiv9",
+              "code": "002241",
+              "name": "歌尔股份",
+              "categoryId": "mrx1lazw-fz3kr",
+              "note": "主营微型扬声器、受话器及声学模组"
+            },
+            {
+              "id": "mrx1lazw-jw2fa",
+              "code": "002045",
+              "name": "国光电器",
+              "categoryId": "mrx1lazw-rikk4",
+              "note": "主营扬声器、音箱及电声组件"
+            },
+            {
+              "id": "mrx1lazw-zbykw",
+              "code": "002655",
+              "name": "共达电声",
+              "categoryId": "mrx1lazw-wnlpk",
+              "note": "主营MEMS麦克风及微型电声元件"
+            },
+            {
+              "id": "mrx1lazw-f9m40",
+              "code": "300793",
+              "name": "佳禾智能",
+              "categoryId": "mrx1lazw-jo15z",
+              "note": "主营无线耳机及智能穿戴声学产品"
+            },
+            {
+              "id": "mrx1lazw-24f0m",
+              "code": "002888",
+              "name": "惠威科技",
+              "categoryId": "mrx1lazw-fak57",
+              "note": "主营专业音响、家庭音响及多媒体音响产品"
+            }
+          ]
+        },
+        {
+          "id": "mrx1lazw-ekz09",
+          "name": "继电器与电接触",
+          "description": "",
+          "categories": [
+            {
+              "id": "mrx1lazw-mvhzf",
+              "name": "电磁继电器",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-7ur3n",
+              "name": "电接触材料",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-y6g62",
+              "name": "高可靠继电器",
+              "description": ""
+            }
+          ],
+          "stocks": [
+            {
+              "id": "mrx1lazw-r0w79",
+              "code": "600885",
+              "name": "宏发股份",
+              "categoryId": "mrx1lazw-mvhzf",
+              "note": "全球主要电磁继电器供应商"
+            },
+            {
+              "id": "mrx1lazw-788ev",
+              "code": "603045",
+              "name": "福达合金",
+              "categoryId": "mrx1lazw-7ur3n",
+              "note": "主营银基及铜基电接触材料"
+            },
+            {
+              "id": "mrx1lazw-9fqst",
+              "code": "000733",
+              "name": "振华科技",
+              "categoryId": "mrx1lazw-y6g62",
+              "note": "产品应用于航空航天和高端装备"
+            },
+            {
+              "id": "mrx1lazw-w5fb8",
+              "code": "002025",
+              "name": "航天电器",
+              "categoryId": "mrx1lazw-y6g62",
+              "note": "主营航空航天及特种装备用继电器"
+            }
+          ]
+        },
+        {
+          "id": "mrx1lazw-qjhs9",
+          "name": "电子功能件",
+          "description": "",
+          "categories": [
+            {
+              "id": "mrx1lazw-vmlxs",
+              "name": "精密功能件",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-abclb",
+              "name": "功能性器件",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-fqwu8",
+              "name": "电磁屏蔽",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-8s50p",
+              "name": "MIM结构件",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-bg2u9",
+              "name": "精密功能性器件",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-chz8e",
+              "name": "精密结构件",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-v404b",
+              "name": "手机结构件",
+              "description": ""
+            },
+            {
+              "id": "mrx1lazw-9h4oz",
+              "name": "笔记本结构件",
+              "description": ""
+            }
+          ],
+          "stocks": [
+            {
+              "id": "mrx1lazw-5en9s",
+              "code": "002600",
+              "name": "领益智造",
+              "categoryId": "mrx1lazw-vmlxs",
+              "note": "主营消费电子精密功能性器件"
+            },
+            {
+              "id": "mrx1lazw-kdatj",
+              "code": "002635",
+              "name": "安洁科技",
+              "categoryId": "mrx1lazw-abclb",
+              "note": "主营消费电子绝缘、粘接及缓冲功能件"
+            },
+            {
+              "id": "mrx1lazw-2khzt",
+              "code": "300602",
+              "name": "飞荣达",
+              "categoryId": "mrx1lazw-fqwu8",
+              "note": "主营电磁屏蔽材料和器件"
+            },
+            {
+              "id": "mrx1lazw-3l84y",
+              "code": "300976",
+              "name": "达瑞电子",
+              "categoryId": "mrx1lazw-abclb",
+              "note": "主营消费电子缓冲、粘接及绝缘功能件"
+            },
+            {
+              "id": "mrx1lazw-va3yi",
+              "code": "300709",
+              "name": "精研科技",
+              "categoryId": "mrx1lazw-8s50p",
+              "note": "主营金属注射成形精密零部件"
+            },
+            {
+              "id": "mrx1lazw-nli56",
+              "code": "002947",
+              "name": "恒铭达",
+              "categoryId": "mrx1lazw-bg2u9",
+              "note": "主营消费电子精密功能性器件"
+            },
+            {
+              "id": "mrx1lazw-xjmda",
+              "code": "300686",
+              "name": "智动力",
+              "categoryId": "mrx1lazw-abclb",
+              "note": "主营消费电子功能性器件"
+            },
+            {
+              "id": "mrx1lazw-i2w1v",
+              "code": "603626",
+              "name": "科森科技",
+              "categoryId": "mrx1lazw-chz8e",
+              "note": "主营消费电子和医疗器械精密结构件"
+            },
+            {
+              "id": "mrx1lazw-6ew4v",
+              "code": "002855",
+              "name": "捷荣技术",
+              "categoryId": "mrx1lazw-v404b",
+              "note": "主营手机、平板等智能终端精密结构件"
+            },
+            {
+              "id": "mrx1lazw-r8ml6",
+              "code": "603890",
+              "name": "春秋电子",
+              "categoryId": "mrx1lazw-9h4oz",
+              "note": "主营笔记本电脑及消费电子精密结构件"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+node_modules/
+.next/
+.next-dev/
+.open-next/
+.npm-cache/
+*.log
+.env*
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local caches and temporary files
+.cache/
+.tmp/
+tmp/
+*.tmp
+*.bak
+
+# Generated analysis output and raw market data
+output/
+5分钟数据/
+data/backups/
+data/capacity_core/
+data/daily_themes/
+data/daily_turnover/
+data/dragon_tiger/
+data/gpt_questions/
+data/historical_market_cap/
+data/historical_quote_audits/
+data/historical_quote_corrections/
+data/imports/
+data/intraday_1m/
+data/intraday_5m/
+data/leader-v3/
+data/leader-v4/
+data/leader-v5/
+data/limit_up_scans/
+
+# Build/deployment archives and OS metadata
+*.tar.gz
+*.zip
+.DS_Store
+Thumbs.db
+
+# Local scratch file
+/e

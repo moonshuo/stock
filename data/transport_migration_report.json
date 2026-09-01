@@ -1,0 +1,29 @@
+{
+  "new_primary_sector": "交通运输",
+  "moved_stock_count": 44,
+  "moved_classification_count": 49,
+  "moved_dynamic_theme_count": 17,
+  "newly_classified_stock_count": 0,
+  "added_secondary_sectors": [
+    "公路运输",
+    "铁路与轨道运输"
+  ],
+  "added_tertiary_sectors": [
+    "高速公路运营",
+    "道路客货运输",
+    "集装箱航运",
+    "机场运营",
+    "铁路运输",
+    "城市轨道交通运营"
+  ],
+  "removed_old_secondary_sectors": [
+    "城市交通与出行服务",
+    "物流与供应链服务",
+    "航运与港口物流",
+    "航空运输"
+  ],
+  "stock_count_before": 2441,
+  "stock_count_after": 2441,
+  "unresolved_candidate_count": 77,
+  "validation_errors": []
+}

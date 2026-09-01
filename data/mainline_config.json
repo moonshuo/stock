@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "window_days": 10,
+  "continuity_window_days": 5,
+  "capacity_trend_bonus": 3,
+  "minimum_theme_members": 3,
+  "high_gain_pct": 5,
+  "large_loss_pct": -5,
+  "active_up_ratio": 0.55,
+  "weights": {
+    "core_structure": 20,
+    "breadth": 25,
+    "hierarchy": 15,
+    "continuity": 15,
+    "profit_effect": 15,
+    "divergence_repair": 15,
+    "relative_strength": 10
+  },
+  "thresholds": { "confirmed": 75, "candidate": 60, "forming": 50 }
+}

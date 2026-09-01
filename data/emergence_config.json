@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "weights": {
+    "group_resonance": 30,
+    "breadth_expansion": 20,
+    "capacity_core_response": 25,
+    "leader_formation": 15,
+    "relative_strength": 10
+  },
+  "thresholds": {
+    "minimum_strong_members": 3,
+    "capital_activity_ratio": 1.1,
+    "capital_strengthening_ratio": 1.4,
+    "price_positive_return_pct": 0,
+    "severe_breakdown_return_pct": -4,
+    "minimum_limit_up_count": 1,
+    "competitive_top_percentile": 0.2,
+    "minimum_capacity_core_count": 2,
+    "capacity_core_majority_ratio": 0.6,
+    "capacity_core_excess_return_vs_market_pct": 1,
+    "capacity_core_excess_return_vs_5d_average_pct": 1,
+    "capacity_core_min_amount_ratio_5d": 1,
+    "strong_emergence": 75,
+    "normal_emergence": 65,
+    "candidate_emergence": 55
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "version": "1.1",
+  "history_days": 25,
+  "bootstrap_history_days": 60,
+  "dormant_reset_days": 3,
+  "post_retreat_rebound_max_days": 3,
+  "active_change_pct": 2,
+  "high_gain_pct": 5,
+  "large_loss_pct": -5,
+  "expansion_weights": {
+    "limit_and_high_gain": 20,
+    "new_first_limit": 20,
+    "active_members": 15,
+    "promotion": 15,
+    "new_branches": 10,
+    "theme_amount": 10,
+    "relative_strength": 10
+  },
+  "stage_thresholds": {
+    "emergence_expansion": 58,
+    "fermentation_expansion": 62,
+    "acceleration_expansion": 78,
+    "contraction": 60,
+    "retreat": 75,
+    "repair": 62,
+    "minimum_active_members": 3
+  },
+  "core_thresholds": {
+    "leader_count": 3,
+    "capacity_core_ratio": 0.3,
+    "leader_excess_return_pct": 0.5,
+    "core_breakdown_return_pct": -4,
+    "ma_break_ratio": 0.96,
+    "long_upper_shadow_ratio": 0.45,
+    "weak_close_position": 0.35,
+    "amount_shrink_ratio": 0.7,
+    "weak_relative_return_pct": 0.5,
+    "core_breakdown_min_evidence": 3,
+    "breadth_collapse_up_ratio": 0.35,
+    "negative_feedback_ratio": 0.35,
+    "second_wave_min_adjustment_days": 5
+  }
+}

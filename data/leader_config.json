@@ -1,0 +1,27 @@
+{
+  "version": "4.0",
+  "score_weights": {
+    "initiation": 15,
+    "height": 20,
+    "continued_strength": 20,
+    "theme_leadership": 20,
+    "divergence_survival": 15,
+    "repair": 10
+  },
+  "candidate": {
+    "minimum_members": 3,
+    "minimum_mapping_confidence": 0.7,
+    "active_return_pct": 3,
+    "top_percentile": 0.2,
+    "history_days": 10,
+    "initiation_context_days": 20,
+    "pool_ratio": 0.3,
+    "pool_minimum": 5,
+    "pool_maximum": 10
+  },
+  "thresholds": {
+    "confirmed_leader": 80,
+    "leader_candidate": 65,
+    "frontline_core": 58
+  }
+}

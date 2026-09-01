@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "entry_quality": { "entry_candidate": 75, "probe_candidate": 65, "watch": 55 },
+  "hold_quality": { "hold": 70, "warning": 55, "reduce": 40 },
+  "exit_risk": { "exit": 75, "reduce": 55, "warning": 35 },
+  "eligibility": { "minimum_theme_members": 3, "minimum_mainline_rank_score": 60 },
+  "automatic_core_enrichment": { "maximum_themes_per_plan": 12, "parallelism": 2 },
+  "state_transitions": {
+    "no_trade": ["no_trade", "watch"],
+    "watch": ["watch", "probe_candidate", "entry_candidate", "no_trade"],
+    "probe_candidate": ["probe_candidate", "hold", "exit", "reduce", "watch"],
+    "entry_candidate": ["entry_candidate", "hold", "exit", "reduce", "watch"],
+    "hold": ["hold", "add_candidate", "reduce", "exit", "watch"],
+    "add_candidate": ["add_candidate", "hold", "reduce", "exit"],
+    "reduce": ["reduce", "hold", "exit", "watch"],
+    "exit": ["exit", "watch", "no_trade"]
+  },
+  "max_non_follow_through_days": 2,
+  "risk": {
+    "max_portfolio_risk_pct": null,
+    "max_single_trade_risk_pct": null,
+    "max_theme_exposure_pct": null,
+    "max_single_stock_exposure_pct": null,
+    "probe_risk_multiplier": 0.5
+  }
+}
