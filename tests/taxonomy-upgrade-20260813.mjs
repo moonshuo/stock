@@ -5,7 +5,7 @@ import { validateSectorData } from "../app/lib/sectorSystem.js";
 const root = process.cwd();
 const read = (name) => readFile(path.join(root, "data", name), "utf8").then(JSON.parse);
 const [before, taxonomy, after, candidates, report] = await Promise.all([
-  read("stock_sector_map.json"), read("taxonomy_after.json"), read("stocks_after.json"), read("migration_candidates.json"), read("migration_report.json"),
+  read("stocks_before.json"), read("taxonomy_after.json"), read("stocks_after.json"), read("migration_candidates.json"), read("migration_report.json"),
 ]);
 const validation = validateSectorData(taxonomy, after, []);
 if (!validation.ok) throw new Error(validation.errors.join("\n"));

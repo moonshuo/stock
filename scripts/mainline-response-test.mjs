@@ -12,14 +12,25 @@ const theme = {
       metrics: { up_count: 3, previous_leaders: [stockPayload], previous_capacity_cores: [stockPayload] },
     }],
   },
+  score_history: [{
+    date: "2026-08-03",
+    score: { mainline_rank_score: 72.5 },
+    daily_strength_score: 68.2,
+    metrics: {
+      up_count: 3,
+      raw_history: "x".repeat(100_000),
+      previous_leaders: [stockPayload],
+      previous_capacity_cores: [stockPayload],
+    },
+  }],
 };
 const result = compactMainlineResult({ themes: [theme], all_themes: [theme], mainline: { confirmed: [theme] } });
 const compact = result.all_themes[0];
 
 assert.equal(compact.member_count, 1);
-assert.equal(compact.cycle_stage.recent_history, undefined);
-assert.equal(compact.cycle_stage.timeline[0].confirmed_stage, "normal_divergence");
-assert.deepEqual(compact.cycle_stage.timeline[0].metrics.previous_leaders, [{ code: "600000", name: "测试股", change_pct: 2.5 }]);
-assert.deepEqual(compact.cycle_stage.timeline[0].metrics.previous_capacity_cores, [{ code: "600000", name: "测试股", change_pct: 2.5 }]);
+assert.equal(compact.cycle_stage, undefined, "legacy lifecycle state must not be exposed");
+assert.equal(compact.score_history[0].metrics.raw_history, undefined);
+assert.deepEqual(compact.score_history[0].metrics.previous_leaders, [{ code: "600000", name: "测试股", change_pct: 2.5 }]);
+assert.deepEqual(compact.score_history[0].metrics.previous_capacity_cores, [{ code: "600000", name: "测试股", change_pct: 2.5 }]);
 assert.ok(JSON.stringify(result).length < 5_000, "response compaction must remove raw timeline payloads");
-console.log("mainline-response-test: compact transport preserves cycle evidence");
+console.log("mainline-response-test: compact transport preserves score history evidence");

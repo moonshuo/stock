@@ -14,7 +14,7 @@ export async function POST() {
     try {
       const entries = await readdir(OUTPUT_DIR, { withFileTypes: true });
       const targets = entries
-        .filter((entry) => entry.isFile() && /^mainline_response_.*\.json$/i.test(entry.name))
+        .filter((entry) => entry.isFile() && /^mainline_response_.*\.json(?:\.gz)?$/i.test(entry.name))
         .map((entry) => path.join(OUTPUT_DIR, entry.name));
       await Promise.all(targets.map(async (filePath) => { await unlink(filePath); removed += 1; }));
     } catch (error) {

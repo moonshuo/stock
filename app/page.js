@@ -2588,6 +2588,7 @@ export default function Home() {
           const automaticPayload = await automaticResponse.json();
           if (!automaticResponse.ok) throw new Error(automaticPayload.error || "核心模块自动分析失败");
           if (requestId && dailyScanRequestRef.current !== requestId) return;
+          setSystemMainline(automaticPayload);
           const modules = automaticPayload.automatic_modules || {};
           if (modules.capacity) setCapacityCoreResults((current) => ({ ...current, ...modules.capacity }));
           if (modules.leader) setLeaderResults((current) => ({ ...current, ...modules.leader }));
@@ -4459,7 +4460,9 @@ function CapacityCoreResult({ result }) {
 }
 
 function LeaderResult({ result }) {
-  const rows = (result.candidates || []).slice(0, 5);
+  const [showAll, setShowAll] = useState(false);
+  const allRows = result.candidates || [];
+  const rows = showAll ? allRows : allRows.slice(0, 5);
   const roleLabels = { emotion_leader: "情绪龙头", trend_leader: "趋势龙头", high_elasticity_leader: "高弹性龙头", independent_high_stock: "独立高位股", frontline_member: "前排成员" };
   const statusLabels = { confirmed_leader: "确认龙头", provisional_leader: "暂定龙头", high_confidence_candidate: "高置信候选", leader_candidate: "龙头候选", late_follower: "后排补涨", frontline_core: "前排核心", follow_up_or_normal_member: "跟随/普通成员", independent_high_stock: "独立高位股" };
   if (!rows.length) return <p className="capacity-core-empty">{result.status === "insufficient_data" ? "历史行情数据不足，暂不机械指定龙头。" : "没有可用于评分的题材成员。"}</p>;
@@ -4472,6 +4475,7 @@ function LeaderResult({ result }) {
       <p>新版六维：启动 {stock.score_details.initiation}/15 · 高度 {stock.score_details.height}/20 · 持续前排 {stock.score_details.continued_strength}/20 · 板块带动 {stock.score_details.theme_leadership}/20 · 抗分歧 {stock.score_details.divergence_survival}/15 · 修复 {stock.score_details.repair ?? 0}/10</p>
       <p>关联度调整：原始 {Number.isFinite(stock.raw_score) ? stock.raw_score : "-"} × {Number.isFinite(stock.relevance_score) ? stock.relevance_score.toFixed(2) : "-"} = {Number.isFinite(stock.score) ? stock.score : "-"}</p>
     </div>)}
+    {allRows.length > 5 && <button type="button" className="mainline-history-button" onClick={() => setShowAll((current) => !current)}>{showAll ? "收起列表" : `查看全部 ${allRows.length} 只股票`}</button>}
     {!!result.rejected_candidates?.length && <p className="capacity-core-empty">已排除 {result.rejected_candidates.length} 只不满足候选资格或缺少题材联动的股票。</p>}
   </div>;
 }

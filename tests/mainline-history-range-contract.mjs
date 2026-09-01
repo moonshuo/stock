@@ -4,7 +4,9 @@ import { loadMainlineHistory } from "../lib/mainline.js";
 const requested = [];
 const loadDailyMarket = async (date) => {
   requested.push(date);
-  return date === "2026-08-10" ? { error: "missing" } : { date, totalStocks: 5000, stocks: [] };
+  return date === "2026-08-10"
+    ? { error: "missing", status: 404, source: "non-trading-day" }
+    : { date, totalStocks: 5000, stocks: [] };
 };
 
 const history = await loadMainlineHistory("2026-08-14", loadDailyMarket, {

@@ -14,6 +14,10 @@ __pycache__/
 .ruff_cache/
 .venv/
 venv/
+.ths-py312/
+.ths-venv/
+.uv-cache/
+.uv-python/
 
 # Local caches and temporary files
 .cache/
@@ -44,6 +48,7 @@ data/limit_up_scans/
 
 # Build/deployment archives and OS metadata
 *.tar.gz
+*.tgz
 *.zip
 .DS_Store
 Thumbs.db
