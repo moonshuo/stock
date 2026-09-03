@@ -19,6 +19,8 @@ import {
 import { isUsableMarketResearchBatch, marketResearchBatchId, pendingMarketResearchBatch, pendingMarketResearchCount, mergeMarketResearchUniverse } from "./lib/marketResearchBatch";
 import { stockBoardLabel } from "./lib/stockBoard";
 import { countVisibleNoteCharacters } from "./lib/noteMetrics";
+import { canonicalNoteCaretOffset, visibleNoteCaretOffset } from "./lib/noteCaret";
+import { buildScoreHistoryChart, scoreHistoryLineSegments } from "./lib/scoreHistoryChart";
 import { selectTradeMainlines, TRADE_MAINLINE_LIMIT } from "../lib/trade-mainline-selection";
 import { relevanceAdjustedAverageChange } from "../lib/relevance-adjusted-return";
 
@@ -3587,17 +3589,10 @@ function NotesPanel({ notes, taxonomy, stocks, selectedNoteId, onSelect, onCreat
 
   const syncRichNoteContent = (event) => {
     const editor = event.currentTarget;
-    const selection = window.getSelection();
-    let caretOffset = editor.innerText.length;
-    if (selection?.rangeCount && editor.contains(selection.anchorNode)) {
-      const range = selection.getRangeAt(0).cloneRange();
-      range.selectNodeContents(editor);
-      range.setEnd(selection.anchorNode, selection.anchorOffset);
-      caretOffset = range.toString().length;
-    }
+    const caretOffset = rawCaretOffset(editor);
     const rawContent = editorContentValue(editor).replace(/\r/g, "");
     const nextContent = replaceStockCodes(rawContent);
-    const nextCaret = replaceStockCodes(rawContent.slice(0, caretOffset)).length;
+    const nextCaret = visibleNoteCaretOffset(replaceStockCodes(rawContent.slice(0, caretOffset)));
     if (nextContent !== rawContent) {
       editor.innerHTML = noteEditorHtml(nextContent);
       restoreCaret(editor, nextCaret);
@@ -3653,15 +3648,15 @@ function NotesPanel({ notes, taxonomy, stocks, selectedNoteId, onSelect, onCreat
     const directOffset = selection.anchorNode === editor ? selection.anchorOffset : -1;
     const rowIndex = directOffset >= 0 ? Math.min(directOffset, children.length - 1) : children.findIndex((child) => child === selection.anchorNode || child.contains(selection.anchorNode));
     if (rowIndex < 0) return editorContentValue(editor).length;
-    const before = children.slice(0, rowIndex).map(editorNodeValue).join("\n");
-    const beforeLength = before.length + (rowIndex ? 1 : 0);
+    const rows = children.map(editorNodeValue);
+    const beforeLength = canonicalNoteCaretOffset(rows, rowIndex);
     if (directOffset >= 0) return directOffset >= children.length ? editorContentValue(editor).length : beforeLength;
     const row = children[rowIndex];
     const range = document.createRange();
     range.selectNodeContents(row);
     range.setEnd(selection.anchorNode, selection.anchorOffset);
-    const headingPrefix = row.classList?.contains("note-heading") ? Number(row.dataset.noteHeading || 1) + 1 : 0;
-    return beforeLength + headingPrefix + range.toString().replace(/\u00a0/g, " ").length;
+    const headingLevel = row.classList?.contains("note-heading") ? Number(row.dataset.noteHeading || 1) : 0;
+    return canonicalNoteCaretOffset(rows, rowIndex, range.toString().replace(/\u00a0/g, " ").length, headingLevel);
   };
 
   const formatNoteHeading = (event) => {
@@ -4392,6 +4387,36 @@ function PrimaryCoreAnalysisModal({ group, primarySector, date, capacityCoreResu
   </div>;
 }
 
+function ScoreHistoryChart({ history, selectedDate, onSelectDate }) {
+  const chart = useMemo(() => buildScoreHistoryChart(history), [history]);
+  const scoreSegments = scoreHistoryLineSegments(chart.points, "scoreY");
+  const strengthSegments = scoreHistoryLineSegments(chart.points, "dailyStrengthY");
+  const firstDate = chart.points[0]?.date;
+  const lastDate = chart.points.at(-1)?.date;
+  if (!scoreSegments.length && !strengthSegments.length) return <div className="score-history-chart-empty">当前区间暂无可绘制分数。</div>;
+  const activate = (event, date) => {
+    if (event.type === "keydown" && !["Enter", " "].includes(event.key)) return;
+    event.preventDefault();
+    onSelectDate(date);
+  };
+  return <figure className="score-history-chart" aria-label={`从 ${firstDate} 到 ${lastDate} 的每日评分趋势`}>
+    <figcaption><span><i className="score-line-key" />综合评分</span><span><i className="strength-line-key" />日强度</span><small>点击节点查看当日明细</small></figcaption>
+    <svg viewBox={`0 0 ${chart.width} ${chart.height}`} role="img" aria-labelledby="score-history-chart-title score-history-chart-description">
+      <title id="score-history-chart-title">每日综合评分与日强度折线图</title>
+      <desc id="score-history-chart-description">横轴为交易日，纵轴为零到一百分；可选择数据点查看对应日期。</desc>
+      {[0, 50, 100].map((value) => {
+        const y = chart.padding.top + (100 - value) / 100 * chart.plotHeight;
+        return <g className="score-chart-grid" key={value}><line x1={chart.padding.left} x2={chart.width - chart.padding.right} y1={y} y2={y} /><text x={chart.padding.left - 6} y={y + 3}>{value}</text></g>;
+      })}
+      {strengthSegments.map((points, index) => <polyline className="score-chart-strength-line" points={points.join(" ")} key={`strength-${index}`} />)}
+      {scoreSegments.map((points, index) => <polyline className="score-chart-score-line" points={points.join(" ")} key={`score-${index}`} />)}
+      {chart.points.map((point) => Number.isFinite(point.scoreY) && <g className={`score-chart-point ${selectedDate === point.date ? "selected" : ""}`} role="button" tabIndex="0" aria-label={`${point.date}，综合评分 ${point.score.toFixed(1)}，日强度 ${Number.isFinite(point.dailyStrength) ? point.dailyStrength.toFixed(1) : "数据不足"}`} onClick={(event) => activate(event, point.date)} onKeyDown={(event) => activate(event, point.date)} key={point.date}><circle cx={point.x} cy={point.scoreY} r={selectedDate === point.date ? 4.5 : 3}><title>{point.date} · 综合评分 {point.score.toFixed(1)} · 日强度 {Number.isFinite(point.dailyStrength) ? point.dailyStrength.toFixed(1) : "-"}</title></circle></g>)}
+      <text className="score-chart-date-label" x={chart.padding.left} y={chart.height - 5}>{firstDate?.slice(5)}</text>
+      <text className="score-chart-date-label" textAnchor="end" x={chart.width - chart.padding.right} y={chart.height - 5}>{lastDate?.slice(5)}</text>
+    </svg>
+  </figure>;
+}
+
 function ScoreHistoryCalendar({ item }) {
   const history = item?.score_history || [];
   const current = history.at(-1);
@@ -4420,7 +4445,7 @@ function ScoreHistoryCalendar({ item }) {
   };
   const scoreParts = [["近5日强度", 50, selected?.score?.recent_strength_score], ["资金持续", 20, selected?.score?.capital_persistence_score], ["抗分歧修复", 20, selected?.score?.resilience_repair_score], ["持续活跃", 10, selected?.score?.continuity_score]];
   const profit = selected?.metrics?.profit_effect || {};
-  return <section className="cycle-timeline" aria-label="历史综合评分"><header><div><h3>历史综合评分</h3><p>逐交易日保留评分、日强度、板块广度、龙头与容量中军表现；不再作生命周期状态判断。</p></div><span>{history.length} 个交易日</span></header><div className="cycle-calendar" ref={calendarRef} onScroll={handleCalendarScroll} aria-label="按月查看历史综合评分；鼠标滚轮上下可翻月"><div className="cycle-calendar-month-label">{visibleCalendarMonth ? visibleCalendarMonth.replace("-", "年") + "月" : ""}</div><section className="cycle-calendar-month" aria-label="交易日历史评分"><h4></h4><div className="cycle-calendar-weekdays" aria-hidden="true">{["一", "二", "三", "四", "五"].map((day) => <span key={day}>周{day}</span>)}</div><div className="cycle-calendar-grid">{cells.map(({ date, entry }) => entry ? <button type="button" className={`cycle-calendar-day ${selected?.date === date ? "selected" : ""}`} key={date} aria-pressed={selected?.date === date} title={`${date}：综合分 ${Number(entry.score?.mainline_rank_score).toFixed(1)}，日强度 ${Number(entry.daily_strength_score).toFixed(1)}`} onClick={() => setSelectedDate(date)}><time>{date.slice(8)}</time><strong>{Number(entry.score?.mainline_rank_score).toFixed(1)} 分</strong><small>日强度 {Number(entry.daily_strength_score).toFixed(1)}</small></button> : <span className="cycle-calendar-empty" key={date} aria-label={`${date} 无行情`} />)}</div></section></div><div className="cycle-evidence" aria-live="polite"><div className="cycle-evidence-heading"><b>{selected?.date}</b><small>综合分 {Number(selected?.score?.mainline_rank_score).toFixed(1)} · 日强度 {Number(selected?.daily_strength_score).toFixed(1)}</small></div><b>板块整体：上涨 {selected?.metrics?.up_count ?? "-"} 只，涨停 {selected?.metrics?.limit_up_count ?? "-"} 只，大涨 {selected?.metrics?.high_gain_count ?? "-"} 只，大跌 {selected?.metrics?.large_loss_count ?? "-"} 只；相对收益 {selected?.metrics?.theme_relative_return?.toFixed?.(2) ?? "-"}%</b><b>龙头：{selected?.metrics?.previous_leaders?.length ? `${selected.metrics.previous_leaders.map((stock) => `${stock.name || stock.code} ${stock.change_pct ?? "-"}%`).join("、")}；${selected.metrics.leader_status || "-"}${selected.metrics.leader_drives_theme ? "，仍在带动板块" : ""}` : "前一日龙头数据不足"}</b><b>容量中军：{selected?.metrics?.previous_capacity_cores?.length ? `${selected.metrics.previous_capacity_cores.map((stock) => `${stock.name || stock.code} ${stock.change_pct ?? "-"}%`).join("、")}；${selected.metrics.capacity_core_status || "-"}${selected.metrics.capacity_core_long_upper_count ? `，长上影 ${selected.metrics.capacity_core_long_upper_count} 只` : ""}` : "前一日容量中军数据不足"}</b><b>赚钱效应：{profit.profit_effect || "数据不足"}；前排中位收益 {profit.frontline_next_day_median_return ?? "-"}%、上涨占比 {profit.frontline_positive_rate != null ? `${Math.round(profit.frontline_positive_rate * 100)}%` : "-"}；活跃成员中位收益 {profit.active_member_next_day_median_return ?? "-"}%、上涨占比 {profit.active_member_positive_rate != null ? `${Math.round(profit.active_member_positive_rate * 100)}%` : "-"}；昨日涨停中位收益 {profit.limit_up_next_day_median_return ?? "-"}%；严重负反馈 {profit.severe_negative_rate != null ? `${Math.round(profit.severe_negative_rate * 100)}%` : "-"}</b><b>核心反馈：龙头 {profit.leader_feedback || "数据不足"}；中军 {profit.capacity_core_feedback || "数据不足"}；普通成员 {profit.ordinary_member_feedback || "数据不足"}</b><b>中军池汇总：有效池 {selected?.metrics?.capacity_core_pool_size ?? "-"} 只；正向 {selected?.metrics?.capacity_core_positive_count ?? "-"} 只（{selected?.metrics?.capacity_core_positive_count_ratio != null ? `${Math.round(selected.metrics.capacity_core_positive_count_ratio * 100)}%` : "-"}），正向权重 {selected?.metrics?.capacity_core_positive_weight != null ? `${Math.round(selected.metrics.capacity_core_positive_weight * 100)}%` : "-"}；池加权收益 {selected?.metrics?.capacity_core_pool_weighted_return?.toFixed?.(2) ?? "-"}%；{selected?.metrics?.core_pool_status || "数据不足"}</b></div><section className="cycle-score-detail" aria-label="当日评分构成"><header><b>当日评分构成</b><strong>{Number(selected?.score?.mainline_rank_score).toFixed(1)}/100</strong></header><p>评分权重保持原规则。</p><div>{scoreParts.map(([label, weight, value]) => <span key={label}><small>{label} · 权重 {weight}%</small><b>{Number.isFinite(Number(value)) ? Number(value).toFixed(1) : "-"}</b><em>{Number.isFinite(Number(value)) ? `贡献 ${(Number(value) * weight / 100).toFixed(1)} 分` : "数据不足"}</em></span>)}</div></section></section>;
+  return <section className="cycle-timeline" aria-label="历史综合评分"><header className="score-history-overview"><div className="score-history-heading"><h3>历史综合评分</h3><p>逐交易日保留评分、日强度、板块广度、龙头与容量中军表现；不再作生命周期状态判断。</p></div><ScoreHistoryChart history={history} selectedDate={selected?.date} onSelectDate={setSelectedDate} /><span>{history.length} 个交易日</span></header><div className="cycle-calendar" ref={calendarRef} onScroll={handleCalendarScroll} aria-label="按月查看历史综合评分；鼠标滚轮上下可翻月"><div className="cycle-calendar-month-label">{visibleCalendarMonth ? visibleCalendarMonth.replace("-", "年") + "月" : ""}</div><section className="cycle-calendar-month" aria-label="交易日历史评分"><h4></h4><div className="cycle-calendar-weekdays" aria-hidden="true">{["一", "二", "三", "四", "五"].map((day) => <span key={day}>周{day}</span>)}</div><div className="cycle-calendar-grid">{cells.map(({ date, entry }) => entry ? <button type="button" className={`cycle-calendar-day ${selected?.date === date ? "selected" : ""}`} key={date} aria-pressed={selected?.date === date} title={`${date}：综合分 ${Number(entry.score?.mainline_rank_score).toFixed(1)}，日强度 ${Number(entry.daily_strength_score).toFixed(1)}`} onClick={() => setSelectedDate(date)}><time>{date.slice(8)}</time><strong>{Number(entry.score?.mainline_rank_score).toFixed(1)} 分</strong><small>日强度 {Number(entry.daily_strength_score).toFixed(1)}</small></button> : <span className="cycle-calendar-empty" key={date} aria-label={`${date} 无行情`} />)}</div></section></div><div className="cycle-evidence" aria-live="polite"><div className="cycle-evidence-heading"><b>{selected?.date}</b><small>综合分 {Number(selected?.score?.mainline_rank_score).toFixed(1)} · 日强度 {Number(selected?.daily_strength_score).toFixed(1)}</small></div><b>板块整体：上涨 {selected?.metrics?.up_count ?? "-"} 只，涨停 {selected?.metrics?.limit_up_count ?? "-"} 只，大涨 {selected?.metrics?.high_gain_count ?? "-"} 只，大跌 {selected?.metrics?.large_loss_count ?? "-"} 只；相对收益 {selected?.metrics?.theme_relative_return?.toFixed?.(2) ?? "-"}%</b><b>龙头：{selected?.metrics?.previous_leaders?.length ? `${selected.metrics.previous_leaders.map((stock) => `${stock.name || stock.code} ${stock.change_pct ?? "-"}%`).join("、")}；${selected.metrics.leader_status || "-"}${selected.metrics.leader_drives_theme ? "，仍在带动板块" : ""}` : "前一日龙头数据不足"}</b><b>容量中军：{selected?.metrics?.previous_capacity_cores?.length ? `${selected.metrics.previous_capacity_cores.map((stock) => `${stock.name || stock.code} ${stock.change_pct ?? "-"}%`).join("、")}；${selected.metrics.capacity_core_status || "-"}${selected.metrics.capacity_core_long_upper_count ? `，长上影 ${selected.metrics.capacity_core_long_upper_count} 只` : ""}` : "前一日容量中军数据不足"}</b><b>赚钱效应：{profit.profit_effect || "数据不足"}；前排中位收益 {profit.frontline_next_day_median_return ?? "-"}%、上涨占比 {profit.frontline_positive_rate != null ? `${Math.round(profit.frontline_positive_rate * 100)}%` : "-"}；活跃成员中位收益 {profit.active_member_next_day_median_return ?? "-"}%、上涨占比 {profit.active_member_positive_rate != null ? `${Math.round(profit.active_member_positive_rate * 100)}%` : "-"}；昨日涨停中位收益 {profit.limit_up_next_day_median_return ?? "-"}%；严重负反馈 {profit.severe_negative_rate != null ? `${Math.round(profit.severe_negative_rate * 100)}%` : "-"}</b><b>核心反馈：龙头 {profit.leader_feedback || "数据不足"}；中军 {profit.capacity_core_feedback || "数据不足"}；普通成员 {profit.ordinary_member_feedback || "数据不足"}</b><b>中军池汇总：有效池 {selected?.metrics?.capacity_core_pool_size ?? "-"} 只；正向 {selected?.metrics?.capacity_core_positive_count ?? "-"} 只（{selected?.metrics?.capacity_core_positive_count_ratio != null ? `${Math.round(selected.metrics.capacity_core_positive_count_ratio * 100)}%` : "-"}），正向权重 {selected?.metrics?.capacity_core_positive_weight != null ? `${Math.round(selected.metrics.capacity_core_positive_weight * 100)}%` : "-"}；池加权收益 {selected?.metrics?.capacity_core_pool_weighted_return?.toFixed?.(2) ?? "-"}%；{selected?.metrics?.core_pool_status || "数据不足"}</b></div><section className="cycle-score-detail" aria-label="当日评分构成"><header><b>当日评分构成</b><strong>{Number(selected?.score?.mainline_rank_score).toFixed(1)}/100</strong></header><p>评分权重保持原规则。</p><div>{scoreParts.map(([label, weight, value]) => <span key={label}><small>{label} · 权重 {weight}%</small><b>{Number.isFinite(Number(value)) ? Number(value).toFixed(1) : "-"}</b><em>{Number.isFinite(Number(value)) ? `贡献 ${(Number(value) * weight / 100).toFixed(1)} 分` : "数据不足"}</em></span>)}</div></section></section>;
 }
 
 function MainlineModuleModal({ type, target, result, onClose }) {
