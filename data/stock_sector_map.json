@@ -2608,8 +2608,15 @@
           ]
         }
       ],
-      "product_tags": [],
-      "reason": "智能家居家电是最大核心，库卡机器人业务规模显著，同时楼宇科技已切入数据中心冷却等场景。"
+      "product_tags": [
+        "家用空调",
+        "商用空调",
+        "中央空调",
+        "空调压缩机",
+        "空调电机",
+        "暖通设备"
+      ],
+      "reason": "公司暖通空调业务规模大，产品覆盖空调整机及压缩机、电机等核心部件，直接处于高温制冷需求产业链。"
     },
     {
       "code": "000338",
@@ -2954,7 +2961,7 @@
     {
       "code": "000409",
       "name": "云鼎科技",
-      "primary_sector": "计算机软件",
+      "primary_sector": "煤炭",
       "classifications": [
         {
           "primary_sector": "煤炭",
@@ -4070,6 +4077,18 @@
           "source_refs": [
             "historical assignment: relevance pending business review"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "经济作物种植与初加工",
+          "tertiary_sectors": [
+            "食糖"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "《红棉股份2025年半年度报告》披露，公司全资子公司华糖食品长期从事食糖生产制造及销售，产品包括红糖、黑糖、精制白砂糖等；公司整体主营同时包括食品饮料和文化创意产业园运营。([巨潮资讯网][5])",
+            "红棉股份2025年12月投资者关系活动记录表再次披露，华糖食品长期专注于食糖、饮料生产制造及销售。([巨潮资讯网][6])"
+          ]
         }
       ],
       "product_tags": [
@@ -4079,9 +4098,14 @@
         "饮料食品",
         "文化创意园区",
         "商业物业运营",
-        "品牌文化运营"
+        "品牌文化运营",
+        "精制白砂糖",
+        "红糖",
+        "黑糖",
+        "食糖精炼",
+        "食糖加工"
       ],
-      "reason": "公司完成资产置换后聚焦食品饮料和文化创意产业园区开发运营，食品板块包括糖类和饮料，园区运营具有商业物业属性。"
+      "reason": "公司通过全资子公司华糖食品直接经营食糖精炼和加工业务，符合既有“食糖”三级中炼糖、食糖加工范围；但公司整体还包括饮料和产业园运营等业务，且产业位置偏向食糖加工端，因此归为明确产业链关联。"
     },
     {
       "code": "000524",
@@ -5034,7 +5058,7 @@
     {
       "code": "000555",
       "name": "神州信息",
-      "primary_sector": "计算机软件",
+      "primary_sector": "AIDC基础设施",
       "classifications": [
         {
           "primary_sector": "AIDC基础设施",
@@ -6561,7 +6585,7 @@
     {
       "code": "000626",
       "name": "远大控股",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -6728,13 +6752,31 @@
             "业务资料核对",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "有色金属资源开发",
+          "tertiary_sectors": [
+            "铜矿资源及铜产品"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《铜陵有色金属集团股份有限公司2025年年度报告》披露，公司拥有冬瓜山铜矿、安庆铜矿、庐江矿业等矿山资产，同时经营铜冶炼和铜加工业务，产业链覆盖矿山、冶炼和铜基材料。([巨潮资讯网][5])",
+            "公司2025年度业绩说明会披露，2025年自产铜精矿含铜19.77万吨、阴极铜195.48万吨、铜加工材40.07万吨，并持续推进米拉多铜矿资源开发。([互动易][6])"
+          ]
         }
       ],
       "product_tags": [
         "铜冶炼",
-        "阴极铜"
+        "阴极铜",
+        "铜矿",
+        "铜精矿",
+        "铜加工材",
+        "铜箔",
+        "铜带",
+        "米拉多铜矿"
       ],
-      "reason": "公司形成铜矿采选、冶炼及铜加工一体化产业链。"
+      "reason": "公司以铜产业为核心主业，形成铜矿采选、铜冶炼及铜加工一体化产业链，同时拥有国内外铜矿资源资产，是A股铜资源及铜产品板块的重要龙头。"
     },
     {
       "code": "000631",
@@ -7040,9 +7082,15 @@
       ],
       "product_tags": [
         "空调",
-        "家电"
+        "家电",
+        "家用空调",
+        "中央空调",
+        "商用空调",
+        "暖通设备",
+        "压缩机",
+        "制冷核心零部件"
       ],
-      "reason": "公司核心为家用空调等白色家电。"
+      "reason": "空调及暖通设备是公司核心产业，属于高温天气下最直接的终端制冷设备方向。"
     },
     {
       "code": "000652",
@@ -7449,7 +7497,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -7598,7 +7646,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -8240,7 +8288,7 @@
     },
     {
       "code": "000711",
-      "name": "ST京蓝",
+      "name": "京蓝科技",
       "primary_sector": "有色金属",
       "classifications": [
         {
@@ -8330,13 +8378,31 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "用户提供的公司业务说明（2026-09-08）",
+            "巨潮资讯网：https://static.cninfo.com.cn/finalpage/2025-05-12/1223513752.PDF"
+          ]
         }
       ],
       "product_tags": [
         "蔬菜种子",
-        "玉米种子"
+        "玉米种子",
+        "杂交水稻种子",
+        "杂交玉米种子",
+        "常规水稻种子",
+        "小麦种子",
+        "瓜菜种子",
+        "油菜种子"
       ],
-      "reason": "公司以种业为核心，并长期经营农化产品，农药业务同时属于农业投入品和精细化工。"
+      "reason": "公司种子业务覆盖杂交水稻、杂交玉米、常规水稻、小麦、瓜菜和油菜等产品，是A股综合农作物种子企业。"
     },
     {
       "code": "000715",
@@ -8910,6 +8976,18 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "有色金属资源开发",
+          "tertiary_sectors": [
+            "铜矿资源及铜产品"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《北方铜业股份有限公司2025年年度报告》披露，公司运营铜矿峪矿并开展低品位铜矿石选矿、铜冶炼和高纯阴极铜生产等业务，形成铜矿采选冶产业体系。([巨潮资讯网][12])",
+            "公司公开生产经营计划披露，铜矿峪矿处理矿石、铜精矿含铜以及阴极铜均属于核心生产指标，并持续推进铜板带箔等铜深加工产业。([巨潮资讯网][13])"
+          ]
         }
       ],
       "product_tags": [
@@ -8919,9 +8997,14 @@
         "金锭",
         "银锭",
         "硫酸",
-        "多金属综合回收"
+        "多金属综合回收",
+        "铜矿峪矿",
+        "铜矿石",
+        "铜冶炼",
+        "铜板带",
+        "铜箔"
       ],
-      "reason": "公司形成铜矿采选和铜冶炼产业链，并综合回收金银等伴生金属。"
+      "reason": "公司主营高度集中于铜产业，拥有铜矿峪矿等上游铜资源，并覆盖采矿、选矿、冶炼和铜材加工环节，是A股铜资源开发与铜产品一体化程度较高的代表企业。"
     },
     {
       "code": "000738",
@@ -11217,10 +11300,27 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "经济作物种植与初加工",
+          "tertiary_sectors": [
+            "食糖"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "《粤桂股份2025年年度报告》披露，子公司贵糖集团主导产品涵盖食糖等，并形成“甘蔗制糖—蔗渣制浆—甘蔗浆造纸”一体化循环经济模式；公司同时明确制糖属于典型农产品初加工行业。([巨潮资讯网][3])"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司形成糖浆纸、硫化工和新能源材料多板块业务，机制糖、糖料加工、硫酸等无机化工为重要业务，并生产特种纸、磷肥及光伏银粉。"
+      "product_tags": [
+        "甘蔗",
+        "甘蔗制糖",
+        "机制糖",
+        "白砂糖",
+        "蔗渣综合利用"
+      ],
+      "reason": "公司通过贵糖集团长期经营甘蔗制糖业务，食糖属于公司重要产业板块并直接使用甘蔗作为原料，但上市公司同时经营硫化工等其他业务，因此对该二级主线评为直接核心业务关联而非单一主营。"
     },
     {
       "code": "000837",
@@ -11903,13 +12003,29 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "有色金属资源开发",
+          "tertiary_sectors": [
+            "铜矿资源及铜产品"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《云南铜业股份有限公司2025年度董事会工作报告》披露，公司坚持“矿山稳产提产、冶炼满产高产”的经营方向，2025年生产精矿含铜6.94万吨。([巨潮资讯网][7])",
+            "《云南铜业股份有限公司2025年度财务决算报告》披露，公司2025年生产阴极铜164.11万吨并销售自产阴极铜163.50万吨，铜冶炼为公司核心经营业务。([巨潮资讯网][8])"
+          ]
         }
       ],
       "product_tags": [
         "铜冶炼",
-        "阴极铜"
+        "阴极铜",
+        "铜矿",
+        "铜精矿",
+        "矿山采选",
+        "铜资源"
       ],
-      "reason": "公司形成铜矿采选、冶炼产业链，并综合回收金银等伴生贵金属。"
+      "reason": "公司长期聚焦铜资源开发和铜冶炼产业，拥有实际矿山生产能力并形成从矿山采选到阴极铜冶炼的产业体系，铜业务构成公司核心主营。"
     },
     {
       "code": "000880",
@@ -12690,7 +12806,7 @@
     {
       "code": "000905",
       "name": "厦门港务",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -12911,13 +13027,37 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "经济作物种植与初加工",
+          "tertiary_sectors": [
+            "食糖"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：公司主营广西食糖生产及糖业产业链业务 ([新浪财经][6])",
+            "2025年年度报告：公司主营广西食糖生产及糖业产业链业务",
+            "《广农糖业2025年年度报告》披露，公司主营业务主要为机制糖生产与销售，主要原材料为甘蔗，甘蔗来源于公司订单合同蔗区；公司同时推进甘蔗种植面积扩大和制糖主业发展。([新浪财经][2])"
+          ]
         }
       ],
       "product_tags": [
         "甘蔗糖",
-        "食糖"
+        "食糖",
+        "甘蔗制糖",
+        "白砂糖",
+        "赤砂糖",
+        "原糖",
+        "精制糖",
+        "糖业循环经济",
+        "糖料蔗",
+        "甘蔗种植",
+        "机制糖",
+        "糖蜜",
+        "蔗渣"
       ],
-      "reason": "公司核心为甘蔗制糖及糖产品加工销售，并经营纸浆、纸品等业务；原“糖料与经济作物”更偏种植，不适合其加工主业。"
+      "reason": "公司主营高度集中于甘蔗制糖，直接连接糖料蔗种植、原料采购和机制糖生产，是A股甘蔗糖产业链业务纯度较高的上市公司，原料供应明显受到干旱、洪涝等气候因素影响。"
     },
     {
       "code": "000912",
@@ -13325,7 +13465,7 @@
     {
       "code": "000927",
       "name": "中国铁物",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -13762,7 +13902,7 @@
     {
       "code": "000948",
       "name": "南天信息",
-      "primary_sector": "计算机软件",
+      "primary_sector": "AIDC基础设施",
       "classifications": [
         {
           "primary_sector": "AIDC基础设施",
@@ -15105,13 +15245,28 @@
             "同花顺细分行业：种子生产（884001）",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：公司主营水稻、玉米、小麦及其他农作物种子 ([新浪财经VIP][1])"
+          ]
         }
       ],
       "product_tags": [
         "杂交水稻种子",
-        "玉米种子"
+        "玉米种子",
+        "水稻种子",
+        "小麦种子",
+        "蔬菜瓜果种子",
+        "转基因玉米种子"
       ],
-      "reason": "公司核心为杂交水稻、玉米等农作物种子研发、生产和销售，是种业核心企业。"
+      "reason": "公司主营业务覆盖水稻、玉米、小麦等主粮作物种子研发、繁育和销售，属于农业种植端的核心种业企业。"
     },
     {
       "code": "000999",
@@ -15194,7 +15349,7 @@
     {
       "code": "001202",
       "name": "炬申股份",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -15878,7 +16033,7 @@
     {
       "code": "001228",
       "name": "永泰运",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -17398,7 +17553,7 @@
     {
       "code": "001316",
       "name": "润贝航科",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -17440,7 +17595,7 @@
     {
       "code": "001317",
       "name": "三羊马",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -20111,7 +20266,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -20541,12 +20696,28 @@
             "同花顺细分行业：种子生产（884001）",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：主要从事农作物新品种选育、种子生产、分装及销售，玉米种子为核心产品 ([新浪财经VIP][2])"
+          ]
         }
       ],
       "product_tags": [
-        "玉米种子"
+        "玉米种子",
+        "玉米杂交种",
+        "小麦种子",
+        "水稻种子",
+        "蔬菜种子",
+        "育繁推一体化"
       ],
-      "reason": "主营玉米种子研发、生产和销售。"
+      "reason": "公司核心业务为玉米杂交种研发、生产和销售，并兼营小麦、水稻、蔬菜等农作物种子。"
     },
     {
       "code": "002042",
@@ -21213,7 +21384,7 @@
     },
     {
       "code": "002058",
-      "name": "威尔泰",
+      "name": "紫竹高科",
       "primary_sector": "电子元器件",
       "classifications": [
         {
@@ -21304,10 +21475,29 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "水利防灾与输水设备",
+          "tertiary_sectors": [
+            "水利工程建设"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "《广东省建筑工程集团股份有限公司2025年年度报告》披露，公司2025年水利水电工程收入127.998亿元，占营业收入18.57%，为公司主要工程施工产品板块之一。([新浪财经][2])"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司核心为水利、市政、交通等工程建设，并经营水电、风电和光伏等清洁能源资产。"
+      "product_tags": [
+        "水利水电工程",
+        "水库工程",
+        "引调水工程",
+        "河道治理",
+        "防洪工程",
+        "水资源配置",
+        "工程施工"
+      ],
+      "reason": "公司长期拥有水利水电工程建设业务，2025年该板块收入超过百亿元并占上市公司营业收入较高比例，属于明确且规模较大的主营工程板块，但公司同时经营市政、房建、智能装备和新能源等业务，因此评为0.80。"
     },
     {
       "code": "002061",
@@ -22708,7 +22898,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -23100,7 +23290,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -23346,7 +23536,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -23527,7 +23717,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -23692,7 +23882,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -25275,7 +25465,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -25628,7 +25818,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -25683,7 +25873,7 @@
     {
       "code": "002183",
       "name": "怡 亚 通",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -26094,7 +26284,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -26514,10 +26704,31 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "水利防灾与输水设备",
+          "tertiary_sectors": [
+            "输水排水管道"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《新疆国统管道股份有限公司2025年年度报告》披露，公司主营业务为PCCP、各种输水管道及异型管件等，PCCP主要应用于跨区域大型引调水、城镇供水、工业用水及农业灌溉系统。",
+            "《新疆国统管道股份有限公司2025年年度报告》披露，2025年PCCP管材收入5.56亿元，占公司营业收入82.58%，并参与环北部湾水资源配置等重大水利项目。"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司核心为PCCP等预制混凝土管及水利市政管网相关工程，预制混凝土管是主营产品。"
+      "product_tags": [
+        "PCCP",
+        "大口径输水管",
+        "输水管道",
+        "异型管件",
+        "引调水工程",
+        "城市供水",
+        "农业灌溉",
+        "环北部湾水资源配置"
+      ],
+      "reason": "PCCP及输水管道是公司绝对核心主营，PCCP收入占比超过八成，产品长期服务于国家水网、大型跨流域调水及城乡供水工程，因此属于该二级主线业务纯度较高的核心标的。"
     },
     {
       "code": "002206",
@@ -27388,7 +27599,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -28502,7 +28713,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -29465,7 +29676,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频",
@@ -29532,7 +29743,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -30347,7 +30558,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -30502,7 +30713,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -31387,7 +31598,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -31800,7 +32011,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人",
             "AI营销与客服"
@@ -31936,7 +32147,7 @@
     {
       "code": "002357",
       "name": "富临运业",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -32961,10 +33172,27 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "用户提供的公司业务说明（2026-09-08）",
+            "新浪财经：https://finance.sina.com.cn/roll/2026-02-09/doc-inhmexfp9360695.shtml"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司围绕饲料、种业、生猪养殖和动物保健形成农业产业链，饲料为核心业务。"
+      "product_tags": [
+        "玉米种子",
+        "生物育种",
+        "转基因玉米种子",
+        "农作物育种"
+      ],
+      "reason": "公司长期布局种业业务，覆盖玉米等农作物育种及种子产品，并具备生物育种产业链布局，属于A股种业产业链代表公司。"
     },
     {
       "code": "002386",
@@ -33440,7 +33668,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -34357,7 +34585,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人",
             "AIGC图文与视频"
@@ -34890,7 +35118,7 @@
     {
       "code": "002441",
       "name": "众业达",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -35465,10 +35693,42 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "水利防灾与输水设备",
+          "tertiary_sectors": [
+            "输水排水管道",
+            "水利工程建设"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：主营输水管道及相关产品，服务水利、市政、农业等领域 ([新浪财经][17])",
+            "《青龙管业集团股份有限公司2025年年度报告》披露，公司始终聚焦输节水核心赛道，主营涵盖混凝土管道、塑料管道、复合钢管、水利设计咨询及工程安装施工；PCCP、BCCP、PCP、RCP等产品主要应用于跨流域调水和城市供排水，PVC、PE、HDPE及滴灌管等用于城乡供水、高标准农田和节水灌溉。"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司核心为PCCP等混凝土管和塑料管道产品。"
+      "product_tags": [
+        "PCCP",
+        "混凝土输水管",
+        "塑料管材",
+        "复合钢管",
+        "排水管",
+        "滴灌管",
+        "节水灌溉器材",
+        "BCCP",
+        "PCP输水管",
+        "RCP排水管",
+        "RCCP",
+        "PVC管",
+        "PE管",
+        "HDPE管",
+        "节水灌溉",
+        "跨流域调水",
+        "水利设计咨询",
+        "管道工程施工"
+      ],
+      "reason": "公司业务高度集中于输水、节水及水利工程产业链，既是大型调水和城乡供排水工程管材供应商，又具备水利设计咨询和工程施工服务能力，能够同时覆盖输水排水设备端和水利工程建设端。"
     },
     {
       "code": "002458",
@@ -36663,7 +36923,7 @@
     {
       "code": "002492",
       "name": "恒基达鑫",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -37381,7 +37641,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -38879,7 +39139,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -38973,7 +39233,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -40096,7 +40356,7 @@
     },
     {
       "code": "002586",
-      "name": "ST围海",
+      "name": "围海股份",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -40717,7 +40977,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -40780,7 +41040,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -41311,7 +41571,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -43028,10 +43288,30 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "水利防灾与输水设备",
+          "tertiary_sectors": [
+            "输水排水管道"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "《山东龙泉管业股份有限公司2025年年度报告摘要》披露，公司主要业务包括PCCP等混凝土管道生产销售；PCCP用于跨区域大型输水、自来水及农业灌溉供配水管网，此外还生产JPCCP和DRCP等排水管。公司曾中标南水北调、鄂北水资源配置、滇中引水和环北部湾水资源配置等项目。"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司核心为PCCP等大型管材，另经营金属管件和核电管道配套，后两项按产业链关联计入。"
+      "product_tags": [
+        "PCCP",
+        "JPCCP",
+        "DRCP",
+        "混凝土输水管",
+        "混凝土排水管",
+        "大型引水工程",
+        "农业灌溉管网",
+        "市政排污管"
+      ],
+      "reason": "公司是国内PCCP行业第一梯队企业，大型输水管道属于重要主营业务并具有长期重大水利工程供货记录，但公司同时经营高端金属管件、电站阀门及防腐钢管等业务，因此关联度评为直接核心业务级别。"
     },
     {
       "code": "002672",
@@ -43292,7 +43572,7 @@
     {
       "code": "002682",
       "name": "龙洲股份",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -44107,7 +44387,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -45259,7 +45539,7 @@
     },
     {
       "code": "002743",
-      "name": "富煌钢构",
+      "name": "ST富煌",
       "primary_sector": "钢铁",
       "classifications": [
         {
@@ -46108,7 +46388,7 @@
     {
       "code": "002769",
       "name": "普路通",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -47128,7 +47408,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -47287,7 +47567,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -49904,7 +50184,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -50266,7 +50546,7 @@
     {
       "code": "002889",
       "name": "东方嘉盛",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -51542,7 +51822,7 @@
     {
       "code": "002928",
       "name": "华夏航空",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -53775,7 +54055,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频",
             "AI游戏与数字人",
@@ -54250,7 +54530,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -56167,10 +56447,35 @@
           "source_refs": [
             "业务资料核对"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "水利防灾与输水设备",
+          "tertiary_sectors": [
+            "输水排水管道",
+            "水利工程建设"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《大禹节水集团股份有限公司2025年年度报告》披露，公司高效节水灌溉产品包括PVC/PE输水管材及配件、滴灌带、过滤器和喷灌机，主要应用于灌区输水和农业灌溉。",
+            "《大禹节水集团股份有限公司2025年年度报告》披露，公司具备水利行业甲级设计能力和水利水电工程施工总承包一级资质，可承接水库枢纽、引调水、灌溉排涝、城乡供水等工程，并提供工程建设全周期服务。"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司核心为节水灌溉、水利工程、智慧水务及水环境项目，水务装备运营与水利工程均为主营。"
+      "product_tags": [
+        "PVC输水管",
+        "PE输水管",
+        "滴灌带",
+        "节水灌溉",
+        "灌区输配水",
+        "水库枢纽",
+        "引调水工程",
+        "灌溉排涝",
+        "城乡供水",
+        "水利EPC",
+        "水利工程施工"
+      ],
+      "reason": "公司主营围绕农业节水和水利全产业链展开，同时具备输水管材装备制造、规划设计、工程施工和运营服务能力，可以同时覆盖管道设备端与水利工程建设端，是该二级主线产业链覆盖较完整的上市公司。"
     },
     {
       "code": "300022",
@@ -56394,7 +56699,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -56880,7 +57185,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -57306,7 +57611,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -57532,7 +57837,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -57661,7 +57966,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -57743,7 +58048,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -58039,7 +58344,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -58548,7 +58853,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -58776,10 +59081,29 @@
             "同花顺细分行业：种子生产（884001）",
             "业务资料核对"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "用户提供的公司业务说明（2026-09-08）",
+            "证券之星：https://stock.stockstar.com/notice/SN2026042500004840.shtml"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司主营水稻、玉米等农作物种子研发、繁育和销售，种业为核心。"
+      "product_tags": [
+        "杂交水稻种子",
+        "杂交玉米种子",
+        "小麦种子",
+        "棉花种子",
+        "油菜种子",
+        "瓜菜种子"
+      ],
+      "reason": "公司主要从事优良水稻、玉米、小麦等主要农作物种子的研发、繁育、推广和服务，产品覆盖多个主要粮食作物。"
     },
     {
       "code": "300088",
@@ -59634,7 +59958,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -60155,7 +60479,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -60248,7 +60572,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -61759,7 +62083,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -62025,13 +62349,30 @@
             "同花顺细分行业：种子生产（884001）",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "用户提供的公司业务说明（2026-09-08）",
+            "新浪财经VIP：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12178654&utm_source=chatgpt.com"
+          ]
         }
       ],
       "product_tags": [
         "油料种子",
-        "水稻种子"
+        "水稻种子",
+        "杂交水稻种子",
+        "玉米种子",
+        "油料作物种子",
+        "蔬菜种子",
+        "种子生产销售"
       ],
-      "reason": "公司主营农作物种子选育、繁育和销售。"
+      "reason": "公司以杂交水稻种子选育、制种和销售为核心，并覆盖水稻、玉米、油料、蔬菜等农作物种子业务。"
     },
     {
       "code": "300190",
@@ -63729,7 +64070,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -64094,7 +64435,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人",
             "AIGC图文与视频"
@@ -64570,7 +64911,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -64770,7 +65111,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -65603,7 +65944,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -65664,7 +66005,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -65861,7 +66202,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -66359,7 +66700,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -67936,7 +68277,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人",
             "AIGC图文与视频"
@@ -69853,7 +70194,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频",
             "AI游戏与数字人"
@@ -70070,7 +70411,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频",
             "AI游戏与数字人"
@@ -71775,7 +72116,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -72237,7 +72578,7 @@
     },
     {
       "code": "300472",
-      "name": "*ST新元",
+      "name": "ST新元",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -73007,7 +73348,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -75096,7 +75437,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -77051,7 +77392,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频",
             "AI营销与客服"
@@ -77441,7 +77782,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -77754,7 +78095,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -78737,7 +79078,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -82123,7 +82464,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -82664,7 +83005,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频",
             "AI营销与客服"
@@ -82812,7 +83153,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频",
             "AI营销与客服"
@@ -83079,7 +83420,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -83456,7 +83797,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -88972,7 +89313,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频",
             "AI营销与客服"
@@ -89482,7 +89823,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -91349,7 +91690,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -92482,7 +92823,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -94171,7 +94512,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -96844,7 +97185,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -98072,7 +98413,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -102414,7 +102755,7 @@
     },
     {
       "code": "301560",
-      "name": "众捷汽车",
+      "name": "众捷股份",
       "primary_sector": "汽车产业链",
       "classifications": [
         {
@@ -104072,7 +104413,7 @@
     },
     {
       "code": "301655",
-      "name": "C绿控",
+      "name": "绿控传动",
       "primary_sector": "汽车产业链",
       "classifications": [
         {
@@ -104982,14 +105323,31 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "火力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：公司为大型电力生产企业，主营电力生产及销售 ([新浪财经VIP][8])",
+            "《华能国际电力股份有限公司2025年年度报告》披露，截至2025年末公司可控发电装机155869兆瓦，其中煤机91953兆瓦、燃机17700兆瓦；公司年度经营分析同时明确火电仍是主要发电和盈利板块。([上海证券交易所][1])"
+          ]
         }
       ],
       "product_tags": [
         "燃煤发电",
         "燃气发电",
-        "热电联产"
+        "热电联产",
+        "电力生产",
+        "电力销售",
+        "煤电机组",
+        "燃机",
+        "电力供应"
       ],
-      "reason": "公司以大型火电资产投资运营为核心，同时持续运营风电和光伏等新能源项目。"
+      "reason": "公司属于全国性大型综合发电运营商，煤电和燃气发电装机规模庞大，火电是长期核心电源资产，在高温用电高峰、新能源出力波动及电力保供场景下具有直接业务关联。([上海证券交易所][1])"
     },
     {
       "code": "600012",
@@ -105189,10 +105547,28 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "火力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "上海电力2026年度跟踪评级报告依据公司年报数据披露，2025年公司煤电发电量510.06亿千瓦时、气电发电量78.04亿千瓦时，煤电与气电仍构成公司发电量的主体，并明确公司拥有较大规模煤电机组。([上海证券交易所][4])"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司电源结构覆盖火电、光伏和风电，火电仍为重要基础业务，新能源项目已形成持续运营规模。"
+      "product_tags": [
+        "煤电",
+        "燃煤发电",
+        "燃气发电",
+        "气电",
+        "火电机组",
+        "电力销售"
+      ],
+      "reason": "公司长期主营电力生产与销售，煤电、气电均为重要经营资产，火力发电量在整体电源结构中仍占较高比重，因此属于火电方向直接核心标的。([上海证券交易所][4])"
     },
     {
       "code": "600022",
@@ -105270,10 +105646,28 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "水力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《华能澜沧江水电股份有限公司2025年年度报告》披露，公司2025年水力发电业务营业收入248.14亿元，显著高于风力发电和太阳能光伏发电收入，水电为公司核心主营业务。([巨潮资讯网][13])"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司以澜沧江流域大型水电站开发运营为核心，并已形成水风光协同中的光伏电站运营业务。"
+      "product_tags": [
+        "澜沧江水电",
+        "大型水电站",
+        "梯级水电",
+        "水力发电",
+        "流域开发",
+        "水电运营"
+      ],
+      "reason": "公司长期围绕澜沧江流域水能资源进行开发和运营，水力发电收入在公司发电业务中占据绝对主导地位，对降水及流域来水条件具有直接经营敏感性。([巨潮资讯网][13])"
     },
     {
       "code": "600026",
@@ -105315,14 +105709,32 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "火力发电",
+            "水力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《华电国际电力股份有限公司2025年年度报告》披露，公司控股装机7792.4288万千瓦，其中燃煤发电5438万千瓦、燃气发电2107.2708万千瓦、水力发电245.9万千瓦，燃煤发电装机占控股装机约69.77%。([巨潮资讯网][2])"
+          ]
         }
       ],
       "product_tags": [
         "燃煤电厂",
         "燃气电厂",
-        "热电联产"
+        "热电联产",
+        "燃煤发电",
+        "燃气发电",
+        "煤电",
+        "气电",
+        "水电站",
+        "水力发电"
       ],
-      "reason": "公司主营燃煤、燃气等发电资产投资和运营，火电运营为长期核心业务。"
+      "reason": "公司主营电力生产，火电装机占据绝对主体，同时拥有实际运营水电资产，因此可同时归入火力发电和水力发电两个既有三级方向。([巨潮资讯网][2])"
     },
     {
       "code": "600028",
@@ -107509,7 +107921,7 @@
     {
       "code": "600115",
       "name": "中国东航",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -108810,9 +109222,14 @@
         "氟化工",
         "新材料",
         "石墨烯相关",
-        "制冷剂"
+        "制冷剂",
+        "HFC制冷剂",
+        "HCFC制冷剂",
+        "氟化工原料",
+        "含氟聚合物",
+        "氟化工产业链"
       ],
-      "reason": "氟化工为核心主业，石墨烯等前沿新材料属于布局型业务。"
+      "reason": "公司拥有完整氟化工产业链，制冷剂为核心产品，高温制冷需求与其产品存在直接产业链联系。"
     },
     {
       "code": "600161",
@@ -109246,7 +109663,7 @@
     {
       "code": "600173",
       "name": "卧龙新能",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -109715,14 +110132,29 @@
           "source_refs": [
             "2025年年度报告/公司公告复核"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "煤炭供应"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《兖矿能源集团股份有限公司2025年年度报告》披露，2025年公司商品煤产量1.82亿吨，煤炭矿业是公司五大产业中的基础和核心板块，山东、新疆、陕蒙、西北及澳洲基地形成大规模煤炭生产能力。([巨潮资讯网][8])"
+          ]
         }
       ],
       "product_tags": [
         "煤炭开采",
         "动力煤",
-        "焦煤"
+        "焦煤",
+        "商品煤",
+        "煤炭洗选",
+        "煤炭销售",
+        "煤炭资源"
       ],
-      "reason": "煤炭开采为核心主业，煤种覆盖动力煤和焦煤，同时拥有规模化煤化工及甲醇业务。"
+      "reason": "煤炭资源开发和商品煤生产是公司的核心基本盘，公司拥有超亿吨级商品煤产量和多个大型煤炭生产基地，是火电燃料供应端的代表性大型煤企。([巨潮资讯网][8])"
     },
     {
       "code": "600189",
@@ -109779,15 +110211,30 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公告复核"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "经济作物种植与初加工",
+          "tertiary_sectors": [
+            "食糖"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "《华资实业2025年年度报告》披露，公司主营业务包括生物发酵技术应用、粮食深加工及制糖业务，主要产品包含食糖，2025年食糖生产量为8632.89吨。([新浪财经VIP][7])",
+            "公司2025年股票交易异常波动公告明确称公司主营业务主要围绕粮食深加工开展，因此制糖并非当前最核心主营。([上海证券交易所][8])"
+          ]
         }
       ],
       "product_tags": [
         "甜菜糖",
         "食糖加工",
         "糖蜜",
-        "农产品加工"
+        "农产品加工",
+        "食糖",
+        "原糖加工",
+        "制糖"
       ],
-      "reason": "2025年主营生物发酵、粮食深加工及制糖，食糖业务规模较小；现有目录以制糖、功能食品和农产品加工路径最接近。"
+      "reason": "公司当前仍存在实际制糖和食糖产品业务，能够形成对食糖产业链的业务关联，但其主营重心已更多转向粮食深加工，制糖业务规模和主营占比相对有限，因此仅按布局及非核心直接业务给予较低关联度。"
     },
     {
       "code": "600192",
@@ -110671,7 +111118,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -110900,7 +111347,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -110981,15 +111428,30 @@
             "historical assignment: relevance pending business review",
             "业务资料核对"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "水力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《广西桂冠电力股份有限公司2025年年度报告》披露，公司长期依托红水河流域梯级电站进行开发运营，2025年水电板块实现利润43.12亿元，显著高于公司其他电源板块。([巨潮资讯网][14])"
+          ]
         }
       ],
       "product_tags": [
         "水力发电",
         "风力发电",
         "光伏发电",
-        "清洁能源电站运营"
+        "清洁能源电站运营",
+        "红水河水电",
+        "梯级水电站",
+        "流域调度",
+        "清洁能源发电"
       ],
-      "reason": "水电为核心发电业务，风电和光伏为明确但规模较小的新能源运营业务。"
+      "reason": "水电是公司的核心利润来源和长期优势资产，公司拥有红水河流域梯级水电站运营能力，来水变化对发电量和盈利具有直接影响。([巨潮资讯网][14])"
     },
     {
       "code": "600237",
@@ -111218,7 +111680,7 @@
     },
     {
       "code": "600249",
-      "name": "XD两面针",
+      "name": "两面针",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -111329,10 +111791,26 @@
           "source_refs": [
             "2025年年度报告/公司公告复核"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "经济作物种植与初加工",
+          "tertiary_sectors": [
+            "食糖"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "《冠农股份2025年年度报告》披露，公司主营业务包括番茄、棉花、甜菜制糖三大产业板块；甜菜于10月至11月收获并集中进行制糖加工，甜菜制糖主要产品为白砂糖和冰糖。([巨潮资讯网][4])"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营番茄制品、甜菜糖等农产品加工业务，属于果蔬和糖料加工产业链。"
+      "product_tags": [
+        "甜菜",
+        "甜菜制糖",
+        "白砂糖",
+        "冰糖"
+      ],
+      "reason": "甜菜制糖是公司三大主营产业之一，公司直接参与甜菜原料订单、加工生产和食糖销售，是A股甜菜糖产业的重要代表，但由于同时拥有番茄和棉花等其他核心产业，因此关联度低于以制糖为绝对主营的企业。"
     },
     {
       "code": "600252",
@@ -113065,13 +113543,29 @@
           "source_refs": [
             "业务资料核对"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：农作物种子业务为公司核心业务之一 ([新浪财经][4])"
+          ]
         }
       ],
       "product_tags": [
         "小麦种子",
-        "玉米种子"
+        "玉米种子",
+        "农作物种子",
+        "种子研发",
+        "种子生产销售",
+        "农药",
+        "化肥"
       ],
-      "reason": "种子为核心主营，并经营化肥、农药等农资贸易。"
+      "reason": "公司长期从事农作物种子、农药、化肥等农业生产资料业务，其中种子业务直接位于农业种植产业链上游。"
     },
     {
       "code": "600315",
@@ -114179,13 +114673,30 @@
             "同花顺细分行业：种子生产（884001）",
             "2025年年度报告/公开业务资料复核"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "用户提供的公司业务说明（2026-09-08）",
+            "巨潮资讯网：https://static.cninfo.com.cn/finalpage/2025-05-12/1223513752.PDF"
+          ]
         }
       ],
       "product_tags": [
         "棉花",
-        "粮食种植"
+        "粮食种植",
+        "玉米种子",
+        "棉花种子",
+        "瓜菜种子",
+        "农作物种子研发",
+        "种子生产加工"
       ],
-      "reason": "种子业务为核心，并参与粮食等农产品种植经营。"
+      "reason": "公司长期从事各类农作物种子的研发、生产、加工和销售，属于西北地区具有代表性的综合种业上市公司。"
     },
     {
       "code": "600356",
@@ -114306,10 +114817,27 @@
           "source_refs": [
             "2025年年度报告/公开业务资料复核"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "用户提供的公司业务说明（2026-09-08）",
+            "新浪财经：https://finance.sina.com.cn/roll/2026-02-09/doc-inhmexfp9360695.shtml"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "2025年聚焦种业，并经营肉牛养殖、大米谷物加工和健康饮品等业务。"
+      "product_tags": [
+        "棉花种子",
+        "棉花育种",
+        "农作物种子",
+        "新疆农业"
+      ],
+      "reason": "公司农业业务覆盖棉花等农作物，并拥有种子相关业务，属于农作物种植及种业产业链上市公司。"
     },
     {
       "code": "600360",
@@ -114391,13 +114919,33 @@
           "source_refs": [
             "2025年年度报告/公开业务资料复核"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "有色金属资源开发",
+          "tertiary_sectors": [
+            "铜矿资源及铜产品"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：公司业务涵盖铜和黄金采选、冶炼与加工，形成完整铜产业链 ([新浪财经][19])",
+            "《江西铜业股份有限公司2025年年度报告》披露，公司坚持“实业为主、资源为王”，拥有德兴铜矿、武山铜矿等铜资源项目，并持续推进国内外铜矿资源布局，同时形成铜采选、冶炼及铜加工完整产业链。([巨潮资讯网][1])"
+          ]
         }
       ],
       "product_tags": [
         "铜精矿",
-        "阴极铜"
+        "阴极铜",
+        "铜矿采选",
+        "铜杆",
+        "铜管",
+        "铜箔",
+        "铜冶炼",
+        "铜矿",
+        "铜线材",
+        "铜加工材"
       ],
-      "reason": "主营铜采选、冶炼和加工，并综合回收银等贵金属。"
+      "reason": "公司长期以铜产业为核心，覆盖铜矿勘探开发、采矿、选矿、冶炼以及铜材深加工等环节，并持续扩大境内外铜资源储备，是A股铜资源开发和铜产业链一体化程度最高的代表性公司之一。"
     },
     {
       "code": "600363",
@@ -114657,10 +115205,25 @@
             "同花顺细分行业：种子生产（884001）",
             "2025年年度报告/公开业务资料复核"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：主营玉米杂交种研发、生产、销售 ([新浪财经][3])"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营玉米等农作物种子。"
+      "product_tags": [
+        "玉米杂交种",
+        "京科968",
+        "德单系列"
+      ],
+      "reason": "公司主营玉米杂交种子研发、生产和销售，产品直接处于玉米种植产业链上游。"
     },
     {
       "code": "600372",
@@ -115563,9 +116126,14 @@
         "电力调度",
         "电网自动化系统",
         "继电保护装置",
-        "继电保护"
+        "继电保护",
+        "电网调度自动化",
+        "新能源并网控制",
+        "配电自动化",
+        "源网荷储协同控制",
+        "智能电表"
       ],
-      "reason": "主营电网自动化、调度控制、继电保护和电力信息化，并覆盖虚拟电厂相关解决方案。"
+      "reason": "公司核心业务为能源电力智能化及电网自动化设备和系统，属于极端天气背景下电力系统调度和稳定运行的重要设备环节。"
     },
     {
       "code": "600408",
@@ -117924,10 +118492,31 @@
           "source_refs": [
             "2025年年度报告/公司公开主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "水利防灾与输水设备",
+          "tertiary_sectors": [
+            "水利工程建设"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "《安徽建工集团股份有限公司2025年年度报告》披露，公司核心经营基础为投资与工程施工业务，并拥有安徽建工水利开发投资集团等水利建设经营主体。([新浪财经][3])",
+            "安徽建工水利公开业务资料显示，其拥有水利水电工程施工总承包特级资质以及河道整治、城市防洪、水库枢纽等专业甲级设计资质，长期参与引江济淮、南水北调、治淮等重大水利工程。([CAHSL][4])"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "工程建设施工为核心主业，并持续拓展高速公路投资运营。"
+      "product_tags": [
+        "水利水电施工",
+        "水库枢纽",
+        "城市防洪",
+        "河道整治",
+        "引江济淮",
+        "南水北调",
+        "水资源开发",
+        "水利基础设施"
+      ],
+      "reason": "上市公司通过专业水利建设子集团长期从事水利水电、河道整治、城市防洪、水库枢纽及重大调水工程建设，产业关联明确；但安徽建工整体业务还大量覆盖公路、市政、房建、地产及其他基础设施，因此按明确产业链关联给予0.60。"
     },
     {
       "code": "600503",
@@ -119434,7 +120023,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -121278,7 +121867,7 @@
     {
       "code": "600611",
       "name": "大众交通",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -121997,7 +122586,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -122194,7 +122783,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人",
             "AIGC图文与视频"
@@ -125418,13 +126007,37 @@
           "source_refs": [
             "公司年报/公告及主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "经济作物种植与初加工",
+          "tertiary_sectors": [
+            "食糖"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：公司形成制糖、炼糖、贸易、仓储物流的食糖产业链 ([新浪财经][5])",
+            "2025年年度报告：公司形成制糖、炼糖、贸易、仓储物流的食糖产业链",
+            "《中粮糖业2025年年度报告》披露，公司为国内食糖与番茄产业双龙头，业务包括国内外制糖、食糖进口、炼糖和食糖贸易；食糖业务形成制糖、炼糖、贸易、仓储物流全产业链。([巨潮资讯网][1])"
+          ]
         }
       ],
       "product_tags": [
         "食糖",
-        "甜菜糖"
+        "甜菜糖",
+        "甘蔗制糖",
+        "甜菜制糖",
+        "原糖",
+        "炼糖",
+        "白砂糖",
+        "食糖贸易",
+        "甘蔗糖",
+        "自产糖",
+        "原糖炼制",
+        "加工糖",
+        "精制糖"
       ],
-      "reason": "主营食糖生产、贸易及相关农产品业务。"
+      "reason": "食糖属于公司核心主营产业。公司直接覆盖甘蔗、甜菜制糖以及原糖炼制等环节，2025年食糖业务经营规模显著，在国内拥有多家制糖企业并具备大规模炼糖产能，对糖料作物供给和食糖价格变化具有直接产业关联。"
     },
     {
       "code": "600738",
@@ -125922,7 +126535,7 @@
     {
       "code": "600751",
       "name": "海航科技",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -127231,13 +127844,37 @@
           "source_refs": [
             "公司年报/公告及主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "火力发电",
+            "水力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：公司火电装机占控股装机64.89%，主营电力、热力生产及销售 ([中国能源集团][9])",
+            "2025年年度报告：公司同时拥有水电等非化石能源发电资产 ([新浪财经][10])",
+            "《国电电力发展股份有限公司2025年年度报告》披露，截至2025年末公司权益装机7215.60万千瓦，其中火电3633.54万千瓦、水电1174.23万千瓦，分别占权益装机50.36%和16.27%。([巨潮资讯网][3])"
+          ]
         }
       ],
       "product_tags": [
         "大型火电基地",
-        "燃煤发电"
+        "燃煤发电",
+        "火电",
+        "水电",
+        "风电",
+        "光伏发电",
+        "综合能源服务",
+        "火电机组",
+        "水电站",
+        "水力发电",
+        "电力生产",
+        "电力供应"
       ],
-      "reason": "公司为综合电力运营平台，实际装机覆盖火电、水电、风电和光伏，并提供热力服务，原仅保留火电不完整。"
+      "reason": "公司是全国性综合电力运营商，火电为最大单一电源类型，同时拥有超过千万千瓦级水电权益装机，火电保供与流域来水变化均会直接影响公司经营。([巨潮资讯网][3])"
     },
     {
       "code": "600796",
@@ -129817,7 +130454,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -130113,10 +130750,29 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "水力发电",
+            "火力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《国投电力控股股份有限公司2025年年度股东会会议材料》披露，2025年公司水电业务主营收入258.63亿元、火电业务主营收入176.89亿元；报告明确雅砻江流域来水偏枯导致水电上网电量下降5.76%。([巨潮资讯网][15])"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司为综合电力运营商，水电为核心资产，同时经营火电、风电和光伏发电项目。"
+      "product_tags": [
+        "雅砻江水电",
+        "水力发电",
+        "大型水电站",
+        "燃煤发电",
+        "火电机组",
+        "电力生产"
+      ],
+      "reason": "水电和火电均是公司的核心主营业务，其中水电为最大收入板块，雅砻江流域来水变化能够直接影响公司发电量，同时火电承担重要的电力生产和调节功能。([巨潮资讯网][15])"
     },
     {
       "code": "600887",
@@ -130328,10 +130984,29 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "水力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《中国长江电力股份有限公司2025年年度报告》披露，公司2025年境内水电发电量3071.944亿千瓦时、上网电量3055.5521亿千瓦时，水力发电构成公司核心电力生产业务。([巨潮资讯网][11])",
+            "上海证券交易所2025年年报综述披露，长江电力梯级电站2025年全年发电量超过3000亿千瓦时。([上海电力股份有限公司][12])"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司核心业务为大型水电站投资、运营和电力销售，是水电运营龙头企业。"
+      "product_tags": [
+        "大型水电站",
+        "梯级水电站",
+        "水力发电",
+        "流域调度",
+        "电力生产",
+        "水电运营"
+      ],
+      "reason": "公司核心资产和主要电力产量来自大型水电站，是A股水力发电规模最大的代表性上市公司之一，流域来水变化能够直接传导至发电量和经营表现。([巨潮资讯网][11])"
     },
     {
       "code": "600901",
@@ -131898,7 +132573,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -133261,13 +133936,35 @@
           "source_refs": [
             "2025年年度报告主营业务/公司公告"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "煤炭供应",
+            "火力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：公司设有煤炭、发电等业务分部，煤炭业务覆盖煤炭开采及销售 ([巨潮资讯网][11])",
+            "2025年年度报告：公司发电业务包括煤炭发电等 ([巨潮资讯网][11])",
+            "《中国神华能源股份有限公司2025年度报告》将煤炭和发电分别列为核心经营分部，2025年煤炭分部对外交易收入1828.74亿元、发电分部对外交易收入889.14亿元，形成煤电一体化经营体系。([巨潮资讯网][5])",
+            "上海证券交易所公开资料将中国神华列为国内煤炭行业龙头，并指出其拥有丰富煤炭资源及铁路、港口、航运等一体化能源供应体系。([上海证券交易所][6])"
+          ]
         }
       ],
       "product_tags": [
         "动力煤",
-        "煤电一体化"
+        "煤电一体化",
+        "煤炭开采",
+        "煤炭销售",
+        "燃煤发电",
+        "铁路运输",
+        "港口运输",
+        "煤炭洗选",
+        "商品煤"
       ],
-      "reason": "公司形成煤炭生产、发电、铁路港口航运和煤化工一体化运营模式，其中煤炭和煤电为核心主业。"
+      "reason": "公司同时处于动力煤资源端和燃煤发电端，煤炭与发电均为核心经营分部，是A股煤炭供应与火电生产一体化程度最高的代表性公司之一。([巨潮资讯网][5])"
     },
     {
       "code": "601089",
@@ -133746,13 +134443,37 @@
             "业务资料核对",
             "2025年年度报告主营业务/公司公告"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "经济作物种植与初加工",
+          "tertiary_sectors": [
+            "天然橡胶"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：公司主营天然橡胶种植、生产及初加工 ([新浪财经][7])",
+            "2025年年度报告：公司主营天然橡胶种植、生产及初加工",
+            "《海南橡胶2025年年度报告》披露，公司拥有大规模成片胶园和境内外天然橡胶种植基地，业务直接覆盖橡胶种植、管理、养护、采割；同时在全球拥有大量天然橡胶初加工厂。([新浪财经VIP][9])",
+            "《海南橡胶2025年年度报告》披露，重要子公司业务包括天然橡胶种植、加工及贸易，以及天然橡胶种植、加工、销售等。([Hirub][10])"
+          ]
         }
       ],
       "product_tags": [
         "天然橡胶",
-        "橡胶种植"
+        "橡胶种植",
+        "天然橡胶种植",
+        "割胶",
+        "天然橡胶初加工",
+        "橡胶原料",
+        "橡胶树",
+        "新鲜胶乳",
+        "杯胶",
+        "全乳胶",
+        "浓缩乳胶",
+        "标准胶"
       ],
-      "reason": "公司主营天然橡胶种植、加工和销售。"
+      "reason": "公司核心主营围绕天然橡胶资源展开，直接拥有胶园并覆盖种植、养护、采割、原料收购和初加工等上游环节，是A股天然橡胶资源端和初加工端业务关联度最高的代表性上市公司。"
     },
     {
       "code": "601121",
@@ -134307,6 +135028,19 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告主营业务/公司公告"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "有色金属资源开发",
+          "tertiary_sectors": [
+            "铜矿资源及铜产品"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《西部矿业股份有限公司2025年年度报告摘要》披露，公司属于大型有色金属矿业企业，持续经营铜、铅、锌、钼等矿产资源开发业务。([巨潮资讯网][9])",
+            "公司公开年报资料披露，玉龙铜矿是核心铜资源资产，2024年公司矿产铜17.75万吨，其中玉龙铜业生产矿产铜15.91万吨，同时经营铜冶炼业务。([巨潮资讯网][10])",
+            "《西部矿业股份有限公司2026年半年度报告》继续披露公司拥有矿产品铜及冶炼铜生产业务，铜产业属于持续经营的核心有色金属板块。([巨潮资讯网][11])"
+          ]
         }
       ],
       "product_tags": [
@@ -134316,9 +135050,14 @@
         "铜精矿",
         "锌精矿",
         "电解铜",
-        "多金属矿产开发"
+        "多金属矿产开发",
+        "玉龙铜矿",
+        "矿产铜",
+        "铜矿采选",
+        "阴极铜",
+        "铜冶炼"
       ],
-      "reason": "公司核心资源包括铜、铅锌等有色金属矿产及冶炼，并经营铁矿采选业务。"
+      "reason": "公司核心主营为有色金属矿产资源开发，玉龙铜矿是国内大型铜矿之一，铜矿采选及铜冶炼均具备实际规模，铜资源业务是公司主要利润来源之一。"
     },
     {
       "code": "601169",
@@ -134927,14 +135666,30 @@
             "2025年年度报告主营业务/公司公告"
           ],
           "verification_note": "煤炭开采洗选和销售为主营。"
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "煤炭供应",
+            "火力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《陕西煤业股份有限公司2025年年度报告摘要》披露，公司主营业务为煤炭、电力的生产和销售以及生产服务，煤炭产品主要用于电力、化工及冶金等行业，并明确煤电一体化产业联动经营模式是公司的经营模式之一。([上海证券报][7])"
+          ]
         }
       ],
       "product_tags": [
         "动力煤",
         "煤炭开采",
-        "煤炭洗选"
+        "煤炭洗选",
+        "商品煤",
+        "煤炭销售",
+        "电力生产",
+        "煤电一体化"
       ],
-      "reason": "公司以煤炭开采销售为核心，并配套洗选、运输和销售体系。"
+      "reason": "煤炭生产销售属于公司核心主营，同时公司拥有直接电力生产业务并实施煤电一体化运营，因此同时覆盖火电上游燃料供应和发电环节。([上海证券报][7])"
     },
     {
       "code": "601226",
@@ -136410,7 +137165,7 @@
     },
     {
       "code": "601595",
-      "name": "XD上海电",
+      "name": "上海电影",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -137171,10 +137926,37 @@
           "source_refs": [
             "2025年年度报告主营业务/公司公告"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "水利防灾与输水设备",
+          "tertiary_sectors": [
+            "水利工程建设"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：公司主营业务覆盖水利水电等工程建设领域 ([新浪财经][18])",
+            "《中国电力建设股份有限公司2025年年度报告》披露，工程承包与勘察设计为公司核心主业，公司将水资源与环境作为主要业务领域之一，2025年相关新签合同1117.87亿元，重点布局国家水网、重大引调水、流域治理、灾后恢复重建及应急管理等项目。([巨潮资讯网][1])"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司以水利水电、能源电力和基础设施工程设计施工为核心，并持有运营部分风光新能源资产；目录无水电工程建设三级项，因此主要映射基础设施与工程咨询。"
+      "product_tags": [
+        "水利水电工程",
+        "水资源工程",
+        "防洪工程",
+        "水网建设",
+        "工程设计施工",
+        "国家水网",
+        "重大引调水",
+        "水利工程",
+        "水资源配置",
+        "流域治理",
+        "水环境治理",
+        "灾后恢复重建",
+        "水利勘察设计",
+        "水利EPC"
+      ],
+      "reason": "公司是大型综合工程建设央企，水利、水务及水环境属于长期主要业务板块，拥有规划、设计、施工及运营全产业链能力，能够直接参与国家水网、调水、流域治理和防灾重建工程；但能源电力等业务规模同样庞大，因此给予0.80关联度。"
     },
     {
       "code": "601677",
@@ -137410,7 +138192,7 @@
     {
       "code": "601698",
       "name": "中国卫通",
-      "primary_sector": "商业航天",
+      "primary_sector": "通信设备",
       "classifications": [
         {
           "primary_sector": "通信设备",
@@ -138941,7 +139723,7 @@
     },
     {
       "code": "601898",
-      "name": "XD中煤能",
+      "name": "中煤能源",
       "primary_sector": "煤炭",
       "classifications": [
         {
@@ -138991,14 +139773,34 @@
           "source_refs": [
             "2025年年度报告主营业务/公司公告"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "煤炭供应",
+            "火力发电"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "中煤能源公司官网主营业务资料披露，公司业务包括煤炭生产与贸易、电力、煤化工和煤矿装备，其中煤炭板块布局山西、内蒙古、陕西、新疆等大型煤炭基地，电力板块发展煤电一体化坑口电厂。([中国煤炭能源][9])",
+            "2026年度公开跟踪评级资料依据公司年报披露，截至2025年底公司在产及在建矿井煤炭产能1.74亿吨/年，2025年商品煤销售量25580万吨，并持续推进坑口电厂及煤电联营。([上海证券交易所][10])"
+          ]
         }
       ],
       "product_tags": [
         "煤炭",
         "煤化工",
-        "煤电"
+        "煤电",
+        "动力煤",
+        "商品煤",
+        "煤炭开采",
+        "煤炭贸易",
+        "坑口电厂",
+        "煤电联营",
+        "燃煤发电"
       ],
-      "reason": "公司以煤炭开采为核心，并形成洗选贸易、煤化工和煤电一体化业务。"
+      "reason": "公司拥有大规模煤炭生产和销售业务，并直接布局坑口煤电项目，但上市公司同时拥有煤化工、煤机装备等重要业务，因此对该二级主线评为直接核心产业关联而非单一业务高度集中。([中国煤炭能源][9])"
     },
     {
       "code": "601899",
@@ -139051,14 +139853,39 @@
           "source_refs": [
             "2025年年度报告主营业务/公司公告"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "有色金属资源开发",
+          "tertiary_sectors": [
+            "铜矿资源及铜产品"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：公司主营全球铜、金、锂、锌等金属矿产资源勘查开发，拥有大量铜资源 ([上海证券报][20])",
+            "《紫金矿业集团股份有限公司2025年年度报告摘要》披露，公司拥有巨龙铜矿、塞尔维亚紫金铜业、卡莫阿铜矿等大型铜资源资产，巨龙铜矿二期建成后年产铜能力达到30至35万吨，并持续推进全球铜资源开发。([巨潮资讯网][2])",
+            "公司2025年度公开经营资料将铜列为主营金属品种之一，并单列铜资源量及矿产铜产量，是公司核心矿产业务之一。([巨潮资讯网][3])"
+          ]
         }
       ],
       "product_tags": [
         "黄金",
         "铜",
-        "锌"
+        "锌",
+        "铜矿资源",
+        "铜矿采选",
+        "铜产品",
+        "海外矿产资源",
+        "金属矿产开发",
+        "铜矿",
+        "矿产铜",
+        "铜精矿",
+        "巨龙铜矿",
+        "卡莫阿铜矿",
+        "塞尔维亚铜矿",
+        "海外铜资源"
       ],
-      "reason": "公司为全球化多金属矿业企业，黄金与铜为核心，并持续经营锂、锌等能源和基本金属资源。"
+      "reason": "公司是全球大型金属矿业企业，铜与黄金共同构成核心资源板块，拥有多个世界级铜矿项目并持续扩张铜矿产能，铜矿开采和资源开发对公司利润具有重要贡献。"
     },
     {
       "code": "601900",
@@ -139533,10 +140360,27 @@
           "source_refs": [
             "2025年年度报告主营业务/公司公告"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "农业种业",
+          "tertiary_sectors": [
+            "农作物种子"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "用户提供的公司业务说明（2026-09-08）",
+            "财富号：https://caifuhao.eastmoney.com/news/20260819095857798320730"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司形成稻麦种植、种子、农资、大米和食用油加工销售的农业全产业链。"
+      "product_tags": [
+        "水稻种子",
+        "小麦种子",
+        "农作物良种",
+        "种子繁育"
+      ],
+      "reason": "公司农业产业链覆盖种业和规模化种植，具备水稻、小麦等农作物良种繁育及种子业务，属于农作物种业产业链的延伸型上市公司。"
     },
     {
       "code": "601956",
@@ -139942,7 +140786,7 @@
     },
     {
       "code": "601991",
-      "name": "XD大唐发",
+      "name": "大唐发电",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -140016,6 +140860,18 @@
           "source_refs": [
             "2025年年度报告主营业务/公司公告"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "能源电力生产",
+          "tertiary_sectors": [
+            "火力发电",
+            "水力发电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《大唐国际发电股份有限公司2025年年度报告》披露，公司总装机容量86192.081兆瓦，其中火电装机58613.38兆瓦、水电装机9204.73兆瓦；2025年火电发电量2228.9441亿千瓦时、水电发电量355.2262亿千瓦时。"
+          ]
         }
       ],
       "product_tags": [
@@ -140024,9 +140880,14 @@
         "风力发电",
         "光伏发电",
         "供热",
-        "煤炭资源"
+        "煤炭资源",
+        "燃煤发电",
+        "燃气发电",
+        "火电",
+        "水电站",
+        "电力生产"
       ],
-      "reason": "公司以火电为主，同时经营水电、风电、光伏、供热并拥有部分煤炭资源，形成综合电源结构。"
+      "reason": "公司为大型独立发电上市公司，火电是最大电源板块，同时拥有较大规模水电资产，两类电源均属于长期实际运营业务。"
     },
     {
       "code": "601992",
@@ -140272,7 +141133,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -142277,7 +143138,7 @@
     {
       "code": "603056",
       "name": "德邦股份",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -143144,7 +144005,7 @@
     },
     {
       "code": "603083",
-      "name": "剑桥科技",
+      "name": "XD剑桥科",
       "primary_sector": "AIDC基础设施",
       "classifications": [
         {
@@ -144192,7 +145053,7 @@
     {
       "code": "603117",
       "name": "万林物流",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -145249,7 +146110,7 @@
     {
       "code": "603162",
       "name": "海通发展",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -145323,7 +146184,7 @@
     },
     {
       "code": "603165",
-      "name": "荣晟环保",
+      "name": "XD荣晟环",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -147907,7 +148768,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -151273,8 +152134,15 @@
           ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营氟制冷剂、氟化氢等氟化工产品，覆盖基础氟化工及含氟材料。"
+      "product_tags": [
+        "HFC制冷剂",
+        "HCFC制冷剂",
+        "R410A",
+        "R404A",
+        "R407C",
+        "无水氟化氢"
+      ],
+      "reason": "公司主营氟制冷剂及相关氟化工产品，制冷剂直接服务于空调、冰箱、汽车热管理等制冷设备。"
     },
     {
       "code": "603380",
@@ -151903,7 +152771,7 @@
     },
     {
       "code": "603406",
-      "name": "XD天富龙",
+      "name": "天富龙",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -152266,7 +153134,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人"
           ],
@@ -152393,7 +153261,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -153198,7 +154066,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -154103,7 +154971,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -154706,6 +155574,17 @@
           "source_refs": [
             "historical assignment: relevance pending business review"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "水利防灾与输水设备",
+          "tertiary_sectors": [
+            "输水排水管道"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "《北京韩建河山管业股份有限公司2025年年度报告摘要》明确PCCP为公司传统主营业务核心，产品广泛应用于重大引调水、农业输水、城市引供水、大型排水和压力排污工程，并曾服务南水北调、引黄入晋、鄂北水资源配置、引江济淮等大型工程。"
+          ]
         }
       ],
       "product_tags": [
@@ -154714,9 +155593,16 @@
         "城市输水管道",
         "水利工程管材",
         "市政排水构件",
-        "管网工程服务"
+        "管网工程服务",
+        "PCCP",
+        "大口径混凝土管",
+        "引调水管道",
+        "农业输水",
+        "城市供水",
+        "排水管道",
+        "压力排污管"
       ],
-      "reason": "公司主营预应力钢筒混凝土管等预制管材，主要用于输水、水利及市政工程；水处理运营并非主营，原水务设备归属删除。"
+      "reason": "PCCP是公司长期传统核心业务，公司产品直接进入国家重大引调水、城市供水及排水工程产业链，具有较强水利管网属性，但上市公司当前业务结构并非仅有PCCP单一产品，因此给予0.80关联度。"
     },
     {
       "code": "603617",
@@ -157129,7 +158015,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -157369,7 +158255,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -158574,7 +159460,7 @@
     {
       "code": "603813",
       "name": "原尚股份",
-      "primary_sector": "消费",
+      "primary_sector": "交通运输",
       "classifications": [
         {
           "primary_sector": "交通运输",
@@ -158824,7 +159710,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -159882,7 +160768,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -162089,6 +162975,17 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公告/主营业务资料"
           ]
+        },
+        {
+          "primary_sector": "厄尔尼诺影响",
+          "secondary_sector": "有色金属资源开发",
+          "tertiary_sectors": [
+            "铜矿资源及铜产品"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "《洛阳钼业2025年度报告》披露，公司在刚果（金）运营TFM和KFM两座世界级铜钴矿，铜资源量约3358万吨，具备70万吨以上年产铜能力，2025年铜产量74.11万吨，铜业务营业收入550.96亿元。([巨潮资讯网][4])"
+          ]
         }
       ],
       "product_tags": [
@@ -162098,9 +162995,15 @@
         "铌矿",
         "磷矿",
         "多金属矿山运营",
-        "有色金属贸易"
+        "有色金属贸易",
+        "铜矿",
+        "矿产铜",
+        "铜钴矿",
+        "TFM铜钴矿",
+        "KFM铜钴矿",
+        "刚果金铜资源"
       ],
-      "reason": "全球布局铜、钴、钼、钨、铌和磷等矿产资源，多个资源板块均为核心经营业务。"
+      "reason": "公司铜矿资源开发已经成为核心主营板块，在刚果（金）拥有两座世界级铜钴矿山，矿产铜产量和资源储备均处于全球大型矿企前列，对全球铜矿供给变化具有较高经营敏感度。"
     },
     {
       "code": "603995",
@@ -163900,7 +164803,7 @@
       "classifications": [
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服",
             "AIGC图文与视频"
@@ -165556,7 +166459,7 @@
     },
     {
       "code": "605389",
-      "name": "长龄液压",
+      "name": "XD长龄液",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -165642,7 +166545,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -167444,7 +168347,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -168793,7 +169696,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频"
           ],
@@ -177202,7 +178105,7 @@
         },
         {
           "primary_sector": "AI应用",
-          "secondary_sector": "AI内容与营销",
+          "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI营销与客服"
           ],
@@ -183976,7 +184879,7 @@
     {
       "code": "688651",
       "name": "盛邦安全",
-      "primary_sector": "计算机软件",
+      "primary_sector": "通信设备",
       "classifications": [
         {
           "primary_sector": "通信设备",
@@ -187456,7 +188359,7 @@
     },
     {
       "code": "688835",
-      "name": "C高凯",
+      "name": "高凯技术",
       "primary_sector": "半导体",
       "classifications": [
         {
