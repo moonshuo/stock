@@ -16,7 +16,7 @@ const STOCK_MAP_PATH = path.join(process.cwd(), "data", "stock_sector_map.json")
 // A historical response is reusable only while the classification and every
 // scoring rule that produced it are unchanged.  Bump this when a new rule is
 // introduced; source/config mtimes cover ordinary strategy edits automatically.
-const RESPONSE_CACHE_VERSION = 16;
+const RESPONSE_CACHE_VERSION = 17;
 const STRATEGY_DEPENDENCIES = [
   TAXONOMY_PATH,
   STOCK_MAP_PATH,

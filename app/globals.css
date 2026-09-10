@@ -271,7 +271,20 @@ body.resizing-sidebar { cursor: col-resize; user-select: none; }
 .primary-core-score em { color: #84928b; font-size: 10px; font-style: normal; }
 .primary-core-card-action { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 3px; color: #426355; font-size: 11px; font-weight: 600; }
 .modal.primary-core-modal { width: min(940px, calc(100vw - 32px)); max-height: min(80vh, 820px); overflow: auto; }
+.modal.tertiary-history-modal { width: min(1120px, calc(100vw - 32px)); max-height: min(86vh, 920px); overflow: auto; }
+.tertiary-calendar-link { margin: 2px 0 0; justify-self: start; }
+.tertiary-history-list { display: grid; gap: 18px; margin-top: 20px; }
+.tertiary-history-item { padding-top: 16px; border-top: 1px solid #dfe7e2; }
+.tertiary-history-item header h3 { margin: 0; color: #314f43; font-size: 15px; }.tertiary-history-item header small { display: block; margin-top: 4px; color: #718078; font: 600 11px "DM Mono", monospace; }
 .primary-core-modal h2 { margin: 0 0 5px; color: #263d34; font-size: 22px; }
+.tertiary-history-picker { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 20px; }
+.tertiary-history-picker button { display: grid; gap: 3px; min-width: 118px; padding: 9px 11px; border: 1px solid #d4dcd8; border-radius: 8px; background: #fbfcfa; color: #496258; text-align: left; }
+.tertiary-history-picker button:hover { border-color: #9fb5aa; background: #f5f9f6; }
+.tertiary-history-picker button.active { border-color: #52796b; background: #eaf3ed; color: #274d3f; }
+.tertiary-history-picker strong { font-size: 12px; }.tertiary-history-picker small { color: #718078; font: 600 10px "DM Mono", monospace; }
+.primary-core-secondary { grid-template-columns: 1fr; gap: 8px; padding: 14px 0; }
+.primary-core-secondary-heading { grid-template-columns: minmax(180px, 1fr) auto auto; }
+.primary-core-secondary .mainline-core-modules { grid-template-columns: repeat(2, minmax(180px, 1fr)); max-width: 520px; }
 .primary-core-secondary-list { display: grid; gap: 0; margin-top: 20px; border-top: 1px solid #dfe7e2; }
 .primary-core-secondary { display: grid; grid-template-columns: minmax(240px, 360px) minmax(0, 1fr); gap: 20px; padding: 17px 0; border-bottom: 1px solid #dfe7e2; }
 .primary-core-secondary h3 { margin: 3px 0 0; color: #314f43; font-size: 15px; line-height: 1.5; }
@@ -303,7 +316,10 @@ body.resizing-sidebar { cursor: col-resize; user-select: none; }
 .primary-cycle-error { margin: 10px 0 0; color: #9a4135; font-size: 11px; line-height: 1.5; }
 .secondary-stage-reason { display: none; position: absolute; z-index: 2; top: 32px; left: 0; width: min(360px, 70vw); padding: 9px 10px; border: 1px solid #c8ddd0; border-radius: 7px; background: #fff; color: #496258; box-shadow: 0 10px 24px rgba(24, 62, 53, .14); font-size: 11px; line-height: 1.6; }
 .secondary-stage-tag.startup:hover + .secondary-stage-reason, .secondary-stage-tag.startup:focus + .secondary-stage-reason { display: block; }
-.primary-core-secondary .mainline-core-modules { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
+.primary-core-secondary { grid-template-columns: 1fr; gap: 8px; padding: 14px 0; }
+.primary-core-secondary-heading { display: flex; min-width: 0; align-items: center; gap: 14px; }
+.primary-core-secondary-heading h3 { flex: 1 1 auto; min-width: 150px; }
+.primary-core-secondary .mainline-core-modules { display: grid; flex: 0 0 auto; grid-template-columns: repeat(2, max-content); max-width: none; column-gap: 14px; }
 .primary-core-secondary .capacity-core.collapsible { min-width: 0; margin-top: 0; padding-top: 0; border-top: 0; }
 .primary-core-secondary .capacity-core.collapsible + .capacity-core.collapsible { padding-left: 18px; border-left: 1px solid #e1e8e4; }
 .mainline-rank { font: 700 13px "DM Mono"; color: #7a8882; padding-top: 3px; }
@@ -925,7 +941,9 @@ button.primary { background: var(--green); border-color: var(--green); color: #f
   .primary-core-list { grid-template-columns: 1fr; }
   .primary-core-secondary { grid-template-columns: 1fr; gap: 10px; }
   .score-breakdown-items { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .primary-core-secondary .mainline-core-modules { grid-template-columns: 1fr; }
+  .primary-core-secondary-heading { flex-wrap: wrap; gap: 10px; }
+  .primary-core-secondary-heading h3 { flex-basis: 100%; }
+  .primary-core-secondary .mainline-core-modules { flex-basis: 100%; grid-template-columns: 1fr; }
   .primary-core-secondary .capacity-core.collapsible + .capacity-core.collapsible { padding-top: 12px; padding-left: 0; border-top: 1px solid #e1e8e4; border-left: 0; }
   .mainline-history-modal-days { grid-template-columns: 1fr; } .trade-plan-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }.trade-plan-row { grid-template-columns: 1fr; gap: 6px; }
 }

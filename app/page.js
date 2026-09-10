@@ -21,6 +21,7 @@ import { stockBoardLabel } from "./lib/stockBoard";
 import { countVisibleNoteCharacters } from "./lib/noteMetrics";
 import { canonicalNoteCaretOffset, visibleNoteCaretOffset } from "./lib/noteCaret";
 import { buildScoreHistoryChart, scoreHistoryLineSegments } from "./lib/scoreHistoryChart";
+import { sortByMarketChange } from "./lib/marketChangeSorting";
 import { selectTradeMainlines, TRADE_MAINLINE_LIMIT } from "../lib/trade-mainline-selection";
 import { relevanceAdjustedAverageChange } from "../lib/relevance-adjusted-return";
 
@@ -688,8 +689,29 @@ export default function Home() {
     [indexes.primarySectorIndex, visibleSectors]
   );
   const primary = visibleSectors.find((sector) => sector.name === selectedPrimary) || visibleSectors[0] || (!collection ? taxonomy.sectors[0] : null);
-  const secondary = primary?.secondary_sectors?.find((item) => item.name === selectedSecondary) || primary?.secondary_sectors?.[0];
+  const rankedSecondarySectors = useMemo(() => sortByMarketChange(
+    primary?.secondary_sectors || [],
+    (item) => averageChange(
+      indexList(indexes.secondarySectorIndex, `${primary.name}|${item.name}`),
+      quotes,
+      { primary: primary.name, secondary: item.name }
+    )
+  ), [indexes.secondarySectorIndex, primary, quotes]);
+  const secondary = rankedSecondarySectors.find((item) => item.name === selectedSecondary) || rankedSecondarySectors[0];
   const secondaryStocks = primary && secondary ? indexList(indexes.secondarySectorIndex, `${primary.name}|${secondary.name}`) : [];
+  const rankedTertiarySectors = useMemo(() => {
+    const pkByName = new Map((systemMainline?.tertiary_themes || [])
+      .filter((item) => item.primary === primary?.name && item.secondary === secondary?.name)
+      .map((item) => [item.name, item]));
+    return (secondary?.tertiary_sectors || []).map((name, index) => ({ name, index, result: pkByName.get(name) })).sort((left, right) => {
+      const leftScore = Number(left.result?.mainline_rank_score);
+      const rightScore = Number(right.result?.mainline_rank_score);
+      if (Number.isFinite(leftScore) && Number.isFinite(rightScore)) return rightScore - leftScore || left.result.rank - right.result.rank || left.index - right.index;
+      if (Number.isFinite(leftScore)) return -1;
+      if (Number.isFinite(rightScore)) return 1;
+      return left.index - right.index;
+    }).map((item) => item.name);
+  }, [primary?.name, secondary, systemMainline?.tertiary_themes]);
   const visibleStocks = useMemo(() => {
     if (!primary || !secondary) return [];
     let stocks;
@@ -708,7 +730,8 @@ export default function Home() {
     } else {
       stocks = filterTradableStocks(indexList(indexes.tertiarySectorIndex, `${primary.name}|${secondary.name}|${selectedTertiary}`), quotes);
     }
-    return limitUpFilter.records ? stocks.filter((stock) => limitUpFilter.records[stock.code]) : stocks;
+    const filteredStocks = limitUpFilter.records ? stocks.filter((stock) => limitUpFilter.records[stock.code]) : stocks;
+    return sortByMarketChange(filteredStocks, (stock) => quotes[stock.code]?.changePct);
   }, [indexes, limitUpFilter.records, primary, query, secondary, secondaryStocks, selectedTertiary, stockMap.stocks, quotes]);
 
   const scanSelectedTertiaryLimitUps = async () => {
@@ -2337,13 +2360,14 @@ export default function Home() {
     if (!activeMarketResearchBatch.length) setPendingMarketResearchBatch(currentMarketResearchBatch);
     const batchId = marketResearchBatchId(currentMarketResearchBatch);
     const taskDescription = {
-      classify_and_score: "当前没有长期产业分类：必须给出应归属的一级、二级、三级路径，并逐条给出二级主线关联度。",
-      score_only: "已有分类，但关联度缺失或待复核：保留/必要时修正分类，并逐条给出关联度。",
-      confirm: "已有分类和关联度：请逐条核验；除确认或修正现有归属外，还必须检查整个现有目录，补充所有业务相关的其他二级主线归属、关联度及依据。",
+      classify_and_score: "当前没有长期产业分类：必须给出应归属的一级、二级、三级路径；每一条 classifications 必须给出基于主营业务证据的 relevance_score 和 source_refs。",
+      score_only: "已有分类，但关联度缺失或待复核：保留或必要时修正分类；每一条 classifications 必须给出基于主营业务证据的 relevance_score 和 source_refs。",
+      confirm: "已有分类和关联度：请逐条核验；除确认或修正现有归属外，还必须检查整个现有目录，补充所有业务相关的其他二级主线归属、关联度及依据。每一条 classifications 都必须保留或补齐 relevance_score 和 source_refs。",
     };
     const prompt = [
       "你是 A 股产业链分类研究员。请核验下方 100 只全市场股票。关联度是股票对每条二级主线的业务关联度，不是行情热度。",
       "关联度标准：1.00=主营/核心业务；0.80=直接业务或核心产品；0.60=明确产业链或产品关联；0.40=布局/间接关联；0.20=弱概念关联。一个股票属于多个二级主线时，必须逐条独立判断。",
+      "输出完整性（强制）：只要 classifications 非空，其中每一条都必须包含 relevance_score 和 source_refs。relevance_score 必须是 0 到 1 的数值，且应由 source_refs 所列年报主营业务、公司公告或其他公开业务资料支撑；不得省略、填 null、照抄示例的 0.8，或为同一股票的不同二级主线机械复用分数。缺少证据时应删除该归属，而不是保留无分数的分类。",
       "对 task=classify_and_score：补全分类和关联度；对 task=score_only：补全或校准关联度；对 task=confirm：先确认或修正已有信息，再逐一比对现有目录中的其他二级主线，补充应新增的归属。返回的 classifications 必须是该股票全部确认归属的完整集合，包含保留、修正和新增项；不能只返回原有归属或仅返回新增项。每只股票都必须返回，不能省略。",
       "只能使用下方现有目录；确实无法归入时，将 classifications 返回为空数组，并在 reason 说明原因，不得编造目录。",
       `batch_id: ${batchId}`,
@@ -2429,7 +2453,7 @@ export default function Home() {
       "5. 优先复用下方“当前已有目录”中的二级、三级标题。名称相同或仅是产品规格、应用场景、客户、终端不同的方向必须归入既有标题，不得拆出近义新目录；例如已有“存储芯片”时，不要另建“消费存储芯片”“车规存储芯片”等三级，细分信息写入 product_tags。只有产业环节确实不同、且现有标题无法覆盖时才可新增。",
       "6. 股票代码必须为6位数字。",
       `7. 本次仅研究「${primaryName}」：不得新增、返回或归入任何其他一级主线。股票可同时属于本一级下多个二级和三级目录，但每条 classifications 的 primary_sector 必须固定为「${primaryName}」。`,
-       "8. 每一条 classifications 必须同时给出 relevance_score（0 至 1，表示该股票对该二级主线的业务关联度，而非市场热度）：1.00=主营/核心业务，0.80=直接业务或核心产品，0.60=明确产业链或产品关联，0.40=布局/间接关联，0.20=弱概念关联。股票属于多个二级主线时，必须逐条独立判断，不能复用同一分数。",
+       "8. 输出完整性（强制）：每一条 classifications 必须同时给出 relevance_score 和 source_refs。relevance_score 必须是 0 至 1 的数值，表示该股票对该二级主线的业务关联度，而非市场热度；1.00=主营/核心业务，0.80=直接业务或核心产品，0.60=明确产业链或产品关联，0.40=布局/间接关联，0.20=弱概念关联。评分必须由 source_refs 所列年报主营业务、公司公告或其他公开业务资料支撑；不得省略、填 null、照抄下方示例的 0.8，或为不同二级主线机械复用分数。缺少证据时不得保留该归属。",
        `当前已有目录（优先原样复用）：\n${JSON.stringify(primary?.secondary_sectors || [], null, 2)}`,
       "请只返回严格 JSON，不要 Markdown，不要解释文字。格式如下：",
       JSON.stringify({
@@ -2485,6 +2509,8 @@ export default function Home() {
     notify(`已复制「${primary.name}」目录整理 JSON 询问`);
   };
 
+  const relevanceScoreRequirement = "关联度输出（强制）：每一条 classifications 必须同时给出 relevance_score 和 source_refs。relevance_score 必须是 0 至 1 的数值，表示股票对该二级主线的业务关联度而非市场热度；1.00=主营/核心业务，0.80=直接业务或核心产品，0.60=明确产业链或产品关联，0.40=布局/间接关联，0.20=弱概念关联。评分必须由 source_refs 所列年报主营业务、公司公告或其他公开业务资料支撑；不得省略、填 null、照抄示例的 0.8，或为不同二级主线机械复用分数。缺少证据时不得保留该归属。";
+
   const copySecondaryPrompt = async () => {
     if (!primary) return;
     const existingDirectory = primary.secondary_sectors.map((item) => ({
@@ -2494,10 +2520,11 @@ export default function Home() {
     const prompt = [
       `请为一级主线「${primary.name}」补全代表 A 股股票。以下二级、三级目录已由我预先设定：必须原样保留这些名称，并为每个三级方向补充应归属的股票；如确有缺漏，可追加新的目录，但不要更名或删除既有目录。`,
       `股票代码必须为 6 位数字。本次仅补全「${primary.name}」，不得返回其他一级主线；同一股票可归入本一级下多个二级和三级目录，每条 classifications 的 primary_sector 都必须是「${primary.name}」。请只返回严格 JSON：`,
+      relevanceScoreRequirement,
       JSON.stringify({
         primary_sector: primary.name,
         secondary_sectors: existingDirectory,
-        stocks: [{ code: "000000", name: "股票名称", primary_sector: primary.name, classifications: [{ primary_sector: primary.name, secondary_sector: "已有二级名称", tertiary_sectors: ["已有三级名称"] }], product_tags: ["产品标签"], reason: "长期产业归属依据" }]
+        stocks: [{ code: "000000", name: "股票名称", primary_sector: primary.name, classifications: [{ primary_sector: primary.name, secondary_sector: "已有二级名称", tertiary_sectors: ["已有三级名称"], relevance_score: 0.8, source_refs: ["年报主营业务/公司公告"] }], product_tags: ["产品标签"], reason: "长期产业归属依据" }]
       }, null, 2)
     ].join("\n");
     await navigator.clipboard.writeText(prompt);
@@ -2511,10 +2538,11 @@ export default function Home() {
       `请为「${primary.name}」一级主线下的二级主线「${secondary.name}」补全代表 A 股股票。以下三级标题已由我预先设定：必须原样保留，并将股票归入这些三级标题；如确有缺漏，可追加新的三级，但不要更名或删除既有三级。`,
       "如需新增三级，必须按 A 股市场的产业链、板块联动和可形成独立行情的题材来命名；不要依据科研教材、学科门类或纯技术分类创建目录。",
       `股票代码必须为 6 位数字。本次仅补全「${primary.name} / ${secondary.name}」，不得返回其他一级或二级目录；同一股票可归入该二级下多个三级方向，每条 classifications 的 primary_sector 都必须是「${primary.name}」。请只返回严格 JSON：`,
+      relevanceScoreRequirement,
       JSON.stringify({
         primary_sector: primary.name,
         secondary_sectors: [{ name: secondary.name, tertiary_sectors: existingTertiaries }],
-        stocks: [{ code: "000000", name: "股票名称", primary_sector: primary.name, classifications: [{ primary_sector: primary.name, secondary_sector: secondary.name, tertiary_sectors: ["已有三级名称"] }], product_tags: ["产品标签"], reason: "长期产业归属依据" }]
+        stocks: [{ code: "000000", name: "股票名称", primary_sector: primary.name, classifications: [{ primary_sector: primary.name, secondary_sector: secondary.name, tertiary_sectors: ["已有三级名称"], relevance_score: 0.8, source_refs: ["年报主营业务/公司公告"] }], product_tags: ["产品标签"], reason: "长期产业归属依据" }]
       }, null, 2)
     ].join("\n");
     await navigator.clipboard.writeText(prompt);
@@ -2526,9 +2554,10 @@ export default function Home() {
     const prompt = [
       `请列出「${primary.name} / ${secondary.name} / ${selectedTertiary}」应包含的代表 A 股股票及长期归属依据。本次仅返回该三级方向的归属，不得新增或返回其他一级、二级、三级目录。请只返回严格 JSON：`,
       "判断归属时以 A 股市场的产业链和板块行情逻辑为准，不要使用科研教材或学科门类式的分类标准。",
+      relevanceScoreRequirement,
       JSON.stringify({
         primary_sector: primary.name,
-        stocks: [{ code: "000000", name: "股票名称", primary_sector: primary.name, classifications: [{ primary_sector: primary.name, secondary_sector: secondary.name, tertiary_sectors: [selectedTertiary] }], product_tags: ["产品标签"], reason: "长期产业归属依据" }]
+        stocks: [{ code: "000000", name: "股票名称", primary_sector: primary.name, classifications: [{ primary_sector: primary.name, secondary_sector: secondary.name, tertiary_sectors: [selectedTertiary], relevance_score: 0.8, source_refs: ["年报主营业务/公司公告"] }], product_tags: ["产品标签"], reason: "长期产业归属依据" }]
       }, null, 2)
     ].join("\n");
     await navigator.clipboard.writeText(prompt);
@@ -2998,7 +3027,11 @@ export default function Home() {
                           )}
                           {openPrimaryNames.includes(sector.name) && (
                             <div className="group-tree">
-                              {(sector.secondary_sectors || []).map((item) => {
+                              {sortByMarketChange(sector.secondary_sectors || [], (item) => averageChange(
+                                indexList(indexes.secondarySectorIndex, `${sector.name}|${item.name}`),
+                                quotes,
+                                { primary: sector.name, secondary: item.name }
+                              )).map((item) => {
                                 const secondaryStocksForRow = indexList(indexes.secondarySectorIndex, `${sector.name}|${item.name}`);
                                 const secondaryAvg = averageChange(secondaryStocksForRow, quotes, { primary: sector.name, secondary: item.name });
                                 const active = sector.name === primary?.name && item.name === secondary?.name;
@@ -3046,7 +3079,7 @@ export default function Home() {
                   <>
                     <div className="side-label primary-label">浜岀骇涓荤嚎 / {primary.name}</div>
                     <div className="group-tree sidebar-subtree">
-                      {primary.secondary_sectors.map((item) => {
+                      {rankedSecondarySectors.map((item) => {
                         const stocks = indexList(indexes.secondarySectorIndex, `${primary.name}|${item.name}`);
                         const avg = averageChange(stocks, quotes, { primary: primary.name, secondary: item.name });
                         const active = item.name === secondary?.name;
@@ -3214,7 +3247,7 @@ export default function Home() {
                           <em className={marketClass(averageChange(secondaryStocks, quotes, { primary: primary.name, secondary: secondary.name }))}>{formatPct(averageChange(secondaryStocks, quotes, { primary: primary.name, secondary: secondary.name }))}</em>
                           <ChevronRight size={16} />
                         </button>
-                        {secondary.tertiary_sectors.map((name) => {
+                        {rankedTertiarySectors.map((name) => {
                           const stocks = indexList(indexes.tertiarySectorIndex, `${primary.name}|${secondary.name}|${name}`);
                           const tradableStocks = filterTradableStocks(stocks, quotes);
                           const avg = averageChange(stocks, quotes, { primary: primary.name, secondary: secondary.name, tertiary: name });
@@ -4050,7 +4083,7 @@ function SystemMainlinePanel({ result, loading, date, scan, stockUniverse = [], 
       const score = displayScore(representative);
       return <button type="button" className="primary-core-card" key={group.primary} onClick={() => setSelectedPrimary(group)}><span className="primary-core-card-copy"><strong>{group.primary}</strong><small>{secondaryCount} 个二级方向，已分析 {group.items.length} 个</small></span>{Number.isFinite(score) && <span className="primary-core-score"><small>综合分</small><b>{score.toFixed(1)}</b><em>/100</em></span>}<span className="primary-core-card-action">查看二级方向 <ChevronRight size={16} /></span></button>;
     })}</div>}
-    {selectedPrimary && <PrimaryCoreAnalysisModal group={selectedPrimary} primarySector={primarySectors.find((sector) => sector.name === selectedPrimary.primary)} date={date} capacityCoreResults={capacityCoreResults} capacityCoreLoading={capacityCoreLoading} onLoadCapacityCore={onLoadCapacityCore} leaderResults={leaderResults} leaderLoading={leaderLoading} onLoadLeader={onLoadLeader} onClose={() => setSelectedPrimary(null)} />}
+    {selectedPrimary && <PrimaryCoreAnalysisModal group={selectedPrimary} primarySector={primarySectors.find((sector) => sector.name === selectedPrimary.primary)} tertiaryThemes={result?.tertiary_themes || []} date={date} capacityCoreResults={capacityCoreResults} capacityCoreLoading={capacityCoreLoading} onLoadCapacityCore={onLoadCapacityCore} leaderResults={leaderResults} leaderLoading={leaderLoading} onLoadLeader={onLoadLeader} onClose={() => setSelectedPrimary(null)} />}
   </section>;
   /* Former cycle and trade-plan rendering below is retired and unreachable. */
   const labels = { started_theme: "已启动", mainline_candidate: "主线候选", confirmed_mainline: "确认主线", active_branch: "活跃分支", failed_emergence: "启动失效", unstarted: "未启动", candidate_mainline: "候选主线", forming_mainline: "正在形成", strong_branch: "强支线", core_stock_cluster: "核心驱动，广度不足", one_day_theme: "一日游题材", insufficient_data: "数据不足" };
@@ -4346,8 +4379,9 @@ function MainlineCoreModules({ target, capacity, leader, loadingCapacity, loadin
   </div>;
 }
 
-function PrimaryCoreAnalysisModal({ group, primarySector, date, capacityCoreResults, capacityCoreLoading, onLoadCapacityCore, leaderResults, leaderLoading, onLoadLeader, onClose }) {
+function PrimaryCoreAnalysisModal({ group, primarySector, tertiaryThemes, date, capacityCoreResults, capacityCoreLoading, onLoadCapacityCore, leaderResults, leaderLoading, onLoadLeader, onClose }) {
   const [historyItem, setHistoryItem] = useState(null);
+  const [tertiaryHistory, setTertiaryHistory] = useState(null);
   const analyzedBySecondary = new Map(group.items.map((item) => [item.name, item]));
   const secondaryNames = Array.from(new Set([
     ...group.items.map((item) => item.name),
@@ -4376,16 +4410,35 @@ function PrimaryCoreAnalysisModal({ group, primarySector, date, capacityCoreResu
             ["抗分歧修复", item?.resilience_repair_score, 20],
             ["持续活跃", item?.continuity_score, 10]
           ];
+          const tertiaryItems = tertiaryThemes.filter((tertiary) => tertiary.primary === group.primary && tertiary.secondary === secondary)
+            .sort((left, right) => left.rank - right.rank || left.name.localeCompare(right.name, "zh-CN"));
           return <article className="primary-core-secondary" key={item?.key || key}>
-            <div className="primary-core-secondary-heading"><h3>{secondary}</h3>{Number.isFinite(score) && <span className="secondary-score-trigger"><button type="button" className="secondary-score" aria-label={`查看${secondary}的综合评分结构`}>{score.toFixed(1)}</button><span className="score-breakdown" role="tooltip"><span className="score-breakdown-heading"><strong>综合评分结构</strong><span>{score.toFixed(1)}</span></span><span className="score-breakdown-items">{scoreParts.map(([label, value, weight]) => <span key={label}><span>{label}</span><b>{Number.isFinite(Number(value)) ? Number(value).toFixed(1) : "-"}</b><small>权重 {weight}%</small></span>)}</span></span></span>}<button type="button" className="secondary-cycle-link" disabled={!item?.score_history?.length} onClick={() => setHistoryItem(item)}>查看历史表现</button></div>
-            <MainlineCoreModules target={target} capacity={capacityCoreResults[key]} leader={leaderResults[key]} loadingCapacity={capacityCoreLoading[key]} loadingLeader={leaderLoading[key]} onLoadCapacityCore={onLoadCapacityCore} onLoadLeader={onLoadLeader} />
+            <div className="primary-core-secondary-heading">
+              <h3>{secondary}</h3>{Number.isFinite(score) && <span className="secondary-score-trigger"><button type="button" className="secondary-score" aria-label={`查看${secondary}的综合评分结构`}>{score.toFixed(1)}</button><span className="score-breakdown" role="tooltip"><span className="score-breakdown-heading"><strong>综合评分结构</strong><span>{score.toFixed(1)}</span></span><span className="score-breakdown-items">{scoreParts.map(([label, value, weight]) => <span key={label}><span>{label}</span><b>{Number.isFinite(Number(value)) ? Number(value).toFixed(1) : "-"}</b><small>权重 {weight}%</small></span>)}</span></span></span>}
+              <button type="button" className="secondary-cycle-link" disabled={!item?.score_history?.length} onClick={() => setHistoryItem(item)}>查看历史表现</button>
+              <button type="button" className="secondary-cycle-link" disabled={!tertiaryItems.length} onClick={() => setTertiaryHistory({ secondary, items: tertiaryItems })}>查看三级日历</button>
+              <MainlineCoreModules target={target} capacity={capacityCoreResults[key]} leader={leaderResults[key]} loadingCapacity={capacityCoreLoading[key]} loadingLeader={leaderLoading[key]} onLoadCapacityCore={onLoadCapacityCore} onLoadLeader={onLoadLeader} />
+            </div>
           </article>;
         })}
       </div>
     </div>
+    {tertiaryHistory && <TertiaryHistoryModal primary={group.primary} secondary={tertiaryHistory.secondary} items={tertiaryHistory.items} onClose={() => setTertiaryHistory(null)} />}
     {historyItem && <div className="modal-backdrop" onMouseDown={() => setHistoryItem(null)}><div className="modal cycle-timeline-modal" role="dialog" aria-modal="true" aria-labelledby="score-history-title" onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" type="button" aria-label="关闭历史表现" onClick={() => setHistoryItem(null)}><X size={18} /></button><h2 id="score-history-title">{group.primary} · {historyItem.name}</h2><ScoreHistoryCalendar item={historyItem} /></div></div>}
   </div>;
 }
+
+function TertiaryHistoryModal({ primary, secondary, items, onClose }) {
+  const [selectedKey, setSelectedKey] = useState(items[0]?.key || "");
+  const selected = items.find((item) => item.key === selectedKey) || items[0];
+  return <div className="modal-backdrop" onMouseDown={onClose}><div className="modal tertiary-history-modal" role="dialog" aria-modal="true" aria-labelledby="tertiary-history-title" onMouseDown={(event) => event.stopPropagation()}>
+    <button className="modal-close" type="button" aria-label="关闭三级历史表现" onClick={onClose}><X size={18} /></button><div className="modal-kicker">二级方向</div><h2 id="tertiary-history-title">{primary} · {secondary}</h2>
+    <p className="modal-sub">选择三级方向查看其评分日历；名次只在本二级内比较。</p>
+    <div className="tertiary-history-picker" role="tablist" aria-label="选择三级方向">{items.map((item) => <button type="button" role="tab" aria-selected={item.key === selected?.key} className={item.key === selected?.key ? "active" : ""} key={item.key} onClick={() => setSelectedKey(item.key)}><strong>{item.name}</strong><small>#{item.rank} · {Number(item.mainline_rank_score).toFixed(1)}</small></button>)}</div>
+    {selected && <section className="tertiary-history-item"><header><div><h3>{selected.name}</h3><small>同二级排名 #{selected.rank} · 综合分 {Number(selected.mainline_rank_score).toFixed(1)}</small></div></header><ScoreHistoryCalendar item={selected} /></section>}
+  </div></div>;
+}
+
 
 function ScoreHistoryChart({ history, selectedDate, onSelectDate }) {
   const chart = useMemo(() => buildScoreHistoryChart(history), [history]);

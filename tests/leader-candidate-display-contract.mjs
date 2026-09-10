@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const pageSource = await readFile(new URL("../app/page.js", import.meta.url), "utf8");
-const leaderResult = pageSource.match(/function LeaderResult\(\{ result \}\) \{([\s\S]*?)\n\}\n\nfunction MainlineHistoryModal/)?.[1] || "";
+const leaderResult = pageSource.match(/function LeaderResult\(\{ result \}\) \{([\s\S]*?)\r?\n\}\r?\n\r?\nfunction MainlineHistoryModal/)?.[1] || "";
 
 assert.ok(leaderResult, "LeaderResult component must exist");
 assert.match(leaderResult, /const \[showAll, setShowAll\] = useState\(false\)/, "leader modal must track expanded state");
