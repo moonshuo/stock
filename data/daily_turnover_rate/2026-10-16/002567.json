@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "date": "2026-10-16",
+  "code": "002567",
+  "source": "sohu_daily_kline",
+  "turnover_rate": 1.54,
+  "historical_quote": {
+    "close": 3.54,
+    "volume": 22018200,
+    "amount": 78166600
+  },
+  "fallback_failures": [
+    "tonghuashun_daily_turnover_rate: invalid JSONP response",
+    "fetch failed"
+  ],
+  "fetched_at": "2026-10-26T05:32:09.605Z"
+}

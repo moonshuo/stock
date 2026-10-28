@@ -1,0 +1,899 @@
+{
+  "new_primary_sectors": [
+    "商业航天",
+    "低空经济",
+    "计算机软件"
+  ],
+  "moved_stock_count": 12,
+  "added_classification_count": 25,
+  "kept_stock_count": 392,
+  "deleted_empty_categories": [
+    "AIDC基础设施 → 数据基础软件"
+  ],
+  "new_secondary_sectors": [
+    "商业航天 → 运载火箭",
+    "商业航天 → 卫星制造",
+    "商业航天 → 卫星互联网",
+    "商业航天 → 空天应用",
+    "低空经济 → 低空飞行器",
+    "低空经济 → 飞行器核心部件",
+    "低空经济 → 低空基础设施",
+    "低空经济 → 低空运营",
+    "计算机软件 → 基础软件",
+    "计算机软件 → 企业软件",
+    "计算机软件 → 工业软件",
+    "计算机软件 → 网络安全",
+    "计算机软件 → 云与数据软件"
+  ],
+  "new_tertiary_sectors": [
+    "商业航天 → 运载火箭 → 商业火箭整机",
+    "商业航天 → 运载火箭 → 火箭发动机",
+    "商业航天 → 运载火箭 → 火箭结构件",
+    "商业航天 → 运载火箭 → 发射与地面保障",
+    "商业航天 → 卫星制造 → 卫星平台",
+    "商业航天 → 卫星制造 → 卫星载荷",
+    "商业航天 → 卫星制造 → 卫星结构件",
+    "商业航天 → 卫星制造 → 卫星电源与太阳翼",
+    "商业航天 → 卫星互联网 → 低轨卫星通信",
+    "商业航天 → 卫星互联网 → 星间通信",
+    "商业航天 → 卫星互联网 → 卫星通信终端",
+    "商业航天 → 卫星互联网 → 地面站与测运控",
+    "商业航天 → 空天应用 → 卫星遥感",
+    "商业航天 → 空天应用 → 卫星导航",
+    "商业航天 → 空天应用 → 太空计算",
+    "商业航天 → 空天应用 → 商业卫星运营",
+    "低空经济 → 低空飞行器 → eVTOL",
+    "低空经济 → 低空飞行器 → 民用无人机",
+    "低空经济 → 低空飞行器 → 通用航空器",
+    "低空经济 → 低空飞行器 → 低空特种飞行器",
+    "低空经济 → 飞行器核心部件 → 航空电机与电驱",
+    "低空经济 → 飞行器核心部件 → 航电与飞控",
+    "低空经济 → 飞行器核心部件 → 航空电池",
+    "低空经济 → 飞行器核心部件 → 航空结构件",
+    "低空经济 → 低空基础设施 → 起降设施",
+    "低空经济 → 低空基础设施 → 低空通信",
+    "低空经济 → 低空基础设施 → 低空导航",
+    "低空经济 → 低空基础设施 → 低空监视",
+    "低空经济 → 低空运营 → 低空交通运营",
+    "低空经济 → 低空运营 → 无人机运营服务",
+    "低空经济 → 低空运营 → 低空物流",
+    "低空经济 → 低空运营 → 空域管理",
+    "计算机软件 → 基础软件 → 操作系统",
+    "计算机软件 → 基础软件 → 数据库",
+    "计算机软件 → 基础软件 → 中间件",
+    "计算机软件 → 基础软件 → 数据复制与灾备",
+    "计算机软件 → 企业软件 → ERP与企业管理软件",
+    "计算机软件 → 企业软件 → 财税软件",
+    "计算机软件 → 企业软件 → 办公软件",
+    "计算机软件 → 企业软件 → 行业管理软件",
+    "计算机软件 → 工业软件 → CAD/CAE/CAM",
+    "计算机软件 → 工业软件 → MES",
+    "计算机软件 → 工业软件 → PLM",
+    "计算机软件 → 工业软件 → 工业仿真软件",
+    "计算机软件 → 网络安全 → 网络安全软件",
+    "计算机软件 → 网络安全 → 数据安全",
+    "计算机软件 → 网络安全 → 身份认证",
+    "计算机软件 → 网络安全 → 密码安全",
+    "计算机软件 → 云与数据软件 → 云计算软件",
+    "计算机软件 → 云与数据软件 → 大数据平台",
+    "计算机软件 → 云与数据软件 → 数据管理",
+    "计算机软件 → 云与数据软件 → 数据治理"
+  ],
+  "validation_errors": [],
+  "candidate_stock_count": 411,
+  "changes": [
+    {
+      "code": "000409",
+      "name": "云鼎科技",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI工业与制造"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "企业AI软件",
+          "tertiary_sectors": [
+            "AI ERP与企业管理"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        },
+        {
+          "primary_sector": "煤炭",
+          "secondary_sector": "煤炭洗选与贸易",
+          "tertiary_sectors": [
+            "煤质检测与智能管理"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "煤炭",
+          "secondary_sector": "煤炭洗选与贸易",
+          "tertiary_sectors": [
+            "煤质检测与智能管理"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "行业管理软件"
+          ]
+        }
+      ],
+      "reason": "主营矿山与能源行业工业互联网、生产安全和经营管理软件，AI是功能能力而非核心产品定义。"
+    },
+    {
+      "code": "000503",
+      "name": "国新健康",
+      "action": "add",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI医疗"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据治理与标注"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI医疗"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据治理与标注"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "行业管理软件"
+          ]
+        }
+      ],
+      "reason": "医保基金管理、医疗数据服务和审核平台为持续行业软件业务；保留AI医疗分类。"
+    },
+    {
+      "code": "000555",
+      "name": "神州信息",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI金融"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "企业AI软件",
+          "tertiary_sectors": [
+            "AI ERP与企业管理"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据治理与标注"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        },
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "IDC运营与算力服务",
+          "tertiary_sectors": [
+            "算力租赁与云基础设施"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "IDC运营与算力服务",
+          "tertiary_sectors": [
+            "算力租赁与云基础设施"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "行业管理软件"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "基础软件",
+          "tertiary_sectors": [
+            "数据库"
+          ]
+        }
+      ],
+      "reason": "主营银行核心系统、金融云、数据治理和分布式数据库；属于金融IT软件，AI不构成其唯一产品核心。"
+    },
+    {
+      "code": "000948",
+      "name": "南天信息",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI金融"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "企业AI软件",
+          "tertiary_sectors": [
+            "AI ERP与企业管理"
+          ]
+        },
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "数据中心建设与工程",
+          "tertiary_sectors": [
+            "数据中心EPC与机电工程"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "数据中心建设与工程",
+          "tertiary_sectors": [
+            "数据中心EPC与机电工程"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "行业管理软件"
+          ]
+        }
+      ],
+      "reason": "主营银行IT、金融软件及数字化解决方案；保留数据中心集成分类，不以AI标签替代长期软件主业。"
+    },
+    {
+      "code": "601698",
+      "name": "中国卫通",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "卫星通信",
+          "tertiary_sectors": [
+            "卫星地面站与运营配套"
+          ]
+        },
+        {
+          "primary_sector": "军工装备",
+          "secondary_sector": "航天装备",
+          "tertiary_sectors": [
+            "卫星通信导航与遥感"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "卫星通信",
+          "tertiary_sectors": [
+            "卫星地面站与运营配套"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "空天应用",
+          "tertiary_sectors": [
+            "商业卫星运营"
+          ]
+        }
+      ],
+      "reason": "主营卫星通信运营、地面站和卫星互联网，属于持续商业卫星运营，而非军用航天系统。"
+    },
+    {
+      "code": "688229",
+      "name": "博睿数据",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        },
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "IDC运营与算力服务",
+          "tertiary_sectors": [
+            "数据中心运维服务"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI工业与制造"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "云与数据软件",
+          "tertiary_sectors": [
+            "数据管理"
+          ]
+        }
+      ],
+      "reason": "主营APM、可观测性和智能运维软件；不是IDC运营商或算力基础设施企业。"
+    },
+    {
+      "code": "688232",
+      "name": "新点软件",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "智慧城市与公共安全"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "企业AI软件",
+          "tertiary_sectors": [
+            "AI ERP与企业管理"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据治理与标注"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "行业管理软件"
+          ]
+        }
+      ],
+      "reason": "主营智慧政务、公共资源交易和数字建筑业务软件；AI和数据治理是产品能力。"
+    },
+    {
+      "code": "688246",
+      "name": "嘉和美康",
+      "action": "add",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI医疗"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI医疗"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "行业管理软件"
+          ]
+        }
+      ],
+      "reason": "电子病历与医疗数据平台属于医疗行业管理软件；保留AI医疗分类。"
+    },
+    {
+      "code": "688258",
+      "name": "卓易信息",
+      "action": "add",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "大模型与智能体",
+          "tertiary_sectors": [
+            "模型开发与部署平台"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "企业AI软件",
+          "tertiary_sectors": [
+            "AI编程与开发工具"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "大模型与智能体",
+          "tertiary_sectors": [
+            "模型开发与部署平台"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "企业AI软件",
+          "tertiary_sectors": [
+            "AI编程与开发工具"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "基础软件",
+          "tertiary_sectors": [
+            "操作系统"
+          ]
+        }
+      ],
+      "reason": "主营云计算基础软件和软件开发平台；AI开发工具为产品关联，基础软件分类可并存。"
+    },
+    {
+      "code": "688292",
+      "name": "浩瀚深度",
+      "action": "add",
+      "old_classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "网络安全与通信网关"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "AI安全与可信",
+          "tertiary_sectors": [
+            "AI网络安全"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "网络安全与通信网关"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "AI安全与可信",
+          "tertiary_sectors": [
+            "AI网络安全"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "网络安全",
+          "tertiary_sectors": [
+            "网络安全软件"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "云与数据软件",
+          "tertiary_sectors": [
+            "数据管理"
+          ]
+        }
+      ],
+      "reason": "主营网络流量采集、深度报文检测、网络可视化和安全管理平台。"
+    },
+    {
+      "code": "688318",
+      "name": "财富趋势",
+      "action": "add",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI金融"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI金融"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "行业管理软件"
+          ]
+        }
+      ],
+      "reason": "金融信息服务、投研和量化工具是面向金融行业的软件产品；保留AI金融数据分析分类。"
+    },
+    {
+      "code": "688365",
+      "name": "光云科技",
+      "action": "add",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "大模型与智能体",
+          "tertiary_sectors": [
+            "模型开发与部署平台"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "AI内容与营销",
+          "tertiary_sectors": [
+            "AI营销与客服"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "大模型与智能体",
+          "tertiary_sectors": [
+            "模型开发与部署平台"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "AI内容与营销",
+          "tertiary_sectors": [
+            "AI营销与客服"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "ERP与企业管理软件"
+          ]
+        }
+      ],
+      "reason": "电商客服、CRM、订单管理和营销运营SaaS是长期企业软件主业；AI客服作为重要产品线保留。"
+    },
+    {
+      "code": "688369",
+      "name": "致远互联",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "企业AI软件",
+          "tertiary_sectors": [
+            "AI ERP与企业管理"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "办公软件"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "ERP与企业管理软件"
+          ]
+        }
+      ],
+      "reason": "主营协同运营和企业管理平台；AI智能体为嵌入式能力，长期主业为企业软件。"
+    },
+    {
+      "code": "688435",
+      "name": "英方软件",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "数据基础软件",
+          "tertiary_sectors": [
+            "数据复制与灾备软件"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "基础软件",
+          "tertiary_sectors": [
+            "数据复制与灾备"
+          ]
+        }
+      ],
+      "reason": "主营数据复制、容灾、备份和迁移软件；其服务数据中心不改变软件产业属性。"
+    },
+    {
+      "code": "688479",
+      "name": "友车科技",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "企业AI软件",
+          "tertiary_sectors": [
+            "AI ERP与企业管理"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "数据与知识服务",
+          "tertiary_sectors": [
+            "数据分析与决策智能"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "智慧交通与车路协同"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "行业管理软件"
+          ]
+        }
+      ],
+      "reason": "主营汽车和工程机械行业的营销、经销商管理、售后及云平台软件。"
+    },
+    {
+      "code": "688561",
+      "name": "奇安信",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "AI安全与可信",
+          "tertiary_sectors": [
+            "AI网络安全"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "AI安全与可信",
+          "tertiary_sectors": [
+            "模型安全与治理"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "网络安全",
+          "tertiary_sectors": [
+            "网络安全软件"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "网络安全",
+          "tertiary_sectors": [
+            "数据安全"
+          ]
+        }
+      ],
+      "reason": "主营网络安全产品与服务，大模型安全是网络安全产品线延伸。"
+    },
+    {
+      "code": "688588",
+      "name": "凌志软件",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "企业AI软件",
+          "tertiary_sectors": [
+            "AI办公与协同"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "企业软件",
+          "tertiary_sectors": [
+            "办公软件"
+          ]
+        }
+      ],
+      "reason": "主营企业软件开发和数字化办公服务；AI应用开发并不改变其软件服务主业。"
+    },
+    {
+      "code": "688651",
+      "name": "盛邦安全",
+      "action": "move",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "AI安全与可信",
+          "tertiary_sectors": [
+            "AI网络安全"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "网络安全与通信网关"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "网络安全与通信网关"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "网络安全",
+          "tertiary_sectors": [
+            "网络安全软件"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "网络安全",
+          "tertiary_sectors": [
+            "数据安全"
+          ]
+        }
+      ],
+      "reason": "主营网络空间测绘、应用安全和数据安全产品；卫星互联网、低空通信仅为应用场景。"
+    },
+    {
+      "code": "688777",
+      "name": "中控技术",
+      "action": "add",
+      "old_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI工业与制造"
+          ]
+        }
+      ],
+      "new_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "AI工业与制造"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "工业软件",
+          "tertiary_sectors": [
+            "MES"
+          ]
+        },
+        {
+          "primary_sector": "计算机软件",
+          "secondary_sector": "工业软件",
+          "tertiary_sectors": [
+            "工业仿真软件"
+          ]
+        }
+      ],
+      "reason": "流程工业自动化、智能制造和工业软件平台构成持续业务；保留AI工业分类。"
+    }
+  ]
+}

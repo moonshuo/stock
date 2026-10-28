@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "date": "2026-10-23",
+  "code": "300819",
+  "source": "sohu_daily_kline",
+  "turnover_rate": 2.55,
+  "historical_quote": {
+    "close": 36.39,
+    "volume": 3434400,
+    "amount": 117112000
+  },
+  "fallback_failures": [
+    "The operation was aborted due to timeout",
+    "fetch failed"
+  ],
+  "fetched_at": "2026-10-26T06:45:27.622Z"
+}

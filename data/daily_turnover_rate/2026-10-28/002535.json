@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "date": "2026-10-28",
+  "code": "002535",
+  "source": "eastmoney_daily_kline",
+  "turnover_rate": 18.73,
+  "historical_quote": {
+    "close": 2.79,
+    "volume": 139818400,
+    "amount": 390278027.99
+  },
+  "fallback_failures": [
+    "tonghuashun_daily_turnover_rate: no turnover rate for 2026-10-28"
+  ],
+  "fetched_at": "2026-10-28T06:52:08.427Z"
+}

@@ -1,0 +1,2638 @@
+{
+  "generated_at": "2026-08-13T11:51:21.239Z",
+  "candidates": [
+    {
+      "code": "000429",
+      "name": "粤高速Ａ",
+      "matched_terms": [
+        "收费公路",
+        "高速公路运营"
+      ],
+      "current_classifications": [],
+      "recommended_classification": {
+        "primary_sector": "交通运输",
+        "secondary_sector": "公路运输",
+        "tertiary_sectors": [
+          "高速公路运营"
+        ],
+        "relevance_score": 1
+      },
+      "status": "unresolved",
+      "note": "当前不在 stock_sector_map.json。为保持本次迁移前后股票总数一致，未新增股票记录；该路径已创建，可在该股票进入分类库时直接采用。"
+    },
+    {
+      "code": "000008",
+      "name": "神州高铁",
+      "matched_terms": [
+        "轨道交通运营"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "轨道交通装备",
+          "tertiary_sectors": [
+            "轨道车辆内饰与配套"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "工业检测与技术服务",
+          "tertiary_sectors": [
+            "计量校准与检测认证"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "智慧交通与车路协同"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "000063",
+      "name": "中兴通讯",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "服务器与算力硬件",
+          "tertiary_sectors": [
+            "AI服务器",
+            "通用服务器"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "交换机与路由器"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "交换机与路由器",
+            "无线局域网设备"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "无线通信设备",
+          "tertiary_sectors": [
+            "5G基站与核心网"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "传输与承载设备",
+          "tertiary_sectors": [
+            "光传输设备"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "000880",
+      "name": "潍柴重机",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "专用机电装备",
+          "tertiary_sectors": [
+            "发动机与发电设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "000938",
+      "name": "紫光股份",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "交换机与路由器"
+          ],
+          "relevance_score": 0.7,
+          "source_refs": [
+            "业务资料核对",
+            "同花顺:算力租赁",
+            "同花顺F10:经营分析（2026-07-25复核）"
+          ],
+          "verification_note": "主营/产品资料出现数据中心或算力基础设施业务：主营业务： 提供全栈智能化的信息通信（ICT）基础设施、云与智能平台，以及数字化转型及智能化升级解决方案。 产品类型： 网络设备、服务器、存储产品、云与智能、主动安全、智能终端 产品名称： 交换机 、 路由器 、 WLAN 、 SDN 、 PON 、 智能管理 、 运维服务 、 通用计算服务器 、 人工智能计算服务器 、 关键业务计算服务器 、 边缘计算服务器 、 企业级智能全闪存存储 、 企业级智能混合闪存存储 、 分布式存储 、 数据备份与保护 、 存储网络设备 、 云操。"
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "交换机与路由器",
+            "无线局域网设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "000988",
+      "name": "华工科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "高速光模块",
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "高速光模块",
+            "光器件与光芯片"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "001212",
+      "name": "中旗新材",
+      "matched_terms": [
+        "机场",
+        "地铁"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "建材",
+          "secondary_sector": "管材与装饰材料",
+          "tertiary_sectors": [
+            "板材与装饰材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "001232",
+      "name": "嘉立创",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "通用多层PCB",
+            "FPC与HDI",
+            "高频高速材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "001267",
+      "name": "汇绿生态",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "生态环保工程",
+          "tertiary_sectors": [
+            "园林景观与生态工程"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002111",
+      "name": "威海广泰",
+      "matched_terms": [
+        "机场"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "军工装备",
+          "secondary_sector": "维修保障与后勤",
+          "tertiary_sectors": [
+            "军用地面保障设备"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002130",
+      "name": "沃尔核材",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "核电",
+          "tertiary_sectors": [
+            "核电材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002141",
+      "name": "贤丰控股",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "高频高速材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "农业",
+          "secondary_sector": "水产养殖与动保",
+          "tertiary_sectors": [
+            "动物疫苗与兽药"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "农业",
+          "secondary_sector": "饲料",
+          "tertiary_sectors": [
+            "畜禽饲料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002281",
+      "name": "光迅科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "高速光模块",
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "高速光模块",
+            "光器件与光芯片"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002296",
+      "name": "辉煌科技",
+      "matched_terms": [
+        "铁路运输"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "智慧交通与车路协同"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "轨道交通装备",
+          "tertiary_sectors": [
+            "轨道车辆内饰与配套"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "机器人",
+          "secondary_sector": "机器视觉与传感",
+          "tertiary_sectors": [
+            "工业传感器"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002331",
+      "name": "皖通科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "智慧交通与车路协同",
+            "智慧城市与公共安全"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "生态环保工程",
+          "tertiary_sectors": [
+            "环境监测与分析设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002396",
+      "name": "星网锐捷",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "交换机与路由器"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "交换机与路由器",
+            "无线局域网设备"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002475",
+      "name": "立讯精密",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "连接器",
+          "tertiary_sectors": [
+            "消费电子互连"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "消费电子",
+          "secondary_sector": "精密零部件",
+          "tertiary_sectors": [
+            "连接器与线束"
+          ],
+          "relevance_score": 0.9,
+          "source_refs": [
+            "消费电子产业链人工归类"
+          ],
+          "verification_note": "消费电子连接器与线束龙头，覆盖智能终端和可穿戴产品。"
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002542",
+      "name": "*ST中岩",
+      "matched_terms": [
+        "机场"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "房地产",
+          "secondary_sector": "建筑施工与工程总承包",
+          "tertiary_sectors": [
+            "地基处理与岩土工程",
+            "房屋建筑与市政工程"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "房地产",
+          "secondary_sector": "建筑设计与装饰工程",
+          "tertiary_sectors": [
+            "建筑设计与工程咨询"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002552",
+      "name": "宝鼎科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "高频高速材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "有色金属",
+          "secondary_sector": "黄金与贵金属",
+          "tertiary_sectors": [
+            "黄金"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002636",
+      "name": "金安国纪",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "高频高速材料"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002897",
+      "name": "意华股份",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "连接器",
+          "tertiary_sectors": [
+            "高速互连"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光纤光缆与连接"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "002990",
+      "name": "盛视科技",
+      "matched_terms": [
+        "机场"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "智慧交通与车路协同",
+            "智慧城市与公共安全"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "AI视觉与语音",
+          "tertiary_sectors": [
+            "计算机视觉应用",
+            "AIoT与边缘智能"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300252",
+      "name": "金信诺",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300270",
+      "name": "中威电子",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "AI视觉与语音",
+          "tertiary_sectors": [
+            "计算机视觉应用",
+            "AIoT与边缘智能"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "AI应用",
+          "secondary_sector": "行业AI应用",
+          "tertiary_sectors": [
+            "智慧交通与车路协同",
+            "智慧城市与公共安全"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300308",
+      "name": "中际旭创",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300394",
+      "name": "天孚通信",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光器件与光芯片"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300502",
+      "name": "新易盛",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300548",
+      "name": "长芯博创",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "高速光模块",
+            "光器件与光芯片"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300570",
+      "name": "太辰光",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光纤光缆与连接"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300620",
+      "name": "光库科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光器件与光芯片",
+            "光纤光缆与连接"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300679",
+      "name": "电连技术",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "连接器",
+          "tertiary_sectors": [
+            "高速互连"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300757",
+      "name": "罗博特科",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "光伏产业链",
+          "secondary_sector": "光伏设备",
+          "tertiary_sectors": [
+            "电池片设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "半导体",
+          "secondary_sector": "半导体设备",
+          "tertiary_sectors": [
+            "封装测试设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "300913",
+      "name": "兆龙互连",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "连接器",
+          "tertiary_sectors": [
+            "高速互连"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光纤光缆与连接"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "301165",
+      "name": "锐捷网络",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "交换机与路由器"
+          ],
+          "relevance_score": 0.7,
+          "source_refs": [
+            "业务资料核对",
+            "同花顺:数据中心(AIDC)",
+            "同花顺:东数西算(算力)",
+            "同花顺F10:经营分析（2026-07-25复核）"
+          ],
+          "verification_note": "主营/产品资料出现数据中心或算力基础设施业务：主营业务： 网络设备、网络安全产品及云桌面解决方案的研发、设计和销售。 产品类型： 网络设备、网络安全产品、云桌面整体解决方案、IT运维 产品名称： 交换机 、 路由器 、 无线产品 、 安全网关 、 下一代防火墙 、 安全态势感知 、 云桌面软件 、 云主机 、 云终端 、 IT运维 。"
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "交换机与路由器",
+            "无线局域网设备"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "301182",
+      "name": "凯旺科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "连接器",
+          "tertiary_sectors": [
+            "高速互连"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "301191",
+      "name": "菲菱科思",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "交换机与路由器"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "交换机与路由器"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "301205",
+      "name": "联特科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 0.7,
+          "source_refs": [
+            "业务资料核对",
+            "同花顺:数据中心(AIDC)",
+            "同花顺F10:经营分析（2026-07-25复核）"
+          ],
+          "verification_note": "主营/产品资料出现数据中心或算力基础设施业务：主营业务： 光通信收发模块的研发、生产和销售。 产品类型： 400G及以上光模块、400G以下光模块 产品名称： 400G及以上光模块 、 400G以下光模块 。"
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "301217",
+      "name": "铜冠铜箔",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "电子与光学材料",
+          "tertiary_sectors": [
+            "电子铜箔材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "电子电路铜箔",
+            "高频高速材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "301366",
+      "name": "一博科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "AI服务器PCB",
+            "通用多层PCB"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "消费电子",
+          "secondary_sector": "智能终端与代工",
+          "tertiary_sectors": [
+            "EMS与终端代工"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "301486",
+      "name": "致尚科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "301511",
+      "name": "德福科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "电子与光学材料",
+          "tertiary_sectors": [
+            "电子铜箔材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "电子电路铜箔",
+            "高频高速材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "301548",
+      "name": "崇德科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "机器人",
+          "secondary_sector": "精密传动与执行部件",
+          "tertiary_sectors": [
+            "精密轴承"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "风电",
+          "tertiary_sectors": [
+            "风电零部件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "专用机电装备",
+          "tertiary_sectors": [
+            "发动机与发电设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "600076",
+      "name": "康欣新材",
+      "matched_terms": [
+        "集装箱"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "碳材料与复合材料",
+          "tertiary_sectors": [
+            "高性能复合材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "农业",
+          "secondary_sector": "种植业",
+          "tertiary_sectors": [
+            "橡胶与林业"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "600105",
+      "name": "永鼎股份",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光纤光缆与连接",
+            "光器件与光芯片",
+            "高速光模块"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "电网设备",
+          "tertiary_sectors": [
+            "电线电缆"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "消费电子",
+          "secondary_sector": "精密零部件",
+          "tertiary_sectors": [
+            "连接器与线束"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "600110",
+      "name": "诺德股份",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "电子与光学材料",
+          "tertiary_sectors": [
+            "电子铜箔材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "电子电路铜箔"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "600133",
+      "name": "东湖高新",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "房地产",
+          "secondary_sector": "建筑施工与工程总承包",
+          "tertiary_sectors": [
+            "基础设施建设",
+            "房屋建筑与市政工程"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "生态环保工程",
+          "tertiary_sectors": [
+            "环保工程EPC",
+            "生态修复与水环境治理"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "房地产",
+          "secondary_sector": "房地产服务与运营",
+          "tertiary_sectors": [
+            "商业物业运营"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "600183",
+      "name": "生益科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "半导体",
+          "secondary_sector": "封装测试",
+          "tertiary_sectors": [
+            "封装材料与载板"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "高频高速材料"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "600482",
+      "name": "中国动力",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "专用机电装备",
+          "tertiary_sectors": [
+            "发动机与发电设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "军工装备",
+          "secondary_sector": "海军装备",
+          "tertiary_sectors": [
+            "舰船动力系统"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "600498",
+      "name": "烽火通信",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "服务器与算力硬件",
+          "tertiary_sectors": [
+            "通用服务器"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "交换机与路由器"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "交换机与路由器"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光纤光缆与连接"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "传输与承载设备",
+          "tertiary_sectors": [
+            "光传输设备"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "600686",
+      "name": "金龙汽车",
+      "matched_terms": [
+        "公交"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "汽车产业链",
+          "secondary_sector": "整车制造",
+          "tertiary_sectors": [
+            "商用车",
+            "新能源汽车"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "600869",
+      "name": "远东股份",
+      "matched_terms": [
+        "机场"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "电网设备",
+          "tertiary_sectors": [
+            "电线电缆"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "锂电产业链",
+          "secondary_sector": "动力电池",
+          "tertiary_sectors": [
+            "动力电池",
+            "储能锂电池"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "储能",
+          "secondary_sector": "储能电池",
+          "tertiary_sectors": [
+            "储能锂电池"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "601002",
+      "name": "晋亿实业",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "钢铁",
+          "secondary_sector": "钢材加工与贸易",
+          "tertiary_sectors": [
+            "不锈钢紧固件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "轨道交通装备",
+          "tertiary_sectors": [
+            "轨道交通紧固件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "601101",
+      "name": "昊华能源",
+      "matched_terms": [
+        "铁路运输"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "煤炭",
+          "secondary_sector": "煤炭资源开采",
+          "tertiary_sectors": [
+            "动力煤"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "煤炭",
+          "secondary_sector": "煤炭洗选与贸易",
+          "tertiary_sectors": [
+            "煤炭洗选",
+            "煤炭贸易与物流"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "603083",
+      "name": "剑桥科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "603088",
+      "name": "宁波精达",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "金属成形机床",
+          "tertiary_sectors": [
+            "锻压设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "603124",
+      "name": "江南新材",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "电子与光学材料",
+          "tertiary_sectors": [
+            "电子化学材料",
+            "导热与电磁材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "高频高速材料",
+            "封装基板"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "有色金属",
+          "secondary_sector": "铜",
+          "tertiary_sectors": [
+            "铜加工"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "603175",
+      "name": "超颖电子",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "AI服务器PCB",
+            "汽车PCB",
+            "FPC与HDI",
+            "高频高速材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "603186",
+      "name": "华正新材",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "AI服务器PCB"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "603256",
+      "name": "宏和科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "高频高速材料",
+            "封装基板"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "建材",
+          "secondary_sector": "玻纤与复合材料",
+          "tertiary_sectors": [
+            "玻纤制品"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "603355",
+      "name": "莱克电气",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "消费",
+          "secondary_sector": "家电",
+          "tertiary_sectors": [
+            "清洁电器"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "智能控制与驱动部件",
+          "tertiary_sectors": [
+            "智能控制器与无刷电机"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "603703",
+      "name": "盛洋科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "无线通信设备",
+          "tertiary_sectors": [
+            "通信天线与射频器件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "卫星通信",
+          "tertiary_sectors": [
+            "卫星通信载荷与终端"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "连接器",
+          "tertiary_sectors": [
+            "高速互连"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "603803",
+      "name": "瑞斯康达",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "传输与承载设备",
+          "tertiary_sectors": [
+            "光传输设备",
+            "通信网络运维设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "交换机与路由器"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "交换机与路由器"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "605277",
+      "name": "新亚电子",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "连接器",
+          "tertiary_sectors": [
+            "高速互连"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "605286",
+      "name": "同力天启",
+      "matched_terms": [
+        "集装箱"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "储能",
+          "secondary_sector": "储能系统",
+          "tertiary_sectors": [
+            "大型储能系统"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "储能",
+          "secondary_sector": "储能运营",
+          "tertiary_sectors": [
+            "储能电站运营"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "风电",
+          "tertiary_sectors": [
+            "风电运营"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "专用机电装备",
+          "tertiary_sectors": [
+            "电梯与楼宇运输设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "605589",
+      "name": "圣泉集团",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "化工",
+          "secondary_sector": "高分子材料",
+          "tertiary_sectors": [
+            "高性能树脂"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "前沿新材料",
+          "tertiary_sectors": [
+            "石墨烯与二维材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "电子与光学材料",
+          "tertiary_sectors": [
+            "电子化学材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "半导体",
+          "secondary_sector": "封装测试",
+          "tertiary_sectors": [
+            "封装材料与载板"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "605598",
+      "name": "上海港湾",
+      "matched_terms": [
+        "机场"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "房地产",
+          "secondary_sector": "建筑施工与工程总承包",
+          "tertiary_sectors": [
+            "地基处理与岩土工程",
+            "国际工程承包"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "房地产",
+          "secondary_sector": "建筑设计与装饰工程",
+          "tertiary_sectors": [
+            "建筑设计与工程咨询"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688008",
+      "name": "澜起科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "半导体",
+          "secondary_sector": "芯片设计",
+          "tertiary_sectors": [
+            "通用与专用芯片"
+          ],
+          "relevance_score": 0.7,
+          "source_refs": [
+            "业务资料核对",
+            "东方财富:半导体概念",
+            "同花顺:芯片概念",
+            "同花顺:存储芯片",
+            "同花顺F10:经营分析（2026-07-25复核）"
+          ],
+          "verification_note": "按产品标签及主营说明重分类：通用与专用芯片。"
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688020",
+      "name": "方邦股份",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "电子与光学材料",
+          "tertiary_sectors": [
+            "导热与电磁材料",
+            "电子铜箔材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "FPC与HDI",
+            "高频高速材料",
+            "电子电路铜箔"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688167",
+      "name": "炬光科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "光学元件",
+          "tertiary_sectors": [
+            "精密光学元件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光器件与光芯片"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688205",
+      "name": "德科立",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "高速光模块"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "高速光模块",
+            "光器件与光芯片"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688313",
+      "name": "仕佳光子",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "高速光模块",
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光器件与光芯片"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688519",
+      "name": "南亚新材",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "半导体",
+          "secondary_sector": "封装测试",
+          "tertiary_sectors": [
+            "封装材料与载板"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "高频高速材料",
+            "封装基板"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688610",
+      "name": "埃科光电",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "机器人",
+          "secondary_sector": "机器视觉与传感",
+          "tertiary_sectors": [
+            "机器视觉"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "传感器",
+          "tertiary_sectors": [
+            "视觉传感器"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "光学元件",
+          "tertiary_sectors": [
+            "机器视觉光学"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "historical assignment: relevance pending business review"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688629",
+      "name": "华丰科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688655",
+      "name": "迅捷兴",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "PCB",
+          "tertiary_sectors": [
+            "AI服务器PCB"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688668",
+      "name": "鼎通科技",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    },
+    {
+      "code": "688800",
+      "name": "瑞可达",
+      "matched_terms": [
+        "高速"
+      ],
+      "current_classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "连接器",
+          "tertiary_sectors": [
+            "汽车连接器",
+            "高速互连",
+            "消费电子互连"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "业务资料核对"
+          ]
+        }
+      ],
+      "status": "unresolved",
+      "note": "仅按交通关键词筛出，未在本次目录迁移中自动改变分类；需人工确认是否属于运输运营而非装备制造或制造企业自有物流。"
+    }
+  ]
+}

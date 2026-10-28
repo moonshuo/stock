@@ -1,0 +1,214 @@
+{
+  "plan_version": "1.0-draft",
+  "status": "analysis_only_pending_confirmation",
+  "source_snapshot": {
+    "stock_sector_map": "data/stock_sector_map.json",
+    "stock_count": 2322,
+    "automotive_parts_classification_occurrences": 83,
+    "vehicle_and_mobility_classification_occurrences": 15,
+    "legacy_stock_library_scan": {
+      "automotive_parts_or_vehicle_mobility_groups": 0,
+      "automotive_pcb_records": ["301132 满坤科技", "605258 协和电子", "300814 中富电路"],
+      "automotive_sensor_records": ["300507 苏奥传感"],
+      "finding": "stock-library.json 未包含待迁移的汽车零部件或汽车整车与出行分组；其中的汽车PCB/汽车传感器属于应保留的通用上游历史展示分类。"
+    },
+    "scope_note": "本文件是迁移设计，不对任何现有 JSON 进行写回；affected_stocks 以代码和名称标识现有分类记录。"
+  },
+  "catalog_registration": {
+    "primary_sector": "汽车产业链",
+    "secondary_sectors": {
+      "整车制造": ["乘用车", "商用车", "新能源汽车"],
+      "动力与传动": ["发动机与传统动力部件", "变速器与传动系统", "电驱动系统", "混合动力系统", "汽车尾气后处理部件"],
+      "底盘与车身": ["汽车转向系统", "汽车制动系统", "汽车底盘与减震部件", "汽车车身结构件", "汽车轻量化零部件"],
+      "汽车电子与智能化": ["汽车电子控制部件", "车载传感器", "车载通信模组", "汽车连接器", "智能座舱与车载显示", "ADAS与自动驾驶", "汽车照明系统"],
+      "热管理": ["新能源汽车热管理部件", "汽车空调与热管理系统"],
+      "安全与内饰": ["汽车安全系统部件", "汽车内饰材料"],
+      "轮胎与橡胶部件": ["汽车轮胎", "汽车橡胶密封件"],
+      "汽车后市场与补能": ["汽车销售与后市场", "新能源汽车充换电"]
+    },
+    "deduplication_rule": "上述名称为唯一登记名称；执行时不得创建近义二、三级标题。"
+  },
+  "migration_entries": [
+    {
+      "old_path": {"primary_sector": "消费", "secondary_sector": "汽车整车与出行", "tertiary_sector": "乘用车与商用车"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "整车制造", "tertiary_sector": ["乘用车", "商用车"]},
+      "action": "split",
+      "reason": "按整车实际产品拆分；同时生产新能源车型者另保留/增加新能源汽车。",
+      "affected_stocks": ["002418 康盛股份", "600303 曙光股份", "600418 江淮汽车", "600166 福田汽车"]
+    },
+    {
+      "old_path": {"primary_sector": "消费", "secondary_sector": "汽车整车与出行", "tertiary_sector": "新能源汽车"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "整车制造", "tertiary_sector": "新能源汽车"},
+      "action": "move",
+      "reason": "整车制造业务，迁入新一级主线；不删除其零部件、房地产等其他分类。",
+      "affected_stocks": ["000981 山子高科", "600733 北汽蓝谷", "600166 福田汽车"]
+    },
+    {
+      "old_path": {"primary_sector": "消费", "secondary_sector": "汽车整车与出行", "tertiary_sector": "汽车销售与后市场"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "汽车后市场与补能", "tertiary_sector": "汽车销售与后市场"},
+      "action": "move",
+      "reason": "明确批准迁入；珠宝等非汽车分类保留。",
+      "affected_stocks": ["000025 特 力Ａ"]
+    },
+    {
+      "old_path": {"primary_sector": "消费", "secondary_sector": "汽车整车与出行", "tertiary_sector": "新能源汽车充换电"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "汽车后市场与补能", "tertiary_sector": "新能源汽车充换电"},
+      "action": "move",
+      "reason": "明确批准迁入；电网设备、储能和线缆等原分类必须保留。",
+      "affected_stocks": ["002350 北京科锐", "002519 银河电子", "002927 泰永长征", "300141 和顺电气", "300510 金冠股份", "301310 鑫宏业"]
+    },
+    {
+      "old_path": {"primary_sector": "消费", "secondary_sector": "汽车整车与出行", "tertiary_sector": "城市交通运营"},
+      "new_path": {"primary_sector": "消费", "secondary_sector": "汽车整车与出行", "tertiary_sector": "城市交通运营"},
+      "action": "keep",
+      "reason": "属于交通运营服务，不属于汽车制造产业链。",
+      "affected_stocks": ["002627 三峡旅游", "600611 大众交通"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "新能源汽车热管理部件"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "热管理", "tertiary_sector": "新能源汽车热管理部件"},
+      "action": "move",
+      "reason": "直接出售汽车热管理部件或系统。铝材/橡胶/液冷等既有分类保留。",
+      "affected_stocks": ["301667 纳百川", "600619 海立股份", "301181 标榜股份", "605255 天普股份", "300828 锐新科技"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车轻量化零部件"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "底盘与车身", "tertiary_sector": "汽车轻量化零部件"},
+      "action": "split",
+      "reason": "仅迁移直接交付汽车车轮、压铸/冲压结构件、电池壳体等的记录；纯铝材及多行业材料供应商进入人工复核。",
+      "affected_stocks": ["001311 多利科技", "002328 新朋股份", "002488 金固股份", "002510 天汽模", "002725 跃岭股份", "603305 旭升集团", "603348 文灿股份", "603358 华达科技", "605133 嵘泰股份", "600480 凌云股份", "603211 晋拓股份", "603271 永杰新材", "002501 *ST利源", "002547 *ST春兴", "002686 亿利达", "002824 和胜股份", "002988 豪美新材", "600219 南山铝业", "601677 明泰铝业", "601702 华峰铝业", "603917 合力科技"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车电子控制部件"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "汽车电子与智能化", "tertiary_sector": "汽车电子控制部件"},
+      "action": "split",
+      "reason": "控制器、仪表、开关和车身电子迁入；智能座舱、ADAS、照明按更精确目录拆分；仅有汽车应用的通用电子件不迁。",
+      "affected_stocks": ["000901 航天科技", "001266 宏英智能", "002213 大为股份", "002519 银河电子", "603023 威帝股份", "603376 大明电子", "688667 菱电电控", "002766 索菱股份", "002813 路畅科技", "002920 德赛西威", "601799 星宇股份", "603303 得邦照明", "300643 万通智控", "300968 格林精密"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车转向系统"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "底盘与车身", "tertiary_sector": "汽车转向系统"},
+      "action": "move",
+      "reason": "转向器、EPS及转向执行器属于直接汽车系统。",
+      "affected_stocks": ["002703 浙江世宝"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车车身结构件"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "底盘与车身", "tertiary_sector": "汽车车身结构件"},
+      "action": "move",
+      "reason": "直接交付白车身、覆盖件、冲压/焊接总成等汽车结构件。",
+      "affected_stocks": ["001278 一彬科技", "001311 多利科技", "002048 宁波华翔", "002328 新朋股份", "002420 毅昌科技", "002510 天汽模", "301529 福赛科技", "600480 凌云股份", "603352 至信股份", "605128 上海沿浦", "605228 神通科技"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车内饰材料"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "安全与内饰", "tertiary_sector": "汽车内饰材料"},
+      "action": "split",
+      "reason": "汽车专用座舱件、内饰革和内饰材料迁入；以鞋服、建材或通用高分子材料为主者需确认汽车收入与产品专用性。",
+      "affected_stocks": ["001260 坤泰股份", "001278 一彬科技", "002048 宁波华翔", "301529 福赛科技", "603179 新泉股份", "605068 明新旭腾", "605128 上海沿浦", "605228 神通科技", "002674 兴业科技", "603725 天安新材"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车动力与传动部件"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "动力与传动", "tertiary_sector": ["发动机与传统动力部件", "变速器与传动系统", "电驱动系统", "混合动力系统"]},
+      "action": "split",
+      "reason": "执行时按主营产品逐股拆分，不能继续使用笼统旧三级目录。",
+      "affected_stocks": ["002196 方正电机", "002283 天润工业", "002448 中原内配", "002664 信质集团", "002708 光洋股份", "003033 征和工业", "300652 雷迪克", "600178 东安动力", "600303 曙光股份", "600698 湖南天雁", "603040 新坐标", "603121 华培动力", "603161 科华控股", "603178 圣龙股份", "603331 百达精工", "603758 秦安股份", "603926 铁流股份", "603950 长源东谷", "605100 华丰股份", "688667 菱电电控", "000981 山子高科"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车安全系统部件"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "安全与内饰", "tertiary_sector": "汽车安全系统部件"},
+      "action": "move",
+      "reason": "安全气囊、碰撞防护和车辆安全监测等直接汽车安全功能部件迁入。",
+      "affected_stocks": ["000981 山子高科", "002363 隆基机械", "600480 凌云股份", "603037 凯众股份", "603306 华懋科技"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车底盘与减震部件"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "底盘与车身", "tertiary_sector": "汽车底盘与减震部件"},
+      "action": "move",
+      "reason": "悬架、制动盘/毂、轮毂轴承等为汽车专用底盘总成或部件。",
+      "affected_stocks": ["002283 天润工业", "002363 隆基机械", "002708 光洋股份", "002921 联诚精密", "603037 凯众股份"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车尾气后处理部件"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "动力与传动", "tertiary_sector": "汽车尾气后处理部件"},
+      "action": "move",
+      "reason": "尾气净化系统、催化转化器及排放控制器属于专用汽车系统。",
+      "affected_stocks": ["300816 艾可蓝", "603121 华培动力"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车照明系统"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "汽车电子与智能化", "tertiary_sector": "汽车照明系统"},
+      "action": "move",
+      "reason": "汽车前照灯、组合灯及配套控制器属于整车专用照明系统。LED器件原分类保留。",
+      "affected_stocks": ["601799 星宇股份", "603303 得邦照明"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车轮胎"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "轮胎与橡胶部件", "tertiary_sector": "汽车轮胎"},
+      "action": "move",
+      "reason": "乘用车和商用车轮胎为直接汽车专用产品；工程机械轮胎、橡胶材料分类保留。",
+      "affected_stocks": ["000599 青岛双星"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "增压器与动力机械部件"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "动力与传动", "tertiary_sector": "发动机与传统动力部件"},
+      "action": "manual_review",
+      "reason": "主营汽车涡轮增压器者迁入；工业发动机、工程机械、船舶或发电机组为主者不能强制迁入。",
+      "affected_stocks": ["600698 湖南天雁（建议迁入）", "603121 华培动力（建议迁入并保留传感器）", "603161 科华控股（建议迁入）", "600841 动力新科（需核验汽车收入占比）"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "汽车零部件", "tertiary_sector": "汽车橡胶密封件（现无对应旧三级目录）"},
+      "new_path": {"primary_sector": "汽车产业链", "secondary_sector": "轮胎与橡胶部件", "tertiary_sector": "汽车橡胶密封件"},
+      "action": "add_cross_classification",
+      "reason": "朗博科技的O型圈、油封及汽车空调密封件为直接汽车专用零部件；保留化工/橡胶原分类。",
+      "affected_stocks": ["603655 朗博科技"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "PCB", "tertiary_sector": "汽车PCB"},
+      "new_path": {"primary_sector": "电子元器件", "secondary_sector": "PCB", "tertiary_sector": "汽车PCB"},
+      "action": "keep",
+      "reason": "PCB属于通用电子上游；不得仅因汽车客户增加汽车产业链分类。",
+      "affected_stocks": ["002815 崇达技术", "300814 中富电路", "301132 满坤科技", "301282 金禄电子", "603175 超颖电子", "603459 红板科技", "603920 世运电路", "605258 协和电子"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "传感器", "tertiary_sector": "汽车传感器"},
+      "new_path": {"primary_sector": "电子元器件", "secondary_sector": "传感器", "tertiary_sector": "汽车传感器"},
+      "action": "keep",
+      "reason": "传感器仍属于电子元器件；仅TPMS等完整汽车安全模块可另行增加交叉分类。",
+      "affected_stocks": ["300507 苏奥传感", "300552 万集科技", "300643 万通智控（可增加汽车安全系统部件）", "603121 华培动力（可增加发动机与传统动力部件）", "603286 日盈电子（需核验）", "688665 四方光电"]
+    },
+    {
+      "old_path": {"primary_sector": "电子元器件", "secondary_sector": "连接器", "tertiary_sector": "汽车连接器"},
+      "new_path": {"primary_sector": "电子元器件", "secondary_sector": "连接器", "tertiary_sector": "汽车连接器"},
+      "action": "keep",
+      "reason": "连接器作为通用电子元件保留原产业属性；线束/开关模块等完整汽车电器总成另作逐股复核。",
+      "affected_stocks": ["603286 日盈电子（需核验）", "603328 依顿电子", "603376 大明电子（可增加汽车电子控制部件）", "603633 徕木股份", "605333 沪光股份", "688800 瑞可达"]
+    },
+    {
+      "old_path": {"primary_sector": "通信设备", "secondary_sector": "通信模组", "tertiary_sector": "车载通信模组"},
+      "new_path": {"primary_sector": "通信设备", "secondary_sector": "通信模组", "tertiary_sector": "车载通信模组"},
+      "action": "keep",
+      "reason": "通信模组是通用上游；仅直接销售智能座舱、车载终端、商用车视频监控等专用系统者可增加交叉分类。",
+      "affected_stocks": ["002355 兴民智通（可增加轻量化零部件/智能座舱）", "002766 索菱股份（可增加智能座舱与车载显示）", "002813 路畅科技（可增加智能座舱与车载显示）", "002869 金溢科技", "002881 美格智能", "002920 德赛西威（可增加智能座舱与车载显示、ADAS与自动驾驶）", "002970 锐明技术（需核验ADAS属性）", "300552 万集科技", "300638 广和通", "603023 威帝股份（可增加汽车电子控制部件）", "603236 移远通信"]
+    },
+    {
+      "old_path": {"primary_sector": "锂电产业链", "secondary_sector": "动力电池", "tertiary_sector": "动力电池"},
+      "new_path": {"primary_sector": "锂电产业链", "secondary_sector": "动力电池", "tertiary_sector": "动力电池"},
+      "action": "keep",
+      "reason": "动力电池首先属于锂电产业链；仅本身制造整车的公司可另增整车制造分类。",
+      "affected_stocks": ["002074 国轩高科", "002594 比亚迪（可增加新能源汽车整车）", "300530 领湃科技", "300750 宁德时代", "600869 远东股份"]
+    },
+    {
+      "old_path": {"primary_sector": ["有色金属", "化工", "新材料", "半导体", "锂电产业链"], "secondary_sector": "同时含汽车零部件旧分类的记录"},
+      "new_path": {"primary_sector": "原一级行业", "secondary_sector": "原目录", "tertiary_sector": "原目录"},
+      "action": "manual_review",
+      "reason": "这些公司是本次防止机械迁移的高风险集合；仅在现有备注能证明直接出售汽车专用系统/总成/零件时增加汽车交叉分类，否则删除旧汽车零部件分类并保留上游分类。",
+      "affected_stocks": ["002501 *ST利源", "002547 *ST春兴", "002674 兴业科技", "002686 亿利达", "002824 和胜股份", "002988 豪美新材", "002993 奥海科技", "003033 征和工业", "300828 锐新科技", "300968 格林精密", "600219 南山铝业", "601677 明泰铝业", "601702 华峰铝业", "603271 永杰新材", "603725 天安新材", "603917 合力科技", "600841 动力新科"]
+    }
+  ],
+  "execution_controls": [
+    "以公司直接销售产品和长期主营为准；题材、订单、合作和涨停原因只写入 dynamic_themes.reason。",
+    "每次 move/split 仅替换旧汽车路径；保留其他有效 classifications、股票代码和股票总数。",
+    "primary_sector 仅在长期主营和核心收入来源确有变化时调整；不得由 product_tags 推导出三级目录。",
+    "执行前为每只 manual_review 股票补充主营产品和收入证据，再决定增加、保留或移除汽车交叉分类。"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "date": "2026-10-20",
+  "code": "600288",
+  "source": "sohu_daily_kline",
+  "turnover_rate": 1.99,
+  "historical_quote": {
+    "close": 10.03,
+    "volume": 8680700,
+    "amount": 86698700.00000001
+  },
+  "fallback_failures": [
+    "tonghuashun_daily_turnover_rate: invalid JSONP response",
+    "fetch failed"
+  ],
+  "fetched_at": "2026-10-26T05:32:51.331Z"
+}

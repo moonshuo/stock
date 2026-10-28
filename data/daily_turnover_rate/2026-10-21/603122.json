@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "date": "2026-10-21",
+  "code": "603122",
+  "source": "tonghuashun_daily_kline",
+  "turnover_rate": 7.472,
+  "historical_quote": {
+    "close": 11.89,
+    "volume": 29740900,
+    "amount": 357620800
+  },
+  "fallback_failures": [],
+  "fetched_at": "2026-10-22T03:55:26.692Z"
+}

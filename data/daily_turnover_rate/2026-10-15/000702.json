@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "date": "2026-10-15",
+  "code": "000702",
+  "source": "eastmoney_daily_kline",
+  "turnover_rate": 1.85,
+  "historical_quote": {
+    "close": 5.5,
+    "volume": 6415500,
+    "amount": 35653313.5
+  },
+  "fallback_failures": [
+    "tonghuashun_daily_turnover_rate: invalid JSONP response"
+  ],
+  "fetched_at": "2026-10-26T05:30:23.841Z"
+}
