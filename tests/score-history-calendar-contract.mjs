@@ -28,6 +28,7 @@ const theme = {
     metrics: {
       up_count: 21,
       limit_up_count: 1,
+      limit_up_stocks: [{ code: "300061", name: "传智教育", change_pct: 19.99, internal: "discard" }],
       high_gain_count: 2,
       large_loss_count: 1,
       theme_relative_return: -.64,
@@ -51,4 +52,5 @@ assert.deepEqual(entry.metrics.previous_leaders, [{ code: "300061", name: "传�
 assert.equal(entry.metrics.profit_effect.frontline_positive_rate, .75);
 assert.equal(entry.metrics.profit_effect.raw_pool_rows, undefined);
 assert.equal(entry.metrics.raw_daily_rows, undefined);
+assert.deepEqual(entry.metrics.limit_up_stocks, [{ code: "300061", name: "传智教育", change_pct: 19.99 }]);
 console.log("score-history calendar response contract passed");

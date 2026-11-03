@@ -20,6 +20,8 @@ import { isUsableMarketResearchBatch, marketResearchBatchId, pendingMarketResear
 import { isMainBoardStock, stockBoardLabel } from "./lib/stockBoard";
 import { countVisibleNoteCharacters } from "./lib/noteMetrics";
 import { canonicalNoteCaretOffset, visibleNoteCaretOffset } from "./lib/noteCaret";
+import { normalizeNumericHeadingPrefixes } from "./lib/noteHeadingSyntax";
+import { buildPrimaryLimitUpCalendar } from "./lib/primaryLimitUpCalendar";
 import { buildScoreHistoryChart, scoreHistoryLineSegments } from "./lib/scoreHistoryChart";
 import { sortByMarketChange } from "./lib/marketChangeSorting";
 import { rankTertiaryThemesByScore } from "./lib/tertiaryRanking";
@@ -193,9 +195,12 @@ function MarketEnvironmentModal({ environment, environmentStatus, turnoverHistor
 
 function TertiaryRankingModal({ result, date, mode, onClose }) {
   const [historyItem, setHistoryItem] = useState(null);
+  const [confirmedOnly, setConfirmedOnly] = useState(false);
   const daily = mode === "daily";
   const scoreField = daily ? "daily_strength_score" : "mainline_rank_score";
-  const rows = useMemo(() => rankTertiaryThemesByScore(result?.tertiary_themes || [], scoreField), [result?.tertiary_themes, scoreField]);
+  const rankedRows = useMemo(() => rankTertiaryThemesByScore(result?.tertiary_themes || [], scoreField), [result?.tertiary_themes, scoreField]);
+  const confirmedCount = rankedRows.filter((item) => item.mainline_confirmation?.confirmed).length;
+  const rows = confirmedOnly ? rankedRows.filter((item) => item.mainline_confirmation?.confirmed) : rankedRows;
   useEffect(() => {
     const closeOnEscape = (event) => {
       if (event.key === "Escape") {
@@ -209,11 +214,12 @@ function TertiaryRankingModal({ result, date, mode, onClose }) {
   const title = daily ? "三级板块当日排序" : "三级板块综合排序";
   const description = daily
     ? "按目标交易日的当日强度分排序，不混入此前累计或后续行情。"
-    : "按原有三级方向综合评分排序；评分公式、样本门槛和历史窗口均未改变。";
+    : "按原有三级方向综合评分排序；通过“首日涨停强势—次日中军反馈—首板高开溢价”复核的方向会标为确认主线，标识不改变综合评分或名次。";
   return <div className="modal-backdrop tertiary-ranking-backdrop" onMouseDown={onClose}>
     <section className="modal tertiary-ranking-modal" role="dialog" aria-modal="true" aria-labelledby="tertiary-ranking-title" onMouseDown={(event) => event.stopPropagation()}>
       <button className="modal-close" type="button" aria-label={`关闭${title}`} onClick={onClose}><X size={18} /></button>
       <header><div><h2 id="tertiary-ranking-title">{title}</h2><p>{date} · {description}</p></div><b>{rows.length} 个方向</b></header>
+      {!daily && <div className="tertiary-ranking-actions"><span>{confirmedOnly ? `已筛出 ${confirmedCount} 个确认主线` : `共 ${confirmedCount} 个确认主线`}</span><button type="button" className={confirmedOnly ? "active" : ""} aria-pressed={confirmedOnly} disabled={!confirmedCount} onClick={() => setConfirmedOnly((value) => !value)}>{confirmedOnly ? "显示全部方向" : "只看确认主线"}</button></div>}
       {rows.length ? <div className="tertiary-ranking-table" role="table" aria-label={title}>
         <div className="tertiary-ranking-table-head" role="row"><span>排名</span><span>三级板块</span><span>{daily ? "当日评分" : "综合评分"}</span><span>{daily ? "当日相对强度" : "近3日强度"}</span></div>
         {rows.map((item, index) => {
@@ -221,10 +227,10 @@ function TertiaryRankingModal({ result, date, mode, onClose }) {
           const related = daily ? Number(item.score_history?.at(-1)?.metrics?.theme_relative_return) : Number(item.recent_strength_score);
           const memberCount = Number(item.breadth?.member_count);
           const historyAvailable = Array.isArray(item.score_history) && item.score_history.length > 0;
-          return <div className="tertiary-ranking-row" role="row" key={`${item.primary}-${item.secondary}-${item.name}`}><span className="tertiary-ranking-rank">{index + 1}</span><span><button type="button" className="tertiary-ranking-history-link" disabled={!historyAvailable} onClick={() => setHistoryItem(item)} aria-label={`查看${item.primary}、${item.secondary}、${item.name}的三级板块评分日历`}><strong>{item.name}</strong><small>{item.primary} · {item.secondary}{Number.isFinite(memberCount) ? ` · ${memberCount} 只股票` : ""}</small></button></span><b>{score.toFixed(1)}<small>/100</small></b><em className={marketClass(related)}>{Number.isFinite(related) ? (daily ? formatPct(related) : `${related.toFixed(1)} 分`) : "数据不足"}</em></div>;
+          return <div className="tertiary-ranking-row" role="row" key={`${item.primary}-${item.secondary}-${item.name}`}><span className="tertiary-ranking-rank">{index + 1}</span><span><button type="button" className="tertiary-ranking-history-link" disabled={!historyAvailable} onClick={() => setHistoryItem(item)} aria-label={`查看${item.primary}、${item.secondary}、${item.name}的三级板块评分日历`}><strong>{item.name}{item.mainline_confirmation?.confirmed && <mark className="mainline-confirmation-badge">确认主线</mark>}</strong><small>{item.primary} · {item.secondary}{Number.isFinite(memberCount) ? ` · ${memberCount} 只股票` : ""}</small></button></span><b>{score.toFixed(1)}<small>/100</small></b><em className={marketClass(related)}>{Number.isFinite(related) ? (daily ? formatPct(related) : `${related.toFixed(1)} 分`) : "数据不足"}</em></div>;
         })}
       </div> : <p className="tertiary-ranking-empty">当前没有可参与评分的三级板块。请先完成“读取当日涨幅”和主线评分。</p>}
-      <p className="tertiary-ranking-footnote">展示全部已完成评分的三级方向；同分时按产业路径稳定排序，不会改变原始评分或同二级内的正式名次。</p>
+      <p className="tertiary-ranking-footnote">确认主线须满足：首日相对市场走强且板块内有新增首板；次日市值中军无负反馈，且首板股多数高开。缺少涨停或任何确认数据时不授予标识。展示与名次不受该标识影响。</p>
     </section>
     {historyItem && <div className="modal-backdrop tertiary-ranking-calendar-backdrop" onMouseDown={(event) => { event.stopPropagation(); setHistoryItem(null); }}><section className="modal cycle-timeline-modal tertiary-ranking-calendar-modal" role="dialog" aria-modal="true" aria-labelledby="tertiary-ranking-calendar-title" onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" type="button" aria-label="关闭三级板块评分日历" onClick={() => setHistoryItem(null)}><X size={18} /></button><h2 id="tertiary-ranking-calendar-title">{historyItem.primary} · {historyItem.secondary} · {historyItem.name}</h2><p className="modal-sub">历史综合评分与每日强度；仅使用所选交易日及此前的行情。</p><ScoreHistoryCalendar item={historyItem} /></section></div>}
   </div>;
@@ -3456,6 +3462,7 @@ export default function Home() {
               marketResearchPendingCount={marketResearchPendingCount}
               marketResearchBatchCount={currentMarketResearchBatch.length}
               stockUniverse={stockUniverse}
+              stockMap={stockMap}
               systemMainline={systemMainline}
               mainlineReplayScores={mainlineReplayScores}
               systemMainlineLoading={systemMainlineLoading}
@@ -3882,8 +3889,10 @@ function NotesPanel({ notes, taxonomy, stocks, selectedNoteId, status, loadError
     const editor = event.currentTarget;
     const caretOffset = rawCaretOffset(editor);
     const rawContent = editorContentValue(editor).replace(/\r/g, "");
-    const nextContent = replaceStockCodes(rawContent);
-    const nextCaret = visibleNoteCaretOffset(replaceStockCodes(rawContent.slice(0, caretOffset)));
+    const normalizedContent = normalizeNumericHeadingPrefixes(rawContent);
+    const nextContent = replaceStockCodes(normalizedContent);
+    const normalizedBeforeCaret = normalizeNumericHeadingPrefixes(rawContent.slice(0, caretOffset));
+    const nextCaret = visibleNoteCaretOffset(replaceStockCodes(normalizedBeforeCaret));
     if (nextContent !== rawContent) {
       editor.innerHTML = noteEditorHtml(nextContent);
       restoreCaret(editor, nextCaret);
@@ -3894,7 +3903,7 @@ function NotesPanel({ notes, taxonomy, stocks, selectedNoteId, status, loadError
 
   const normalizeNoteEditor = (event) => {
     const editor = event.currentTarget;
-    const nextContent = replaceStockCodes(editorContentValue(editor).replace(/\r/g, ""));
+    const nextContent = replaceStockCodes(normalizeNumericHeadingPrefixes(editorContentValue(editor).replace(/\r/g, "")));
     if (editor.innerHTML !== noteEditorHtml(nextContent)) editor.innerHTML = noteEditorHtml(nextContent);
   };
 
@@ -3950,32 +3959,6 @@ function NotesPanel({ notes, taxonomy, stocks, selectedNoteId, status, loadError
     return canonicalNoteCaretOffset(rows, rowIndex, range.toString().replace(/\u00a0/g, " ").length, headingLevel);
   };
 
-  const formatNoteHeading = (event) => {
-    if (!(event.ctrlKey || event.metaKey) || event.altKey || !/^[1-6]$/.test(event.key)) return;
-    event.preventDefault();
-    const editor = event.currentTarget;
-    const rawContent = editorContentValue(editor).replace(/\r/g, "");
-    const caret = rawCaretOffset(editor);
-    const lineStart = rawContent.lastIndexOf("\n", Math.max(0, caret - 1)) + 1;
-    const lineEnd = rawContent.indexOf("\n", caret);
-    const end = lineEnd === -1 ? rawContent.length : lineEnd;
-    const currentLine = rawContent.slice(lineStart, end);
-    const oldMarker = currentLine.match(/^#{1,6}\s+/)?.[0] || "";
-    const headingLevel = Number(event.key);
-    const headingMarker = oldMarker.length === headingLevel + 1 ? "" : `${"#".repeat(headingLevel)} `;
-    const nextLine = `${headingMarker}${currentLine.slice(oldMarker.length)}`;
-    const beforeCurrentLine = currentLine ? rawContent.slice(0, lineStart) : rawContent.slice(0, lineStart).replace(/\n+$/, "");
-    const lineSeparator = !currentLine && beforeCurrentLine ? "\n" : "";
-    const nextContent = `${beforeCurrentLine}${lineSeparator}${nextLine}${rawContent.slice(end)}`;
-    const textPosition = currentLine ? Math.max(0, caret - lineStart - oldMarker.length) : 0;
-    const nextRawCaret = beforeCurrentLine.length + lineSeparator.length + headingMarker.length + textPosition;
-    const nextCaret = nextContent.slice(0, nextRawCaret).replace(/^#{1,6}\s+/gm, "").length;
-    recordContentHistory(nextContent, nextCaret);
-    setContent(nextContent);
-    editor.innerHTML = noteEditorHtml(nextContent);
-    restoreCaret(editor, nextCaret);
-  };
-
   const moveContentHistory = (editor, direction) => {
     const history = contentHistoryRef.current;
     const nextIndex = Math.min(history.entries.length - 1, Math.max(0, history.index + direction));
@@ -4027,8 +4010,8 @@ function NotesPanel({ notes, taxonomy, stocks, selectedNoteId, status, loadError
     }
     if (deleteNoteCharacter(event)) return;
     insertNoteLineBreak(event);
-    formatNoteHeading(event);
   };
+
 
   const noteOutline = useMemo(() => String(content || "").split("\n").map((line, index) => {
     const heading = line.match(/^(#{1,6})\s+(.+)$/);
@@ -4061,10 +4044,10 @@ function NotesPanel({ notes, taxonomy, stocks, selectedNoteId, status, loadError
         {selectedNote ? <>
           <div className="note-editor-actions"><div className="note-editor-status"><span>{saveState || `最后修改：${new Date(selectedNote.updatedAt).toLocaleString("zh-CN")}`}</span><span className="note-character-count" aria-label={`正文共 ${noteCharacterCount.toLocaleString("zh-CN")} 字`} title="正文可见字数，不含空格、换行和格式标记">{noteCharacterCount.toLocaleString("zh-CN")} 字</span></div><div><button onClick={() => { if (confirm(`删除笔记「${selectedNote.title}」？`)) onDelete(selectedNote.id); }}><Trash2 size={15} /> 删除</button><button className="primary" disabled={saving} onClick={() => save()}>{saving ? "保存中…" : "立即保存"}</button></div></div>
           <input className="note-title" value={title} onChange={(event) => setTitle(event.target.value)} placeholder="笔记标题" />
-          <div className="note-stock-hint">股票名称会从全量股票库自动识别；也可输入 <b>#股票代码#</b> 或 <b>#股票名称#</b> 强制标记并隐藏井号。<span className="note-mark-legend"><i className="stock-mark" />股票 <i className="mainline-mark" />三级主线</span><span className="note-shortcut">Ctrl + 1–6 标题 · Ctrl + Z 撤销 · Ctrl + Y 重做 · Ctrl + S 保存</span></div>
+          <div className="note-stock-hint">股票名称会从全量股票库自动识别；也可输入 <b>#股票代码#</b> 或 <b>#股票名称#</b> 强制标记并隐藏井号。<span className="note-mark-legend"><i className="stock-mark" />股票 <i className="mainline-mark" />三级主线</span><span className="note-shortcut">行首输入 #1–#6 设置标题 · ⌘ + Z 撤销 · ⌘ + Shift + Z 重做 · ⌘ + S 保存</span></div>
           {noteOutline.length > 0 && <nav className="note-outline" aria-label="文章目录"><strong>目录</strong>{noteOutline.map((item) => <button className={`note-outline-level-${item.level}`} key={item.index} onClick={() => document.getElementById(`note-heading-${item.index}`)?.scrollIntoView({ block: "center", behavior: "smooth" })}>{item.text}</button>)}</nav>}
           <div className="note-content-shell">
-          <div ref={noteEditorRef} className="note-content note-content-rich" contentEditable suppressContentEditableWarning role="textbox" aria-multiline="true" aria-label="笔记正文；输入六位股票代码会自动转换为股票名称，也可使用 #股票代码 或 #股票名称 标记重点股票" data-placeholder="写下你的研究、观察或待办事项…" onInput={syncRichNoteContent} onBlur={normalizeNoteEditor} onKeyDown={handleNoteKeyDown} />
+          <div ref={noteEditorRef} className="note-content note-content-rich" contentEditable suppressContentEditableWarning role="textbox" aria-multiline="true" aria-label="笔记正文；行首输入 #1 到 #6 可设置标题；输入六位股票代码会自动转换为股票名称，也可使用 #股票代码 或 #股票名称 标记重点股票" data-placeholder="写下你的研究、观察或待办事项…" onInput={syncRichNoteContent} onBlur={normalizeNoteEditor} onKeyDownCapture={handleNoteKeyDown} />
           </div>
         </> : <div className="empty"><div><StickyNote size={24} /></div><h3>{status === "loading" ? "正在读取笔记" : status === "error" ? "笔记读取失败" : "选择或新建一篇笔记"}</h3><p>{status === "loading" ? "正在从本地 data/notes.json 恢复内容。" : status === "error" ? (loadError || "请重新读取本地笔记。") : "笔记会保存到本地 data/notes.json。"}</p>{status === "error" ? <button className="primary" onClick={onRetry}>重新读取</button> : <button className="primary" disabled={status !== "ready"} onClick={onCreate}><Plus size={16} /> 新建笔记</button>}</div>}
       </article>
@@ -4275,7 +4258,7 @@ function StrategyBacktestPanelV2({ startDate, endDate, topN, positionValueWan, o
   return <section className="strategy-backtest strategy-backtest-v2"><header className="strategy-backtest-header"><div><h2>策略回测</h2><p>按交易日复盘资金变化；点击交易数量或持仓数量查看明细。</p></div><div className="strategy-backtest-actions"><button type="button" onClick={onReset} disabled={loading}><RotateCcw size={15} /> 重置</button>{loading ? <button type="button" onClick={onStop}>停止</button> : <button type="button" className="primary" onClick={onRunAll} disabled={complete}><Play size={15} /> {complete ? "区间已完成" : "开始回测"}</button>}</div></header><div className="strategy-backtest-controls"><label>起始日期<input type="date" value={startDate} max={endDate || undefined} onChange={(e) => onStartDateChange(e.target.value)} disabled={loading} /></label><label>截止日期<input type="date" value={endDate} min={startDate || undefined} onChange={(e) => onEndDateChange(e.target.value)} disabled={loading} /></label><span>退出机制 <b>利润保护 + 趋势退出</b><small>附加：评分回落退出</small></span><label>买入范围<input type="number" min="1" max="100" value={topN} onChange={(e) => onTopNChange(Number(e.target.value))} disabled={loading} />评分前 N 名</label><label>单股仓位<input type="number" min="0.1" max="1000" step="0.1" value={positionValueWan} onChange={(e) => onPositionValueWanChange(Number(e.target.value))} disabled={loading} />万元</label></div>{error && <div className="strategy-backtest-error">{error}</div>}<div className="strategy-summary"><div><span>已处理</span><b>{days.length}</b><small>个交易日</small></div><div><span>当前权益</span><b>{money(latest?.equity ?? 10_000_000)}</b><small>元</small></div><div><span>累计收益</span><b className={Number(latest?.total_return_pct) >= 0 ? "up" : "down"}>{latest ? formatPct(latest.total_return_pct) : "-"}</b><small>收盘计价</small></div><button type="button" className="strategy-holdings-card" onClick={openHoldings}><span>当前持仓</span><b>{latest?.holdings_count ?? 0}</b><small>点击查看仓位与浮盈亏</small></button></div><section className="strategy-ledger"><header><div><h3>逐日资金账本</h3><p>{rules?.exit_description}</p></div><span>{latest?.date ? `最近更新 ${latest.date}` : "尚未开始"}</span></header>{days.length ? <div className="strategy-ledger-table"><div className="strategy-ledger-head"><span>交易日</span><span>权益</span><span>收益率</span><span>买入</span><span>卖出</span><span>持仓</span></div>{[...days].reverse().map((day) => <div key={day.date}><time>{day.date}</time><b>{money(day.equity)}</b><em className={Number(day.total_return_pct) >= 0 ? "up" : "down"}>{formatPct(day.total_return_pct)}</em><button disabled={!day.buy_count} onClick={() => openTrades(day.date, "buy")}>{day.buy_count || "—"}</button><button disabled={!day.sell_count} onClick={() => openTrades(day.date, "sell")}>{day.sell_count || "—"}</button><button onClick={openHoldings}>{day.holdings_count}</button></div>)}</div> : <p className="strategy-empty">设置参数后开始回测。</p>}</section>{dialog && <div className="modal-backdrop" onMouseDown={() => setDialog(null)}><section className="modal strategy-trade-dialog" role="dialog" aria-modal="true" onMouseDown={(e) => e.stopPropagation()}><button className="modal-close" type="button" onClick={() => setDialog(null)}><X size={18} /></button><header><h2>{dialog.type === "holding" ? `${dialog.date || "当前"} 持仓` : `${dialog.date} 当日${dialog.type === "buy" ? "买入" : "卖出"}`}</h2><p>{dialog.items.length} 只股票</p></header><div className="strategy-dialog-list">{dialog.items.map((item) => { const current = Number(item.last_price ?? item.entry_price), entry = Number(item.entry_price), ret = Number(item.current_return ?? item.return_pct ?? (current / entry - 1) * 100), peak = Number(item.highest_close_since_entry ?? current), peakReturn = Number.isFinite(entry) && entry > 0 && Number.isFinite(peak) ? (peak / entry - 1) * 100 : null, drawdownFromPeak = Number.isFinite(current) && Number.isFinite(peak) && peak > 0 ? (current / peak - 1) * 100 : null, realizedPeakReturn = Number(item.peak_close_return ?? item.max_profit ?? peakReturn), realizedDrawdown = Number(item.drawdown_from_peak_close ?? item.drawdown_from_peak ?? drawdownFromPeak), entryScore = Number(item.score ?? item.entry_score), scoreHistory = Array.isArray(item.score_history) ? item.score_history : [], scoreDetails = scoreDetailText(item), scoreTitle = `入场评分 ${Number.isFinite(entryScore) ? entryScore.toFixed(2) : "-"}${scoreDetails ? `：${scoreDetails}` : ""}`, exitReason = exitReasonLabel[item.exit_reason] || item.exit_reason || "卖出"; return <article key={`${item.code}-${item.entry_date || item.date}`}><div><strong><StockName code={item.code} name={item.name} /></strong><small>{item.code} · {item.primary} / {item.secondary}</small></div><div><b className={ret >= 0 ? "up" : "down"}>{ret >= 0 ? "+" : ""}{ret.toFixed(2)}%</b><small>{dialog.type === "sell" ? <>{exitReason} · 买入 {item.entry_date} · 卖出 {item.date} · 回收 {money(item.proceeds)} 元 · 当前收益 {Number.isFinite(ret) ? `${ret >= 0 ? "+" : ""}${ret.toFixed(2)}%` : "-"} · 峰值收益 {Number.isFinite(realizedPeakReturn) ? `${realizedPeakReturn >= 0 ? "+" : ""}${realizedPeakReturn.toFixed(2)}%` : "-"} · 峰值回撤 {Number.isFinite(realizedDrawdown) ? `${realizedDrawdown.toFixed(2)}%` : "-"}</> : <>入场 {entry.toFixed(2)} · 当前 {current.toFixed(2)} · 持仓 {item.holding_days || 0} 日 · 当前收益 {Number.isFinite(ret) ? `${ret >= 0 ? "+" : ""}${ret.toFixed(2)}%` : "-"} · 峰值收益 {Number.isFinite(peakReturn) ? `${peakReturn >= 0 ? "+" : ""}${peakReturn.toFixed(2)}%` : "-"} · 峰值回撤 {Number.isFinite(drawdownFromPeak) ? `${drawdownFromPeak.toFixed(2)}%` : "-"}</>}<span className="strategy-score-hint" tabIndex="0" title={scoreTitle} data-score-details={scoreTitle} aria-label={scoreTitle}>入场评分 {Number.isFinite(entryScore) ? entryScore.toFixed(2) : "-"}</span></small><HoldingScoreChart history={scoreHistory} /></div></article>; })}</div></section></div>}</section>;
 }
 
-function DailyMarketPanel({ date, cycleReplayStartDate, scan, loading, progress, progressValue = 0, onScan, onCopyPrompt, onSaveQuestion, onImportJson, onImportFile, onClassifyStock, onCopyMarketResearch, onImportMarketResearch, marketResearchPendingCount = 0, marketResearchBatchCount = 0, stockUniverse = [], primarySectors = [], capacityCoreResults, capacityCoreLoading, onLoadCapacityCore, leaderResults, leaderLoading, onLoadLeader, systemMainline, mainlineReplayScores, systemMainlineLoading, analysisCacheClearing, onClearAnalysisCache }) {
+function DailyMarketPanel({ date, cycleReplayStartDate, scan, loading, progress, progressValue = 0, onScan, onCopyPrompt, onSaveQuestion, onImportJson, onImportFile, onClassifyStock, onCopyMarketResearch, onImportMarketResearch, marketResearchPendingCount = 0, marketResearchBatchCount = 0, stockUniverse = [], stockMap = emptyStockMap, primarySectors = [], capacityCoreResults, capacityCoreLoading, onLoadCapacityCore, leaderResults, leaderLoading, onLoadLeader, systemMainline, mainlineReplayScores, systemMainlineLoading, analysisCacheClearing, onClearAnalysisCache }) {
   const topUnknown = scan?.unknownLimitUpStocks?.slice(0, 8) || [];
   // The date input may be a weekend.  Subsequent analysis must use the same
   // effective trading date as the completed scan, not the raw input value.
@@ -4292,12 +4275,13 @@ function DailyMarketPanel({ date, cycleReplayStartDate, scan, loading, progress,
   const [greenLimitUpSelectionLoading, setGreenLimitUpSelectionLoading] = useState(false);
   const [greenLimitUpSelectionOpen, setGreenLimitUpSelectionOpen] = useState(false);
   const [tertiaryRankingMode, setTertiaryRankingMode] = useState(null);
-  const loadGreenLimitUpSelection = async () => {
-    setGreenLimitUpSelection(null);
+  const loadGreenLimitUpSelection = async ({ preserveResult = false, retryQfqHydration = false } = {}) => {
+    if (!preserveResult) setGreenLimitUpSelection(null);
     setGreenLimitUpSelectionLoading(true);
     setGreenLimitUpSelectionOpen(true);
     try {
-      const response = await fetch(`/api/green-limit-up-selection?date=${encodeURIComponent(analysisDate)}`, { cache: "no-store" });
+      const retry = retryQfqHydration ? "&retry=1" : "";
+      const response = await fetch(`/api/green-limit-up-selection?date=${encodeURIComponent(analysisDate)}${retry}`, { cache: "no-store" });
       const payload = await response.json();
       setGreenLimitUpSelection(response.ok ? payload : { error: payload.error || "无法完成初筛。" });
     } catch (error) {
@@ -4305,6 +4289,19 @@ function DailyMarketPanel({ date, cycleReplayStartDate, scan, loading, progress,
     } finally {
       setGreenLimitUpSelectionLoading(false);
     }
+  };
+  const pollGreenLimitUpProgress = async () => {
+    try {
+      const response = await fetch(`/api/green-limit-up-selection?date=${encodeURIComponent(analysisDate)}&progress=1`, { cache: "no-store" });
+      const payload = await response.json();
+      const status = payload?.trend_scoring_status;
+      if (!response.ok || !status) return;
+      if (["complete", "partial"].includes(status.state)) {
+        await loadGreenLimitUpSelection({ preserveResult: true });
+        return;
+      }
+      setGreenLimitUpSelection((current) => current ? { ...current, trend_scoring_status: status } : current);
+    } catch { /* Retain the last verified progress display; next poll retries. */ }
   };
   const loadSectorPrioritySelection = async () => {
     setSectorPrioritySelection(null);
@@ -4380,19 +4377,73 @@ function DailyMarketPanel({ date, cycleReplayStartDate, scan, loading, progress,
       )}
       {scan && <SystemMainlinePanel result={systemMainline} loading={systemMainlineLoading} date={analysisDate} scan={scan} stockUniverse={stockUniverse} primarySectors={primarySectors} capacityCoreResults={capacityCoreResults} capacityCoreLoading={capacityCoreLoading} onLoadCapacityCore={onLoadCapacityCore} leaderResults={leaderResults} leaderLoading={leaderLoading} onLoadLeader={onLoadLeader} />}
       {tertiaryRankingMode && <TertiaryRankingModal result={systemMainline} date={analysisDate} mode={tertiaryRankingMode} onClose={() => setTertiaryRankingMode(null)} />}
-      {greenLimitUpSelectionOpen && <GreenLimitUpSelectionModal result={greenLimitUpSelection} loading={greenLimitUpSelectionLoading} onRetry={loadGreenLimitUpSelection} onClose={() => setGreenLimitUpSelectionOpen(false)} />}
+      {greenLimitUpSelectionOpen && <GreenLimitUpSelectionModal result={greenLimitUpSelection} stockMap={stockMap} loading={greenLimitUpSelectionLoading} onRetry={loadGreenLimitUpSelection} onPoll={pollGreenLimitUpProgress} onClose={() => setGreenLimitUpSelectionOpen(false)} />}
     </section>
   );
 }
 
-function GreenLimitUpSelectionModal({ result, loading, onRetry, onClose }) {
+function GreenLimitUpSelectionModal({ result, stockMap, loading, onRetry, onPoll, onClose }) {
   const rows = result?.scored_stocks || [];
+  const trendStatus = result?.trend_scoring_status || {};
+  const trendPreparing = trendStatus.state === "preparing";
+  const trendUnavailable = trendStatus.state === "failed";
+  const trendPartial = trendStatus.state === "partial";
+  useEffect(() => {
+    if (!trendPreparing || loading) return undefined;
+    const timer = window.setTimeout(onPoll, Math.max(3, Number(trendStatus.retry_after_seconds) || 8) * 1000);
+    return () => window.clearTimeout(timer);
+  }, [loading, onPoll, trendPreparing, trendStatus.retry_after_seconds]);
+  const fallbackPathsByCode = useMemo(() => new Map((stockMap?.stocks || []).map((stock) => [stock.code, (stock.classifications || []).flatMap((item) => (item.tertiary_sectors || []).map((tertiary) => ({ primary: item.primary_sector, secondary: item.secondary_sector, tertiary })))])), [stockMap]);
+  const rowsByCode = useMemo(() => new Map(rows.map((stock) => [String(stock.code), stock])), [rows]);
+  // All secondary groups begin expanded.  Store only groups the user has
+  // explicitly collapsed, so this default does not need a state-setting effect.
+  const [collapsedSecondaryKeys, setCollapsedSecondaryKeys] = useState([]);
+  const [selectedSecondaryKey, setSelectedSecondaryKey] = useState("");
+  const [selectedTertiaryKey, setSelectedTertiaryKey] = useState("");
+  const catalog = useMemo(() => {
+    // The API catalog is built from the same complete scored rows.  Retain the
+    // local reconstruction only for responses produced before that contract.
+    if (Array.isArray(result?.sector_catalog)) return result.sector_catalog.map((primary) => ({
+      primary: primary.primary,
+      secondaries: (primary.secondaries || []).map((secondary) => ({
+        ...secondary,
+        secondary: secondary.secondary,
+        tertiaries: (secondary.tertiaries || []).map((tertiary) => ({
+          tertiary: tertiary.tertiary,
+          candidates: (tertiary.candidate_codes || []).map((code) => rowsByCode.get(String(code))).filter(Boolean),
+        })),
+      })),
+    }));
+    const primaries = new Map();
+    for (const stock of rows) for (const path of stock.sector_paths?.length ? stock.sector_paths : (fallbackPathsByCode.get(stock.code) || [])) {
+      if (!path?.primary || !path?.secondary || !path?.tertiary) continue;
+      const primary = primaries.get(path.primary) || new Map();
+      const secondary = primary.get(path.secondary) || new Map();
+      const tertiary = secondary.get(path.tertiary) || new Map();
+      tertiary.set(stock.code, stock); secondary.set(path.tertiary, tertiary); primary.set(path.secondary, secondary); primaries.set(path.primary, primary);
+    }
+    return Array.from(primaries, ([primary, secondaryMap]) => ({ primary, secondaries: Array.from(secondaryMap, ([secondary, tertiaryMap]) => ({ secondary, tertiaries: Array.from(tertiaryMap, ([tertiary, stocks]) => ({ tertiary, candidates: Array.from(stocks.values()).sort((left, right) => right.scores.total - left.scores.total || left.code.localeCompare(right.code)) })).sort((left, right) => left.tertiary.localeCompare(right.tertiary, "zh-CN")) })).sort((left, right) => left.secondary.localeCompare(right.secondary, "zh-CN")) })).sort((left, right) => left.primary.localeCompare(right.primary, "zh-CN"));
+  }, [fallbackPathsByCode, result?.sector_catalog, rows, rowsByCode]);
+  const secondaryGroups = catalog.flatMap((primary) => primary.secondaries.map((secondary) => ({ ...secondary, primary: primary.primary, key: `${primary.primary}|${secondary.secondary}` })));
+  const activeSecondary = secondaryGroups.find((item) => item.key === selectedSecondaryKey) || null;
+  const activeTertiary = catalog.flatMap((primary) => primary.secondaries.flatMap((secondary) => secondary.tertiaries.map((tertiary) => ({ ...tertiary, primary: primary.primary, secondary: secondary.secondary, key: `${primary.primary}|${secondary.secondary}|${tertiary.tertiary}` })))).find((item) => item.key === selectedTertiaryKey) || null;
+  const visibleRows = activeTertiary?.candidates || activeSecondary?.tertiaries.flatMap((tertiary) => tertiary.candidates).filter((stock, index, stocks) => stocks.findIndex((candidate) => candidate.code === stock.code) === index) || rows;
+  const toggleSecondary = (key) => setCollapsedSecondaryKeys((keys) => keys.includes(key) ? keys.filter((value) => value !== key) : [...keys, key]);
+  const selectSecondary = (key) => {
+    setSelectedSecondaryKey(key); setSelectedTertiaryKey("");
+    setCollapsedSecondaryKeys((keys) => keys.filter((value) => value !== key));
+  };
+  const showOverallRanking = () => { setSelectedSecondaryKey(""); setSelectedTertiaryKey(""); };
+  const table = (stocks) => <div className="green-limit-up-table" role="table"><div role="row"><span>股票 / 总排名</span><span>总分</span><span>上涨趋势</span><span>近 5 日三级评分</span><span>评分三级方向</span><span>近 10 日涨停</span></div>{stocks.map((stock) => <div role="row" key={stock.code}><span><strong><StockName code={stock.code} name={stock.name} /></strong><small><em className="green-limit-up-rank">总榜 #{stock.total_rank ?? "-"}</em>{stock.code} · {formatPct(stock.changePct)}</small></span><span><b>{stock.scores.total.toFixed(1)}</b><small>趋势80% · 三级20%</small></span><span><b>{stock.scores.trend.score.toFixed(1)}</b><small>MA5 {stock.scores.trend.ma5?.toFixed?.(2) ?? "-"} · MA10 {stock.scores.trend.ma10?.toFixed?.(2) ?? "-"} · MA20 {stock.scores.trend.ma20?.toFixed?.(2) ?? "-"}</small></span><span><b>{stock.scores.tertiary.score.toFixed(1)}</b><small>最近日权重最高</small></span><span><b>{stock.scores.tertiary.tertiary || "-"}</b><small>{stock.scores.tertiary.primary || "-"} / {stock.scores.tertiary.secondary || "-"}</small></span><span><b>{stock.limit_up_count} 次</b><small>{stock.limit_up_dates.join("、")}</small></span></div>)}</div>;
   return <div className="modal-backdrop" onMouseDown={onClose}><section className="modal sector-priority-modal green-limit-up-modal" role="dialog" aria-modal="true" aria-labelledby="green-limit-up-title" onMouseDown={(event) => event.stopPropagation()}>
     <button className="modal-close" type="button" aria-label="关闭初筛结果" onClick={onClose}><X size={18} /></button>
     <header className="selection-modal-header"><div><h2 id="green-limit-up-title">绿盘涨停回调初筛</h2><p>这是新系统的第一个硬条件，不叠加旧评分、板块或龙头规则。</p></div><div className="selection-rule-summary"><span>当日收绿</span><span>仅主板</span><span>近 10 日有涨停</span></div></header>
-    {loading && <TaskProgress label="正在核对最近 10 个交易日的本地收盘快照…" />}
+    {loading && <TaskProgress label={trendPreparing ? `正在读取前复权双源核验进度（${trendStatus.verified_candidates ?? 0}/${trendStatus.total_candidates ?? 0} 只），不会重新计算选股结果…` : "正在核对最近 10 个交易日的本地收盘快照…"} />}
     {result?.error && <section className="selection-error" role="alert"><div><AlertTriangle size={20} aria-hidden="true" /><div><strong>未生成候选</strong><p>{result.error}</p></div></div><button type="button" onClick={onRetry} disabled={loading}>重新尝试</button></section>}
-    {result && !result.error && <><div className="selection-toolbar"><div><strong>{result.date} 初筛结果</strong><small> 当日 {result.data_quality?.today_snapshot === "fresh_intraday" ? "实时快照" : "已确认收盘"}</small></div><small>基础初筛 {result.initial_candidate_count ?? result.candidate_count} 只 · 三级评分达标 {result.candidate_count} 只 · 完整评分 {result.scored_candidate_count} 只</small></div><section className="selection-result"><div className="selection-result-title"><strong>完整评分候选</strong><span>“近 10 日”包含 {result.trading_dates?.at(-1) || result.date}</span></div>{rows.length ? <div className="green-limit-up-table" role="table"><div role="row"><span>股票</span><span>总分</span><span>趋势 / MA10</span><span>5 日加权换手</span><span>下跌放量压力</span><span>近 10 日涨停</span></div>{rows.map((stock) => <div role="row" key={stock.code}><span><strong><StockName code={stock.code} name={stock.name} /></strong><small>{stock.code} · {formatPct(stock.changePct)}</small></span><span><b>{stock.scores.total.toFixed(1)}</b><small>趋势40% · 换手30% · 量能30%</small></span><span><b>{stock.scores.trend.score.toFixed(1)}</b><small>MA10 {stock.scores.trend.ma10.toFixed(2)} · 偏离 {formatPct(stock.scores.trend.deviation_pct)}</small></span><span><b>{stock.scores.turnover.score.toFixed(1)}</b><small>{stock.scores.turnover.weighted_rate.toFixed(2)}%</small></span><span><b>{stock.scores.downside_volume.score.toFixed(1)}</b><small>压力 {stock.scores.downside_volume.pressure.toFixed(2)}</small></span><span><b>{stock.limit_up_count} 次</b><small>{stock.limit_up_dates.join("、")}</small></span></div>)}</div> : <p className="selection-search-empty">基础初筛完成，但没有股票通过“所属三级板块近 10 日当日评分至少一次达到 80 分”的硬过滤；当前不处于换手率补齐中。</p>}{result.unscored_candidates?.length > 0 && <p className="score-history-note">另有 {result.unscored_candidates.length} 只初筛候选未评分：自动补齐后仍缺少目标交易日真实换手率，系统未用成交额或默认值替代。</p>}</section></>}
+    {result && !result.error && <>
+      <div className="selection-toolbar"><div><strong>{result.date} 初筛结果</strong><small> 当日 {result.data_quality?.today_snapshot === "fresh_intraday" ? "实时快照" : "已确认收盘"}</small></div><small>基础初筛 {result.initial_candidate_count ?? result.candidate_count} 只 · {trendPreparing ? `前复权双源核验 ${trendStatus.verified_candidates ?? 0}/${trendStatus.total_candidates ?? result.initial_candidate_count ?? 0}，趋势评分准备中` : trendUnavailable ? `前复权核验失败 ${trendStatus.failed_candidates ?? 0}/${trendStatus.total_candidates ?? result.initial_candidate_count ?? 0}，趋势评分不可用` : `上涨趋势 >60 分 ${result.trend_qualified_count ?? 0} 只`} · 近 5 日三级评分完整 {result.candidate_count} 只 · 完整评分 {result.scored_candidate_count} 只</small></div>
+      {trendPreparing ? <section className="selection-result"><p className="selection-search-empty">正在以同花顺与腾讯的前复权日K逐只核验 60 个交易日；盘中趋势仅截至上一交易日收盘。这批股票尚未评分，不是“趋势分低于 60”。核验完成后会自动刷新。</p></section> : trendUnavailable ? <section className="selection-result"><p className="selection-search-empty">前复权双源核验未能取得任何完整日K窗口，系统不会把数据缺失伪装成“趋势分低于 60”。请在数据源恢复后重新核验。</p><button type="button" className="secondary" onClick={() => onRetry({ retryQfqHydration: true })} disabled={loading}>重新核验</button></section> : rows.length ? <section className="green-limit-up-browser"><nav className="selection-catalog" aria-label="按产业路径浏览候选"><header><span>二级 / 三级方向</span><button className="green-limit-up-overall-button" type="button" aria-pressed={!activeSecondary && !activeTertiary} onClick={showOverallRanking}>查看总榜 {rows.length} 只</button></header><div className="selection-catalog-list">{catalog.length ? catalog.map((primary) => <section className="selection-tree-primary" key={primary.primary}><div className="green-limit-up-primary-label">{primary.primary}</div>{primary.secondaries.map((secondary) => { const secondaryKey = `${primary.primary}|${secondary.secondary}`; const expanded = !collapsedSecondaryKeys.includes(secondaryKey), selected = secondaryKey === selectedSecondaryKey; return <section className={`selection-tree-secondary${selected ? " active" : ""}`} key={secondaryKey}><div><button className="selection-tree-secondary-trigger" type="button" aria-expanded={expanded} aria-label={`${expanded ? "收起" : "展开"}${secondary.secondary}的三级方向`} onClick={() => toggleSecondary(secondaryKey)}>{expanded ? <ChevronDown size={15} /> : <ChevronRight size={15} />}</button><button className="selection-tree-secondary-select" type="button" aria-pressed={selected} onClick={() => selectSecondary(secondaryKey)}><strong>{secondary.secondary}</strong><small>二级总榜 #{secondary.rank ?? "-"} · {secondary.tertiaries.length} 个三级方向</small></button></div>{expanded && <div className="selection-tree-tertiary-list">{secondary.tertiaries.map((tertiary) => { const key = `${secondaryKey}|${tertiary.tertiary}`; return <button type="button" className={key === selectedTertiaryKey ? "active" : ""} aria-pressed={key === selectedTertiaryKey} key={key} onClick={() => { setSelectedSecondaryKey(secondaryKey); setSelectedTertiaryKey(key); }}><span>{tertiary.tertiary}</span><small>{tertiary.candidates.length} 只</small></button>; })}</div>}</section>; })}</section>) : <p className="selection-catalog-empty" role="alert">候选已生成，但返回结果缺少产业目录；请重新尝试。</p>}</div></nav><section className="selection-group-detail"><header><div><span>{activeTertiary ? `${activeTertiary.primary} / ${activeTertiary.secondary}` : activeSecondary ? activeSecondary.primary : "全市场完整评分候选"}</span><h3>{activeTertiary?.tertiary || activeSecondary?.secondary || "股票总榜"}</h3>{activeSecondary && <small className="green-limit-up-secondary-rank">二级主线总榜 #{activeSecondary.rank ?? "-"} · 候选 {activeSecondary.candidate_count ?? visibleRows.length} 只 · 平均总分 {Number.isFinite(activeSecondary.average_total_score) ? activeSecondary.average_total_score.toFixed(1) : "-"}</small>}</div><div><b>{visibleRows.length}</b><small>只股票</small></div></header><p>{activeTertiary ? `仅展示归属「${activeTertiary.tertiary}」的候选股票。` : activeSecondary ? `仅展示二级主线「${activeSecondary.secondary}」及其三级方向下的候选股票。` : "全部完整评分候选，已按总分从高到低排序。"}</p>{table(visibleRows)}</section></section> : <section className="selection-result"><p className="selection-search-empty">基础初筛完成，但没有股票同时具备“上涨趋势评分严格大于 60 分”和“完整近 5 日三级板块综合评分”。</p></section>}{trendPartial && <p className="score-history-note">前复权双源核验仅完成 {trendStatus.verified_candidates ?? 0}/{trendStatus.total_candidates ?? 0} 只；其余 {trendStatus.failed_candidates ?? 0} 只未参与趋势评分，也未以默认分替代。</p>}{result.tertiary_unavailable_candidates?.length > 0 && <p className="score-history-note">另有 {result.tertiary_unavailable_candidates.length} 只趋势合格股票因缺少三级归属或完整近 5 日三级评分而未计算总分。</p>}{result.unscored_candidates?.length > 0 && <p className="score-history-note">另有 {result.unscored_candidates.length} 只候选缺少计算总分所需数据，系统未以默认值补齐。</p>}
+    </>}
   </section></div>;
 }
 
@@ -4937,7 +4988,8 @@ function CycleTimeline({ cycle = {}, scoreContext = null }) {
 function PrimaryMainlineGroup({ preview, items, labels, date, loading, capacityCoreResults, capacityCoreLoading, onLoadCapacityCore, leaderResults, leaderLoading, onLoadLeader }) {
   const [open, setOpen] = useState(false);
   const [stageFilter, setStageFilter] = useState("all");
-  const confirmed = items.filter((item) => item.status === "confirmed_mainline").length;
+  const [confirmedOnly, setConfirmedOnly] = useState(false);
+  const confirmed = items.filter((item) => item.mainline_confirmation?.confirmed).length;
   useEffect(() => {
     if (!open) return undefined;
     let cancelled = false;
@@ -4965,11 +5017,12 @@ function PrimaryMainlineGroup({ preview, items, labels, date, loading, capacityC
   const stages = [["all", "全部阶段"], ["unstarted", "未启动"], ["emergence", "启动"], ["fermentation", "发酵"], ["acceleration", "加速"], ["normal_divergence", "正常分歧"], ["divergence_continuation", "分歧延续"], ["persistent_weakening", "持续转弱"], ["strong_divergence", "趋势未被破坏，强分歧"], ["repair", "趋势延续，修复"], ["re_strengthening", "重新增强"], ["retreat_warning", "退潮预警"], ["retreat_confirmed", "退潮确认"], ["downtrend_continuation", "下跌延续"], ["downtrend_stabilizing", "跌势趋稳"], ["post_retreat_rebound", "退潮后反弹"], ["rebound_failed", "反弹失败"], ["weakening_again", "再次走弱"]];
   const getStage = (item) => item.cycle_stage?.cycle_stage || "unknown";
   const countForStage = (stage) => stage === "all" ? items.length : items.filter((item) => getStage(item) === stage).length;
-  const visibleItems = stageFilter === "all" ? items : items.filter((item) => getStage(item) === stageFilter);
+  const stageVisibleItems = stageFilter === "all" ? items : items.filter((item) => getStage(item) === stageFilter);
+  const visibleItems = confirmedOnly ? stageVisibleItems.filter((item) => item.mainline_confirmation?.confirmed) : stageVisibleItems;
   const primaryName = preview.primary;
   const leadership = preview.mainlineLeadership;
   const headline = items.length ? (leadership?.validatedDays >= 2 ? `趋势主线验证 ${Math.round(leadership.score)}/100 · 抗跌 ${Math.round(leadership.resilience * 100)}% · 领涨 ${Math.round(leadership.leadership * 100)}% · 修复 ${Math.round(leadership.recovery * 100)}%` : `趋势验证天数不足，暂按当日强度排序 · 最高 ${items[0].score ?? "-"}/100`) : loading ? "正在计算日线评分" : "暂无可评分二级方向";
-  return <section className="primary-mainline-group"><header><div><strong>{primaryName}</strong><small>{items.length ? `${items.length} 个已计算二级方向 · ${headline}` : `${preview.limitUpCount} 只涨停 · ${preview.validMemberCount} 只有效行情 · ${headline}`}</small></div><button type="button" className="mainline-history-button" disabled={!items.length} title={items.length ? "查看该一级主线下全部已计算二级方向" : (loading ? "后台计算完成后可查看二级方向" : "该一级主线没有满足数据条件的二级方向")} onClick={() => { setStageFilter("all"); setOpen(true); }}>查看二级方向</button></header>{open && <div className="modal-backdrop" onMouseDown={() => setOpen(false)}><div className="modal primary-directions-modal" role="dialog" aria-modal="true" aria-labelledby={`primary-${primaryName}`} onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" type="button" aria-label="关闭二级方向" onClick={() => setOpen(false)}><X size={18} /></button><div className="modal-kicker">一级主线</div><h2 id={`primary-${primaryName}`}>{primaryName}</h2><p className="modal-sub">{items.length} 个已计算二级方向，按主线综合评分排序；包括未进入首页重点列表的方向。选择周期阶段可快速筛选查看。</p><div className="stage-filter-bar" aria-label="按周期阶段筛选">{stages.map(([stage, label]) => { const count = countForStage(stage); return <button type="button" key={stage} className={stageFilter === stage ? "active" : ""} disabled={!count} onClick={() => setStageFilter(stage)}>{label}<b>{count}</b></button>; })}</div><div className="primary-mainline-directions">{visibleItems.map((item) => <SystemThemeCard key={item.key} item={item} labels={labels} date={date} capacityCoreResults={capacityCoreResults} capacityCoreLoading={capacityCoreLoading} onLoadCapacityCore={onLoadCapacityCore} leaderResults={leaderResults} leaderLoading={leaderLoading} onLoadLeader={onLoadLeader} />)}</div></div></div>}</section>;
+  return <section className="primary-mainline-group"><header><div><strong>{primaryName}</strong><small>{items.length ? `${items.length} 个已计算二级方向 · ${headline}` : `${preview.limitUpCount} 只涨停 · ${preview.validMemberCount} 只有效行情 · ${headline}`}</small></div><button type="button" className="mainline-history-button" disabled={!items.length} title={items.length ? "查看该一级主线下全部已计算二级方向" : (loading ? "后台计算完成后可查看二级方向" : "该一级主线没有满足数据条件的二级方向")} onClick={() => { setStageFilter("all"); setConfirmedOnly(false); setOpen(true); }}>查看二级方向</button></header>{open && <div className="modal-backdrop" onMouseDown={() => setOpen(false)}><div className="modal primary-directions-modal" role="dialog" aria-modal="true" aria-labelledby={`primary-${primaryName}`} onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" type="button" aria-label="关闭二级方向" onClick={() => setOpen(false)}><X size={18} /></button><div className="modal-kicker">一级主线</div><h2 id={`primary-${primaryName}`}>{primaryName}</h2><p className="modal-sub">{items.length} 个已计算二级方向，按主线综合评分排序；包括未进入首页重点列表的方向。选择周期阶段或确认主线可快速筛选查看。</p><div className="stage-filter-bar" aria-label="按周期阶段或确认主线筛选"><button type="button" className={confirmedOnly ? "active" : ""} disabled={!confirmed} aria-pressed={confirmedOnly} onClick={() => setConfirmedOnly((value) => !value)}>确认主线<b>{confirmed}</b></button>{stages.map(([stage, label]) => { const count = countForStage(stage); return <button type="button" key={stage} className={stageFilter === stage ? "active" : ""} disabled={!count} onClick={() => setStageFilter(stage)}>{label}<b>{count}</b></button>; })}</div><div className="primary-mainline-directions">{visibleItems.map((item) => <SystemThemeCard key={item.key} item={item} labels={labels} date={date} capacityCoreResults={capacityCoreResults} capacityCoreLoading={capacityCoreLoading} onLoadCapacityCore={onLoadCapacityCore} leaderResults={leaderResults} leaderLoading={leaderLoading} onLoadLeader={onLoadLeader} />)}</div>{!visibleItems.length && <p className="tertiary-ranking-empty">当前筛选下没有确认主线。</p>}</div></div>}</section>;
 }
 
 function SystemThemeCard({ item, labels, date, capacityCoreResults, capacityCoreLoading, onLoadCapacityCore, leaderResults, leaderLoading, onLoadLeader }) {
@@ -4980,7 +5033,8 @@ function SystemThemeCard({ item, labels, date, capacityCoreResults, capacityCore
   const expansionLabels = { expanding: "扩张中", stable: "平稳", shrinking: "收缩中", rapidly_shrinking: "快速收缩" };
   const profitLabels = { improving: "次日改善", healthy: "次日健康", deteriorating: "次日恶化", collapsed: "次日崩塌", unavailable: "暂无次日反馈" };
   const cycle = item.cycle_stage || {};
-  return <article className="mainline-card pending"><div className="mainline-rank">#{item.rank ?? "-"}</div><div className="mainline-core"><div className="mainline-path">{item.name}</div><h4>{labels[item.status] || item.status}</h4><p>综合分 <b>{Number.isFinite(item.score) ? `${item.score}/100` : "数据不足"}</b> · 周期 <b>{cycleLabels[cycle.confirmed_stage || cycle.cycle_stage] || "-"}</b>{cycle.daily_condition ? ` · 当日${dailyConditionText(cycle.daily_condition)}` : ""}{cycle.confirmation_status ? `（${cycle.confirmation_status} · ${Math.round((cycle.stage_confidence || 0) * 100)}%）` : ""}</p><small>核心结构 {item.score_details?.core_structure ?? "-"}/20 · 广度 {item.score_details?.breadth ?? "-"}/25 · 梯队 {item.score_details?.hierarchy ?? "-"}/15 · 持续性 {item.score_details?.continuity ?? "-"}/15 · 相对强度 {item.score_details?.relative_strength ?? "-"}/10 · 分歧修复 {item.score_details?.divergence_repair ?? "待检验"}/15</small><small>涨停 {item.breadth?.limit_up_count ?? "-"} · 大涨 {item.breadth?.high_gain_count ?? "-"} · 上涨占比 {item.breadth?.up_ratio != null ? `${Math.round(item.breadth.up_ratio * 100)}%` : "-"} · 扩张 {expansionLabels[cycle.expansion_status] || "待判断"} · 赚钱效应 {profitLabels[cycle.profit_effect_status] || "待判断"}</small><div className="mainline-card-actions"><button type="button" className="mainline-history-button" onClick={() => setShowTimeline(true)}><BarChart3 size={13} /> 查看周期轨迹</button></div><MainlineCoreModules target={target} capacity={capacity} leader={leader} loadingCapacity={capacityCoreLoading[key]} loadingLeader={leaderLoading[key]} onLoadCapacityCore={onLoadCapacityCore} onLoadLeader={onLoadLeader} />{showTimeline && <div className="modal-backdrop" onMouseDown={() => setShowTimeline(false)}><div className="modal cycle-timeline-modal" role="dialog" aria-modal="true" aria-labelledby={`cycle-${item.key}`} onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" type="button" aria-label="关闭周期轨迹" onClick={() => setShowTimeline(false)}><X size={18} /></button><h2 id={`cycle-${item.key}`}>{item.primary} · {item.name}</h2><p className="modal-sub">主周期保持连续；当天整理、分歧和修复会单独标注，不会把活跃题材误写为未启动。</p><CycleTimeline cycle={cycle} scoreContext={item} /></div></div>}</div><div className="mainline-status">{labels[item.status] || item.status}</div></article>;
+  const confirmation = item.mainline_confirmation;
+  return <article className="mainline-card pending"><div className="mainline-rank">#{item.rank ?? "-"}</div><div className="mainline-core"><div className="mainline-path">{item.name}</div><h4>{confirmation?.confirmed ? "确认主线" : (labels[item.status] || item.status)}</h4><p>综合分 <b>{Number.isFinite(item.score) ? `${item.score}/100` : "数据不足"}</b> · 周期 <b>{cycleLabels[cycle.confirmed_stage || cycle.cycle_stage] || "-"}</b>{cycle.daily_condition ? ` · 当日${dailyConditionText(cycle.daily_condition)}` : ""}{cycle.confirmation_status ? `（${cycle.confirmation_status} · ${Math.round((cycle.stage_confidence || 0) * 100)}%）` : ""}</p><small>核心结构 {item.score_details?.core_structure ?? "-"}/20 · 广度 {item.score_details?.breadth ?? "-"}/25 · 梯队 {item.score_details?.hierarchy ?? "-"}/15 · 持续性 {item.score_details?.continuity ?? "-"}/15 · 相对强度 {item.score_details?.relative_strength ?? "-"}/10 · 分歧修复 {item.score_details?.divergence_repair ?? "待检验"}/15</small><small>涨停 {item.breadth?.limit_up_count ?? "-"} · 大涨 {item.breadth?.high_gain_count ?? "-"} · 上涨占比 {item.breadth?.up_ratio != null ? `${Math.round(item.breadth.up_ratio * 100)}%` : "-"} · 扩张 {expansionLabels[cycle.expansion_status] || "待判断"} · 赚钱效应 {profitLabels[cycle.profit_effect_status] || "待判断"}</small><div className="mainline-card-actions"><button type="button" className="mainline-history-button" onClick={() => setShowTimeline(true)}><BarChart3 size={13} /> 查看周期轨迹</button></div><MainlineCoreModules target={target} capacity={capacity} leader={leader} loadingCapacity={capacityCoreLoading[key]} loadingLeader={leaderLoading[key]} onLoadCapacityCore={onLoadCapacityCore} onLoadLeader={onLoadLeader} />{showTimeline && <div className="modal-backdrop" onMouseDown={() => setShowTimeline(false)}><div className="modal cycle-timeline-modal" role="dialog" aria-modal="true" aria-labelledby={`cycle-${item.key}`} onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" type="button" aria-label="关闭周期轨迹" onClick={() => setShowTimeline(false)}><X size={18} /></button><h2 id={`cycle-${item.key}`}>{item.primary} · {item.name}</h2><p className="modal-sub">主周期保持连续；当天整理、分歧和修复会单独标注，不会把活跃题材误写为未启动。</p><CycleTimeline cycle={cycle} scoreContext={item} /></div></div>}</div><div className="mainline-status">{confirmation?.confirmed ? "确认主线" : (labels[item.status] || item.status)}</div></article>;
 }
 
 function MainlineCoreModules({ target, capacity, leader, loadingCapacity, loadingLeader, onLoadCapacityCore, onLoadLeader }) {
@@ -5001,6 +5055,7 @@ function MainlineCoreModules({ target, capacity, leader, loadingCapacity, loadin
 function PrimaryCoreAnalysisModal({ group, primarySector, tertiaryThemes, date, capacityCoreResults, capacityCoreLoading, onLoadCapacityCore, leaderResults, leaderLoading, onLoadLeader, onClose }) {
   const [historyItem, setHistoryItem] = useState(null);
   const [tertiaryHistory, setTertiaryHistory] = useState(null);
+  const [showPrimaryLimitUpCalendar, setShowPrimaryLimitUpCalendar] = useState(false);
   const analyzedBySecondary = new Map(group.items.map((item) => [item.name, item]));
   const secondaryNames = Array.from(new Set([
     ...group.items.map((item) => item.name),
@@ -5017,6 +5072,7 @@ function PrimaryCoreAnalysisModal({ group, primarySector, tertiaryThemes, date, 
       <div className="modal-kicker">一级主线</div>
       <h2 id="primary-core-modal-title">{group.primary}</h2>
       <p className="modal-sub">完整展示 {secondaryNames.length} 个二级方向，按既有综合评分从高到低排列。</p>
+      <button type="button" className="secondary-cycle-link primary-limit-up-calendar-link" disabled={!group.items.some((item) => item.score_history?.length)} onClick={() => setShowPrimaryLimitUpCalendar(true)}>查看一级涨停日历</button>
       <div className="primary-core-secondary-list">
         {secondaryNames.map((secondary) => {
           const item = analyzedBySecondary.get(secondary);
@@ -5044,7 +5100,25 @@ function PrimaryCoreAnalysisModal({ group, primarySector, tertiaryThemes, date, 
     </div>
     {tertiaryHistory && <TertiaryHistoryModal primary={group.primary} secondary={tertiaryHistory.secondary} items={tertiaryHistory.items} onClose={() => setTertiaryHistory(null)} />}
     {historyItem && <div className="modal-backdrop" onMouseDown={() => setHistoryItem(null)}><div className="modal cycle-timeline-modal" role="dialog" aria-modal="true" aria-labelledby="score-history-title" onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" type="button" aria-label="关闭历史表现" onClick={() => setHistoryItem(null)}><X size={18} /></button><h2 id="score-history-title">{group.primary} · {historyItem.name}</h2><ScoreHistoryCalendar item={historyItem} /></div></div>}
+    {showPrimaryLimitUpCalendar && <PrimaryLimitUpCalendarModal primary={group.primary} items={group.items} onClose={() => setShowPrimaryLimitUpCalendar(false)} />}
   </div>;
+}
+
+function PrimaryLimitUpCalendarModal({ primary, items, onClose }) {
+  const entries = useMemo(() => buildPrimaryLimitUpCalendar(items), [items]);
+  const [selectedDate, setSelectedDate] = useState(entries.at(-1)?.date || "");
+  const selected = entries.find((entry) => entry.date === selectedDate) || entries.at(-1);
+  if (!entries.length) return null;
+  const byDate = new Map(entries.map((entry) => [entry.date, entry]));
+  const first = new Date(`${entries[0].date}T12:00:00Z`), last = new Date(`${entries.at(-1).date}T12:00:00Z`);
+  first.setUTCDate(first.getUTCDate() - ((first.getUTCDay() + 6) % 7));
+  last.setUTCDate(last.getUTCDate() + ((5 - ((last.getUTCDay() + 6) % 7) + 7) % 7));
+  const cells = [];
+  for (const day = new Date(first); day <= last; day.setUTCDate(day.getUTCDate() + 1)) {
+    if ([0, 6].includes(day.getUTCDay())) continue;
+    const date = day.toISOString().slice(0, 10); cells.push({ date, entry: byDate.get(date) });
+  }
+  return <div className="modal-backdrop" onMouseDown={onClose}><section className="modal cycle-timeline-modal primary-limit-up-calendar-modal" role="dialog" aria-modal="true" aria-labelledby="primary-limit-up-calendar-title" onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" type="button" aria-label="关闭一级涨停日历" onClick={onClose}><X size={18} /></button><div className="modal-kicker">一级主线</div><h2 id="primary-limit-up-calendar-title">{primary} · 涨停日历</h2><p className="modal-sub">点击交易日，仅显示该一级板块当天的涨停股票；跨二级重复归属已按股票代码去重。</p><div className="cycle-calendar primary-limit-up-calendar" aria-label="一级板块涨停日历"><section className="cycle-calendar-month"><div className="cycle-calendar-weekdays" aria-hidden="true">{["一", "二", "三", "四", "五"].map((day) => <span key={day}>周{day}</span>)}</div><div className="cycle-calendar-grid">{cells.map(({ date, entry }) => entry ? <button type="button" className={`cycle-calendar-day ${selected?.date === date ? "selected" : ""}`} key={date} aria-pressed={selected?.date === date} onClick={() => setSelectedDate(date)}><time>{date.slice(5)}</time><strong>{entry.limit_up_stocks.length} 只涨停</strong><small>点击查看名单</small></button> : <span className="cycle-calendar-empty" key={date} aria-label={`${date} 无行情`} />)}</div></section></div><section className="primary-limit-up-day-list" aria-live="polite"><header><b>{selected?.date}</b><span>当日涨停 {selected?.limit_up_stocks.length || 0} 只</span></header>{selected?.limit_up_stocks.length ? <div>{selected.limit_up_stocks.map((stock) => <span key={stock.code}><StockName code={stock.code} name={stock.name} /><small>{stock.code} · +{Number(stock.change_pct).toFixed(2)}%</small></span>)}</div> : <p>当日该一级板块没有涨停股票。</p>}</section></section></div>;
 }
 
 function TertiaryHistoryModal({ primary, secondary, items, onClose }) {
@@ -5133,7 +5207,8 @@ function ScoreHistoryCalendar({ item }) {
     ["龙头与中军背离", Number(selected?.score?.leader_capacity_consistency_penalty) || 0],
   ].filter(([, penalty]) => penalty > 0);
   const totalDailyPenalty = dailyPenaltyParts.reduce((sum, [, penalty]) => sum + penalty, 0);
-  return <section className="cycle-timeline" aria-label="历史综合评分"><header className="score-history-overview"><div className="score-history-heading"><h3>历史综合评分</h3><p>逐交易日保留评分、日强度、板块广度、龙头与容量中军表现；不再作生命周期状态判断。</p></div><ScoreHistoryChart history={history} selectedDate={selected?.date} onSelectDate={setSelectedDate} /><span>{history.length} 个交易日</span></header><div className="cycle-calendar" ref={calendarRef} onScroll={handleCalendarScroll} aria-label="按月查看历史综合评分；鼠标滚轮上下可翻月"><div className="cycle-calendar-month-label">{visibleCalendarMonth ? visibleCalendarMonth.replace("-", "年") + "月" : ""}</div><section className="cycle-calendar-month" aria-label="交易日历史评分"><h4></h4><div className="cycle-calendar-weekdays" aria-hidden="true">{["一", "二", "三", "四", "五"].map((day) => <span key={day}>周{day}</span>)}</div><div className="cycle-calendar-grid">{cells.map(({ date, entry }) => entry ? <button type="button" className={`cycle-calendar-day ${selected?.date === date ? "selected" : ""}`} key={date} aria-pressed={selected?.date === date} title={`${date}：综合分 ${Number(entry.score?.mainline_rank_score).toFixed(1)}，日强度 ${Number(entry.daily_strength_score).toFixed(1)}`} onClick={() => setSelectedDate(date)}><time>{date.slice(8)}</time><strong>{Number(entry.score?.mainline_rank_score).toFixed(1)} 分</strong><small>日强度 {Number(entry.daily_strength_score).toFixed(1)}</small></button> : <span className="cycle-calendar-empty" key={date} aria-label={`${date} 无行情`} />)}</div></section></div><div className="cycle-evidence" aria-live="polite"><div className="cycle-evidence-heading"><b>{selected?.date}</b><small>综合分 {Number(selected?.score?.mainline_rank_score).toFixed(1)} · 日强度 {Number(selected?.daily_strength_score).toFixed(1)}</small></div><b>板块整体：上涨 {selected?.metrics?.up_count ?? "-"} 只，涨停 {selected?.metrics?.limit_up_count ?? "-"} 只，大涨 {selected?.metrics?.high_gain_count ?? "-"} 只，大跌 {selected?.metrics?.large_loss_count ?? "-"} 只；相对收益 {selected?.metrics?.theme_relative_return?.toFixed?.(2) ?? "-"}%</b><b>龙头：{selected?.metrics?.previous_leaders?.length ? `${selected.metrics.previous_leaders.map((stock) => `${stock.name || stock.code} ${stock.change_pct ?? "-"}%`).join("、")}；${selected.metrics.leader_status || "-"}${selected.metrics.leader_drives_theme ? "，仍在带动板块" : ""}` : "前一日龙头数据不足"}</b><b>容量中军：{selected?.metrics?.previous_capacity_cores?.length ? `${selected.metrics.previous_capacity_cores.map((stock) => `${stock.name || stock.code} ${stock.change_pct ?? "-"}%`).join("、")}；${selected.metrics.capacity_core_status || "-"}${selected.metrics.capacity_core_long_upper_count ? `，长上影 ${selected.metrics.capacity_core_long_upper_count} 只` : ""}` : "前一日容量中军数据不足"}</b><b>赚钱效应：{profit.profit_effect || "数据不足"}；前排中位收益 {profit.frontline_next_day_median_return ?? "-"}%、上涨占比 {profit.frontline_positive_rate != null ? `${Math.round(profit.frontline_positive_rate * 100)}%` : "-"}；活跃成员中位收益 {profit.active_member_next_day_median_return ?? "-"}%、上涨占比 {profit.active_member_positive_rate != null ? `${Math.round(profit.active_member_positive_rate * 100)}%` : "-"}；昨日涨停中位收益 {profit.limit_up_next_day_median_return ?? "-"}%；严重负反馈 {profit.severe_negative_rate != null ? `${Math.round(profit.severe_negative_rate * 100)}%` : "-"}</b><b>核心反馈：龙头 {profit.leader_feedback || "数据不足"}；中军 {profit.capacity_core_feedback || "数据不足"}；普通成员 {profit.ordinary_member_feedback || "数据不足"}</b><b>中军池汇总：有效池 {selected?.metrics?.capacity_core_pool_size ?? "-"} 只；正向 {selected?.metrics?.capacity_core_positive_count ?? "-"} 只（{selected?.metrics?.capacity_core_positive_count_ratio != null ? `${Math.round(selected.metrics.capacity_core_positive_count_ratio * 100)}%` : "-"}），正向权重 {selected?.metrics?.capacity_core_positive_weight != null ? `${Math.round(selected.metrics.capacity_core_positive_weight * 100)}%` : "-"}；池加权收益 {selected?.metrics?.capacity_core_pool_weighted_return?.toFixed?.(2) ?? "-"}%；{selected?.metrics?.core_pool_status || "数据不足"}</b><b>{reversalEvidence}</b><b>{leaderCapacityEvidence}</b></div><section className="cycle-score-detail" aria-label="当日评分构成"><header><b>当日评分构成</b><strong>{Number(selected?.score?.mainline_rank_score).toFixed(1)}/100</strong></header><p>风险扣分会先计入各交易日的日强度，再按近3日强度 15% / 35% / 50% 的权重进入综合分。</p><div>{scoreParts.map(([label, weight, value]) => <span key={label}><small>{label} · 权重 {weight}%</small><b>{Number.isFinite(Number(value)) ? Number(value).toFixed(1) : "-"}</b><em>{Number.isFinite(Number(value)) ? `贡献 ${(Number(value) * weight / 100).toFixed(1)} 分` : "数据不足"}</em></span>)}</div>{totalDailyPenalty > 0 && <div className="cycle-score-penalties" aria-label="当日风险扣分"><span><small>当日风险扣分</small><b>-{totalDailyPenalty.toFixed(1)} 分</b><em>已计入近3日强度</em></span>{dailyPenaltyParts.map(([label, penalty]) => <span key={label}><small>{label}</small><b>-{penalty.toFixed(1)} 分</b><em>当日风险信号</em></span>)}</div>}</section></section>;
+  const limitUpStocks = selected?.metrics?.limit_up_stocks || [];
+  return <section className="cycle-timeline" aria-label="历史综合评分"><header className="score-history-overview"><div className="score-history-heading"><h3>历史综合评分</h3><p>逐交易日保留评分、日强度、板块广度、龙头与容量中军表现；不再作生命周期状态判断。</p></div><ScoreHistoryChart history={history} selectedDate={selected?.date} onSelectDate={setSelectedDate} /><span>{history.length} 个交易日</span></header><div className="cycle-calendar" ref={calendarRef} onScroll={handleCalendarScroll} aria-label="按月查看历史综合评分；鼠标滚轮上下可翻月"><div className="cycle-calendar-month-label">{visibleCalendarMonth ? visibleCalendarMonth.replace("-", "年") + "月" : ""}</div><section className="cycle-calendar-month" aria-label="交易日历史评分"><h4></h4><div className="cycle-calendar-weekdays" aria-hidden="true">{["一", "二", "三", "四", "五"].map((day) => <span key={day}>周{day}</span>)}</div><div className="cycle-calendar-grid">{cells.map(({ date, entry }) => entry ? <button type="button" className={`cycle-calendar-day ${selected?.date === date ? "selected" : ""}`} key={date} aria-pressed={selected?.date === date} title={`${date}：综合分 ${Number(entry.score?.mainline_rank_score).toFixed(1)}，日强度 ${Number(entry.daily_strength_score).toFixed(1)}`} onClick={() => setSelectedDate(date)}><time>{date.slice(8)}</time><strong>{Number(entry.score?.mainline_rank_score).toFixed(1)} 分</strong><small>日强度 {Number(entry.daily_strength_score).toFixed(1)}</small></button> : <span className="cycle-calendar-empty" key={date} aria-label={`${date} 无行情`} />)}</div></section></div><div className="cycle-evidence" aria-live="polite"><div className="cycle-evidence-heading"><b>{selected?.date}</b><small>综合分 {Number(selected?.score?.mainline_rank_score).toFixed(1)} · 日强度 {Number(selected?.daily_strength_score).toFixed(1)}</small></div><b>板块整体：上涨 {selected?.metrics?.up_count ?? "-"} 只，涨停 {selected?.metrics?.limit_up_count ?? "-"} 只，大涨 {selected?.metrics?.high_gain_count ?? "-"} 只，大跌 {selected?.metrics?.large_loss_count ?? "-"} 只；相对收益 {selected?.metrics?.theme_relative_return?.toFixed?.(2) ?? "-"}%</b><b>龙头：{selected?.metrics?.previous_leaders?.length ? `${selected.metrics.previous_leaders.map((stock) => `${stock.name || stock.code} ${stock.change_pct ?? "-"}%`).join("、")}；${selected.metrics.leader_status || "-"}${selected.metrics.leader_drives_theme ? "，仍在带动板块" : ""}` : "前一日龙头数据不足"}</b><b>容量中军：{selected?.metrics?.previous_capacity_cores?.length ? `${selected.metrics.previous_capacity_cores.map((stock) => `${stock.name || stock.code} ${stock.change_pct ?? "-"}%`).join("、")}；${selected.metrics.capacity_core_status || "-"}${selected.metrics.capacity_core_long_upper_count ? `，长上影 ${selected.metrics.capacity_core_long_upper_count} 只` : ""}` : "前一日容量中军数据不足"}</b><b>赚钱效应：{profit.profit_effect || "数据不足"}；前排中位收益 {profit.frontline_next_day_median_return ?? "-"}%、上涨占比 {profit.frontline_positive_rate != null ? `${Math.round(profit.frontline_positive_rate * 100)}%` : "-"}；活跃成员中位收益 {profit.active_member_next_day_median_return ?? "-"}%、上涨占比 {profit.active_member_positive_rate != null ? `${Math.round(profit.active_member_positive_rate * 100)}%` : "-"}；昨日涨停中位收益 {profit.limit_up_next_day_median_return ?? "-"}%；严重负反馈 {profit.severe_negative_rate != null ? `${Math.round(profit.severe_negative_rate * 100)}%` : "-"}</b><b>核心反馈：龙头 {profit.leader_feedback || "数据不足"}；中军 {profit.capacity_core_feedback || "数据不足"}；普通成员 {profit.ordinary_member_feedback || "数据不足"}</b><b>中军池汇总：有效池 {selected?.metrics?.capacity_core_pool_size ?? "-"} 只；正向 {selected?.metrics?.capacity_core_positive_count ?? "-"} 只（{selected?.metrics?.capacity_core_positive_count_ratio != null ? `${Math.round(selected.metrics.capacity_core_positive_count_ratio * 100)}%` : "-"}），正向权重 {selected?.metrics?.capacity_core_positive_weight != null ? `${Math.round(selected.metrics.capacity_core_positive_weight * 100)}%` : "-"}；池加权收益 {selected?.metrics?.capacity_core_pool_weighted_return?.toFixed?.(2) ?? "-"}%；{selected?.metrics?.core_pool_status || "数据不足"}</b><b>{reversalEvidence}</b><b>{leaderCapacityEvidence}</b>{limitUpStocks.length > 0 && <section className="cycle-limit-up-stocks" aria-label={`${selected?.date} 板块内涨停股票`}><strong>当日涨停 {limitUpStocks.length} 只</strong><div>{limitUpStocks.map((stock) => <span key={stock.code}><StockName code={stock.code} name={stock.name} /><small>{stock.code} · {Number.isFinite(Number(stock.change_pct)) ? `+${Number(stock.change_pct).toFixed(2)}%` : "涨停"}</small></span>)}</div></section>}</div><section className="cycle-score-detail" aria-label="当日评分构成"><header><b>当日评分构成</b><strong>{Number(selected?.score?.mainline_rank_score).toFixed(1)}/100</strong></header><p>风险扣分会先计入各交易日的日强度，再按近3日强度 15% / 35% / 50% 的权重进入综合分。</p><div>{scoreParts.map(([label, weight, value]) => <span key={label}><small>{label} · 权重 {weight}%</small><b>{Number.isFinite(Number(value)) ? Number(value).toFixed(1) : "-"}</b><em>{Number.isFinite(Number(value)) ? `贡献 ${(Number(value) * weight / 100).toFixed(1)} 分` : "数据不足"}</em></span>)}</div>{totalDailyPenalty > 0 && <div className="cycle-score-penalties" aria-label="当日风险扣分"><span><small>当日风险扣分</small><b>-{totalDailyPenalty.toFixed(1)} 分</b><em>已计入近3日强度</em></span>{dailyPenaltyParts.map(([label, penalty]) => <span key={label}><small>{label}</small><b>-{penalty.toFixed(1)} 分</b><em>当日风险信号</em></span>)}</div>}</section></section>;
 }
 
 function MainlineModuleModal({ type, target, result, onClose }) {

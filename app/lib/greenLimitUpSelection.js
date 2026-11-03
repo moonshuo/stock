@@ -59,5 +59,10 @@ export function selectGreenMainBoardRecentLimitUps({ todayStocks = [], historica
         limit_up_count: limitUpDates.length,
       };
     })
+    // A green main-board close alone is not this strategy's entry universe.
+    // Keep the historical limit-up evidence attached above, then require at
+    // least one actual exchange-rounded limit-up close in the requested
+    // window.  Filtering before the map would lose that date-specific proof.
+    .filter((stock) => stock.limit_up_count > 0)
     .sort((left, right) => right.limit_up_count - left.limit_up_count || left.changePct - right.changePct || left.code.localeCompare(right.code));
 }

@@ -40115,6 +40115,14 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "锂电产业链",
+          "secondary_sector": "动力电池",
+          "tertiary_sectors": [
+            "储能锂电池"
+          ],
+          "relevance_score": 0.6
         }
       ],
       "product_tags": [
@@ -45111,7 +45119,7 @@
     },
     {
       "code": "002731",
-      "name": "*ST萃华",
+      "name": "萃华退",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -59372,7 +59380,7 @@
     },
     {
       "code": "300096",
-      "name": "ST易联众",
+      "name": "易联众",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -62988,7 +62996,7 @@
     },
     {
       "code": "300211",
-      "name": "*ST亿通",
+      "name": "亿通科技",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -74460,7 +74468,7 @@
     },
     {
       "code": "300527",
-      "name": "ST应急",
+      "name": "中船应急",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -93708,7 +93716,7 @@
     },
     {
       "code": "301139",
-      "name": "*ST元道",
+      "name": "元道退",
       "primary_sector": "通信设备",
       "classifications": [
         {
@@ -99231,7 +99239,7 @@
     },
     {
       "code": "301339",
-      "name": "通行宝",
+      "name": "苏交数智",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -115015,7 +115023,7 @@
     },
     {
       "code": "600363",
-      "name": "联创光电",
+      "name": "ST联光",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -115481,7 +115489,7 @@
     },
     {
       "code": "600379",
-      "name": "XD宝光股份",
+      "name": "宝光股份",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -116672,7 +116680,7 @@
     },
     {
       "code": "600429",
-      "name": "XD三元股份",
+      "name": "三元股份",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -131459,7 +131467,7 @@
     },
     {
       "code": "600930",
-      "name": "华电新能源集团",
+      "name": "华电新能",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -133518,7 +133526,7 @@
     },
     {
       "code": "601026",
-      "name": "道生天合材料科技",
+      "name": "道生天合",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -133746,7 +133754,7 @@
     },
     {
       "code": "601065",
-      "name": "江西省盐业集团",
+      "name": "江盐集团",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -134062,7 +134070,7 @@
     },
     {
       "code": "601096",
-      "name": "宏盛华源铁塔集团",
+      "name": "宏盛华源",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -134646,7 +134654,7 @@
     },
     {
       "code": "601133",
-      "name": "柏诚系统股份公司",
+      "name": "柏诚股份",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -136305,7 +136313,7 @@
     },
     {
       "code": "601360",
-      "name": "XD三六零",
+      "name": "三六零",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -143220,7 +143228,7 @@
     },
     {
       "code": "603057",
-      "name": "上海紫燕食品",
+      "name": "紫燕食品",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -143339,7 +143347,7 @@
     },
     {
       "code": "603061",
-      "name": "金海通股份",
+      "name": "金海通",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -143704,7 +143712,7 @@
     },
     {
       "code": "603072",
-      "name": "天和磁材科技",
+      "name": "天和磁材",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -143745,7 +143753,7 @@
     },
     {
       "code": "603075",
-      "name": "热威科技股份",
+      "name": "热威股份",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -144017,7 +144025,7 @@
     },
     {
       "code": "603082",
-      "name": "北自科技股份",
+      "name": "北自科技",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -144320,7 +144328,7 @@
     },
     {
       "code": "603092",
-      "name": "德力佳传动",
+      "name": "德力佳",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -145182,7 +145190,7 @@
     },
     {
       "code": "603119",
-      "name": "浙江荣泰股份",
+      "name": "浙江荣泰",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -145213,7 +145221,7 @@
     },
     {
       "code": "603120",
-      "name": "肯特催化材料",
+      "name": "肯特催化",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -145413,7 +145421,7 @@
     },
     {
       "code": "603125",
-      "name": "江苏常青树科技",
+      "name": "常青科技",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -145563,7 +145571,7 @@
     },
     {
       "code": "603130",
-      "name": "云中马股份",
+      "name": "云中马",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -145899,7 +145907,7 @@
     },
     {
       "code": "603151",
-      "name": "邦基科技股份",
+      "name": "邦基科技",
       "primary_sector": "农业",
       "classifications": [
         {
@@ -145930,7 +145938,7 @@
     },
     {
       "code": "603153",
-      "name": "上海建科集团",
+      "name": "上海建科",
       "primary_sector": "房地产",
       "classifications": [
         {
@@ -146201,7 +146209,7 @@
     },
     {
       "code": "603163",
-      "name": "圣晖系统集成集团",
+      "name": "圣晖集成",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -146431,7 +146439,7 @@
     },
     {
       "code": "603170",
-      "name": "宝立食品科技",
+      "name": "宝立食品",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -146513,7 +146521,7 @@
     },
     {
       "code": "603172",
-      "name": "浙江万丰股份",
+      "name": "万丰股份",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -146540,7 +146548,7 @@
     },
     {
       "code": "603173",
-      "name": "福斯达深冷",
+      "name": "福斯达",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -146786,7 +146794,7 @@
     },
     {
       "code": "603182",
-      "name": "嘉华生物科技股份",
+      "name": "嘉华股份",
       "primary_sector": "农业",
       "classifications": [
         {
@@ -147031,7 +147039,7 @@
     },
     {
       "code": "603190",
-      "name": "烟台亚通精工机械",
+      "name": "亚通精工",
       "primary_sector": "汽车产业链",
       "classifications": [
         {
@@ -147128,7 +147136,7 @@
     },
     {
       "code": "603193",
-      "name": "润本生物技术股份",
+      "name": "润本股份",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -147591,7 +147599,7 @@
     },
     {
       "code": "603207",
-      "name": "上海小方制药",
+      "name": "小方制药",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -147684,7 +147692,7 @@
     },
     {
       "code": "603211",
-      "name": "晋拓科技股份",
+      "name": "晋拓股份",
       "primary_sector": "消费电子",
       "classifications": [
         {
@@ -148558,7 +148566,7 @@
     },
     {
       "code": "603237",
-      "name": "五芳斋实业",
+      "name": "五芳斋",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -148701,7 +148709,7 @@
     },
     {
       "code": "603255",
-      "name": "鼎际得股份",
+      "name": "鼎际得",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -149134,7 +149142,7 @@
     },
     {
       "code": "603270",
-      "name": "金帝精密科技股份",
+      "name": "金帝股份",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -149165,7 +149173,7 @@
     },
     {
       "code": "603271",
-      "name": "永杰新材料",
+      "name": "永杰新材",
       "primary_sector": "有色金属",
       "classifications": [
         {
@@ -149297,7 +149305,7 @@
     },
     {
       "code": "603275",
-      "name": "上海众辰科技",
+      "name": "众辰科技",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -149330,7 +149338,7 @@
     },
     {
       "code": "603276",
-      "name": "恒兴新材料科技",
+      "name": "恒兴新材",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -149475,7 +149483,7 @@
     },
     {
       "code": "603280",
-      "name": "南方路面机械",
+      "name": "南方路机",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -149547,7 +149555,7 @@
     },
     {
       "code": "603282",
-      "name": "亚光科技股份",
+      "name": "亚光股份",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -149856,7 +149864,7 @@
     },
     {
       "code": "603293",
-      "name": "埃泰克汽车电子",
+      "name": "埃泰克",
       "primary_sector": "汽车产业链",
       "classifications": [
         {
@@ -151321,7 +151329,7 @@
     },
     {
       "code": "603344",
-      "name": "星德胜科技",
+      "name": "星德胜",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -152005,7 +152013,7 @@
     },
     {
       "code": "603373",
-      "name": "安邦护卫集团股份",
+      "name": "安邦护卫",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -152047,7 +152055,7 @@
     },
     {
       "code": "603375",
-      "name": "盛景微电子",
+      "name": "盛景微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -152605,7 +152613,7 @@
     },
     {
       "code": "603395",
-      "name": "中盐红四方",
+      "name": "红四方",
       "primary_sector": "农业",
       "classifications": [
         {
@@ -153885,7 +153893,7 @@
     },
     {
       "code": "603517",
-      "name": "ST绝味",
+      "name": "绝味食品",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -154860,7 +154868,7 @@
     },
     {
       "code": "603588",
-      "name": "高能环境",
+      "name": "高能时代",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -155331,7 +155339,7 @@
     },
     {
       "code": "603608",
-      "name": "天创时尚",
+      "name": "天创股份",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -156228,7 +156236,7 @@
     },
     {
       "code": "603655",
-      "name": "XD朗博科技",
+      "name": "朗博科技",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -159932,7 +159940,7 @@
     },
     {
       "code": "603838",
-      "name": "*ST四通",
+      "name": "四通股份",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -161724,7 +161732,7 @@
     },
     {
       "code": "603928",
-      "name": "XD兴业股份",
+      "name": "兴业股份",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -164997,7 +165005,7 @@
     },
     {
       "code": "605179",
-      "name": "一鸣食品",
+      "name": "XD一鸣食",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -165962,7 +165970,7 @@
     },
     {
       "code": "605300",
-      "name": "佳禾食品",
+      "name": "XD佳禾食",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -167164,7 +167172,7 @@
     },
     {
       "code": "688001",
-      "name": "苏州华兴源创科技",
+      "name": "华兴源创",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -167314,7 +167322,7 @@
     },
     {
       "code": "688004",
-      "name": "北京博汇科技",
+      "name": "博汇科技",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -167419,7 +167427,7 @@
     },
     {
       "code": "688006",
-      "name": "浙江杭可科技",
+      "name": "杭可科技",
       "primary_sector": "锂电产业链",
       "classifications": [
         {
@@ -167563,7 +167571,7 @@
     },
     {
       "code": "688011",
-      "name": "新光光电科技股份",
+      "name": "新光光电",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -167594,7 +167602,7 @@
     },
     {
       "code": "688012",
-      "name": "中微半导体设备",
+      "name": "中微公司",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -167620,7 +167628,7 @@
     },
     {
       "code": "688013",
-      "name": "天臣国际医疗科技",
+      "name": "天臣医疗",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -167851,7 +167859,7 @@
     },
     {
       "code": "688022",
-      "name": "ST瀚川智能",
+      "name": "ST瀚川",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -167921,7 +167929,7 @@
     },
     {
       "code": "688025",
-      "name": "杰普特光电",
+      "name": "杰普特",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -167964,7 +167972,7 @@
     },
     {
       "code": "688026",
-      "name": "洁特生物股份",
+      "name": "洁特生物",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -167995,7 +168003,7 @@
     },
     {
       "code": "688027",
-      "name": "科大国盾量子",
+      "name": "国盾量子",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -168026,7 +168034,7 @@
     },
     {
       "code": "688028",
-      "name": "沃尔德金刚石",
+      "name": "沃尔德",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -168057,7 +168065,7 @@
     },
     {
       "code": "688029",
-      "name": "南微医学科技",
+      "name": "南微医学",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -168229,7 +168237,7 @@
     },
     {
       "code": "688033",
-      "name": "*ST天宜新材",
+      "name": "*ST天宜",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -168272,7 +168280,7 @@
     },
     {
       "code": "688035",
-      "name": "德邦科技股份",
+      "name": "德邦科技",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -168341,7 +168349,7 @@
     },
     {
       "code": "688037",
-      "name": "芯源微电子",
+      "name": "芯源微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -168367,7 +168375,7 @@
     },
     {
       "code": "688038",
-      "name": "武汉中科通达",
+      "name": "中科通达",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -168472,7 +168480,7 @@
     },
     {
       "code": "688045",
-      "name": "必易微电子",
+      "name": "必易微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -168617,7 +168625,7 @@
     },
     {
       "code": "688050",
-      "name": "爱博诺德医疗",
+      "name": "爱博医疗",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -168637,7 +168645,7 @@
     },
     {
       "code": "688051",
-      "name": "罗克佳华科技",
+      "name": "佳华科技",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -168691,7 +168699,7 @@
     },
     {
       "code": "688052",
-      "name": "纳芯微电子",
+      "name": "纳芯微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -168719,7 +168727,7 @@
     },
     {
       "code": "688053",
-      "name": "ST思科瑞微电子",
+      "name": "ST思科瑞",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -168761,7 +168769,7 @@
     },
     {
       "code": "688055",
-      "name": "昆山龙腾光电",
+      "name": "龙腾光电",
       "primary_sector": "消费电子",
       "classifications": [
         {
@@ -168781,7 +168789,7 @@
     },
     {
       "code": "688056",
-      "name": "莱伯泰科仪器",
+      "name": "莱伯泰科",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -168801,7 +168809,7 @@
     },
     {
       "code": "688057",
-      "name": "金达莱环保",
+      "name": "金达莱",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -168853,7 +168861,7 @@
     },
     {
       "code": "688058",
-      "name": "宝兰德软件",
+      "name": "宝兰德",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -168896,7 +168904,7 @@
     },
     {
       "code": "688059",
-      "name": "株洲华锐精密",
+      "name": "华锐精密",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -168916,7 +168924,7 @@
     },
     {
       "code": "688060",
-      "name": "江苏云涌电子科技",
+      "name": "云涌科技",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -169111,7 +169119,7 @@
     },
     {
       "code": "688066",
-      "name": "*ST航天宏图",
+      "name": "*ST航图",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -169193,7 +169201,7 @@
     },
     {
       "code": "688069",
-      "name": "德林海环保",
+      "name": "德林海",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -169235,7 +169243,7 @@
     },
     {
       "code": "688070",
-      "name": "成都纵横",
+      "name": "纵横股份",
       "primary_sector": "低空经济",
       "classifications": [
         {
@@ -169255,7 +169263,7 @@
     },
     {
       "code": "688071",
-      "name": "华依科技集团",
+      "name": "华依科技",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -169312,7 +169320,7 @@
     },
     {
       "code": "688073",
-      "name": "毕得医药科技股份",
+      "name": "毕得医药",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -169373,7 +169381,7 @@
     },
     {
       "code": "688076",
-      "name": "ST诺泰生物",
+      "name": "ST诺泰",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -169405,7 +169413,7 @@
     },
     {
       "code": "688077",
-      "name": "大地熊新材料",
+      "name": "大地熊",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -169456,7 +169464,7 @@
     },
     {
       "code": "688079",
-      "name": "美迪凯股份",
+      "name": "美迪凯",
       "primary_sector": "电子元器件",
       "classifications": [
         {
@@ -169498,7 +169506,7 @@
     },
     {
       "code": "688080",
-      "name": "映翰通网络",
+      "name": "映翰通",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -169592,7 +169600,7 @@
     },
     {
       "code": "688082",
-      "name": "盛美上海半导体",
+      "name": "盛美上海",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -169803,7 +169811,7 @@
     },
     {
       "code": "688089",
-      "name": "ST嘉必优生物",
+      "name": "ST嘉必优",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -169872,7 +169880,7 @@
     },
     {
       "code": "688091",
-      "name": "上海谊众药业",
+      "name": "上海谊众",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -169892,7 +169900,7 @@
     },
     {
       "code": "688092",
-      "name": "爱科科技股份",
+      "name": "爱科科技",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -169955,7 +169963,7 @@
     },
     {
       "code": "688095",
-      "name": "福昕软件开发",
+      "name": "福昕软件",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -170004,7 +170012,7 @@
     },
     {
       "code": "688096",
-      "name": "江苏京源环保",
+      "name": "京源环保",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -170035,7 +170043,7 @@
     },
     {
       "code": "688097",
-      "name": "博众精工科技",
+      "name": "博众精工",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -170078,7 +170086,7 @@
     },
     {
       "code": "688098",
-      "name": "申联生物医药",
+      "name": "申联生物",
       "primary_sector": "农业",
       "classifications": [
         {
@@ -170098,7 +170106,7 @@
     },
     {
       "code": "688099",
-      "name": "晶晨半导体",
+      "name": "晶晨股份",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -170173,7 +170181,7 @@
     },
     {
       "code": "688101",
-      "name": "三达膜环境技术",
+      "name": "三达膜",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -170215,7 +170223,7 @@
     },
     {
       "code": "688102",
-      "name": "陕西斯瑞新材股份",
+      "name": "斯瑞新材",
       "primary_sector": "有色金属",
       "classifications": [
         {
@@ -170289,7 +170297,7 @@
     },
     {
       "code": "688105",
-      "name": "诺唯赞生物",
+      "name": "诺唯赞",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -170390,7 +170398,7 @@
     },
     {
       "code": "688108",
-      "name": "赛诺医疗科学",
+      "name": "赛诺医疗",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -170610,7 +170618,7 @@
     },
     {
       "code": "688115",
-      "name": "思林杰科技",
+      "name": "思林杰",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -170832,7 +170840,7 @@
     },
     {
       "code": "688121",
-      "name": "*ST卓然技术",
+      "name": "*ST卓然",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -170911,7 +170919,7 @@
     },
     {
       "code": "688123",
-      "name": "聚辰半导体",
+      "name": "聚辰股份",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -170995,7 +171003,7 @@
     },
     {
       "code": "688126",
-      "name": "上海硅产业集团",
+      "name": "沪硅产业",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -171067,7 +171075,7 @@
     },
     {
       "code": "688128",
-      "name": "中国电器研究院",
+      "name": "中国电研",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -171109,7 +171117,7 @@
     },
     {
       "code": "688129",
-      "name": "东来涂料技术股份",
+      "name": "东来技术",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -171140,7 +171148,7 @@
     },
     {
       "code": "688130",
-      "name": "晶华微电子",
+      "name": "晶华微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -171192,7 +171200,7 @@
     },
     {
       "code": "688132",
-      "name": "邦彦技术股份",
+      "name": "邦彦技术",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -171223,7 +171231,7 @@
     },
     {
       "code": "688133",
-      "name": "泰坦股份",
+      "name": "泰坦科技",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -171271,7 +171279,7 @@
     },
     {
       "code": "688136",
-      "name": "科兴生物制药",
+      "name": "科兴制药",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -171393,7 +171401,7 @@
     },
     {
       "code": "688141",
-      "name": "杰华特微电子",
+      "name": "杰华特",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -171421,7 +171429,7 @@
     },
     {
       "code": "688143",
-      "name": "长盈通光电",
+      "name": "长盈通",
       "primary_sector": "通信设备",
       "classifications": [
         {
@@ -171463,7 +171471,7 @@
     },
     {
       "code": "688146",
-      "name": "中船派瑞特气",
+      "name": "中船特气",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -171494,7 +171502,7 @@
     },
     {
       "code": "688147",
-      "name": "微导纳米科技",
+      "name": "微导纳米",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -171577,7 +171585,7 @@
     },
     {
       "code": "688150",
-      "name": "莱特光电股份",
+      "name": "莱特光电",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -171801,7 +171809,7 @@
     },
     {
       "code": "688157",
-      "name": "松井新材料",
+      "name": "松井股份",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -171832,7 +171840,7 @@
     },
     {
       "code": "688158",
-      "name": "优刻得科技",
+      "name": "优刻得",
       "primary_sector": "AIDC基础设施",
       "classifications": [
         {
@@ -171905,7 +171913,7 @@
     },
     {
       "code": "688160",
-      "name": "步科自动化",
+      "name": "步科股份",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -172025,7 +172033,7 @@
     },
     {
       "code": "688165",
-      "name": "埃夫特智能",
+      "name": "埃夫特",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -172080,7 +172088,7 @@
     },
     {
       "code": "688166",
-      "name": "博瑞生物医药",
+      "name": "博瑞医药",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -172122,7 +172130,7 @@
     },
     {
       "code": "688167",
-      "name": "西安炬光科技",
+      "name": "炬光科技",
       "primary_sector": "电子元器件",
       "classifications": [
         {
@@ -172175,7 +172183,7 @@
     },
     {
       "code": "688168",
-      "name": "北京安博通",
+      "name": "安博通",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -172330,7 +172338,7 @@
     },
     {
       "code": "688172",
-      "name": "燕东微电子股份",
+      "name": "燕东微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -172363,7 +172371,7 @@
     },
     {
       "code": "688173",
-      "name": "希荻微电子",
+      "name": "希荻微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -172393,7 +172401,7 @@
     },
     {
       "code": "688175",
-      "name": "珠海高凌信息",
+      "name": "高凌信息",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -172458,7 +172466,7 @@
     },
     {
       "code": "688176",
-      "name": "亚虹医药科技",
+      "name": "亚虹医药",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -172478,7 +172486,7 @@
     },
     {
       "code": "688177",
-      "name": "百奥泰生物",
+      "name": "百奥泰",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -172502,7 +172510,7 @@
     },
     {
       "code": "688178",
-      "name": "万德斯环保",
+      "name": "万德斯",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -172545,7 +172553,7 @@
     },
     {
       "code": "688179",
-      "name": "阿拉丁科技",
+      "name": "阿拉丁",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -172599,7 +172607,7 @@
     },
     {
       "code": "688181",
-      "name": "八亿时空液晶股份",
+      "name": "八亿时空",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -172698,7 +172706,7 @@
     },
     {
       "code": "688184",
-      "name": "ST帕瓦股份",
+      "name": "ST帕瓦",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -172740,7 +172748,7 @@
     },
     {
       "code": "688185",
-      "name": "康希诺生物",
+      "name": "康希诺",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -172760,7 +172768,7 @@
     },
     {
       "code": "688186",
-      "name": "张家港广大特材",
+      "name": "广大特材",
       "primary_sector": "钢铁",
       "classifications": [
         {
@@ -172886,7 +172894,7 @@
     },
     {
       "code": "688188",
-      "name": "上海柏楚电子科技",
+      "name": "柏楚电子",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -172928,7 +172936,7 @@
     },
     {
       "code": "688189",
-      "name": "ST南新制药",
+      "name": "ST南新",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -172948,7 +172956,7 @@
     },
     {
       "code": "688190",
-      "name": "云路先进材料股份",
+      "name": "云路股份",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -172979,7 +172987,7 @@
     },
     {
       "code": "688191",
-      "name": "智洋创新科技",
+      "name": "智洋创新",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -173158,7 +173166,7 @@
     },
     {
       "code": "688198",
-      "name": "佰仁医疗科技",
+      "name": "佰仁医疗",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -173179,7 +173187,7 @@
     },
     {
       "code": "688199",
-      "name": "久日新材料",
+      "name": "久日新材",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -173251,7 +173259,7 @@
     },
     {
       "code": "688201",
-      "name": "ST信安世纪",
+      "name": "ST信安",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -173284,7 +173292,7 @@
     },
     {
       "code": "688202",
-      "name": "美迪西生物医药",
+      "name": "美迪西",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -173304,7 +173312,7 @@
     },
     {
       "code": "688203",
-      "name": "海正生物材料",
+      "name": "海正生材",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -173335,7 +173343,7 @@
     },
     {
       "code": "688205",
-      "name": "德科立光电子",
+      "name": "德科立",
       "primary_sector": "AIDC基础设施",
       "classifications": [
         {
@@ -173498,7 +173506,7 @@
     },
     {
       "code": "688209",
-      "name": "英集芯科技",
+      "name": "英集芯",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -173528,7 +173536,7 @@
     },
     {
       "code": "688210",
-      "name": "泛海统联精密制造",
+      "name": "统联精密",
       "primary_sector": "电子元器件",
       "classifications": [
         {
@@ -173649,7 +173657,7 @@
     },
     {
       "code": "688213",
-      "name": "思特威电子科技",
+      "name": "思特威",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -173700,7 +173708,7 @@
     },
     {
       "code": "688215",
-      "name": "瑞晟智能科技",
+      "name": "瑞晟智能",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -173773,7 +173781,7 @@
     },
     {
       "code": "688217",
-      "name": "上海睿昂基因",
+      "name": "睿昂基因",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -174026,7 +174034,7 @@
     },
     {
       "code": "688226",
-      "name": "威腾电气集团股份",
+      "name": "威腾电气",
       "primary_sector": "AIDC基础设施",
       "classifications": [
         {
@@ -174120,7 +174128,7 @@
     },
     {
       "code": "688228",
-      "name": "开普云信息科技",
+      "name": "开普云",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -174197,7 +174205,7 @@
     },
     {
       "code": "688229",
-      "name": "博睿宏远数据",
+      "name": "博睿数据",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -174269,7 +174277,7 @@
     },
     {
       "code": "688231",
-      "name": "隆达超合金股份",
+      "name": "隆达股份",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -174300,7 +174308,7 @@
     },
     {
       "code": "688232",
-      "name": "国泰新点软件",
+      "name": "新点软件",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -174363,7 +174371,7 @@
     },
     {
       "code": "688233",
-      "name": "神工半导体",
+      "name": "神工股份",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -174466,7 +174474,7 @@
     },
     {
       "code": "688236",
-      "name": "春立正达医疗",
+      "name": "春立医疗",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -174550,7 +174558,7 @@
     },
     {
       "code": "688239",
-      "name": "贵州航宇科技",
+      "name": "航宇科技",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -174629,7 +174637,7 @@
     },
     {
       "code": "688246",
-      "name": "嘉和美康科技",
+      "name": "嘉和美康",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -174711,7 +174719,7 @@
     },
     {
       "code": "688248",
-      "name": "南方电网电力科技",
+      "name": "南网科技",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -174795,7 +174803,7 @@
     },
     {
       "code": "688251",
-      "name": "井松智能科技",
+      "name": "井松智能",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -174834,7 +174842,7 @@
     },
     {
       "code": "688252",
-      "name": "天德钰科技",
+      "name": "天德钰",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -174855,7 +174863,7 @@
     },
     {
       "code": "688253",
-      "name": "英诺特生物股份",
+      "name": "英诺特",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -174875,7 +174883,7 @@
     },
     {
       "code": "688255",
-      "name": "凯尔达机器人",
+      "name": "凯尔达",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -174923,7 +174931,7 @@
     },
     {
       "code": "688256",
-      "name": "寒武纪科技",
+      "name": "寒武纪",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -175001,7 +175009,7 @@
     },
     {
       "code": "688258",
-      "name": "江苏卓易信息科技",
+      "name": "卓易信息",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -175063,7 +175071,7 @@
     },
     {
       "code": "688259",
-      "name": "创耀通信科技",
+      "name": "创耀科技",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -175137,7 +175145,7 @@
     },
     {
       "code": "688261",
-      "name": "东微半导体",
+      "name": "东微半导",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -175173,7 +175181,7 @@
     },
     {
       "code": "688262",
-      "name": "苏州国芯科技",
+      "name": "国芯科技",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -175207,7 +175215,7 @@
     },
     {
       "code": "688265",
-      "name": "南方模式生物",
+      "name": "南模生物",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -175257,7 +175265,7 @@
     },
     {
       "code": "688267",
-      "name": "XD中触媒股份",
+      "name": "中触媒",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -175288,7 +175296,7 @@
     },
     {
       "code": "688268",
-      "name": "广东华特气体",
+      "name": "华特气体",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -175319,7 +175327,7 @@
     },
     {
       "code": "688269",
-      "name": "西安凯立新材",
+      "name": "凯立新材",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -175350,7 +175358,7 @@
     },
     {
       "code": "688270",
-      "name": "ST臻镭科技",
+      "name": "ST臻镭",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -175423,7 +175431,7 @@
     },
     {
       "code": "688272",
-      "name": "富吉瑞光电",
+      "name": "富吉瑞",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -175465,7 +175473,7 @@
     },
     {
       "code": "688273",
-      "name": "麦澜德医疗",
+      "name": "麦澜德",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -175492,7 +175500,7 @@
     },
     {
       "code": "688275",
-      "name": "万润新能源",
+      "name": "万润新能",
       "primary_sector": "锂电产业链",
       "classifications": [
         {
@@ -175523,7 +175531,7 @@
     },
     {
       "code": "688276",
-      "name": "长春百克生物科技",
+      "name": "百克生物",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -175547,7 +175555,7 @@
     },
     {
       "code": "688277",
-      "name": "天智航医疗",
+      "name": "天智航",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -175670,7 +175678,7 @@
     },
     {
       "code": "688281",
-      "name": "华秦科技实业",
+      "name": "华秦科技",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -175927,7 +175935,7 @@
     },
     {
       "code": "688291",
-      "name": "金橙子科技",
+      "name": "金橙子",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -175969,7 +175977,7 @@
     },
     {
       "code": "688292",
-      "name": "浩瀚深度信息技术",
+      "name": "浩瀚深度",
       "primary_sector": "通信设备",
       "classifications": [
         {
@@ -176046,7 +176054,7 @@
     },
     {
       "code": "688293",
-      "name": "奥浦迈生物",
+      "name": "奥浦迈",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -176067,7 +176075,7 @@
     },
     {
       "code": "688295",
-      "name": "中复神鹰碳纤维",
+      "name": "中复神鹰",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -176134,7 +176142,7 @@
     },
     {
       "code": "688297",
-      "name": "中航无人机",
+      "name": "中无人机",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -176154,7 +176162,7 @@
     },
     {
       "code": "688298",
-      "name": "东方基因生物",
+      "name": "东方生物",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -176262,7 +176270,7 @@
     },
     {
       "code": "688301",
-      "name": "奕瑞科技股份",
+      "name": "奕瑞科技",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -176391,7 +176399,7 @@
     },
     {
       "code": "688306",
-      "name": "均普智能制造",
+      "name": "均普智能",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -176466,7 +176474,7 @@
     },
     {
       "code": "688308",
-      "name": "欧科亿数控刀具",
+      "name": "欧科亿",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -176710,7 +176718,7 @@
     },
     {
       "code": "688315",
-      "name": "诺禾致源科技",
+      "name": "诺禾致源",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -176799,7 +176807,7 @@
     },
     {
       "code": "688317",
-      "name": "上海之江生物",
+      "name": "之江生物",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -177012,7 +177020,7 @@
     },
     {
       "code": "688323",
-      "name": "瑞华泰薄膜科技",
+      "name": "瑞华泰",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -177053,7 +177061,7 @@
     },
     {
       "code": "688325",
-      "name": "赛微微电子",
+      "name": "赛微微电",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -177198,7 +177206,7 @@
     },
     {
       "code": "688328",
-      "name": "深科达智能装备",
+      "name": "深科达",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -177251,7 +177259,7 @@
     },
     {
       "code": "688329",
-      "name": "苏州艾隆科技",
+      "name": "艾隆科技",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -177282,7 +177290,7 @@
     },
     {
       "code": "688330",
-      "name": "宏力达信息",
+      "name": "宏力达",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -177394,7 +177402,7 @@
     },
     {
       "code": "688333",
-      "name": "西安铂力特",
+      "name": "铂力特",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -177582,7 +177590,7 @@
     },
     {
       "code": "688339",
-      "name": "亿华通科技",
+      "name": "亿华通",
       "primary_sector": "氢能源",
       "classifications": [
         {
@@ -177616,7 +177624,7 @@
     },
     {
       "code": "688343",
-      "name": "云天励飞股份",
+      "name": "云天励飞",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -177702,7 +177710,7 @@
     },
     {
       "code": "688347",
-      "name": "华虹宏力半导体",
+      "name": "华虹宏力",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -177835,7 +177843,7 @@
     },
     {
       "code": "688351",
-      "name": "微创电生理股份",
+      "name": "微电生理",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -177995,7 +178003,7 @@
     },
     {
       "code": "688358",
-      "name": "祥生医疗科技",
+      "name": "祥生医疗",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -178015,7 +178023,7 @@
     },
     {
       "code": "688359",
-      "name": "三孚新材料科技",
+      "name": "三孚新科",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -178237,7 +178245,7 @@
     },
     {
       "code": "688366",
-      "name": "昊海生物科技",
+      "name": "昊海生科",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -178289,7 +178297,7 @@
     },
     {
       "code": "688368",
-      "name": "晶丰明源半导体",
+      "name": "晶丰明源",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -178357,7 +178365,7 @@
     },
     {
       "code": "688370",
-      "name": "丛麟环保科技",
+      "name": "丛麟科技",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -178377,7 +178385,7 @@
     },
     {
       "code": "688371",
-      "name": "菲沃泰纳米科技",
+      "name": "菲沃泰",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -178566,7 +178574,7 @@
     },
     {
       "code": "688377",
-      "name": "迪威尔高端制造",
+      "name": "迪威尔",
       "primary_sector": "石油天然气",
       "classifications": [
         {
@@ -178586,7 +178594,7 @@
     },
     {
       "code": "688378",
-      "name": "奥来德光电",
+      "name": "奥来德",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -178690,7 +178698,7 @@
     },
     {
       "code": "688381",
-      "name": "帝奥微电子",
+      "name": "帝奥微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -178710,7 +178718,7 @@
     },
     {
       "code": "688382",
-      "name": "益方生物科技",
+      "name": "益方生物",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -178730,7 +178738,7 @@
     },
     {
       "code": "688383",
-      "name": "新益昌科技",
+      "name": "新益昌",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -178829,7 +178837,7 @@
     },
     {
       "code": "688387",
-      "name": "中信科移动",
+      "name": "信科移动",
       "primary_sector": "通信设备",
       "classifications": [
         {
@@ -178918,7 +178926,7 @@
     },
     {
       "code": "688389",
-      "name": "深圳普门科技",
+      "name": "普门科技",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -178939,7 +178947,7 @@
     },
     {
       "code": "688390",
-      "name": "固德威电源",
+      "name": "固德威",
       "primary_sector": "光伏产业链",
       "classifications": [
         {
@@ -179015,7 +179023,7 @@
     },
     {
       "code": "688392",
-      "name": "XD骄成超声波",
+      "name": "骄成超声",
       "primary_sector": "锂电产业链",
       "classifications": [
         {
@@ -179057,7 +179065,7 @@
     },
     {
       "code": "688393",
-      "name": "安必平医药",
+      "name": "安必平",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -179109,7 +179117,7 @@
     },
     {
       "code": "688395",
-      "name": "深圳正弦电气股份",
+      "name": "正弦电气",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -179141,7 +179149,7 @@
     },
     {
       "code": "688396",
-      "name": "华润微电子",
+      "name": "华润微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -179244,7 +179252,7 @@
     },
     {
       "code": "688400",
-      "name": "凌云光技术",
+      "name": "凌云光",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -179353,7 +179361,7 @@
     },
     {
       "code": "688408",
-      "name": "中信博新能源",
+      "name": "中信博",
       "primary_sector": "光伏产业链",
       "classifications": [
         {
@@ -179398,7 +179406,7 @@
     },
     {
       "code": "688410",
-      "name": "山外山血液净化",
+      "name": "山外山",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -179584,7 +179592,7 @@
     },
     {
       "code": "688420",
-      "name": "天津美腾科技",
+      "name": "美腾科技",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -179657,7 +179665,7 @@
     },
     {
       "code": "688426",
-      "name": "康为世纪生物科技",
+      "name": "康为世纪",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -179927,7 +179935,7 @@
     },
     {
       "code": "688448",
-      "name": "南京磁谷科技",
+      "name": "磁谷科技",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -180073,7 +180081,7 @@
     },
     {
       "code": "688458",
-      "name": "美芯晟科技",
+      "name": "美芯晟",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -180230,7 +180238,7 @@
     },
     {
       "code": "688472",
-      "name": "阿特斯阳光电力",
+      "name": "阿特斯",
       "primary_sector": "光伏产业链",
       "classifications": [
         {
@@ -180336,7 +180344,7 @@
     },
     {
       "code": "688479",
-      "name": "用友汽车信息科技",
+      "name": "友车科技",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -180376,7 +180384,7 @@
     },
     {
       "code": "688480",
-      "name": "赛恩斯环保",
+      "name": "赛恩斯",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -180438,7 +180446,7 @@
     },
     {
       "code": "688485",
-      "name": "九州一轨环科",
+      "name": "九州一轨",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -180541,7 +180549,7 @@
     },
     {
       "code": "688496",
-      "name": "*ST清越科技",
+      "name": "*ST清越",
       "primary_sector": "消费电子",
       "classifications": [
         {
@@ -180598,7 +180606,7 @@
     },
     {
       "code": "688499",
-      "name": "广东利元亨",
+      "name": "利元亨",
       "primary_sector": "锂电产业链",
       "classifications": [
         {
@@ -180645,7 +180653,7 @@
     },
     {
       "code": "688500",
-      "name": "慧辰资讯股份公司",
+      "name": "慧辰股份",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -180677,7 +180685,7 @@
     },
     {
       "code": "688501",
-      "name": "青岛达能环保",
+      "name": "青达环保",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -180740,7 +180748,7 @@
     },
     {
       "code": "688503",
-      "name": "聚和材料股份公司",
+      "name": "聚和材料",
       "primary_sector": "光伏产业链",
       "classifications": [
         {
@@ -180782,7 +180790,7 @@
     },
     {
       "code": "688505",
-      "name": "复旦张江股份",
+      "name": "复旦张江",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -180813,7 +180821,7 @@
     },
     {
       "code": "688506",
-      "name": "百利天恒药业",
+      "name": "百利天恒",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -180875,7 +180883,7 @@
     },
     {
       "code": "688508",
-      "name": "芯朋微电子",
+      "name": "芯朋微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -181023,7 +181031,7 @@
     },
     {
       "code": "688512",
-      "name": "慧智微电子",
+      "name": "慧智微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -181064,7 +181072,7 @@
     },
     {
       "code": "688515",
-      "name": "裕太微电子",
+      "name": "裕太微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -181084,7 +181092,7 @@
     },
     {
       "code": "688516",
-      "name": "奥特维科技",
+      "name": "奥特维",
       "primary_sector": "光伏产业链",
       "classifications": [
         {
@@ -181163,7 +181171,7 @@
     },
     {
       "code": "688518",
-      "name": "联赢激光股份",
+      "name": "联赢激光",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -181205,7 +181213,7 @@
     },
     {
       "code": "688519",
-      "name": "南亚新材料",
+      "name": "南亚新材",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -181244,7 +181252,7 @@
     },
     {
       "code": "688520",
-      "name": "神州细胞集团公司",
+      "name": "神州细胞",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -181265,7 +181273,7 @@
     },
     {
       "code": "688521",
-      "name": "芯原微电子",
+      "name": "芯原股份",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -181296,7 +181304,7 @@
     },
     {
       "code": "688522",
-      "name": "纳睿雷达科技",
+      "name": "纳睿雷达",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -181327,7 +181335,7 @@
     },
     {
       "code": "688523",
-      "name": "航天环宇科技",
+      "name": "航天环宇",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -181450,7 +181458,7 @@
     },
     {
       "code": "688526",
-      "name": "武汉科前生物",
+      "name": "科前生物",
       "primary_sector": "农业",
       "classifications": [
         {
@@ -181470,7 +181478,7 @@
     },
     {
       "code": "688528",
-      "name": "秦川物联网",
+      "name": "秦川物联",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -181523,7 +181531,7 @@
     },
     {
       "code": "688529",
-      "name": "豪森智能股份",
+      "name": "豪森智能",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -181620,7 +181628,7 @@
     },
     {
       "code": "688531",
-      "name": "日联科技股份",
+      "name": "日联科技",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -181662,7 +181670,7 @@
     },
     {
       "code": "688533",
-      "name": "上声电子股份",
+      "name": "上声电子",
       "primary_sector": "电子元器件",
       "classifications": [
         {
@@ -181693,7 +181701,7 @@
     },
     {
       "code": "688535",
-      "name": "华海诚科新材料",
+      "name": "华海诚科",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -181734,7 +181742,7 @@
     },
     {
       "code": "688536",
-      "name": "思瑞浦股份",
+      "name": "思瑞浦",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -181874,7 +181882,7 @@
     },
     {
       "code": "688548",
-      "name": "广钢气体股份",
+      "name": "广钢气体",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -181914,7 +181922,7 @@
     },
     {
       "code": "688549",
-      "name": "中巨芯科技",
+      "name": "中巨芯",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -181957,7 +181965,7 @@
     },
     {
       "code": "688550",
-      "name": "瑞联新材料",
+      "name": "瑞联新材",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -181999,7 +182007,7 @@
     },
     {
       "code": "688551",
-      "name": "科威尔股份",
+      "name": "科威尔",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -182113,7 +182121,7 @@
     },
     {
       "code": "688556",
-      "name": "高测科技股份",
+      "name": "高测股份",
       "primary_sector": "光伏产业链",
       "classifications": [
         {
@@ -182211,7 +182219,7 @@
     },
     {
       "code": "688558",
-      "name": "国盛智科股份",
+      "name": "国盛智科",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -182243,7 +182251,7 @@
     },
     {
       "code": "688559",
-      "name": "海目星激光",
+      "name": "海目星",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -182296,7 +182304,7 @@
     },
     {
       "code": "688560",
-      "name": "明冠新材料",
+      "name": "明冠新材",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -182339,7 +182347,7 @@
     },
     {
       "code": "688561",
-      "name": "奇安信集团",
+      "name": "奇安信",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -182377,7 +182385,7 @@
     },
     {
       "code": "688562",
-      "name": "航天软件股份",
+      "name": "航天软件",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -182430,7 +182438,7 @@
     },
     {
       "code": "688563",
-      "name": "航空材料股份",
+      "name": "航材股份",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -182504,7 +182512,7 @@
     },
     {
       "code": "688566",
-      "name": "吉贝尔药业",
+      "name": "吉贝尔",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -182567,7 +182575,7 @@
     },
     {
       "code": "688568",
-      "name": "中科星图公司",
+      "name": "中科星图",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -182683,7 +182691,7 @@
     },
     {
       "code": "688571",
-      "name": "杭华油墨股份",
+      "name": "杭华股份",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -182767,7 +182775,7 @@
     },
     {
       "code": "688575",
-      "name": "亚辉龙生物",
+      "name": "亚辉龙",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -182807,7 +182815,7 @@
     },
     {
       "code": "688577",
-      "name": "海德曼装备",
+      "name": "浙海德曼",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -182827,7 +182835,7 @@
     },
     {
       "code": "688578",
-      "name": "艾力斯医药科技",
+      "name": "艾力斯",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -182928,7 +182936,7 @@
     },
     {
       "code": "688581",
-      "name": "安杰思医学",
+      "name": "安杰思",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -182990,7 +182998,7 @@
     },
     {
       "code": "688583",
-      "name": "杭州思看科技",
+      "name": "思看科技",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -183020,7 +183028,7 @@
     },
     {
       "code": "688584",
-      "name": "上海合晶硅材料",
+      "name": "上海合晶",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -183071,7 +183079,7 @@
     },
     {
       "code": "688586",
-      "name": "江航飞机装备",
+      "name": "江航装备",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -183141,7 +183149,7 @@
     },
     {
       "code": "688589",
-      "name": "力合微电子",
+      "name": "力合微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -183446,7 +183454,7 @@
     },
     {
       "code": "688598",
-      "name": "金博碳素股份",
+      "name": "金博股份",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -183577,7 +183585,7 @@
     },
     {
       "code": "688601",
-      "name": "力芯微股份",
+      "name": "力芯微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -183733,7 +183741,7 @@
     },
     {
       "code": "688607",
-      "name": "康众数字医疗科技",
+      "name": "康众科技",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -183819,7 +183827,7 @@
     },
     {
       "code": "688609",
-      "name": "广东九联科技",
+      "name": "九联科技",
       "primary_sector": "通信设备",
       "classifications": [
         {
@@ -183923,7 +183931,7 @@
     },
     {
       "code": "688611",
-      "name": "杭州柯林股份",
+      "name": "杭州柯林",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -184198,7 +184206,7 @@
     },
     {
       "code": "688619",
-      "name": "罗普特科技",
+      "name": "罗普特",
       "primary_sector": "AI应用",
       "classifications": [
         {
@@ -184240,7 +184248,7 @@
     },
     {
       "code": "688620",
-      "name": "安凯微电子",
+      "name": "安凯微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -184313,7 +184321,7 @@
     },
     {
       "code": "688622",
-      "name": "*ST禾信仪器",
+      "name": "*ST禾信",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -184441,7 +184449,7 @@
     },
     {
       "code": "688627",
-      "name": "精智达技术",
+      "name": "精智达",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -184492,7 +184500,7 @@
     },
     {
       "code": "688628",
-      "name": "优利德科技",
+      "name": "优利德",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -184523,7 +184531,7 @@
     },
     {
       "code": "688629",
-      "name": "四川华丰科技",
+      "name": "华丰科技",
       "primary_sector": "AIDC基础设施",
       "classifications": [
         {
@@ -184713,7 +184721,7 @@
     },
     {
       "code": "688636",
-      "name": "智明达电子",
+      "name": "智明达",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -184958,7 +184966,7 @@
     },
     {
       "code": "688651",
-      "name": "远江盛邦安全",
+      "name": "盛邦安全",
       "primary_sector": "通信设备",
       "classifications": [
         {
@@ -185052,7 +185060,7 @@
     },
     {
       "code": "688655",
-      "name": "迅捷兴科技",
+      "name": "迅捷兴",
       "primary_sector": "电子元器件",
       "classifications": [
         {
@@ -185076,7 +185084,7 @@
     },
     {
       "code": "688656",
-      "name": "浩欧博生物",
+      "name": "浩欧博",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -185203,7 +185211,7 @@
     },
     {
       "code": "688661",
-      "name": "和林微纳科技",
+      "name": "和林微纳",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -185240,7 +185248,7 @@
     },
     {
       "code": "688662",
-      "name": "广东富信科技",
+      "name": "富信科技",
       "primary_sector": "电子元器件",
       "classifications": [
         {
@@ -185280,7 +185288,7 @@
     },
     {
       "code": "688663",
-      "name": "新风光科技",
+      "name": "新风光",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -185300,7 +185308,7 @@
     },
     {
       "code": "688665",
-      "name": "四方光电股份",
+      "name": "四方光电",
       "primary_sector": "电子元器件",
       "classifications": [
         {
@@ -185406,7 +185414,7 @@
     },
     {
       "code": "688669",
-      "name": "聚石化学股份",
+      "name": "聚石化学",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -185448,7 +185456,7 @@
     },
     {
       "code": "688670",
-      "name": "金迪克生物",
+      "name": "金迪克",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -185506,7 +185514,7 @@
     },
     {
       "code": "688676",
-      "name": "海南金盘智能科技",
+      "name": "金盘科技",
       "primary_sector": "AIDC基础设施",
       "classifications": [
         {
@@ -185554,7 +185562,7 @@
     },
     {
       "code": "688677",
-      "name": "青岛海泰新光",
+      "name": "海泰新光",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -185586,7 +185594,7 @@
     },
     {
       "code": "688678",
-      "name": "福立旺精密",
+      "name": "福立旺",
       "primary_sector": "电子元器件",
       "classifications": [
         {
@@ -185700,7 +185708,7 @@
     },
     {
       "code": "688681",
-      "name": "科汇电力自动化",
+      "name": "科汇股份",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -185721,7 +185729,7 @@
     },
     {
       "code": "688682",
-      "name": "霍莱沃技术",
+      "name": "霍莱沃",
       "primary_sector": "计算机软件",
       "classifications": [
         {
@@ -185795,7 +185803,7 @@
     },
     {
       "code": "688685",
-      "name": "迈信林航空股份",
+      "name": "迈信林",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -185849,7 +185857,7 @@
     },
     {
       "code": "688686",
-      "name": "奥普特科技",
+      "name": "奥普特",
       "primary_sector": "机器人",
       "classifications": [
         {
@@ -185902,7 +185910,7 @@
     },
     {
       "code": "688687",
-      "name": "北京凯因科技",
+      "name": "凯因科技",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -185933,7 +185941,7 @@
     },
     {
       "code": "688689",
-      "name": "常州银河微电",
+      "name": "银河微电",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -185993,7 +186001,7 @@
     },
     {
       "code": "688691",
-      "name": "灿芯半导体股份",
+      "name": "灿芯股份",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -186114,7 +186122,7 @@
     },
     {
       "code": "688697",
-      "name": "纽威数控装备",
+      "name": "纽威数控",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -186190,7 +186198,7 @@
     },
     {
       "code": "688700",
-      "name": "XD东威科技",
+      "name": "东威科技",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -186210,7 +186218,7 @@
     },
     {
       "code": "688701",
-      "name": "浙江卓锦股份",
+      "name": "卓锦股份",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -186271,7 +186279,7 @@
     },
     {
       "code": "688707",
-      "name": "振华新材料",
+      "name": "振华新材",
       "primary_sector": "锂电产业链",
       "classifications": [
         {
@@ -186381,7 +186389,7 @@
     },
     {
       "code": "688710",
-      "name": "益诺思生物",
+      "name": "益诺思",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -186409,7 +186417,7 @@
     },
     {
       "code": "688711",
-      "name": "江苏宏微科技",
+      "name": "宏微科技",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -186529,7 +186537,7 @@
     },
     {
       "code": "688718",
-      "name": "唯赛勃科技",
+      "name": "唯赛勃",
       "primary_sector": "电力",
       "classifications": [
         {
@@ -186646,7 +186654,7 @@
     },
     {
       "code": "688722",
-      "name": "同益中新材料",
+      "name": "同益中",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -186759,7 +186767,7 @@
     },
     {
       "code": "688728",
-      "name": "格科微有限公司",
+      "name": "格科微",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -186811,7 +186819,7 @@
     },
     {
       "code": "688729",
-      "name": "屹唐半导体股份",
+      "name": "屹唐股份",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -186920,7 +186928,7 @@
     },
     {
       "code": "688750",
-      "name": "湘投金天钛业",
+      "name": "金天钛业",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -187061,7 +187069,7 @@
     },
     {
       "code": "688765",
-      "name": "武汉禾元生物",
+      "name": "禾元生物",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -187092,7 +187100,7 @@
     },
     {
       "code": "688766",
-      "name": "普冉半导体",
+      "name": "普冉股份",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -187117,7 +187125,7 @@
     },
     {
       "code": "688767",
-      "name": "杭州博拓生物科技",
+      "name": "博拓生物",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -187186,7 +187194,7 @@
     },
     {
       "code": "688772",
-      "name": "珠海冠宇电池",
+      "name": "珠海冠宇",
       "primary_sector": "锂电产业链",
       "classifications": [
         {
@@ -187320,7 +187328,7 @@
     },
     {
       "code": "688778",
-      "name": "厦钨新能源",
+      "name": "厦钨新能",
       "primary_sector": "锂电产业链",
       "classifications": [
         {
@@ -187448,7 +187456,7 @@
     },
     {
       "code": "688785",
-      "name": "恒运昌股份",
+      "name": "恒运昌",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -187624,7 +187632,7 @@
     },
     {
       "code": "688789",
-      "name": "杭州宏华数码科技",
+      "name": "宏华数科",
       "primary_sector": "工业母机",
       "classifications": [
         {
@@ -187665,7 +187673,7 @@
     },
     {
       "code": "688793",
-      "name": "倍轻松科技",
+      "name": "倍轻松",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -187835,7 +187843,7 @@
     },
     {
       "code": "688799",
-      "name": "华纳大药厂",
+      "name": "华纳药厂",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -187856,7 +187864,7 @@
     },
     {
       "code": "688800",
-      "name": "瑞可达连接系统",
+      "name": "瑞可达",
       "primary_sector": "电子元器件",
       "classifications": [
         {
@@ -187956,7 +187964,7 @@
     },
     {
       "code": "688807",
-      "name": "优迅芯片股份",
+      "name": "优迅股份",
       "primary_sector": "半导体",
       "classifications": [
         {
@@ -188078,7 +188086,7 @@
     },
     {
       "code": "688811",
-      "name": "有研金属复材",
+      "name": "有研复材",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -188225,7 +188233,7 @@
     },
     {
       "code": "688818",
-      "name": "中电科蓝天科技",
+      "name": "电科蓝天",
       "primary_sector": "军工装备",
       "classifications": [
         {
@@ -188257,7 +188265,7 @@
     },
     {
       "code": "688819",
-      "name": "天能电池集团股份",
+      "name": "天能股份",
       "primary_sector": "储能",
       "classifications": [
         {
@@ -188854,7 +188862,7 @@
     },
     {
       "code": "920009",
-      "name": "XD丹娜生",
+      "name": "丹娜生物",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -189379,7 +189387,7 @@
     },
     {
       "code": "920033",
-      "name": "XD康普化",
+      "name": "康普化学",
       "primary_sector": "化工",
       "classifications": [
         {
@@ -189662,7 +189670,7 @@
     },
     {
       "code": "920055",
-      "name": "XD隆源股",
+      "name": "隆源股份",
       "primary_sector": "汽车产业链",
       "classifications": [
         {

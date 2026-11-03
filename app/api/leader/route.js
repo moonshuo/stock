@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "fs/promises";
+import { readFile } from "fs/promises";
 import path from "path";
 import { NextResponse } from "next/server";
 import { loadDailyMarket } from "../daily-market/route";
@@ -12,11 +12,6 @@ export const runtime = "nodejs";
 const ROOT = process.cwd();
 const STOCK_MAP = path.join(ROOT, "data", "stock_sector_map.json");
 const CONFIG = path.join(ROOT, "data", "leader_config.json");
-const CACHE_ROOT = path.join(ROOT, "data", "leader-v5");
-function cachePath(date, primary, secondary) {
-  const key = `${primary}__${secondary}`.replace(/[<>:"/\\|?*]/g, "_");
-  return path.join(CACHE_ROOT, date, `${key}.json`);
-}
 const num = (value) => Number.isFinite(Number(value)) ? Number(value) : null;
 const median = (values) => {
   if (!values.length) return null;
@@ -154,12 +149,7 @@ function leaderScore(stock, theme, config) {
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const date = String(searchParams.get("date") || ""), primary = String(searchParams.get("primary") || "").trim(), secondary = String(searchParams.get("secondary") || "").trim();
-  const force = searchParams.get("force") === "1";
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !primary || !secondary) return NextResponse.json({ error: "date、primary、secondary 为必填参数" }, { status: 400 });
-  if (!force) {
-    try { return NextResponse.json({ ...(JSON.parse(await readFile(cachePath(date, primary, secondary), "utf8"))), source: "cache" }); }
-    catch { /* First calculation, or a cache that has been cleared. */ }
-  }
   const config = JSON.parse(await readFile(CONFIG, "utf8"));
   const members = await membersFor(primary, secondary);
   if (members.length < config.candidate.minimum_members) return NextResponse.json({ leader_analysis: { status: "insufficient_data", candidates: [], missing_data: ["theme_member_count"] } });
@@ -237,7 +227,5 @@ export async function GET(request) {
     reason: replacementEligible ? "two_day_superiority_and_evidence_met" : "one_day_move_or_insufficient_leadership_evidence",
   };
   const payload = { leader_analysis: { status: confirmed.length ? "confirmed" : provisional.length ? "provisional" : highConfidence.length ? "candidate" : "no_qualified_candidate", confirmed_leader: confirmed[0] || null, provisional_leader: provisional[0] || null, high_confidence_candidates: highConfidence, challengers, leader_candidate_pool: leaderCandidatePool.map((stock) => ({ code: stock.code, name: stock.name, candidate_evidence_raw: stock._candidate_evidence_raw, relevance_score: stock.relevance_score, candidate_evidence: stock._candidate_evidence })), replacement, emotion_leader: candidates.filter((stock) => stock.role_attributes.includes("emotion_leader")), trend_leader: candidates.filter((stock) => stock.role_attributes.includes("trend_leader")), high_elasticity_leader: candidates.filter((stock) => stock.role_attributes.includes("high_elasticity_leader")), branch_leaders: [], capacity_core: [], candidates, rejected_candidates: rejected, missing_data: validStocks.length === stocks.length ? [] : ["partial_member_return_history_excluded"], methodology: { ...config, candidate_pool: "broad_pool_then_multi_day_rolling_pk", replacement_rule: "challenger needs two consecutive rolling advantages, at least 8 points of adjusted-score lead, and no late-follower label", relevance_score_rule: "candidate evidence and final leader score are multiplied by the strongest matching primary/secondary relevance_score; thresholds and ranks use adjusted scores" } } };
-  await mkdir(path.dirname(cachePath(date, primary, secondary)), { recursive: true });
-  await writeFile(cachePath(date, primary, secondary), `${JSON.stringify(payload, null, 2)}\n`, "utf8");
   return NextResponse.json({ ...payload, source: "computed" });
 }

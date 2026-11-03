@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "fs/promises";
+import { readFile } from "fs/promises";
 import path from "path";
 import { NextResponse } from "next/server";
 import { backfillHistoricalDate, loadDailyMarket } from "../daily-market/route";
@@ -12,9 +12,7 @@ export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 const ROOT = process.cwd();
-const CACHE_DIR = path.join(ROOT, "data", "capacity_core");
 const STOCK_MAP_PATH = path.join(ROOT, "data", "stock_sector_map.json");
-const CACHE_VERSION = "3.7";
 
 const numberOrNull = (value) => Number.isFinite(Number(value)) ? Number(value) : null;
 const amount = (value) => numberOrNull(value) || 0;
@@ -51,11 +49,6 @@ async function loadPriorTradingDays(date, count = 3) {
 
 async function readJson(filePath) {
   return JSON.parse(await readFile(filePath, "utf8"));
-}
-
-function cachePath(date, primary, secondary) {
-  const key = `${primary}__${secondary}`.replace(/[<>:"/\\|?*]/g, "_");
-  return path.join(CACHE_DIR, date, `${key}.json`);
 }
 
 async function membersFor(primary, secondary) {
@@ -267,18 +260,11 @@ export async function GET(request) {
   const date = String(searchParams.get("date") || "");
   const primary = String(searchParams.get("primary") || "").trim();
   const secondary = String(searchParams.get("secondary") || "").trim();
-  const force = searchParams.get("force") === "1";
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !primary || !secondary) {
     return NextResponse.json({ error: "date、primary、secondary 为必填参数" }, { status: 400 });
   }
 
   try {
-    if (!force) {
-      try {
-        const cached = await readJson(cachePath(date, primary, secondary));
-        if (cached?.version === CACHE_VERSION) return NextResponse.json({ ...cached, source: "cache" });
-      } catch { /* First calculation, or a cache that has been cleared. */ }
-    }
     const members = await membersFor(primary, secondary);
     if (!members.length) return NextResponse.json({ error: "该二级主线没有已归类股票" }, { status: 404 });
     let days = await loadPriorTradingDays(date, 3);
@@ -296,8 +282,6 @@ export async function GET(request) {
     }
 
     const analysis = await buildAnalysis(date, primary, secondary, members, days);
-    await mkdir(path.dirname(cachePath(date, primary, secondary)), { recursive: true });
-    await writeFile(cachePath(date, primary, secondary), `${JSON.stringify(analysis, null, 2)}\n`, "utf8");
     return NextResponse.json({ ...analysis, source: "computed" });
   } catch (error) {
     return NextResponse.json({ error: `容量中军分析失败：${error.message}` }, { status: 500 });
