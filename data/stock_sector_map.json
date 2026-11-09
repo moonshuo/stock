@@ -14627,7 +14627,7 @@
     },
     {
       "code": "000972",
-      "name": "中基健康",
+      "name": "*ST中基",
       "primary_sector": "农业",
       "classifications": [
         {
@@ -16346,6 +16346,26 @@
       "reason": "公司主营大型专用装备金属结构件，2025年风电领域收入占比已成为绝对主体，因此归入风电零部件。"
     },
     {
+      "code": "001246",
+      "name": "力勤资源",
+      "primary_sector": "有色金属",
+      "classifications": [
+        {
+          "primary_sector": "有色金属",
+          "secondary_sector": "锂钴镍与能源金属",
+          "tertiary_sectors": [
+            "钴镍与三元资源"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://xinpi.cnstock.com/p/xg/detail/001246"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营镍矿贸易、镍铁及镍钴湿法中间品、硫酸镍和硫酸钴生产销售；归属镍钴资源及加工，不等同于锂矿或正极材料制造。"
+    },
+    {
       "code": "001248",
       "name": "华润新能",
       "primary_sector": "电力",
@@ -16760,10 +16780,34 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载射频与相控阵芯片"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12103041&stockid=001270",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12103022&stockid=001270"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司核心为微波毫米波模拟相控阵T/R芯片设计，产品应用于雷达、卫星通信等领域；商业航天目录相关三级当前为空，因此不编造商业航天分类。"
+      "product_tags": [
+        "星载T/R芯片",
+        "相控阵射频芯片",
+        "功率放大芯片",
+        "低噪声放大芯片",
+        "相控阵多功能芯片",
+        "相控阵功率放大芯片",
+        "相控阵低噪声放大芯片",
+        "多通道波束赋形芯片",
+        "硅基相控阵芯片",
+        "卫星射频前端芯片",
+        "宇航级微波毫米波芯片"
+      ],
+      "reason": "公司主营微波毫米波模拟相控阵T/R芯片，具备系列化宇航级芯片产品。2025年报披露其星载T/R芯片已在多系列卫星中规模化应用，并进入持续批量交付阶段，同时继续开展高性能卫星通信射频芯片研发。属于星载射频芯片直接供应环节。"
     },
     {
       "code": "001277",
@@ -18746,6 +18790,49 @@
       ],
       "product_tags": [],
       "reason": "公司核心为汽车悬架弹簧等弹性元件，直接属于汽车底盘与减震系统零部件。"
+    },
+    {
+      "code": "001381",
+      "name": "C皇冠",
+      "primary_sector": "新材料",
+      "classifications": [
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "高分子与功能膜材料",
+          "tertiary_sectors": [
+            "功能膜材料",
+            "特种橡胶与胶粘材料"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://xinpi.ggt.cnstock.com/p/xg/detail/001381"
+          ]
+        },
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "电子与光学材料",
+          "tertiary_sectors": [
+            "显示与光学膜材料"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://xinpi.ggt.cnstock.com/p/xg/detail/001381"
+          ]
+        },
+        {
+          "primary_sector": "化工",
+          "secondary_sector": "化工新材料",
+          "tertiary_sectors": [
+            "胶黏剂与涂料"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://xinpi.ggt.cnstock.com/p/xg/detail/001381"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "任务内名称“C皇冠”为上市临时简称，正式简称皇冠新材。主营工业/电子胶粘材料、功能性薄膜，光学膜及半导体功能性复合材料项目有明确披露。"
     },
     {
       "code": "001382",
@@ -20907,13 +20994,32 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "运载火箭制造与推进",
+          "tertiary_sectors": [
+            "液体火箭发动机及推力室"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12084779&stockid=002046",
+            "2026年4月14日投资者关系活动记录：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12088595&stockid=002046",
+            "2026年10月21日投资者关系活动记录：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12654130&stockid=002046"
+          ]
         }
       ],
       "product_tags": [
         "精密磨削设备",
-        "超硬材料工具"
+        "超硬材料工具",
+        "液体火箭发动机涡轮泵轴承",
+        "火箭伺服系统轴承",
+        "火箭姿态控制系统轴承",
+        "航天特种轴承",
+        "高可靠精密轴承",
+        "可重复使用火箭专用轴承"
       ],
-      "reason": "公司核心覆盖精密轴承、磨削装备、超硬刀具和金刚石超硬材料，超硬材料和轴承均为重要主业。"
+      "reason": "公司是航天特种轴承核心供应商，2025年报明确披露运载火箭专用轴承的产业地位。2026年投资者关系资料进一步确认其火箭产品包括液体火箭发动机涡轮泵轴承、伺服系统轴承和姿控部位轴承，并配套民营商业火箭企业。涡轮泵轴承属于现有液体火箭发动机三级方向所覆盖的推进系统核心部件，无需单独新增近义目录。"
     },
     {
       "code": "002047",
@@ -24455,14 +24561,35 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天高性能金属材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12229670&stockid=002149",
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12229670"
+          ]
         }
       ],
       "product_tags": [
         "钛材",
         "复合材料",
-        "高端金属"
+        "高端金属",
+        "钛及钛合金材料",
+        "稀有金属材料",
+        "钛合金加工材",
+        "稀有金属复合材料",
+        "钛及钛合金加工材",
+        "难熔金属材料",
+        "航天钛合金材料",
+        "钛合金板带材",
+        "锆及锆合金材料"
       ],
-      "reason": "公司核心为钛、锆等稀有金属板材、复合材料及高端金属制品，并部分用于核电。"
+      "reason": "公司主营稀有金属材料及其合金加工材，产品包括钛及钛合金、锆材料、难熔金属及金属复合材料，应用覆盖航空航天等高端装备领域。2025年钛制品为主要收入来源，但尚未单独披露商业航天业务收入，按明确材料产业链关联评分。"
     },
     {
       "code": "002150",
@@ -24570,6 +24697,30 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星地面设备与终端",
+          "tertiary_sectors": [
+            "北斗导航芯片与终端"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12017809&stockid=002151"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "北斗高精度定位服务"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：httpsmoney.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12017809&stockid=002151",
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12017809&stockid=002151",
+            "2025年年度报告全文：https://disc.static.szse.cn/disc/disk03/finalpage/2026-03-26/09a50473-7748-4e22-a80c-a7610a207685.PDF"
+          ]
         }
       ],
       "product_tags": [
@@ -24577,9 +24728,25 @@
         "卫星导航",
         "卫星通信",
         "北斗导航",
-        "GNSS芯片"
+        "GNSS芯片",
+        "GNSS定位芯片",
+        "北斗导航SoC",
+        "高精度定位模组",
+        "导航板卡",
+        "RTK定位服务",
+        "PPP-RTK云增强服务",
+        "TruePoint高精度定位服务",
+        "TruePoint REACH",
+        "TruePoint FOCUS",
+        "TruePoint CM",
+        "NRTK网络差分服务",
+        "PPP-RTK增强定位",
+        "全球高精度云服务",
+        "GNSS云辅助定位服务",
+        "Location.io星历数据服务",
+        "云芯一体化定位服务"
       ],
-      "reason": "公司核心为北斗卫星导航芯片、模块和终端，卫星导航为核心产业；车载导航应用按较低关联度补充。"
+      "reason": "公司主营芯片及数据服务、导航产品和陶瓷元器件，已形成GNSS芯片、模块及高精度定位云服务业务体系。2025年报明确披露TruePoint系列高精度位置服务、NRTK和PPP-RTK增强服务、全球实时与预测星历数据服务，并已在多个行业实现商业应用。属于北斗高精度定位数据服务的直接供应商。"
     },
     {
       "code": "002152",
@@ -25404,13 +25571,32 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天碳纤维与复合材料"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12188227&stockid=002171",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12188205&stockid=002171"
+          ]
         }
       ],
       "product_tags": [
         "铜板带",
-        "铜加工"
+        "铜加工",
+        "航天碳纤维预制体",
+        "固体火箭发动机喷管喉衬预制体",
+        "火箭发动机热防护材料",
+        "石英纤维预制体",
+        "碳纤维立体仿形预制体",
+        "航天透波材料",
+        "天鸟高新"
       ],
-      "reason": "公司核心为铜板带、铜导体等铜加工，同时经营高端金属粉体和先进材料业务。"
+      "reason": "子公司天鸟高新专业从事航天高性能纤维预制体和热防护复合材料制造。2025年报明确披露其产品配套长征系列火箭、神舟飞船及多型固体火箭发动机喷管喉衬，同时拓展商业航天市场。公司具备直接航天复合材料制造能力，但上市公司整体收入还包括较大规模的铜加工业务。"
     },
     {
       "code": "002172",
@@ -29935,6 +30121,17 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天碳纤维与复合材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12073635&stockid=002297"
+          ]
         }
       ],
       "product_tags": [
@@ -29944,9 +30141,13 @@
         "高性能硬质合金",
         "粉末冶金材料",
         "航天摩擦材料",
-        "特种刀具材料"
+        "特种刀具材料",
+        "航空航天炭炭复合材料",
+        "高性能碳基复合材料",
+        "碳纤维复合材料制品",
+        "耐高温复合材料"
       ],
-      "reason": "公司核心覆盖航空刹车用炭碳复合材料、粉末冶金和硬质合金，航空复合材料与超硬材料均为直接业务。"
+      "reason": "公司主营粉末冶金硬质合金及航空航天、民用炭炭复合材料。2025年报明确披露航空航天及民用炭炭复合材料收入约2.99亿元，占营业收入32.89%。该收入分类同时包含航空航天和民用应用，未单独披露商业航天收入，因此按明确产品关联评分。"
     },
     {
       "code": "002298",
@@ -31466,15 +31667,32 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载遥感光学载荷"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12117384&stockid=002338"
+          ]
         }
       ],
       "product_tags": [
         "光电测控仪器",
         "光栅编码器",
         "航空航天光学仪器",
-        "精密光机电设备"
+        "精密光机电设备",
+        "航天相机光机分系统",
+        "空间遥感相机",
+        "卫星光学成像设备",
+        "航天遥感光学系统",
+        "高精度光学结构组件",
+        "光学载荷复合材料框架"
       ],
-      "reason": "公司核心为光电测控、光栅编码器和精密光机电产品，广泛用于国防和高端装备。"
+      "reason": "公司主营光电测控仪器、光栅传感器及碳纤维复合材料制品。2025年报明确将航空航天相机光机分系统列为主要产品，相关航天遥感设备已应用于国家重大航天工程。控股业务中的复合材料结构件也配套光学载荷。相关产品与星载光学成像载荷具有明确产业链关系，但商业遥感卫星项目收入未单独披露。"
     },
     {
       "code": "002339",
@@ -33096,6 +33314,18 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "北斗高精度定位服务"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12149225",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12149213&stockid=002383"
+          ]
         }
       ],
       "product_tags": [
@@ -33103,9 +33333,17 @@
         "卫星导航板卡",
         "测量测绘设备",
         "时空信息平台",
-        "车载导航终端"
+        "车载导航终端",
+        "北斗高精度定位服务",
+        "GNSS高精度定位解决方案",
+        "时空信息服务平台",
+        "北斗精准农业应用",
+        "北斗形变监测",
+        "北斗数字施工",
+        "北斗时空大数据平台",
+        "高精度导航数据应用"
       ],
-      "reason": "公司核心为北斗高精度定位、导航终端和时空信息服务。"
+      "reason": "公司以高精度卫星导航技术为基础，为测绘、农业、智慧交通、自然资源和工程建设等行业提供北斗高精度产品、时空信息服务及系统解决方案。2025年报明确披露高精度定位、云平台和行业时空信息应用业务，但尚未单独量化差分改正数据服务收入，因此按明确产业链与服务关联评分。"
     },
     {
       "code": "002384",
@@ -33898,14 +34136,30 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "北斗高精度定位服务"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://static.cninfo.com.cn/finalpage/2026-04-29/1225236620.PDF"
+          ]
         }
       ],
       "product_tags": [
         "自动驾驶AI",
         "数据服务",
-        "智能驾驶大模型"
+        "智能驾驶大模型",
+        "六分科技参股",
+        "高精度定位服务",
+        "卫星导航定位增强",
+        "位置数据服务",
+        "高精度车载定位服务"
       ],
-      "reason": "公司围绕汽车智能化提供高精地图、智能驾驶、座舱和汽车芯片，汽车电子智能化为核心。"
+      "reason": "公司2025年报披露参股北京六分科技有限公司，该企业从事精准定位服务及相关软硬件一体化业务。四维图新主营业务仍以汽车智能化相关软件、数据和解决方案为主，北斗高精度定位服务主要通过参股企业形成关联，不能视为上市公司直接主营，因此按照间接关联评分。"
     },
     {
       "code": "002406",
@@ -35991,14 +36245,31 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星地面设备与终端",
+          "tertiary_sectors": [
+            "北斗导航芯片与终端",
+            "卫星通信终端与天线"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12030570&stockid=002465"
+          ]
         }
       ],
       "product_tags": [
         "卫星通信",
         "北斗终端",
-        "专网通信"
+        "专网通信",
+        "北斗导航芯片",
+        "北斗三号导航终端",
+        "通导一体终端",
+        "卫星通信设备",
+        "高精度抗干扰导航系统"
       ],
-      "reason": "公司核心为无线通信、北斗导航和军用通信系统。"
+      "reason": "公司拥有无线通信和北斗导航业务，形成北斗芯片、模块、天线、终端、系统及服务的产业链布局，能够提供卫星通信与导航相关设备。"
     },
     {
       "code": "002466",
@@ -40122,7 +40393,8 @@
           "tertiary_sectors": [
             "储能锂电池"
           ],
-          "relevance_score": 0.6
+          "relevance_score": 0.6,
+          "source_refs": []
         }
       ],
       "product_tags": [
@@ -47206,14 +47478,46 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载通信载荷与相控阵天线"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12233854"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星地面设备与终端",
+          "tertiary_sectors": [
+            "卫星地面站与测控设备",
+            "卫星通信终端与天线"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12233836&stockid=002792"
+          ]
         }
       ],
       "product_tags": [
         "通信天线",
         "基站天线",
-        "射频器件"
+        "射频器件",
+        "星载相控阵天线",
+        "卫星地面站天线",
+        "卫星动中通天线",
+        "车船载卫星天线",
+        "便携式卫星通信站",
+        "Ka波段星载天线",
+        "Ku波段星载天线",
+        "低轨卫星通信天线",
+        "卫星通信射频组件"
       ],
-      "reason": "公司核心为移动通信基站天线和射频器件，并布局卫星通信天线及地面终端产品。"
+      "reason": "公司主营通信天线和射频器件，卫星通信产品已覆盖星载、地面站和用户终端三个领域。2025年报明确披露星载相控阵天线支持Ka和Ku双频段，相关产品已小批量应用于低轨通信卫星。由于卫星通信业务尚非公司整体主营，按照明确产业链产品关联评分。"
     },
     {
       "code": "002793",
@@ -54524,10 +54828,45 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "运载火箭制造与推进",
+          "tertiary_sectors": [
+            "固体火箭与推进组件"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12045430&stockid=003009",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12045409&stockid=003009"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天碳纤维与复合材料"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12045430&stockid=003009",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12045409&stockid=003009"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司主营小型固体火箭及增雨防雹火箭等航天动力产品，并经营碳碳复合材料，航天动力为核心。"
+      "product_tags": [
+        "探空火箭",
+        "小型固体火箭",
+        "固体火箭发动机耐烧蚀组件",
+        "炭炭复合材料",
+        "炭炭复合材料喷管部件",
+        "固体火箭总体设计",
+        "小型火箭推进系统",
+        "火箭发动机喷管耐烧蚀组件",
+        "火箭发动机热防护材料",
+        "高温结构复合材料"
+      ],
+      "reason": "公司主营小型固体火箭及相关材料产品。2025年报明确将固体火箭发动机耐烧蚀组件列为独立产品业务，2025年收入约4105万元，并披露相关产品向商业航天企业提供研发生产服务。需注意，公司炭炭热场材料主要应用于光伏产业，不应全部计入航天材料。"
     },
     {
       "code": "003010",
@@ -56889,15 +57228,36 @@
           "source_refs": [
             "业务资料核对"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天高性能金属材料",
+            "航天精密锻件",
+            "航天精密铸件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12004992&stockid=300034",
+            "2025年年度报告原文：https://disc.static.szse.cn/disc/disk03/finalpage/2026-03-20/8f69f225-9d4e-4f24-8fea-923f9371efcf.PDF"
+          ]
         }
       ],
       "product_tags": [
         "高温合金",
         "高端金属材料",
         "特钢",
-        "航空发动机材料"
+        "航空发动机材料",
+        "航空航天高温合金母合金",
+        "镍基高温合金",
+        "耐蚀合金",
+        "航天发动机精密铸件",
+        "高温合金盘环锻件",
+        "精密铸造钛合金",
+        "粉末高温合金制件"
       ],
-      "reason": "公司主营航空航天高温合金及制品，是高温合金和军工材料核心企业。"
+      "reason": "公司主要从事高温合金及高端金属制品研发制造。2025年报明确披露产品包括航空航天用高温合金母合金、精密铸件、盘环锻件和新型合金制品，具备材料、铸造、模锻与环轧等制造能力。虽然覆盖多个航天材料及制造方向，但商业航天相关收入未独立量化。"
     },
     {
       "code": "300035",
@@ -56983,10 +57343,32 @@
           "source_refs": [
             "业务资料核对"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "遥感数据处理与数字地球"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12100106&stockid=300036"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司核心为GIS基础平台和行业地理信息软件，并广泛服务智慧城市和空间数据管理场景。"
+      "product_tags": [
+        "SuperMap GIS",
+        "遥感影像处理软件",
+        "新一代遥感软件",
+        "空天地一体化数据处理",
+        "遥感智能解译",
+        "地理信息系统平台",
+        "三维GIS",
+        "空间大数据平台",
+        "数字孪生空间底座",
+        "空间智能分析"
+      ],
+      "reason": "公司主营地理信息系统基础软件和行业应用软件。2025年报明确披露新一代遥感软件技术体系，可处理多类卫星遥感数据和多源异构空间信息，提供遥感数据处理、海量数据存储及AI智能解译能力，并与航天企业开展相关合作。属于卫星遥感数据下游软件和空间信息应用直接供应环节，但并非遥感卫星运营企业。"
     },
     {
       "code": "300037",
@@ -57322,13 +57704,32 @@
           "source_refs": [
             "业务资料核对"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星地面设备与终端",
+          "tertiary_sectors": [
+            "卫星通信基带芯片与模组",
+            "卫星通信终端与天线",
+            "北斗导航芯片与终端"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12132871&stockid=300045",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12132849&stockid=300045"
+          ]
         }
       ],
       "product_tags": [
         "卫星导航",
-        "卫星仿真"
+        "卫星仿真",
+        "天通卫星通信基带芯片",
+        "卫星通信射频基带一体化芯片",
+        "卫星通信模组",
+        "卫星电话与行业终端",
+        "北斗导航设备"
       ],
-      "reason": "公司核心为卫星导航、卫星通信、雷达信号处理及军用电子，北斗与卫星通信终端为直接产品。"
+      "reason": "公司从事卫星应用芯片、模块、终端及解决方案研发，2025年卫星应用业务为重要收入组成部分，并披露卫星通信芯片及模组量产。"
     },
     {
       "code": "300046",
@@ -57676,10 +58077,54 @@
           "source_refs": [
             "业务资料核对"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星运营与测运控",
+          "tertiary_sectors": [
+            "卫星测运控服务"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12075398&stockid=300053",
+            "2024年年度报告：https://static.cninfo.com.cn/finalpage/2025-04-26/1223326227.PDF",
+            "2025年年度报告公开文本：https://wap.stockstar.com/detail/SN2026040900039229"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "遥感卫星星座运营与数据服务",
+            "遥感数据处理与数字地球"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12075398&stockid=300053",
+            "2025年年度报告摘要：https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-10/20c43a71-a6ad-42ed-9854-45649ac06a27.PDF"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司核心为宇航电子、嵌入式SoC芯片及卫星遥感数据应用，芯片设计为核心，同时具备航天卫星产业关联。"
+      "product_tags": [
+        "珠海一号遥感卫星星座",
+        "卫星在轨运行控制",
+        "卫星状态监测",
+        "卫星任务规划",
+        "卫星遥测监视",
+        "卫星数据接收",
+        "卫星地面站运行维护",
+        "卫星故障排查",
+        "高光谱遥感卫星数据",
+        "卫星视频数据",
+        "商业卫星数据销售",
+        "高光谱遥感影像处理",
+        "遥感专题数据服务",
+        "比特地球平台",
+        "农业遥感监测",
+        "生态环境遥感监测",
+        "卫星遥感智能解译"
+      ],
+      "reason": "公司以珠海一号商业遥感卫星星座为基础开展卫星大数据业务，产品包括卫星原始数据、加工数据、专题信息服务和定制化系统开发。2025年报明确披露通过自有高光谱卫星及视频卫星获取数据，并向农业、林业、水利、海洋及生态环境领域提供遥感信息服务。卫星大数据属于直接业务，但公司同时经营宇航电子等业务。"
     },
     {
       "code": "300054",
@@ -59658,6 +60103,18 @@
             "historical assignment: relevance pending business review",
             "业务资料核对"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星整星与平台制造",
+          "tertiary_sectors": [
+            "卫星电源与空间太阳电池"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12030431&stockid=300102",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12030403&stockid=300102"
+          ]
         }
       ],
       "product_tags": [
@@ -59666,9 +60123,13 @@
         "MiniLED芯片",
         "砷化镓太阳能电池",
         "红黄光LED芯片",
-        "VCSEL芯片"
+        "VCSEL芯片",
+        "柔性砷化镓太阳电池",
+        "空间光伏电池芯片",
+        "抗辐射多结太阳电池",
+        "Ⅲ-Ⅴ族化合物太阳电池"
       ],
-      "reason": "公司核心为LED外延片和芯片，砷化镓等太阳能电池属于相关技术和产品布局。"
+      "reason": "公司主营半导体光电产品，砷化镓太阳能电池是已披露的主要产品类别之一。2025年报明确披露面向空间应用的柔性砷化镓太阳电池研发和产业化项目，并将航天光伏列为业务应用领域。由于公司还经营LED等业务，且空间电池具体收入未单独披露，按明确产品关联评分。"
     },
     {
       "code": "300103",
@@ -61986,14 +62447,34 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "北斗高精度定位服务"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12189305&stockid=300177",
+            "2025年年度报告摘要原文：https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-25/0f8e14cf-7d7f-42f0-a170-f9151856993d.PDF"
+          ]
         }
       ],
       "product_tags": [
         "北斗终端",
         "GNSS",
-        "卫星定位"
+        "卫星定位",
+        "北斗高精度定位技术",
+        "GNSS高精度定位服务",
+        "RTK差分定位",
+        "PPP-RTK全球定位技术",
+        "全球星基增强定位算法",
+        "GNSS定位解算引擎",
+        "北斗形变监测服务",
+        "高精度时空信息解决方案"
       ],
-      "reason": "公司核心为北斗/GNSS高精度定位终端及测绘解决方案，并应用于交通等场景。"
+      "reason": "公司专注高精度导航定位产业链，形成GNSS核心器件、定位算法、定位终端及行业应用系统。2025年报明确披露RTK、PPP-RTK、全球星基增强定位、云端一体化定位算法及高精度定位解决方案。现有业务以终端设备和系统解决方案为主，尚不能将相关算法能力全部等同于独立商业化差分数据订阅服务，因此按照明确产业链关联评分。"
     },
     {
       "code": "300179",
@@ -63915,7 +64396,7 @@
     },
     {
       "code": "300237",
-      "name": "ST美晨",
+      "name": "美晨科技",
       "primary_sector": "汽车产业链",
       "classifications": [
         {
@@ -67638,6 +68119,19 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星整星与平台制造",
+          "tertiary_sectors": [
+            "卫星姿轨控与敏感器"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12072745&stockid=300342",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/10/content_2197982.htm",
+            "天银星际官方网站：https://www.ty-space.com/"
+          ]
         }
       ],
       "product_tags": [
@@ -67646,9 +68140,17 @@
         "变频控制器",
         "雷达目标模拟器",
         "卫星敏感器",
-        "航天电子设备"
+        "航天电子设备",
+        "恒星敏感器",
+        "太阳敏感器",
+        "卫星姿态控制器",
+        "星敏感器组件",
+        "反作用飞轮",
+        "磁力矩器",
+        "卫星姿控模块",
+        "星敏感器批量制造"
       ],
-      "reason": "公司主营冰箱压缩机启动保护、变频控制等家电部件，并通过子公司经营雷达目标模拟、航天敏感器等军工电子产品。"
+      "reason": "公司子公司天银星际专业从事卫星姿态测量和控制相关产品研发生产，主要产品包括恒星敏感器、太阳敏感器和卫星姿态控制器。2025年报披露星敏感器已实现批量生产，相关产品应用于商业卫星及卫星互联网等领域。该业务属于直接产品业务，但天银机电整体还经营冰箱压缩机零配件等业务。"
     },
     {
       "code": "300343",
@@ -68297,12 +68799,14 @@
           "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AI游戏与数字人",
-            "AIGC图文与视频"
+            "AIGC图文与视频",
+            "AI短剧"
           ],
           "relevance_score": 0.8,
           "source_refs": [
             "historical assignment: relevance pending business review",
-            "2025年年度报告/公司公开经营资料"
+            "2025年年度报告/公司公开经营资料",
+            "巨潮资讯：2025年年度报告（AI短剧业务复核）"
           ]
         },
         {
@@ -70365,10 +70869,26 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "发射保障与航天试验",
+          "tertiary_sectors": [
+            "航天环境试验与检测"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12022922&stockid=300416"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司提供环境与可靠性试验设备及第三方检测服务，客户覆盖航空航天、军工和电子半导体领域。"
+      "product_tags": [
+        "振动试验设备",
+        "环境可靠性试验",
+        "航天产品可靠性检测",
+        "电子元器件验证分析"
+      ],
+      "reason": "公司主营环境与可靠性试验设备、试验服务及电子元器件验证分析，年度报告单列航空航天行业收入，属于航天试验检测配套环节。"
     },
     {
       "code": "300417",
@@ -70450,12 +70970,14 @@
           "secondary_sector": "AIGC",
           "tertiary_sectors": [
             "AIGC图文与视频",
-            "AI游戏与数字人"
+            "AI游戏与数字人",
+            "AI短剧"
           ],
           "relevance_score": 1,
           "source_refs": [
             "historical assignment: relevance pending business review",
-            "2025年年度报告/公司公开经营资料"
+            "2025年年度报告/公司公开经营资料",
+            "巨潮资讯：2025年年度报告（AI短剧平台业务复核）"
           ]
         },
         {
@@ -72053,10 +72575,48 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载电源管理与控制芯片",
+            "星载综合电子与通信安全"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12030836&stockid=300455",
+            "2026年3月公司公开业务答复：https://yuanchuang.10jqka.com.cn/20260326/c675561975.shtml",
+            "2026年3月26日投资者互动答复：https://yuanchuang.10jqka.com.cn/20260326/c675561975.shtml",
+            "2026年4月13日中国航天科技集团宇航微系统业务介绍：https://www.spacechina.com/n25/n2014789/n2014809/c4585333/content.html"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "发射保障与航天试验",
+          "tertiary_sectors": [
+            "航天环境试验与检测"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12030836&stockid=300455",
+            "2025年8月公司公开业务答复：https://cj.sina.com.cn/articles/view/1850649324/6e4eaaec02001yjnq"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "当前业务覆盖铁路车辆安全检测与检修、智能测试仿真以及核工业特殊环境自动化装备，按最接近的现有目录归类。"
+      "product_tags": [
+        "高可靠宇航处理器",
+        "抗辐照存储器",
+        "宇航微系统",
+        "卫星控制部组件",
+        "航天地面仿真测试系统",
+        "宇航高可靠处理器",
+        "宇航控制微系统",
+        "星载计算机微系统",
+        "CPU与存储器集成模块",
+        "高可靠星载信息处理模块"
+      ],
+      "reason": "公司通过全资子公司轩宇空间开展宇航高可靠处理器、存储器、微系统及控制部组件业务。公司公开披露相关产品可用于星载计算机和商业卫星，并确认2025年上半年商业航天业务占同期收入约10%。该业务已有实际产品和收入基础，但不能将所有具备星载应用潜力的芯片视为已批量供货。"
     },
     {
       "code": "300456",
@@ -74147,10 +74707,28 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星整星与平台制造",
+          "tertiary_sectors": [
+            "卫星姿轨控与敏感器"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12024794&stockid=300516",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12024771&stockid=300516"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营红外热像、激光测距和光电系统，主要面向军工光电探测及精密光学应用。"
+      "product_tags": [
+        "光学星体跟踪器",
+        "高精度姿态测量仪器",
+        "天体跟踪光学系统",
+        "航天姿态测量部件",
+        "多传感器组合跟踪系统"
+      ],
+      "reason": "公司2025年报将星体跟踪器列为专门产品业务。该类产品通过观测天体实现高精度姿态测量和自主导航，可应用于卫星等航天器。公司产品还面向其他航行平台，现有公开资料未单独量化商业卫星相关收入，因此按照明确产业链产品关联评分。"
     },
     {
       "code": "300517",
@@ -77695,6 +78273,17 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载激光通信终端与光学器件"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12012908&stockid=300620"
+          ]
         }
       ],
       "product_tags": [
@@ -77704,9 +78293,14 @@
         "铌酸锂高速调制器",
         "薄膜铌酸锂调制器",
         "MEMS光开关",
-        "波分复用器"
+        "波分复用器",
+        "星载光纤放大器",
+        "高可靠光纤放大组件",
+        "激光通信光器件",
+        "光纤隔离器",
+        "高可靠光通信模块"
       ],
-      "reason": "主营光纤激光器件、光通信器件及高速电光调制器，高速产品服务数据中心光互连。"
+      "reason": "公司主营光纤激光器件和光通信器件，2025年报将星载光纤放大器列入报告期发布的新品。该产品属于空间激光通信终端可使用的光学器件，但尚无充分公开证据确认已形成大规模星载交付或对应收入，因此按照产品布局关联评分。"
     },
     {
       "code": "300621",
@@ -77935,14 +78529,53 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星地面设备与终端",
+          "tertiary_sectors": [
+            "北斗导航芯片与终端"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12103688&stockid=300627"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "北斗高精度定位服务"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12103687&stockid=300627",
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12103687",
+            "2025年年度报告摘要：https://static.cninfo.com.cn/finalpage/2026-04-17/1225114087.PDF"
+          ]
         }
       ],
       "product_tags": [
         "北斗终端",
         "GNSS",
-        "高精度定位"
+        "高精度定位",
+        "高精度GNSS接收机",
+        "RTK测量终端",
+        "高精度定位模组",
+        "卫星导航天线",
+        "PointX星地融合增强服务",
+        "PointX全球星地融合增强平台",
+        "PointNet地基增强服务",
+        "PointSky星基增强服务",
+        "PointFusion星地融合服务",
+        "PointSDK开发者平台",
+        "GNSS高精度定位增强",
+        "全球高精度定位服务网络",
+        "RTK定位增强",
+        "星地融合定位算法",
+        "全球位置增强服务"
       ],
-      "reason": "主营高精度GNSS/北斗定位终端及解决方案，并应用于交通、测绘和自动驾驶等场景。"
+      "reason": "公司以高精度定位导航为核心技术，构建了全球星地融合增强服务平台PointX。2025年报披露PointX由地基增强PointNet、星基增强PointSky、星地融合PointFusion及开发者生态PointSDK构成，可向行业客户提供全球高精度定位增强服务。公司整体还经营高精度定位装备及智能控制产品，因此按直接业务关联评分。"
     },
     {
       "code": "300628",
@@ -80561,14 +81194,34 @@
             "业务资料核对",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天碳纤维与复合材料"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12039094&stockid=300699",
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12039094&stockid=300699"
+          ]
         }
       ],
       "product_tags": [
         "碳纤维",
         "复合材料",
-        "航空复材"
+        "航空复材",
+        "高性能碳纤维",
+        "航天级碳纤维",
+        "碳纤维织物",
+        "碳纤维预浸料",
+        "高强高模碳纤维",
+        "T800级碳纤维",
+        "T1100级碳纤维",
+        "卫星结构用碳纤维"
       ],
-      "reason": "公司主营碳纤维及其复合材料，航空航天和军工应用为核心下游。"
+      "reason": "公司以高性能碳纤维及复合材料为核心业务。2025年报披露航天业务收入3.41亿元，占总营收11.93%，并明确高强高模碳纤维已配套国家卫星工程，实现批量应用。公司同时拓展商业航天星箭配套业务，属于航天复合材料直接供应商。"
     },
     {
       "code": "300700",
@@ -82426,10 +83079,44 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载通信载荷与相控阵天线"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告摘要：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12220100",
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12220105&stockid=300762",
+            "深圳证券交易所2025年年度报告原文：https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-28/9c84db04-ffcf-496c-ab94-eaa231319df8.PDF"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星地面设备与终端",
+          "tertiary_sectors": [
+            "卫星地面站与测控设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12220105&stockid=300762"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司长期从事军用宽带移动通信系统和专网通信设备，军用通信与数据链为核心业务。"
+      "product_tags": [
+        "低轨卫星通信载荷",
+        "卫星地基基站",
+        "卫星通信测试终端",
+        "卫星通信分系统",
+        "星载宽带通信分系统",
+        "星载通信设备",
+        "卫星通信分系统集成",
+        "低轨卫星通信载荷测试",
+        "卫星通信系统级交付"
+      ],
+      "reason": "公司主营宽带无线通信设备，同时向低轨卫星通信领域延伸。2025年报明确披露参与千帆星座建设，围绕空间段、地面段和用户端开展通信设备研制，并以通信分系统为对象组织交付验证。卫星通信相关产品已进入批产交付阶段，具有明确的星载通信载荷业务关联。"
     },
     {
       "code": "300763",
@@ -82904,13 +83591,31 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天碳纤维与复合材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12088410&stockid=300777",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/15/content_2199767.htm"
+          ]
         }
       ],
       "product_tags": [
         "高性能碳纤维",
-        "航空航天复材"
+        "航空航天复材",
+        "高强高模碳纤维",
+        "T1100级碳纤维",
+        "ZM40X级碳纤维",
+        "碳纤维织物",
+        "高性能结构材料",
+        "航天复合材料"
       ],
-      "reason": "公司主营高性能碳纤维，产品重点应用于航空航天等高端复合材料领域。"
+      "reason": "公司是航空航天领域高端碳纤维供应商，2025年报披露多款产品已稳定批量应用于航空航天结构部件，同时开展商业航天新用户拓展及结构功能材料研发。由于商业航天处于应用拓展阶段，未独立量化收入，按明确材料产业链关联评分。"
     },
     {
       "code": "300778",
@@ -84513,10 +85218,30 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "遥感数据处理与数字地球"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12161775&stockid=300826",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12161725&stockid=300826"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司主营工程测绘、地理信息和城市空间数据服务，兼具工程咨询和空间数据管理属性。"
+      "product_tags": [
+        "卫星遥感影像分析",
+        "遥感智能解译",
+        "地理信息数据处理",
+        "多源时空数据融合",
+        "自然资源调查监测",
+        "地理信息系统集成",
+        "时空信息智能分析平台"
+      ],
+      "reason": "公司主营工程测勘、测绘服务和地理信息系统集成。2025年报披露开展卫星及其他遥感影像数据融合、遥感智能解译和时空信息平台研发，具备卫星遥感数据处理和下游行业应用的技术基础。但主要收入来自综合测绘及地理信息服务，卫星遥感业务未独立量化，因此按间接关联评分。"
     },
     {
       "code": "300827",
@@ -86865,13 +87590,30 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星整星与平台制造",
+          "tertiary_sectors": [
+            "卫星结构与热控部件"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12152879&stockid=300900",
+            "2025年年度报告原文：https://static.cninfo.com.cn/finalpage/2026-04-23/1225154689.PDF"
+          ]
         }
       ],
       "product_tags": [
         "航空工装",
-        "航空零部件"
+        "航空零部件",
+        "卫星精密结构件",
+        "商业卫星结构研制",
+        "微厘空间一号系统结构件",
+        "天都二号试验星结构件",
+        "卫星结构件试制"
       ],
-      "reason": "主营航空航天工装、零部件和复合材料制品，并参与无人机等航空装备配套。"
+      "reason": "公司2025年报明确披露为工大卫星等合作方提供航天产品结构研制服务，涉及微厘空间一号系统、天都二号通导技术试验星等项目。相关产品尚处科研试制阶段，对上市公司整体收入贡献较小，因此按照已开展业务但规模有限的布局关联评分。"
     },
     {
       "code": "300901",
@@ -90000,10 +90742,30 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "运载火箭制造与推进",
+          "tertiary_sectors": [
+            "箭体结构与贮箱"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12119385&stockid=301005"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司主营汽车用高强度精密紧固件及精密零部件，并向航空航天等领域拓展。"
+      "product_tags": [
+        "商业火箭箭体大部段",
+        "箭体壳段",
+        "整流罩",
+        "航空航天精密结构件",
+        "运载火箭壳段",
+        "火箭整流罩",
+        "火箭一级尾段",
+        "箭体转接框"
+      ],
+      "reason": "公司子公司成都新月直接从事商业火箭箭体结构件制造，2025年报明确披露产品包括箭体大部段、壳段、整流罩和转接框等。报告期内部分商业火箭结构件已交付并形成收入。公司整体主营仍以汽车紧固件及零部件为主，但箭体结构件属于已商业化的直接产品业务。"
     },
     {
       "code": "301006",
@@ -91299,10 +92061,31 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载通信载荷与相控阵天线"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12170264&stockid=301050",
+            "2026年半年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12519735&stockid=301050",
+            "2026年4月26日公司董事长业务访谈：https://www.cs.com.cn/ssgs/01/2026/04/26/detail_2026042610007239.html",
+            "2026年11月2日投资者互动答复：https://www.xiaojingji.com/stock/one/notice?code=301050&type=5"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司主营毫米波有源相控阵微系统，核心应用于军用雷达和电子对抗等领域。"
+      "product_tags": [
+        "星载毫米波相控阵研制",
+        "星载T/R组件",
+        "卫星通信阵列天线",
+        "毫米波微系统",
+        "卫星通信波控电路",
+        "低轨卫星相控阵配套"
+      ],
+      "reason": "公司主营毫米波微系统、T/R组件及阵列天线，具备芯片、组件和相控阵天线系统设计制造能力。公司公开披露已在卫星通信领域开展星载相控阵配套研制，但现有主要收入来自其他专用领域，尚缺乏星载产品规模化交付和收入占比证据，因此按照明确布局评分。"
     },
     {
       "code": "301051",
@@ -93142,6 +93925,18 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载综合电子与通信安全"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12168663&stockid=301117",
+            "深圳证券交易所2025年年度报告原文：https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-24/42d4bcf0-89e8-4128-a9c9-1685fe94a135.PDF"
+          ]
         }
       ],
       "product_tags": [
@@ -93150,9 +93945,20 @@
         "数据安全平台",
         "军工信息化",
         "安全通信设备",
-        "政企信息化解决方案"
+        "政企信息化解决方案",
+        "卫星综合电子计算机",
+        "卫星安全载荷模块",
+        "星载加密通信模块",
+        "卫星数据安全处理",
+        "卫星综合管理单元",
+        "星载信息安全模块",
+        "SIP安全数据处理芯片",
+        "星载高速数字处理模块",
+        "星载控制模块",
+        "卫星通信加密设备",
+        "遥测遥控信息安全"
       ],
-      "reason": "主营网络信息安全产品和信息化解决方案，重点服务军工、医疗及政企客户。"
+      "reason": "公司主营网络信息安全产品及信息化综合解决方案。2025年报明确列示卫星综合电子计算机、卫星综合管理单元、SIP数据处理芯片，以及面向卫星和空间站的高速数字处理模块与控制模块。相关产品用于卫星信息处理、控制及通信安全，属于星载综合电子直接产品业务。"
     },
     {
       "code": "301118",
@@ -96355,6 +97161,29 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "运载火箭制造与推进",
+          "tertiary_sectors": [
+            "液体火箭发动机及推力室"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12085859&stockid=301232",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12085856&stockid=301232"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天增材制造"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12085859&stockid=301232"
+          ]
         }
       ],
       "product_tags": [
@@ -96364,9 +97193,21 @@
         "塔筒螺栓",
         "锚栓组件",
         "航空航天紧固件",
-        "燃气轮机精密结构件"
+        "燃气轮机精密结构件",
+        "商业火箭发动机推力室零部件",
+        "火箭涡轮泵零部件",
+        "火箭发动机管路件",
+        "火箭高强度紧固件",
+        "火箭金属密封件",
+        "商业火箭发动机3D打印精密零件",
+        "商业火箭发动机精密零部件",
+        "商业火箭3D打印",
+        "成都新杉增材制造业务",
+        "火箭发动机结构件",
+        "商业航天高强度紧固件",
+        "航天精密机加工"
       ],
-      "reason": "公司主营风电全系列高强度紧固件和紧固系统，并向航空航天、燃气轮机、深海石油和核电等高端紧固件及精密结构件领域拓展。"
+      "reason": "公司2025年报明确披露通过收购成都新杉获得商业火箭发动机精密零部件3D打印制造能力，并以高强度紧固件和精密钣金产品切入商业航天供应链。同期非风电业务占整体收入比例为2.94%，增材制造相关业务仍处整合及拓展阶段，因此按布局关联评分。紧固件等细分产品保留为标签，不额外新增三级。"
     },
     {
       "code": "301233",
@@ -101281,10 +102122,31 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星整星与平台制造",
+          "tertiary_sectors": [
+            "卫星结构与热控部件"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12220971",
+            "2026年9月3日共同投资公告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12583202&stockid=301489",
+            "上海证券报航天热控业务报道：https://www.cnstock.com/commonDetail/795670"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司主营石墨散热膜、导热材料等热管理产品，直接属于电子散热及导热材料。"
+      "product_tags": [
+        "航天热控业务布局",
+        "石墨导热材料",
+        "热界面材料",
+        "均热板",
+        "热管",
+        "卫星热控产品研发",
+        "中科星海热控参股"
+      ],
+      "reason": "公司主营热管理材料与器件，2026年与星图测控等共同设立中科星海热控科技，持有28%股权，向航天热控领域延伸。现阶段属于参股布局，尚无足够公开证据证明卫星热控产品已形成规模化交付或并表收入，因此按布局关联评分，不将传统电子散热产品视为已实现宇航级供货。"
     },
     {
       "code": "301491",
@@ -103018,6 +103880,27 @@
       "reason": "公司主营机器视觉检测设备，核心产品为AOI等自动光学检测装备，既属于机器视觉又直接服务自动化检测工艺。"
     },
     {
+      "code": "301569",
+      "name": "联亚药业",
+      "primary_sector": "医药医疗",
+      "classifications": [
+        {
+          "primary_sector": "医药医疗",
+          "secondary_sector": "化学制药",
+          "tertiary_sectors": [
+            "仿制药与专科药"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://www.szse.cn/certificate/secondb/GEMdynamice/t20261015_623313.html",
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/301569"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营复杂口服制剂的研发、生产、销售，代表产品为缓控释及低剂量制剂；无充分依据归入创新药或CRO。"
+    },
+    {
       "code": "301571",
       "name": "国科天成",
       "primary_sector": "军工装备",
@@ -104574,6 +105457,27 @@
       "reason": "公司主营并网逆变器、储能逆变器及储能系统，并销售储能电池相关产品，光伏逆变器和储能变流为核心。"
     },
     {
+      "code": "301660",
+      "name": "粤芯半导",
+      "primary_sector": "半导体",
+      "classifications": [
+        {
+          "primary_sector": "半导体",
+          "secondary_sector": "晶圆制造",
+          "tertiary_sectors": [
+            "晶圆代工",
+            "特色工艺制造"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://www.hp.gov.cn/gzhpgz/gkmlpt/content/11/11071/post_11071025.html"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营12英寸特色工艺晶圆代工，面向模拟、工业控制等设计企业提供晶圆制造服务；晶圆代工和特色工艺属同一二级主线。"
+    },
+    {
       "code": "301662",
       "name": "宏工科技",
       "primary_sector": "锂电产业链",
@@ -104923,6 +105827,37 @@
       "reason": "公司主营功能树脂及涂层材料，产品应用于家电、包装、能源、电子等领域，核心属于树脂和功能涂层化工新材料。"
     },
     {
+      "code": "301686",
+      "name": "中塑股份",
+      "primary_sector": "新材料",
+      "classifications": [
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "高分子与功能膜材料",
+          "tertiary_sectors": [
+            "工程塑料"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://xinpi.cnstock.com/p/xg/detail/301686"
+          ]
+        },
+        {
+          "primary_sector": "化工",
+          "secondary_sector": "高分子材料",
+          "tertiary_sectors": [
+            "工程塑料"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://xinpi.cnstock.com/p/xg/detail/301686"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营改性工程塑料，服务消费电子、汽车、储能等应用；这些是下游应用场景，不代表直接制造终端或电池。"
+    },
+    {
       "code": "301687",
       "name": "新广益",
       "primary_sector": "新材料",
@@ -104952,6 +105887,46 @@
       ],
       "product_tags": [],
       "reason": "公司主营高性能特殊功能材料和功能膜，包括防溢胶膜、高阻隔特殊膜等，电子制造应用明确但以功能膜材料为核心。"
+    },
+    {
+      "code": "301688",
+      "name": "格林生物",
+      "primary_sector": "化工",
+      "classifications": [
+        {
+          "primary_sector": "化工",
+          "secondary_sector": "农化与精细化工",
+          "tertiary_sectors": [
+            "香精香料"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://xinpi.cnstock.com/p/xg/detail/301688"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "生产松节油、柏木油及合成香料系列产品，用于日化香精配制，直接对应香精香料。"
+    },
+    {
+      "code": "301689",
+      "name": "电科思仪",
+      "primary_sector": "工业母机",
+      "classifications": [
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "科学仪器与分析设备",
+          "tertiary_sectors": [
+            "电子测量仪器"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://dktx.cetc.com.cn/zgdk/1592571/1592492/2127982/index.html"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "专业电子测量仪器整机、测试系统及组件研发制造；通信、光电等为仪器应用领域，不将仪器误归为通信网络设备。"
     },
     {
       "code": "301696",
@@ -104985,6 +105960,93 @@
       "reason": "公司主营无人机和机器人电动力系统，核心产品包括电机、电调等；低空经济相关二级无可用三级，按实际电机与智能驱动产品归入现有目录。"
     },
     {
+      "code": "301697",
+      "name": "贝特利",
+      "primary_sector": "新材料",
+      "classifications": [
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "电子与光学材料",
+          "tertiary_sectors": [
+            "电子化学材料"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://www.betely.com/"
+          ]
+        },
+        {
+          "primary_sector": "光伏产业链",
+          "secondary_sector": "辅材与胶膜",
+          "tertiary_sectors": [
+            "光伏导电银浆"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://www.betely.com/",
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/301697"
+          ]
+        },
+        {
+          "primary_sector": "化工",
+          "secondary_sector": "高分子材料",
+          "tertiary_sectors": [
+            "橡胶与弹性体"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://www.betely.com/"
+          ]
+        },
+        {
+          "primary_sector": "化工",
+          "secondary_sector": "化工新材料",
+          "tertiary_sectors": [
+            "胶黏剂与涂料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/301697"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营电子导电材料、有机硅材料和涂层材料；官网明确导电浆料用于光伏，涂层与硅胶也是实有产品。"
+    },
+    {
+      "code": "301699",
+      "name": "洛轴股份",
+      "primary_sector": "电力",
+      "classifications": [
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "风电",
+          "tertiary_sectors": [
+            "风电零部件"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://basic.10jqka.com.cn/301699/operate.html",
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12104364&stockid=301699"
+          ]
+        },
+        {
+          "primary_sector": "机器人",
+          "secondary_sector": "精密传动与执行部件",
+          "tertiary_sectors": [
+            "精密轴承",
+            "丝杠导轨与轴承"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12104364&stockid=301699"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营轴承，风电轴承是核心收入品类；已研发并向减速机及机器人企业供货精密轴承，后者应低于风电业务关联度。"
+    },
+    {
       "code": "301707",
       "name": "展芯股份",
       "primary_sector": "半导体",
@@ -105014,6 +106076,37 @@
       ],
       "product_tags": [],
       "reason": "公司主营高可靠电源管理等模拟芯片和集成功率微模组，产品主要服务军工等高可靠领域。"
+    },
+    {
+      "code": "301716",
+      "name": "鸿富诚",
+      "primary_sector": "电子元器件",
+      "classifications": [
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "电子功能件",
+          "tertiary_sectors": [
+            "散热与电磁屏蔽"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://basic.10jqka.com.cn/301716/operate.html"
+          ]
+        },
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "电子与光学材料",
+          "tertiary_sectors": [
+            "导热与电磁材料"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://www.hfcsz.com/?lang=cn"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "导热界面材料及电磁屏蔽、吸波材料为核心产品；虽用于服务器/光模块，不等于自研液冷系统。"
     },
     {
       "code": "301717",
@@ -105056,6 +106149,40 @@
       ],
       "product_tags": [],
       "reason": "公司主营半导体设备特种涂层零部件、精密光学器件和特殊材料制品，核心为半导体设备关键零部件。"
+    },
+    {
+      "code": "301718",
+      "name": "通则康威",
+      "primary_sector": "通信设备",
+      "classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "网络设备",
+          "tertiary_sectors": [
+            "无线局域网设备",
+            "交换机与路由器"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://www.gztozed.com/products/",
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12439396&stockid=301718"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "通信模组",
+          "tertiary_sectors": [
+            "蜂窝通信模组",
+            "物联网模组"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12439396&stockid=301718"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主要研发制造4G/5G CPE、MIFI、工业路由器和工业模组，另有光纤接入用户设备；按实际终端/模组区分归类。"
     },
     {
       "code": "302132",
@@ -106168,10 +107295,28 @@
           "source_refs": [
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星运营与测运控",
+          "tertiary_sectors": [
+            "通信卫星运营服务"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12005771&stockid=600050",
+            "工信部卫星移动通信业务经营许可公告：https://www.miit.gov.cn/xwfb/gxdt/sjdt/art/2025/art_ea54d95b58fc49a3be5315c7ddc2fac0.html"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司主营通信运营业务，但现有目录无电信运营商路径；其IDC、云计算、算力和物联网业务属于现有目录可直接覆盖的长期业务，因此归入AIDC相关方向，不将通信运营强行映射为通信设备制造。"
+      "product_tags": [
+        "卫星移动通信业务",
+        "手机直连卫星",
+        "卫星通信网络接入",
+        "卫星应急通信",
+        "卫星通信运营资质"
+      ],
+      "reason": "公司2025年报披露取得卫星移动通信业务经营许可，推进手机直连卫星规模应用。公开资料能够确认卫星通信业务布局及相关经营资质，但尚不足以证明该业务形成规模化运营收入，因此按照布局关联评分。"
     },
     {
       "code": "600051",
@@ -108112,15 +109257,70 @@
             "业务资料核对",
             "2025年年度报告/公司公开经营资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星整星与平台制造",
+          "tertiary_sectors": [
+            "卫星总体与整星制造",
+            "卫星电源与空间太阳电池"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12038644&stockid=600118",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12038627&stockid=600118"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星地面设备与终端",
+          "tertiary_sectors": [
+            "卫星地面站与测控设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12038644&stockid=600118"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星运营与测运控",
+          "tertiary_sectors": [
+            "通信卫星运营服务"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12038644&stockid=600118",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12038627&stockid=600118"
+          ]
         }
       ],
       "product_tags": [
         "卫星制造",
         "卫星通信",
         "地面系统",
-        "小卫星"
+        "小卫星",
+        "小卫星平台",
+        "微小卫星平台",
+        "通信卫星",
+        "遥感卫星",
+        "卫星总体设计",
+        "卫星应用地面系统集成",
+        "小卫星总体设计",
+        "微小卫星研制",
+        "卫星公用平台",
+        "商业卫星总装集成",
+        "卫星批量化制造",
+        "空间太阳电池片",
+        "卫星宇航部组件",
+        "卫星综合运营服务",
+        "卫星广播电视传输服务",
+        "高通量卫星信关站运维",
+        "卫星通信应用运营",
+        "卫星地面通信系统运营",
+        "卫星数据广播上行站运营"
       ],
-      "reason": "公司主营小卫星及微小卫星研制、卫星应用系统和终端，卫星制造是核心，卫星通信载荷和地面应用属于直接业务。"
+      "reason": "公司除卫星制造业务外，还提供卫星综合运营及通信广播服务。2025年报披露，完成137套广播电视节目安全传输，高通量卫星信关站持续在轨业务配套运维，并运营相关数据广播上行站。该业务属于卫星通信网络及应用运营，但公司并非以自有通信卫星空间段运营为核心，因此评分为明确产业链关联。"
     },
     {
       "code": "600119",
@@ -117096,14 +118296,36 @@
             "业务资料核对",
             "文件内已有业务资料及公开主营业务资料复核"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天高性能金属材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12223273&stockid=600456",
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12223273&stockid=600456"
+          ]
         }
       ],
       "product_tags": [
         "钛材",
         "钛合金",
-        "航空钛合金"
+        "航空钛合金",
+        "航天钛材",
+        "钛合金板材",
+        "钛合金棒材",
+        "航天压力容器材料",
+        "火箭贮箱用钛材",
+        "航天钛及钛合金",
+        "钛合金管材",
+        "火箭发动机用钛材",
+        "卫星壳体用钛材",
+        "火箭燃料箱用钛材"
       ],
-      "reason": "钛及钛合金材料为主营，并广泛用于航空航天等高端军工场景。"
+      "reason": "公司主营钛及钛合金材料的研发、制造和销售。2025年年度报告明确列示钛材在火箭发动机、人造卫星壳体、燃料箱、航天压力容器和载人飞船等领域的应用。属于航天装备上游关键金属材料供应环节，但商业航天收入未单独披露。"
     },
     {
       "code": "600458",
@@ -117186,7 +118408,7 @@
     },
     {
       "code": "600459",
-      "name": "贵研铂业",
+      "name": "XD贵研铂",
       "primary_sector": "有色金属",
       "classifications": [
         {
@@ -118374,6 +119596,18 @@
             "业务资料核对",
             "文件内已有业务资料及公开主营业务资料复核"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载激光通信终端与光学器件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12181554&stockid=600498",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/25/content_2206028.htm"
+          ]
         }
       ],
       "product_tags": [
@@ -118382,9 +119616,15 @@
         "交换机",
         "光传输",
         "通信设备",
-        "光纤光缆"
+        "光纤光缆",
+        "星载激光通信终端",
+        "星载光通信设备",
+        "星载路由设备",
+        "卫星激光通信系统",
+        "星地光通信配套",
+        "星载高速数据传输"
       ],
-      "reason": "光通信传输、网络设备为核心主营，数据中心网络关联较强，服务器为布局业务。"
+      "reason": "公司主营光通信设备及光网络系统。2025年报明确披露星载激光终端及星载路由产品已稳定在轨运行，属于直接的空间光通信产品。由于该业务并非公司整体主要收入来源，且未单独披露收入规模，因此按照明确产品关联评分。"
     },
     {
       "code": "600499",
@@ -118526,6 +119766,19 @@
             "historical assignment: relevance pending business review",
             "文件内已有业务资料及公开主营业务资料复核"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "发射保障与航天试验",
+          "tertiary_sectors": [
+            "发射地面保障装备"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12182224&stockid=600501",
+            "2024年公司商业航天业务公告：https://www.yicai.com/news/102208197.html",
+            "2025年12月公司公开业务说明：https://www.nbd.com.cn/articles/2025-12-19/4188214.html"
+          ]
         }
       ],
       "product_tags": [
@@ -118535,9 +119788,13 @@
         "核电金属软管",
         "军用后勤装备",
         "环卫车辆",
-        "石化装备"
+        "石化装备",
+        "航天地面发射场高压储气罐",
+        "火箭金属软管",
+        "发射场供气系统配套",
+        "火箭贮箱管路组件"
       ],
-      "reason": "主营特种车辆、柔性管件和压力容器，应用于军用后勤、核电、石化及环卫领域。"
+      "reason": "公司生产航天型号用金属软管，并可提供发射场供气和加注系统配套产品。公司曾披露商业航天业务收入占比较小，因此按照明确但非核心业务归属。"
     },
     {
       "code": "600502",
@@ -118962,7 +120219,7 @@
     },
     {
       "code": "600516",
-      "name": "方大炭素",
+      "name": "XD方大炭",
       "primary_sector": "新材料",
       "classifications": [
         {
@@ -120026,7 +121283,7 @@
     },
     {
       "code": "600551",
-      "name": "时代出版",
+      "name": "XD时代出",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -127042,13 +128299,32 @@
             "业务资料核对",
             "公司年报/公告及主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天精密锻件",
+            "航天精密铸件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11993069&stockid=600765",
+            "2025年年度报告原文：https://static.cninfo.com.cn/finalpage/2026-03-13/1225007287.PDF"
+          ]
         }
       ],
       "product_tags": [
         "航空锻件",
-        "模锻件"
+        "模锻件",
+        "航空航天高端锻件",
+        "航天大型锻件",
+        "特种合金锻件",
+        "高端精密铸件",
+        "复杂结构件成形",
+        "精密铸锻制造"
       ],
-      "reason": "主营航空锻铸件及液压环控等产品。"
+      "reason": "公司以航空航天高端锻铸业务为重要主营方向，拥有多家专业锻造和铸造子公司。2025年报披露大国防领域航天订单4.5亿元，同比增长112%，证明航天装备配套具有实际业务基础。由于相关订单并非全部明确归属于商业航天，且未单独列示商业运载火箭或卫星锻铸收入，按明确产业链关联评分。"
     },
     {
       "code": "600768",
@@ -130486,15 +131762,51 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "运载火箭制造与推进",
+          "tertiary_sectors": [
+            "火箭惯导与传感"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12026828&stockid=600879"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载综合电子与通信安全"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12026828&stockid=600879"
+          ]
         }
       ],
       "product_tags": [
         "卫星载荷",
         "北斗终端",
         "航天电子",
-        "制导控制"
+        "制导控制",
+        "惯性导航系统",
+        "航天测控通信",
+        "航天微电子",
+        "机电组件与传感系统",
+        "航天信息处理",
+        "航天惯性导航系统",
+        "航天测控通信设备",
+        "航天机电组件",
+        "航天传感系统",
+        "航天测量电子设备",
+        "星载信息处理电子设备",
+        "遥测遥控电子组件",
+        "航天通信电子分系统",
+        "航天有效载荷电子"
       ],
-      "reason": "公司主营航天电子、测控通信、惯性导航等产品，广泛应用于运载火箭、导弹和卫星平台。"
+      "reason": "公司航天电子信息业务覆盖测控通信与网络信息、微电子、机电组件与传感系统、有效载荷等专业。2025年报明确这些领域为传统优势专业，拥有航天型号配套能力。但卫星专用电子产品及商业卫星收入未单独量化，因此按照明确航天产业链关联评分。"
     },
     {
       "code": "600880",
@@ -131677,10 +132989,29 @@
           "source_refs": [
             "中国移动2025年中期报告/公司官网"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星运营与测运控",
+          "tertiary_sectors": [
+            "通信卫星运营服务"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12023001&stockid=600941",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-03/27/content_2192681.htm",
+            "工信部卫星移动通信业务经营许可公告：https://www.miit.gov.cn/xwfb/gxdt/sjdt/art/2025/art_a6f24798ae08410d9b4cb3126c319d19.html"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司主营通信服务，同时大规模运营IDC机架、云计算和算力网络；现有目录缺少基础电信运营商分类，按最接近的IDC运营与算力服务路径归类。"
+      "product_tags": [
+        "卫星移动通信业务",
+        "卫星互联网通信服务",
+        "手机直连卫星",
+        "卫星通信网络接入",
+        "天地一体通信服务"
+      ],
+      "reason": "公司2025年报将卫星互联列入通信服务业务范畴，并披露取得卫星移动通信业务经营许可，卫星通信进入商业化运营阶段。相较于公司庞大的地面移动通信业务，卫星通信尚属拓展业务，且未单独披露收入规模，因此按布局及间接关联评分。"
     },
     {
       "code": "600955",
@@ -134069,6 +135400,38 @@
       "reason": "公司主营化学药制剂和原料药。"
     },
     {
+      "code": "601091",
+      "name": "沈鼓集团",
+      "primary_sector": "工业母机",
+      "classifications": [
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "专用机电装备",
+          "tertiary_sectors": [
+            "压缩机与真空泵",
+            "流体输送设备"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://xinpi.ggt.cnstock.com/m/xg/detail/601091"
+          ]
+        },
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "核电",
+          "tertiary_sectors": [
+            "核电设备"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://xinpi.ggt.cnstock.com/m/xg/detail/601091"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营大型离心/往复压缩机及核泵；压缩机为主体，核电用泵为直接产品，不能将全部压缩机笼统算作氢能。"
+    },
+    {
       "code": "601096",
       "name": "宏盛华源",
       "primary_sector": "电力",
@@ -134569,6 +135932,38 @@
       ],
       "product_tags": [],
       "reason": "公司主营铁矿石采选及铁精粉生产销售。"
+    },
+    {
+      "code": "601123",
+      "name": "马矿股份",
+      "primary_sector": "钢铁",
+      "classifications": [
+        {
+          "primary_sector": "钢铁",
+          "secondary_sector": "铁矿资源",
+          "tertiary_sectors": [
+            "铁矿石",
+            "铁精粉与选矿"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/601123"
+          ]
+        },
+        {
+          "primary_sector": "有色金属",
+          "secondary_sector": "稀土与小金属",
+          "tertiary_sectors": [
+            "钨钼与战略小金属"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/601123"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营铁矿石采选、铁精粉销售，同时从事伴生钼矿选冶与钼精矿销售。"
     },
     {
       "code": "601126",
@@ -136152,7 +137547,7 @@
     },
     {
       "code": "601319",
-      "name": "中国人保",
+      "name": "XD中国人",
       "primary_sector": "大金融",
       "classifications": [
         {
@@ -138243,7 +139638,7 @@
     },
     {
       "code": "601696",
-      "name": "中银证券",
+      "name": "XD中银证",
       "primary_sector": "大金融",
       "classifications": [
         {
@@ -138279,15 +139674,39 @@
             "业务资料核对",
             "2025年年度报告主营业务/公司公告"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星运营与测运控",
+          "tertiary_sectors": [
+            "通信卫星运营服务",
+            "卫星测运控服务"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12052643&stockid=601698",
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12052643",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/01/content_2195146.htm"
+          ]
         }
       ],
       "product_tags": [
         "卫星通信",
         "卫星运营",
         "地面站",
-        "卫星互联网"
+        "卫星互联网",
+        "通信广播卫星空间段运营",
+        "卫星转发器资源服务",
+        "卫星宽带通信服务",
+        "卫星通信数据传输",
+        "商用通信卫星运营",
+        "卫星测控管理",
+        "卫星轨道与频率资源维护",
+        "卫星地面站网运营",
+        "海星通全球卫星通信网络",
+        "卫星广播电视传输"
       ],
-      "reason": "公司是卫星空间段运营服务商，核心为通信广播卫星运营和卫星通信服务。"
+      "reason": "公司以通信广播卫星运营为核心业务，2025年末拥有19颗商用通信广播卫星，具备卫星空间段资源、频率轨道资源和地面站网资源。公司年报明确披露业务流程包括卫星测控管理、卫星网络维护及业务运行管理，同时提供卫星通信和综合信息服务，属于本二级产业环节的核心运营企业。"
     },
     {
       "code": "601699",
@@ -138630,10 +140049,29 @@
           "source_refs": [
             "2025年年度报告主营业务/公司公告"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星运营与测运控",
+          "tertiary_sectors": [
+            "通信卫星运营服务"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12013734&stockid=601728",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-03/25/content_2191665.htm"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司核心为基础电信运营，现有目录无电信运营商主线；其云、IDC、算力和星辰大模型业务可映射至AIDC与大模型主线。"
+      "product_tags": [
+        "天通卫星移动通信服务",
+        "手机直连卫星通信",
+        "天地一体通信网络",
+        "卫星移动通信运营",
+        "卫星通信连接服务",
+        "应急卫星通信"
+      ],
+      "reason": "公司已经开展卫星移动通信服务，2025年报披露卫星业务收入同比增长30.7%，并持续扩大卫星连接用户规模、推进国内外卫星通信服务。公司属于卫星通信网络服务运营环节，不等同于拥有或制造通信卫星的空间段运营企业。"
     },
     {
       "code": "601766",
@@ -145629,10 +147067,31 @@
           "source_refs": [
             "2025年年度报告/公司主营业务"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星整星与平台制造",
+          "tertiary_sectors": [
+            "卫星总体与整星制造",
+            "卫星结构与热控部件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12130308&stockid=603131",
+            "公司投资者关系公开业务资料：https://www.hugong.com/ir/detail345.htm",
+            "公司可转换公司债券上市公告书：https://www.hugong.com/ir/detail214.htm"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司智能制造板块主营焊接、切割及激光加工设备，并提供机器人焊接系统集成。"
+      "product_tags": [
+        "商业卫星总装集成",
+        "卫星AIT装配集成测试",
+        "卫星电子装联",
+        "卫星热控实施",
+        "宇航相变热控产品",
+        "航天器结构件"
+      ],
+      "reason": "公司通过上海沪航卫星科技有限公司开展商业卫星总装集成及核心部件制造，历史公开资料明确披露商业卫星AIT能力；相关子公司涉及卫星电子装联、热控实施及相变热控产品。2025年报确认沪航卫星等主体仍在合并范围内，但上市公司整体以焊接设备为主要收入来源，卫星业务不是整体主营。"
     },
     {
       "code": "603132",
@@ -153222,6 +154681,48 @@
       "reason": "公司核心业务为网络游戏研发与运营；生成式AI主要用于游戏内容生产和交互优化，属于次级应用关联，不属于通用大模型主营。"
     },
     {
+      "code": "603448",
+      "name": "天博智能",
+      "primary_sector": "汽车产业链",
+      "classifications": [
+        {
+          "primary_sector": "汽车产业链",
+          "secondary_sector": "热管理",
+          "tertiary_sectors": [
+            "新能源汽车热管理部件"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12577191&stockid=603448"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "传感器",
+          "tertiary_sectors": [
+            "汽车传感器"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12159528&stockid=603448"
+          ]
+        },
+        {
+          "primary_sector": "汽车产业链",
+          "secondary_sector": "汽车电子与智能化",
+          "tertiary_sectors": [
+            "汽车电子控制部件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12577191&stockid=603448"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "2025年主营温控产品约59.72%、传感类约21.09%；智能水阀服务新能源三电热管理，汽车温度传感器为独立收入板块，机器人力传感器仍属研发阶段。"
+    },
+    {
       "code": "603456",
       "name": "九洲药业",
       "primary_sector": "医药医疗",
@@ -154138,12 +155639,14 @@
           "primary_sector": "AI应用",
           "secondary_sector": "AIGC",
           "tertiary_sectors": [
-            "AIGC图文与视频"
+            "AIGC图文与视频",
+            "AI短剧"
           ],
           "relevance_score": 0.8,
           "source_refs": [
             "historical assignment: relevance pending business review",
-            "2025年年度报告/招股说明书/公司主营业务资料"
+            "2025年年度报告/招股说明书/公司主营业务资料",
+            "巨潮资讯：2025年年度报告（AI短剧业务复核）"
           ]
         },
         {
@@ -160646,7 +162149,7 @@
     },
     {
       "code": "603881",
-      "name": "数据港",
+      "name": "XD数据港",
       "primary_sector": "AIDC基础设施",
       "classifications": [
         {
@@ -164450,6 +165953,18 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司主营业务资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天精密锻件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11999871&stockid=605123",
+            "2025年年度报告相关监管回复：https://static.sse.com.cn/stock/disclosure/announcement/c/202605/605123_20260529_JGU1.pdf"
+          ]
         }
       ],
       "product_tags": [
@@ -164458,9 +165973,15 @@
         "核电锻件",
         "风电锻件",
         "石化锻件",
-        "高温合金锻件"
+        "高温合金锻件",
+        "航空航天锻件",
+        "高性能环形锻件",
+        "精密模锻件",
+        "航空航天环形锻件",
+        "特种合金锻件",
+        "航天动力系统锻件"
       ],
-      "reason": "公司主营特种合金环形锻件和自由锻件，产品应用于航空航天、核电、风电、石化和船舶等高端装备。"
+      "reason": "公司主营高端金属锻件，产品覆盖航空航天、电力、石化等领域。2025年报单独列示航空航天锻件收入约9.04亿元，具备明确航天锻件制造业务。但未将商业火箭锻件从航空航天总收入中独立披露，不能将全部航空航天锻件收入视为商业航天业务。"
     },
     {
       "code": "605128",
@@ -165005,7 +166526,7 @@
     },
     {
       "code": "605179",
-      "name": "XD一鸣食",
+      "name": "一鸣食品",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -165970,7 +167491,7 @@
     },
     {
       "code": "605300",
-      "name": "XD佳禾食",
+      "name": "佳禾食品",
       "primary_sector": "消费",
       "classifications": [
         {
@@ -167564,10 +169085,30 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载激光通信终端与光学器件",
+            "星载遥感光学载荷"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12228203&stockid=688010",
+            "上海证券交易所2025年年度报告原文：https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-28/688010_20260428_JROT.pdf"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营特种及民用光学镜头、光电系统和精密光学元件，广泛用于国防光电与机器视觉等场景。"
+      "product_tags": [
+        "低轨卫星激光通信光学产品",
+        "星载激光通信光学组件",
+        "低轨卫星对地观测镜头",
+        "航天探测光学系统",
+        "高分辨率航天镜头",
+        "低轨卫星光学成像系统"
+      ],
+      "reason": "公司主营定制光学镜头、光学系统和精密光学元件。2025年报明确披露低轨卫星激光通信产品已小批量交付，航天探测光学系统已进入小批量生产，同时完成低轨卫星对地观测镜头设计。激光通信和空间光学成像均有直接产品或研发依据，但对地观测镜头尚不能认定为批量交付，且卫星业务收入未单独披露。"
     },
     {
       "code": "688011",
@@ -169154,10 +170695,59 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "遥感卫星星座运营与数据服务",
+            "遥感数据处理与数字地球"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12288538&stockid=688066",
+            "航天宏图2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12288538&stockid=688066",
+            "2025年年度报告摘要：https://static.cninfo.com.cn/finalpage/2026-04-30/1225265891.PDF"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星运营与测运控",
+          "tertiary_sectors": [
+            "卫星测运控服务"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "航天宏图2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12288538&stockid=688066",
+            "2026年第一季度报告业务说明：https://paper.cnstock.com/html/2026-04/30/content_2212466.htm",
+            "公司卫星运营业务介绍：https://www.piesat.cn/website/cn/"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营卫星应用系统设计开发、遥感数据分析与应用软件，属于卫星应用软件和数据服务而非卫星制造。"
+      "product_tags": [
+        "女娲雷达遥感星座",
+        "SAR遥感数据",
+        "遥感影像处理",
+        "遥感应用软件",
+        "自然资源与灾害遥感监测",
+        "女娲雷达遥感卫星星座",
+        "卫星星座运营管理",
+        "卫星统一操作系统",
+        "多星协同任务调度",
+        "卫星轨道与任务管理",
+        "卫星自主运行管理",
+        "宏图一号SAR卫星",
+        "宏图二号SAR卫星",
+        "商业SAR遥感数据",
+        "卫星遥感数据产品",
+        "PIE-Engine遥感云平台",
+        "PIE遥感影像处理软件",
+        "InSAR地表形变监测",
+        "遥感数据SaaS服务",
+        "天权遥感大模型",
+        "数字孪生与遥感行业应用"
+      ],
+      "reason": "公司主营空间信息应用软件、遥感数据分析与行业服务，拥有女娲雷达遥感卫星星座，形成从卫星数据获取、遥感处理平台到行业应用的业务体系。2025年报披露女娲星座已完成12颗雷达遥感卫星组网，提供SAR数据产品、遥感云服务、地表沉降和基础设施形变监测等服务。遥感数据与行业应用属于公司核心业务。"
     },
     {
       "code": "688067",
@@ -170258,10 +171848,54 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "运载火箭制造与推进",
+          "tertiary_sectors": [
+            "液体火箭发动机及推力室"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12224038&stockid=688102",
+            "2026年半年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12537242&stockid=688102",
+            "2026年10月10日推力室产业化项目调整公告：https://paper.cnstock.com/html/2026-10/10/content_2276010.htm"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天高性能金属材料",
+            "航天增材制造"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/28/content_2207723.htm",
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12224038&stockid=688102"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营高强高导铜合金和电接触材料，并经营铬粉等高端金属粉体业务。"
+      "product_tags": [
+        "液体火箭发动机推力室内壁",
+        "铜铬锆合金",
+        "铜铬铌合金",
+        "推力室近净成形",
+        "火箭推力室外壁",
+        "铜铬锆合金推力室部件",
+        "铜铬铌合金推力室部件",
+        "热等静压近净成型",
+        "液体火箭发动机喷管组件",
+        "百吨级推力室零组件",
+        "重型火箭发动机推力室材料",
+        "液体火箭发动机推力室内壁材料",
+        "火箭推力室铜合金零组件",
+        "高强高导铜合金",
+        "铜合金3D打印粉末",
+        "推力室增材制造工艺",
+        "铜合金3D打印缩比样件"
+      ],
+      "reason": "公司已形成液体火箭发动机推力室用铜合金材料及零组件的完整制造技术。2025年报明确披露铜铬锆合金推力室产品批量供应多家下游客户，部分型号转入批量生产。同时开展铜铬铌及铜铬锆增材制造工艺研发，已形成打印样件并交付验证。其材料及零组件业务为直接业务，增材制造部分尚处工艺验证阶段。"
     },
     {
       "code": "688103",
@@ -170908,14 +172542,32 @@
           "source_refs": [
             "2025年年度报告/公司公告/主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天高性能金属材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12160107&stockid=688122",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/24/content_2204609.htm"
+          ]
         }
       ],
       "product_tags": [
         "高温合金",
         "钛合金",
-        "超导材料"
+        "超导材料",
+        "高端钛合金棒材",
+        "高性能钛合金锻坯",
+        "航空航天高温合金",
+        "镍基高温合金",
+        "高温合金棒材",
+        "高强韧钛合金"
       ],
-      "reason": "高端钛合金、高温合金等先进金属材料为核心主营，并直接服务航空航天及军工领域。"
+      "reason": "公司主营高端钛合金、高性能高温合金及超导产品。2025年报披露多个高温合金牌号通过航空发动机、航天型号等用户认证，钛合金材料已应用于高端装备。相关材料具备明确航天产品关联，但公司未单列商业运载火箭或卫星材料收入。"
     },
     {
       "code": "688123",
@@ -174595,13 +176247,47 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "运载火箭制造与推进",
+          "tertiary_sectors": [
+            "液体火箭发动机及推力室"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12276613&stockid=688239"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天精密锻件"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12276613&stockid=688239",
+            "2025年年度报告原文：https://static.cninfo.com.cn/finalpage/2026-04-30/1225256622.PDF"
+          ]
         }
       ],
       "product_tags": [
         "航空发动机环形锻件",
-        "高温合金锻件"
+        "高温合金锻件",
+        "航天发动机环形锻件",
+        "火箭涡轮盘锻件",
+        "火箭发动机壳体锻件",
+        "高温合金精密锻件",
+        "航天发动机薄壁环锻件",
+        "运载火箭发动机锻件",
+        "航天筒形壳体锻件",
+        "航天连接结构锻件",
+        "高温合金环形锻件",
+        "大型精密环锻件",
+        "火箭结构系统锻件"
       ],
-      "reason": "主营航空发动机等高端装备环形锻件，军工结构件与锻件为核心，材料体系覆盖高温合金和钛合金。"
+      "reason": "公司主营航空航天及燃气轮机高端环形锻件。2025年报将航天锻件单独列示，收入约1.13亿元，产品主要用于运载火箭，包括发动机及连接航天装备各部段的筒形壳体，并明确提出深化与商业航天企业合作，属于直接航天锻件业务。"
     },
     {
       "code": "688244",
@@ -175385,13 +177071,39 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载射频与相控阵芯片",
+            "星载电源管理与控制芯片",
+            "星载通信载荷与相控阵天线"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12152128&stockid=688270",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12152116&stockid=688270"
+          ]
         }
       ],
       "product_tags": [
         "电源管理芯片",
-        "射频收发芯片"
+        "射频收发芯片",
+        "高速高精度ADC/DAC",
+        "抗辐照电源管理芯片",
+        "星载T/R电源管理芯片",
+        "星载射频微系统",
+        "星用射频收发芯片",
+        "抗辐照射频芯片",
+        "星载宽带载荷射频模块",
+        "数字波束合成芯片",
+        "星用抗辐照电源管理芯片",
+        "T/R电源管理芯片",
+        "负载点电源芯片",
+        "宇航微系统与模组"
       ],
-      "reason": "主营高可靠模拟、射频及电源管理芯片，产品面向雷达、通信等高可靠电子系统。"
+      "reason": "公司主营射频收发芯片、模数及数模转换芯片、电源管理芯片和微系统模组。2025年报披露星载宽带载荷射频模块已有在轨应用，星用射频收发芯片完成定型，多款宇航电源管理芯片已向航天项目批量供货。相关产品覆盖卫星射频收发、载荷模块和星载电源管理，属于直接产品业务。"
     },
     {
       "code": "688271",
@@ -176610,13 +178322,29 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星地面设备与终端",
+          "tertiary_sectors": [
+            "北斗导航芯片与终端",
+            "卫星通信终端与天线"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12130753&stockid=688311"
+          ]
         }
       ],
       "product_tags": [
         "卫星通信天线",
-        "卫星导航"
+        "卫星导航",
+        "卫星导航接收机",
+        "动中通天线",
+        "卫星数据链终端",
+        "卫星导航组件"
       ],
-      "reason": "主营卫星通信和卫星导航终端、天线及组件，军民卫星通信应用明确。"
+      "reason": "公司主要产品包括卫星导航、卫星通信及电子对抗产品，卫星导航接收机、数据链终端和卫星通信天线属于核心业务产品。"
     },
     {
       "code": "688312",
@@ -177439,13 +179167,57 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天增材制造"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12288234&stockid=688333",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/30/content_2211432.htm"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "运载火箭制造与推进",
+          "tertiary_sectors": [
+            "液体火箭发动机及推力室"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/30/content_2211432.htm",
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12288234&stockid=688333"
+          ]
         }
       ],
       "product_tags": [
         "金属增材制造",
-        "航空结构件"
+        "航空结构件",
+        "航天金属3D打印",
+        "火箭发动机推力室结构件",
+        "复杂流道零件",
+        "增材制造设备",
+        "航天金属粉末",
+        "液体火箭发动机金属3D打印",
+        "火箭发动机推力室身部",
+        "推力室复杂冷却流道",
+        "火箭发动机复杂结构件",
+        "液氧甲烷发动机增材制造",
+        "火箭发动机金属打印零件",
+        "商业火箭增材制造服务",
+        "金属3D打印设备",
+        "商业火箭发动机增材制造",
+        "液体火箭推力室3D打印",
+        "复杂冷却流道结构件",
+        "航天金属打印服务",
+        "航天高性能合金粉末",
+        "卫星金属结构件",
+        "火箭发动机复杂零件"
       ],
-      "reason": "主营金属增材制造设备、打印服务及零件，航空航天应用占重要地位，并配套金属粉末材料。"
+      "reason": "公司主营金属增材制造设备、打印服务及配套材料。2025年报披露为蓝箭航天、东方空间、九州云箭、星际荣耀等商业航天客户提供产品和服务，涉及液体火箭发动机、卫星及其他航天结构件，其中多个商业航天项目已进入批量生产阶段，属于航天增材制造直接供应商。"
     },
     {
       "code": "688334",
@@ -177530,7 +179302,7 @@
     },
     {
       "code": "688336",
-      "name": "三生国健",
+      "name": "XD三生国",
       "primary_sector": "医药医疗",
       "classifications": [
         {
@@ -178519,6 +180291,20 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公告及主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载射频与相控阵芯片",
+            "星载通信载荷与相控阵天线"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12074059&stockid=688375",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/10/content_2198238.htm",
+            "2025年年度报告监管问询函回复：https://paper.cnstock.com/html/2026-07/04/content_2239321.htm"
+          ]
         }
       ],
       "product_tags": [
@@ -178527,9 +180313,16 @@
         "射频芯片",
         "雷达收发组件",
         "移动通信射频模块",
-        "微波组件"
+        "微波组件",
+        "射频放大芯片",
+        "射频控制芯片",
+        "星载微波射频模块",
+        "相控阵射频芯片",
+        "射频功率放大芯片",
+        "低轨卫星T/R组件",
+        "毫米波射频模块"
       ],
-      "reason": "公司主营有源相控阵T/R组件和射频集成电路，军用雷达电子为核心，同时具有射频芯片和通信射频器件业务。"
+      "reason": "公司主营有源相控阵T/R组件及射频集成电路，形成芯片、模块、组件系列化产品体系。2025年报明确披露多款T/R组件已向低轨卫星和商业航天客户批量交付。监管问询函回复显示T/R组件和射频模块占公司2025年收入的88.36%，但该比例包含其他应用领域，不能全部认定为卫星业务收入。"
     },
     {
       "code": "688376",
@@ -178795,14 +180588,35 @@
           "source_refs": [
             "2025年年度报告/公司公告及主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载电源管理与控制芯片"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12034110&stockid=688385",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12034125&stockid=688385",
+            "2026年半年度报告：https://wap.stockstar.com/detail/SN2026081700028606"
+          ]
         }
       ],
       "product_tags": [
         "FPGA",
         "安全芯片",
-        "MCU"
+        "MCU",
+        "卫星通信FPGA",
+        "星载高可靠FPGA",
+        "RF-FPGA",
+        "PSoC芯片",
+        "RFSoC芯片",
+        "高可靠Flash存储器",
+        "专用存储刷新芯片",
+        "星载可编程逻辑器件"
       ],
-      "reason": "公司主营FPGA、安全与识别、智能电表等集成电路，芯片设计为核心；智能电表芯片形成智能计量直接产业链关联。"
+      "reason": "公司主营FPGA、非挥发性存储器和其他集成电路。2025年报明确卫星通信为FPGA产品应用领域，2026年半年报进一步披露RF-FPGA、PSoC、RFSoC、Flash存储器及专用刷新芯片可应用于星上载荷和天基算力等场景。现有披露未单独量化星载产品收入，因此按照明确产业链及产品应用关联评分。"
     },
     {
       "code": "688386",
@@ -179827,6 +181641,18 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/公司公告及主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天增材制造"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12029647&stockid=688433",
+            "2026年11月发行人及保荐机构审核问询函回复：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12695060&stockid=688433"
+          ]
         }
       ],
       "product_tags": [
@@ -179834,9 +181660,15 @@
         "高分子3D打印设备",
         "增材制造材料",
         "3D打印软件",
-        "航空航天增材制造"
+        "航空航天增材制造",
+        "工业级金属3D打印设备",
+        "激光选区熔化设备",
+        "高分子增材制造设备",
+        "航空航天金属零件打印",
+        "工业级3D打印服务",
+        "增材制造配套材料"
       ],
-      "reason": "公司主营工业级金属增材制造设备、材料及软件，设备为核心，并直接服务航空航天等高端制造。"
+      "reason": "公司主营工业级3D打印设备、材料及打印服务。2025年航空航天领域收入约2.97亿元，占营业收入41.53%，具备明确的航空航天增材制造业务。2026年公开审核问询函回复进一步确认打印服务收入及相关产能情况。但现有资料未单独量化商业火箭和卫星应用，按明确产业链关联评分。"
     },
     {
       "code": "688435",
@@ -180950,10 +182782,31 @@
           "source_refs": [
             "2025年年度报告/公司公告及主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "遥感数据处理与数字地球"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12265289&stockid=688509",
+            "2026年半年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12562453&stockid=688509"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司主营测绘地理信息、时空大数据平台和智慧城市应用，覆盖行业软件、数据平台及智慧城市。"
+      "product_tags": [
+        "地理时空数据建设",
+        "航测遥感数据处理",
+        "遥感影像解译",
+        "地理空间数据库",
+        "自然资源遥感调查",
+        "实景三维地理信息",
+        "时空大数据平台",
+        "数字城市空间信息服务"
+      ],
+      "reason": "公司主营测绘地理信息技术服务、时空数据建设及智慧城市相关业务。2025年报和2026年半年报披露旗下专业公司开展航测遥感、地理信息数据处理、遥感解译、国土空间监测和自然资源调查服务。业务与卫星遥感数据下游应用存在明确关联，但公司并未单独披露卫星遥感业务收入。"
     },
     {
       "code": "688510",
@@ -181388,6 +183241,43 @@
             "historical assignment: relevance pending business review",
             "2025年年度报告/招股说明书/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星整星与平台制造",
+          "tertiary_sectors": [
+            "卫星结构与热控部件"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12192596&stockid=688523",
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12192611&stockid=688523",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/25/content_2206649.htm",
+            "2025年年度报告监管问询函回复：https://paper.cnstock.com/html/2026-07/08/content_2240365.htm"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星载荷与星载电子",
+          "tertiary_sectors": [
+            "星载通信载荷与相控阵天线"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12192611&stockid=688523",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/25/content_2206649.htm"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星地面设备与终端",
+          "tertiary_sectors": [
+            "卫星地面站与测控设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/25/content_2206649.htm"
+          ]
         }
       ],
       "product_tags": [
@@ -181396,9 +183286,27 @@
         "测控测试设备",
         "航空航天工艺装备",
         "复合材料结构件",
-        "精密机械装备"
+        "精密机械装备",
+        "星载微波天线",
+        "星载复合材料结构件",
+        "卫星热控组件",
+        "卫星测控天线",
+        "低轨卫星互联网馈电天线",
+        "卫星星体结构件",
+        "卫星热控部件",
+        "太阳翼结构",
+        "星载机构结构",
+        "宇航精密结构件",
+        "星载复合材料功能件",
+        "星载一体化阵面",
+        "星载缝隙阵天线",
+        "星载反射面天线",
+        "微波馈电组件",
+        "星载有源板",
+        "卫星通信馈源",
+        "星载天线复合材料结构件"
       ],
-      "reason": "主营宇航产品、星载天线/结构件、卫星通信与测控测试设备及航空复合材料零部件，军工航天为核心，同时直接服务商业低轨卫星通信。"
+      "reason": "公司主营宇航产品、卫星通信及测控测试设备。2025年报明确披露一体化阵面、缝隙阵天线、导航增强天线、有源板、反射面天线、各频段馈源等星载产品。公司掌握复杂微波馈电部件设计、制造、装配和测试技术，相关产品是星载有效载荷的重要组成部分，属于卫星通信载荷直接供应商。"
     },
     {
       "code": "688525",
@@ -181801,10 +183709,32 @@
           "source_refs": [
             "2025年年度报告/招股说明书/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "运载火箭制造与推进",
+          "tertiary_sectors": [
+            "火箭惯导与传感"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12185274&stockid=688539"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营高可靠MEMS传感器及传感器网络系统，服务工业、轨交、航空航天等高可靠场景，核心属于工业传感器。"
+      "product_tags": [
+        "高可靠压力传感器",
+        "温度传感器",
+        "航天测量传感器",
+        "高可靠传感器组件",
+        "火箭高可靠压力传感器",
+        "火箭温度传感器",
+        "全箭传感遥测系统",
+        "火箭发动机健康监测采集系统",
+        "火箭传感器网络",
+        "多参量测量组件"
+      ],
+      "reason": "公司主营高可靠传感器及传感器网络系统。2025年报明确披露已向商业航天客户提供全箭传感遥测解决方案、火箭发动机健康监测采集系统等产品，并拥有多家商业火箭企业客户，属于火箭测量和传感系统的直接配套企业。"
     },
     {
       "code": "688543",
@@ -182474,10 +184404,31 @@
           "source_refs": [
             "2025年年度报告/招股说明书/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天高性能金属材料",
+            "航天精密铸件"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12053006&stockid=688563",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12052989&stockid=688563"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营航空用钛合金、高温合金及特种橡胶等航空材料，高端金属军工材料为核心。"
+      "product_tags": [
+        "商业火箭发动机壳体",
+        "商业火箭发动机叶轮",
+        "航天钛合金精密铸件",
+        "航天发动机进气道",
+        "航天油箱结构件",
+        "高温合金母合金",
+        "航天钛合金结构件"
+      ],
+      "reason": "公司主营航空航天用部件及材料。2025年报明确将商业航天火箭发动机壳体、叶轮列为钛合金精密铸造事业部产品，同时拥有高温合金母合金及大尺寸精密铸件制造能力。相较一般航空航天材料企业，公司具有明确的商业火箭直接产品，因此给予较高关联度。"
     },
     {
       "code": "688565",
@@ -182625,6 +184576,33 @@
           "source_refs": [
             "2025年年度报告/招股说明书/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "遥感数据处理与数字地球"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/15/content_2199912.htm",
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12090946&stockid=688568",
+            "2025年年度报告摘要：https://static.cninfo.com.cn/finalpage/2026-04-15/1225104744.PDF"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星运营与测运控",
+          "tertiary_sectors": [
+            "卫星测运控服务",
+            "太空态势感知与在轨管理"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12090946&stockid=688568",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/15/content_2199912.htm",
+            "控股子公司星图测控年度报告公告：https://epaper.cs.com.cn/zgzqb/html/2026-03/21/nw.D110000zgzqb_20260321_2-A10.htm"
+          ]
         }
       ],
       "product_tags": [
@@ -182633,9 +184611,30 @@
         "地理信息系统",
         "空天大数据",
         "气象海洋应用",
-        "低空经济数字平台"
+        "低空经济数字平台",
+        "空天信息数据服务",
+        "遥感数据处理",
+        "空间信息智能服务",
+        "卫星遥感应用软件",
+        "商业航天太空管理服务",
+        "卫星测运控系统",
+        "多频段地面测控站网",
+        "星图太空云",
+        "太空态势感知平台",
+        "卫星碰撞预警",
+        "卫星在轨管理",
+        "星图测控控股子公司",
+        "GEOVIS数字地球",
+        "星图云",
+        "遥感卫星数据处理",
+        "地理空间智能分析",
+        "卫星遥感智能解译",
+        "GeoAI空间智能",
+        "高质量遥感数据集",
+        "数字孪生地球",
+        "遥感数据云服务"
       ],
-      "reason": "以数字地球平台、空天大数据和卫星遥感应用为核心，兼具大数据平台、遥感应用及城市治理等业务。"
+      "reason": "公司以数字地球技术、空间信息数据处理和行业应用为核心业务，拥有GEOVIS数字地球及星图云产品体系。2025年报披露持续建设遥感共性数据产品、空间信息云服务和地理空间智能分析能力，向政府和行业客户提供数据、平台及应用服务。数字地球及空间数据处理是公司核心主营业务。"
     },
     {
       "code": "688569",
@@ -183312,10 +185311,32 @@
           "source_refs": [
             "2025年年度报告/招股说明书/公司主营业务资料核验"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "北斗高精度定位服务"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12217281&stockid=688592",
+            "2025年年度报告摘要：https://paper.cnstock.com/html/2026-04/28/content_2207601.htm",
+            "公司官方网站：https://www.sinognss.com/company/"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营高精度GNSS/北斗芯片、模块、板卡和终端，北斗高精度定位为核心业务。"
+      "product_tags": [
+        "北斗高精度定位解算",
+        "高精度GNSS数据应用",
+        "RTK定位系统",
+        "北斗差分定位技术",
+        "地基增强网络",
+        "高精度定位数据应用",
+        "北斗形变监测系统",
+        "北斗高精度行业应用服务"
+      ],
+      "reason": "公司主营北斗及GNSS高精度定位芯片、模组、接收机和数据应用系统解决方案。2025年报明确披露数据应用及系统解决方案收入约1.89亿元，同时公司公开资料披露建立地基增强网络。其定位技术和数据应用具有明确产业关联，但主要商业模式仍为基础产品、终端和系统解决方案，而非独立位置增强数据运营服务。"
     },
     {
       "code": "688593",
@@ -186952,10 +188973,27 @@
           "source_refs": [
             "2025年年度报告/公司主营业务资料"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "航天材料与精密制造",
+          "tertiary_sectors": [
+            "航天高性能金属材料"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12111450&stockid=688750"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "公司主营高端钛及钛合金材料，航空航天和军工是重要应用领域。"
+      "product_tags": [
+        "高端钛合金棒材",
+        "钛合金锻坯",
+        "大规格钛合金材料",
+        "高强韧钛合金",
+        "高端装备钛合金配套"
+      ],
+      "reason": "公司主营高端钛及钛合金材料，2025年报明确产品应用于航空、航天、舰船等高端装备领域，并为相关型号提供钛合金材料配套。报告期内业务更多集中于航空等领域，商业火箭及卫星产品收入未单独确认，因此按间接及较弱的商业航天关联评分。"
     },
     {
       "code": "688755",
@@ -187902,6 +189940,37 @@
       "reason": "公司主营新能源汽车、通信和数据中心高速连接器，连接器为核心，并直接服务高速光互连和服务器网络。"
     },
     {
+      "code": "688801",
+      "name": "燧原科技",
+      "primary_sector": "半导体",
+      "classifications": [
+        {
+          "primary_sector": "半导体",
+          "secondary_sector": "芯片设计",
+          "tertiary_sectors": [
+            "AI芯片"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://www.sse.com.cn/aboutus/mediacenter/ceremony/flashback/details/index.shtml?companyId=688801"
+          ]
+        },
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "服务器与算力硬件",
+          "tertiary_sectors": [
+            "AI服务器"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://www.sse.com.cn/aboutus/mediacenter/ceremony/flashback/details/index.shtml?companyId=688801"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "自主研发云端AI芯片、AI加速卡、智算系统/集群以及计算软件，芯片为核心技术，算力系统为直接产品。"
+    },
+    {
       "code": "688802",
       "name": "沐曦股份",
       "primary_sector": "半导体",
@@ -188258,10 +190327,32 @@
           "source_refs": [
             "2025年度报告/招股说明书/公司公开主营资料核对"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星整星与平台制造",
+          "tertiary_sectors": [
+            "卫星电源与空间太阳电池"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12150523&stockid=688818",
+            "2025年年度报告摘要：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12150504&stockid=688818",
+            "中国能源报2026年2月公司宇航电源业务介绍：https://paper.people.com.cn/zgnyb/pc/content/202602/23/content_30141987.html"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "核心为航天/特种电源及新能源电源系统；现有目录缺少独立航天电源主线，按最接近的卫星载荷与储能系统归属。"
+      "product_tags": [
+        "宇航电源系统",
+        "砷化镓空间太阳电池",
+        "空间太阳电池阵",
+        "空间锂离子电池组",
+        "宇航电源控制设备",
+        "卫星电源控制设备",
+        "卫星储能电源",
+        "宇航电源总装集成"
+      ],
+      "reason": "公司宇航电源为核心业务板块，具备空间太阳电池阵、空间锂离子电池组、电源控制设备及系统集成的完整产品体系。2025年报明确披露相关产品配套商业航天项目，可面向不同轨道航天器提供电源系统。"
     },
     {
       "code": "688819",
@@ -188529,6 +190620,26 @@
       ],
       "product_tags": [],
       "reason": "四足、人形等机器人整机为核心；具身智能算法与智能体能力属于明确技术布局，按布局级计分。"
+    },
+    {
+      "code": "688837",
+      "name": "信诺维",
+      "primary_sector": "医药医疗",
+      "classifications": [
+        {
+          "primary_sector": "医药医疗",
+          "secondary_sector": "化学制药",
+          "tertiary_sectors": [
+            "创新药"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://www.sse.com.cn/aboutus/mediacenter/ceremony/flashback/details/index.shtml?companyId=688837"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "药物研发企业，以创新药管线、临床推进及对外BD授权为主营模式；缺少成规模仿制药业务依据。"
     },
     {
       "code": "688981",
@@ -189239,6 +191350,37 @@
       ],
       "product_tags": [],
       "reason": "主营果蔬原浆/原料果汁、速冻果蔬等，核心位于果蔬加工并面向饮料产业链。"
+    },
+    {
+      "code": "920025",
+      "name": "凯达重工",
+      "primary_sector": "工业母机",
+      "classifications": [
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "大型铸件与重型装备",
+          "tertiary_sectors": [
+            "耐磨铸件"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12595028&stockid=920025"
+          ]
+        },
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "稀土与先进金属材料",
+          "tertiary_sectors": [
+            "耐磨金属材料"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12595028&stockid=920025"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营轧辊、辊环，轧辊2025年收入占比超过80%；产品是钢材轧制耐磨铸造关键件，而非钢铁冶炼或金属切削机床。"
     },
     {
       "code": "920026",
@@ -190012,6 +192154,37 @@
       ],
       "product_tags": [],
       "reason": "主营糖尿病护理、给药输注及微创介入器械，并已推出电子内窥镜及一次性内镜等产品；目录无独立注射笔主线，综合按最接近器械路径归属。"
+    },
+    {
+      "code": "920071",
+      "name": "金钛股份",
+      "primary_sector": "新材料",
+      "classifications": [
+        {
+          "primary_sector": "新材料",
+          "secondary_sector": "稀土与先进金属材料",
+          "tertiary_sectors": [
+            "钛合金与高端金属"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12499160&stockid=920071"
+          ]
+        },
+        {
+          "primary_sector": "军工装备",
+          "secondary_sector": "军工材料与制造",
+          "tertiary_sectors": [
+            "高温合金与钛合金"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12499160&stockid=920071"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营高端海绵钛冶炼销售，是高端钛合金上游金属原料并供应军工航空航天客户；不属于钛矿开采。"
     },
     {
       "code": "920072",
@@ -190906,10 +193079,69 @@
           "source_refs": [
             "2025年度报告/招股说明书/公司公开主营资料核对"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星运营与测运控",
+          "tertiary_sectors": [
+            "卫星测运控服务",
+            "太空态势感知与在轨管理"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "2025年年度报告：https://www.9fzt.com/detail/bj_920116_9_606c39f21ed43aea329414e1268079d2.html",
+            "2026年半年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12540086&stockid=920116",
+            "2025年年度报告：https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12009108",
+            "2025年投资者关系活动记录：https://dataclouds.cninfo.com.cn/sjother/bse_onmarket/2025/20250711/4b43883a5e3c11f096fdfa163ee65716.pdf",
+            "星眼太空感知星座计划：https://app.xinhuanet.com/news/article.html?articleId=857c3546bed8b3df9d268b742844c923"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星地面设备与终端",
+          "tertiary_sectors": [
+            "卫星地面站与测控设备"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "2025年年度报告：https://www.9fzt.com/detail/bj_920116_9_606c39f21ed43aea329414e1268079d2.html"
+          ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星整星与平台制造",
+          "tertiary_sectors": [
+            "卫星结构与热控部件"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "2026年9月3日思泉新材共同投资公告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12583202&stockid=301489",
+            "上海证券报航天热控业务报道：https://www.cnstock.com/commonDetail/795670"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营航天测控、空间态势感知、在轨管理与地面系统软件服务，属于卫星测控及商业航天应用。"
+      "product_tags": [
+        "航天测控管理系统",
+        "卫星在轨测运控服务",
+        "太空态势感知",
+        "太空交通管理",
+        "测控地面系统",
+        "航天数字仿真",
+        "中科星海热控参股",
+        "航天器热控业务布局",
+        "卫星热控研发平台",
+        "空间热管理技术合作",
+        "洞察者航天测控管理系统",
+        "商业卫星在轨测运控",
+        "航天地面测控站网",
+        "卫星轨道确定与预报",
+        "空间碎片监测与跟踪",
+        "卫星碰撞风险预警",
+        "太空资产管理平台",
+        "星图太空云",
+        "星眼太空感知星座"
+      ],
+      "reason": "公司主营航天测控管理、太空管理及航天数字仿真等业务。2025年报披露，公司已为多家商业卫星企业提供在轨测运控服务，同时开展空间目标监测、轨道分析和太空交通管理相关产品研发与系统建设。星眼太空感知星座属于后续建设项目，不将尚未实现的星座规模视为现有运营能力。"
     },
     {
       "code": "920117",
@@ -191503,6 +193735,48 @@
       "reason": "主营线束加工智能装备及自动化解决方案，按智能制造装备归属。"
     },
     {
+      "code": "920157",
+      "name": "宇特光电",
+      "primary_sector": "通信设备",
+      "classifications": [
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光纤光缆与连接"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/920157"
+          ]
+        },
+        {
+          "primary_sector": "AIDC基础设施",
+          "secondary_sector": "高速网络与光互连",
+          "tertiary_sectors": [
+            "光连接与高速线缆"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12609375&stockid=920157"
+          ]
+        },
+        {
+          "primary_sector": "电子元器件",
+          "secondary_sector": "连接器",
+          "tertiary_sectors": [
+            "高速互连"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12609375&stockid=920157"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营光纤连接产品，2025年数据中心领域收入占55.75%，光纤接入占41.59%；包括高速光模块光微连接组件。"
+    },
+    {
       "code": "920158",
       "name": "长江能科",
       "primary_sector": "工业母机",
@@ -191614,6 +193888,37 @@
       ],
       "product_tags": [],
       "reason": "电容器用聚丙烯薄膜为核心产品，属于功能膜和电工绝缘材料，并直接用于薄膜电容器。"
+    },
+    {
+      "code": "920162",
+      "name": "莫森泰克",
+      "primary_sector": "汽车产业链",
+      "classifications": [
+        {
+          "primary_sector": "汽车产业链",
+          "secondary_sector": "汽车电子与智能化",
+          "tertiary_sectors": [
+            "汽车电子控制部件"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://www.bse.cn/issue_report_meeting/200029603.html"
+          ]
+        },
+        {
+          "primary_sector": "汽车产业链",
+          "secondary_sector": "底盘与车身",
+          "tertiary_sectors": [
+            "汽车车身结构件"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://basic.10jqka.com.cn/920162/operate.html"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营汽车天窗、玻璃升降器等智能开闭系统及相关ECU，另制造粉末冶金零件；目录无独立“车身开闭系统”，仅按车身零件与电子控制实际业务归类。"
     },
     {
       "code": "920163",
@@ -192135,10 +194440,33 @@
           "source_refs": [
             "2025年年度报告/公司公告"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "遥感数据处理与数字地球"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12199265&stockid=920184",
+            "2025年年度业绩说明会记录：https://pdf.dfcfw.com/pdf/H2_AN202605111822170139_1.pdf"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "地理信息数据工程、空间信息应用服务和行业软件为主营，并已布局时空智能体。"
+      "product_tags": [
+        "国源地图",
+        "农业遥感数据产品",
+        "农作物遥感智能解译",
+        "农业大棚遥感监测",
+        "地块遥感识别",
+        "遥感时空数据要素",
+        "时空大数据基础平台",
+        "自然资源调查监测",
+        "农业地理大数据平台",
+        "遥感数据服务"
+      ],
+      "reason": "公司以地理信息数据工程、行业应用软件和空间信息应用服务为主营业务。2025年报披露持续开展遥感数据生产、农作物自动化解译、农业大棚监测及国源地图建设，并将遥感解译数据确认为数据资源。公司利用卫星遥感等多源数据为农业和自然资源领域提供空间数据产品与服务，不经营商业遥感卫星星座。"
     },
     {
       "code": "920185",
@@ -192467,6 +194795,37 @@
       "reason": "汽车橡胶软管及总成是核心，覆盖冷却、转向等系统；目录无汽车胶管专项，采用最近路径。"
     },
     {
+      "code": "920196",
+      "name": "南方乳业",
+      "primary_sector": "消费",
+      "classifications": [
+        {
+          "primary_sector": "消费",
+          "secondary_sector": "食品饮料",
+          "tertiary_sectors": [
+            "乳制品"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://www.bse.cn/issue_report_meeting/200029606.html"
+          ]
+        },
+        {
+          "primary_sector": "农业",
+          "secondary_sector": "畜禽养殖",
+          "tertiary_sectors": [
+            "牛羊养殖"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://xinpi.cnstock.com/m/xg/detail/920196"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营乳制品、含乳饮料，同时拥有奶畜养殖业务；奶牛养殖为上游配套。"
+    },
+    {
       "code": "920198",
       "name": "微创光电",
       "primary_sector": "AI应用",
@@ -192570,6 +194929,70 @@
       ],
       "product_tags": [],
       "reason": "风电主轴为最主要收入来源；其他大型锻件覆盖船舶、核电等，军工相关仅按较弱关联计分。"
+    },
+    {
+      "code": "920201",
+      "name": "百瑞吉",
+      "primary_sector": "医药医疗",
+      "classifications": [
+        {
+          "primary_sector": "医药医疗",
+          "secondary_sector": "医疗器械",
+          "tertiary_sectors": [
+            "再生医学植入材料",
+            "高值耗材与微创器械"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12431331&stockid=920201"
+          ]
+        },
+        {
+          "primary_sector": "消费",
+          "secondary_sector": "美妆与个护",
+          "tertiary_sectors": [
+            "化妆品"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12129988&stockid=920201"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "2025年医疗器械收入占68.31%、功能性护肤品占31.69%，均属明确主营产品；前者核心为交联透明质酸钠防粘连医用凝胶。"
+    },
+    {
+      "code": "920202",
+      "name": "安达股份",
+      "primary_sector": "汽车产业链",
+      "classifications": [
+        {
+          "primary_sector": "汽车产业链",
+          "secondary_sector": "底盘与车身",
+          "tertiary_sectors": [
+            "汽车轻量化零部件"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/920202"
+          ]
+        },
+        {
+          "primary_sector": "汽车产业链",
+          "secondary_sector": "动力与传动",
+          "tertiary_sectors": [
+            "发动机与传统动力部件",
+            "电驱动系统"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/920202"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营汽车铝合金精密压铸件，既有发动机零件，也有逆变器、电机壳体及悬置支架；按汽车轻量化核心业务及动力零件分别确认。"
     },
     {
       "code": "920204",
@@ -193025,6 +195448,26 @@
       ],
       "product_tags": [],
       "reason": "面向电商商家的SaaS软件和云服务为核心，属于行业管理软件。"
+    },
+    {
+      "code": "920229",
+      "name": "世纪数码",
+      "primary_sector": "工业母机",
+      "classifications": [
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "高端专用加工装备",
+          "tertiary_sectors": [
+            "纺织机械"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12507925&stockid=920229"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营纺织数码印花、广告标识及瓦楞包装数码喷印设备，归入纺织专用机械；不是包装材料制造商。"
     },
     {
       "code": "920230",
@@ -193587,6 +196030,71 @@
       "reason": "智能控制器为核心产品并大量应用于家电，同时开展半导体分销。"
     },
     {
+      "code": "920268",
+      "name": "百迈科",
+      "primary_sector": "医药医疗",
+      "classifications": [
+        {
+          "primary_sector": "医药医疗",
+          "secondary_sector": "医疗器械",
+          "tertiary_sectors": [
+            "高值耗材与微创器械",
+            "医用防护与低值耗材"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12482694&stockid=920268"
+          ]
+        },
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "高端专用加工装备",
+          "tertiary_sectors": [
+            "制药装备"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12482694&stockid=920268"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营外科手术缝线、栓塞/止血材料及多肽合成、裂解设备，医疗耗材与制药装备均为实际产品。"
+    },
+    {
+      "code": "920269",
+      "name": "杰锋动力",
+      "primary_sector": "汽车产业链",
+      "classifications": [
+        {
+          "primary_sector": "汽车产业链",
+          "secondary_sector": "动力与传动",
+          "tertiary_sectors": [
+            "发动机与传统动力部件",
+            "变速器与传动系统",
+            "汽车尾气后处理部件"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12476373&stockid=920269"
+          ]
+        },
+        {
+          "primary_sector": "汽车产业链",
+          "secondary_sector": "底盘与车身",
+          "tertiary_sectors": [
+            "汽车底盘与减震部件"
+          ],
+          "relevance_score": 0.4,
+          "source_refs": [
+            "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12476373&stockid=920269"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营排气消声器、三元催化器、发动机相位器和自动变速箱零件，智能悬架及制氢设备为拓展产品，按成熟度区分。"
+    },
+    {
       "code": "920270",
       "name": "天铭科技",
       "primary_sector": "汽车产业链",
@@ -193820,6 +196328,175 @@
       "reason": "粉料输送、计量、混合及自动化产线为核心，并形成锂电/固态电池材料前段装备解决方案。"
     },
     {
+      "code": "920285",
+      "name": "远大健科",
+      "primary_sector": "消费",
+      "classifications": [
+        {
+          "primary_sector": "消费",
+          "secondary_sector": "家电",
+          "tertiary_sectors": [
+            "家电核心零部件",
+            "厨房与小家电"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://vip.stock.finance.sina.com.cn/corp/go.php/vCI_CorpInfo/stockid/920285.phtml",
+            "https://basic.10jqka.com.cn/920285/operate.html"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营冰箱、咖啡机、家用净水及泳池滤芯和净水整机，核心为家电配套净水器件；电商是销售渠道而非独立电商平台。"
+    },
+    {
+      "code": "920288",
+      "name": "华大海天",
+      "primary_sector": "消费",
+      "classifications": [
+        {
+          "primary_sector": "消费",
+          "secondary_sector": "包装材料",
+          "tertiary_sectors": [
+            "特种纸"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12479909&stockid=920288"
+          ]
+        },
+        {
+          "primary_sector": "化工",
+          "secondary_sector": "农化与精细化工",
+          "tertiary_sectors": [
+            "精细化工产品"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12010924&stockid=920288"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营数码纸基材料、水性喷墨墨料与食品包装原纸；2025年数码纸基材料约52.95%、水性墨约30.08%，两条业务均成立。"
+    },
+    {
+      "code": "920289",
+      "name": "华汇智能",
+      "primary_sector": "锂电产业链",
+      "classifications": [
+        {
+          "primary_sector": "锂电产业链",
+          "secondary_sector": "锂电设备",
+          "tertiary_sectors": [
+            "前段设备"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12509847&stockid=920289"
+          ]
+        },
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "金属切削机床",
+          "tertiary_sectors": [
+            "磨削与精密加工设备",
+            "加工中心"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12509847&stockid=920289"
+          ]
+        },
+        {
+          "primary_sector": "工业母机",
+          "secondary_sector": "高端专用加工装备",
+          "tertiary_sectors": [
+            "橡塑与化工装备"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12509847&stockid=920289"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "核心为锂电正极材料研磨系统、纳米砂磨机、制浆设备，亦生产数控工具磨床和加工中心；锂电客户及收入构成清晰。"
+    },
+    {
+      "code": "920296",
+      "name": "文峰光电",
+      "primary_sector": "电力",
+      "classifications": [
+        {
+          "primary_sector": "电力",
+          "secondary_sector": "电网设备",
+          "tertiary_sectors": [
+            "电线电缆"
+          ],
+          "relevance_score": 1,
+          "source_refs": [
+            "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12548374&stockid=920296"
+          ]
+        },
+        {
+          "primary_sector": "军工装备",
+          "secondary_sector": "军工电子",
+          "tertiary_sectors": [
+            "军用连接器与元器件"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://basic.10jqka.com.cn/920296/operate.html"
+          ]
+        },
+        {
+          "primary_sector": "通信设备",
+          "secondary_sector": "光通信",
+          "tertiary_sectors": [
+            "光纤光缆与连接"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://xinpi.sgt.cnstock.com/m/xg/detail/920296"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营军工/航空航天特种电线电缆、光电组件，主要应用军工；不因经营范围提及光模块而直接归入高速光模块制造。"
+    },
+    {
+      "code": "920298",
+      "name": "腾信精密",
+      "primary_sector": "半导体",
+      "classifications": [
+        {
+          "primary_sector": "半导体",
+          "secondary_sector": "半导体产业服务",
+          "tertiary_sectors": [
+            "半导体设备零部件"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/920298"
+          ]
+        },
+        {
+          "primary_sector": "石油天然气",
+          "secondary_sector": "油服与油气装备",
+          "tertiary_sectors": [
+            "油气田设备与工程"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://basic.10jqka.com.cn/920298/operate.html"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营多个领域高精度零部件，明确包括半导体设备零部件、油气服务装备零部件、仪器及医疗零件；只归入有直接对应目录的业务。"
+    },
+    {
       "code": "920299",
       "name": "灿能电力",
       "primary_sector": "电力",
@@ -193902,6 +196579,37 @@
       ],
       "product_tags": [],
       "reason": "硝酸及硝酸盐、熔盐等无机化工产品为主营，目录以无机化工为最近路径。"
+    },
+    {
+      "code": "920306",
+      "name": "天元重工",
+      "primary_sector": "钢铁",
+      "classifications": [
+        {
+          "primary_sector": "钢铁",
+          "secondary_sector": "钢材加工与贸易",
+          "tertiary_sectors": [
+            "钢管与钢结构"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/920306"
+          ]
+        },
+        {
+          "primary_sector": "房地产",
+          "secondary_sector": "建筑施工与工程总承包",
+          "tertiary_sectors": [
+            "基础设施建设"
+          ],
+          "relevance_score": 0.6,
+          "source_refs": [
+            "https://xinpi.kcb.cnstock.com/m/xg/detail/920306"
+          ]
+        }
+      ],
+      "product_tags": [],
+      "reason": "主营索鞍、索夹等桥梁受力部件、桥梁钢结构及安装维护；在现有目录中以钢结构加工最贴近，未将其误算作地产开发。"
     },
     {
       "code": "920339",
@@ -195842,10 +198550,32 @@
           "source_refs": [
             "2025年年度报告/公司公开披露"
           ]
+        },
+        {
+          "primary_sector": "商业航天",
+          "secondary_sector": "卫星数据与行业应用",
+          "tertiary_sectors": [
+            "遥感数据处理与数字地球"
+          ],
+          "relevance_score": 0.8,
+          "source_refs": [
+            "2025年年度报告：https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12230355&stockid=920564"
+          ]
         }
       ],
-      "product_tags": [],
-      "reason": "主营地理空间数据采集、处理、GIS平台和行业应用，数据处理与空间信息软件为核心。"
+      "product_tags": [
+        "遥感与测绘地理信息数据服务",
+        "多源卫星遥感影像处理",
+        "SAR遥感数据处理",
+        "遥感数据智能解译",
+        "空间信息系统开发",
+        "时空大数据智能处理",
+        "三维地理信息数据",
+        "数字孪生城市平台",
+        "自然资源遥感监测",
+        "多源遥感AI分析平台"
+      ],
+      "reason": "公司主营遥感与测绘地理信息数据服务、空间信息系统开发应用与集成。2025年报披露遥感与测绘地理信息数据服务收入约1.28亿元，同时开展卫星遥感数据处理、SAR数据研究、多源遥感智能分析和时空信息系统建设。遥感数据服务为公司重要主营业务，但服务范围同时包含航空遥感、地面测绘等，不全部属于卫星遥感。"
     },
     {
       "code": "920566",
@@ -197439,7 +200169,7 @@
     },
     {
       "code": "920779",
-      "name": "武汉蓝电",
+      "name": "XD武汉蓝",
       "primary_sector": "工业母机",
       "classifications": [
         {
