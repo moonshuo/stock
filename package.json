@@ -12,6 +12,7 @@
     "test:relevance": "node tests/relevance-score-contract.mjs",
     "test:stock-universe": "node tests/stock-universe-third-board-contract.mjs",
     "test:market-pagination": "node tests/reported-total-pagination-contract.mjs",
+    "test:library-persistence": "node tests/library-empty-tertiary-contract.mjs",
     "test:core-relevance": "node tests/core-relevance-score-contract.mjs",
     "test:automatic-core-modules": "node tests/automatic-core-modules-contract.mjs",
     "test:stock-kline-local": "node tests/stock-kline-local-contract.mjs",

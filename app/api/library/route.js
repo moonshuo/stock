@@ -2,6 +2,7 @@ import { mkdir, readFile, readdir, rename, writeFile } from "fs/promises";
 import path from "path";
 import { NextResponse } from "next/server";
 import { sanitizeStockMap, validateSectorData } from "../../lib/sectorSystem";
+import { taxonomyForPersistence } from "../../lib/libraryPersistence";
 
 export const dynamic = "force-dynamic";
 
@@ -45,38 +46,6 @@ async function readDailyThemes() {
     if (error?.code === "ENOENT") return [];
     throw error;
   }
-}
-
-function removeEmptyTertiaries(taxonomy, stockMap) {
-  const usedPaths = new Set();
-  for (const stock of stockMap.stocks || []) {
-    for (const classification of stock.classifications || []) {
-      const primary = classification.primary_sector || stock.primary_sector;
-      for (const tertiary of classification.tertiary_sectors || []) {
-        usedPaths.add(`${primary}|${classification.secondary_sector}|${tertiary}`);
-      }
-    }
-  }
-
-  return {
-    ...taxonomy,
-    sectors: (taxonomy?.sectors || []).map((primary) => ({
-      ...primary,
-      secondary_sectors: (primary.secondary_sectors || []).map((secondary) => {
-        const tertiary_sectors = (secondary.tertiary_sectors || []).filter((tertiary) =>
-          usedPaths.has(`${primary.name}|${secondary.name}|${tertiary}`),
-        );
-        const tertiarySet = new Set(tertiary_sectors);
-        return {
-          ...secondary,
-          tertiary_sectors,
-          tertiary_descriptions: Object.fromEntries(
-            Object.entries(secondary.tertiary_descriptions || {}).filter(([name]) => tertiarySet.has(name)),
-          ),
-        };
-      }),
-    })),
-  };
 }
 
 function pruneOrphanedThemePaths(dailyThemes, taxonomy) {
@@ -148,7 +117,7 @@ export async function POST(request) {
         { status: 409 },
       );
     }
-    const taxonomy = removeEmptyTertiaries(payload.taxonomy, sanitizeStockMap(payload.stockMap || payload));
+    const taxonomy = taxonomyForPersistence(payload.taxonomy);
     const stockMap = sanitizeStockMap(payload.stockMap || payload);
     const collections = payload.collections || await readJson(COLLECTIONS_PATH, { version: "1.0", collections: [] });
     const dailyThemes = pruneOrphanedThemePaths(

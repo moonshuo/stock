@@ -196,11 +196,57 @@ function MarketEnvironmentModal({ environment, environmentStatus, turnoverHistor
 function TertiaryRankingModal({ result, date, mode, onClose }) {
   const [historyItem, setHistoryItem] = useState(null);
   const [confirmedOnly, setConfirmedOnly] = useState(false);
+  const [view, setView] = useState("overall");
+  const [selectedGroupKey, setSelectedGroupKey] = useState(null);
+  const [expandedPrimaryNames, setExpandedPrimaryNames] = useState([]);
   const daily = mode === "daily";
   const scoreField = daily ? "daily_strength_score" : "mainline_rank_score";
   const rankedRows = useMemo(() => rankTertiaryThemesByScore(result?.tertiary_themes || [], scoreField), [result?.tertiary_themes, scoreField]);
   const confirmedCount = rankedRows.filter((item) => item.mainline_confirmation?.confirmed).length;
-  const rows = confirmedOnly ? rankedRows.filter((item) => item.mainline_confirmation?.confirmed) : rankedRows;
+  const rankedEntries = rankedRows.map((item, index) => ({ item, overallRank: index + 1 }));
+  const entries = confirmedOnly ? rankedEntries.filter(({ item }) => item.mainline_confirmation?.confirmed) : rankedEntries;
+  const groups = useMemo(() => {
+    const grouped = new Map();
+    for (const entry of entries) {
+      const key = `${entry.item.primary}|${entry.item.secondary}`;
+      if (!grouped.has(key)) grouped.set(key, { key, primary: entry.item.primary, secondary: entry.item.secondary, entries: [] });
+      grouped.get(key).entries.push(entry);
+    }
+    return Array.from(grouped.values());
+  }, [entries]);
+  const catalog = useMemo(() => {
+    const primaryGroups = new Map();
+    for (const group of groups) {
+      if (!primaryGroups.has(group.primary)) primaryGroups.set(group.primary, []);
+      primaryGroups.get(group.primary).push(group);
+    }
+    return Array.from(primaryGroups, ([primary, secondaryGroups]) => ({ primary, secondaryGroups }));
+  }, [groups]);
+  const activeGroup = groups.find((group) => group.key === selectedGroupKey) || groups[0] || null;
+  const selectGroupedView = () => {
+    setView("grouped");
+    if (!selectedGroupKey && groups[0]) {
+      setSelectedGroupKey(groups[0].key);
+      setExpandedPrimaryNames((current) => current.includes(groups[0].primary) ? current : [...current, groups[0].primary]);
+    }
+  };
+  const selectGroup = (group) => {
+    setSelectedGroupKey(group.key);
+    setExpandedPrimaryNames((current) => current.includes(group.primary) ? current : [...current, group.primary]);
+  };
+  const togglePrimary = (primary) => {
+    setExpandedPrimaryNames((current) => current.includes(primary) ? current.filter((item) => item !== primary) : [...current, primary]);
+  };
+  const rankingTable = (tableEntries, label) => <div className="tertiary-ranking-table" role="table" aria-label={label}>
+    <div className="tertiary-ranking-table-head" role="row"><span>总榜排名</span><span>三级板块</span><span>{daily ? "当日评分" : "综合评分"}</span><span>{daily ? "当日相对强度" : "近3日强度"}</span></div>
+    {tableEntries.map(({ item, overallRank }) => {
+      const score = Number(item[scoreField]);
+      const related = daily ? Number(item.score_history?.at(-1)?.metrics?.theme_relative_return) : Number(item.recent_strength_score);
+      const memberCount = Number(item.breadth?.member_count);
+      const historyAvailable = Array.isArray(item.score_history) && item.score_history.length > 0;
+      return <div className="tertiary-ranking-row" role="row" key={`${item.primary}-${item.secondary}-${item.name}`}><span className="tertiary-ranking-rank">{overallRank}</span><span><button type="button" className="tertiary-ranking-history-link" disabled={!historyAvailable} onClick={() => setHistoryItem(item)} aria-label={`查看${item.primary}、${item.secondary}、${item.name}的三级板块评分日历`}><strong>{item.name}{item.mainline_confirmation?.confirmed && <mark className="mainline-confirmation-badge">确认主线</mark>}</strong><small>{item.primary} · {item.secondary}{Number.isFinite(memberCount) ? ` · ${memberCount} 只股票` : ""}</small></button></span><b>{score.toFixed(1)}<small>/100</small></b><em className={marketClass(related)}>{Number.isFinite(related) ? (daily ? formatPct(related) : `${related.toFixed(1)} 分`) : "数据不足"}</em></div>;
+    })}
+  </div>;
   useEffect(() => {
     const closeOnEscape = (event) => {
       if (event.key === "Escape") {
@@ -218,18 +264,9 @@ function TertiaryRankingModal({ result, date, mode, onClose }) {
   return <div className="modal-backdrop tertiary-ranking-backdrop" onMouseDown={onClose}>
     <section className="modal tertiary-ranking-modal" role="dialog" aria-modal="true" aria-labelledby="tertiary-ranking-title" onMouseDown={(event) => event.stopPropagation()}>
       <button className="modal-close" type="button" aria-label={`关闭${title}`} onClick={onClose}><X size={18} /></button>
-      <header><div><h2 id="tertiary-ranking-title">{title}</h2><p>{date} · {description}</p></div><b>{rows.length} 个方向</b></header>
+      <header><div><h2 id="tertiary-ranking-title">{title}</h2><p>{date} · {description}</p></div><b>{entries.length} 个方向</b></header>
       {!daily && <div className="tertiary-ranking-actions"><span>{confirmedOnly ? `已筛出 ${confirmedCount} 个确认主线` : `共 ${confirmedCount} 个确认主线`}</span><button type="button" className={confirmedOnly ? "active" : ""} aria-pressed={confirmedOnly} disabled={!confirmedCount} onClick={() => setConfirmedOnly((value) => !value)}>{confirmedOnly ? "显示全部方向" : "只看确认主线"}</button></div>}
-      {rows.length ? <div className="tertiary-ranking-table" role="table" aria-label={title}>
-        <div className="tertiary-ranking-table-head" role="row"><span>排名</span><span>三级板块</span><span>{daily ? "当日评分" : "综合评分"}</span><span>{daily ? "当日相对强度" : "近3日强度"}</span></div>
-        {rows.map((item, index) => {
-          const score = Number(item[scoreField]);
-          const related = daily ? Number(item.score_history?.at(-1)?.metrics?.theme_relative_return) : Number(item.recent_strength_score);
-          const memberCount = Number(item.breadth?.member_count);
-          const historyAvailable = Array.isArray(item.score_history) && item.score_history.length > 0;
-          return <div className="tertiary-ranking-row" role="row" key={`${item.primary}-${item.secondary}-${item.name}`}><span className="tertiary-ranking-rank">{index + 1}</span><span><button type="button" className="tertiary-ranking-history-link" disabled={!historyAvailable} onClick={() => setHistoryItem(item)} aria-label={`查看${item.primary}、${item.secondary}、${item.name}的三级板块评分日历`}><strong>{item.name}{item.mainline_confirmation?.confirmed && <mark className="mainline-confirmation-badge">确认主线</mark>}</strong><small>{item.primary} · {item.secondary}{Number.isFinite(memberCount) ? ` · ${memberCount} 只股票` : ""}</small></button></span><b>{score.toFixed(1)}<small>/100</small></b><em className={marketClass(related)}>{Number.isFinite(related) ? (daily ? formatPct(related) : `${related.toFixed(1)} 分`) : "数据不足"}</em></div>;
-        })}
-      </div> : <p className="tertiary-ranking-empty">当前没有可参与评分的三级板块。请先完成“读取当日涨幅”和主线评分。</p>}
+      {entries.length ? <><div className="tertiary-ranking-toolbar"><div className="selection-tabs" role="tablist" aria-label="选择三级板块排序视图"><button type="button" role="tab" aria-selected={view === "overall"} className={view === "overall" ? "active" : ""} onClick={() => setView("overall")}>全市场总榜 <b>{entries.length}</b></button><button type="button" role="tab" aria-selected={view === "grouped"} className={view === "grouped" ? "active" : ""} onClick={selectGroupedView}>按二级板块 <b>{groups.length}</b></button></div><small>{view === "overall" ? "按当前评分从高到低排列" : "从左侧目录选择一级主线及二级板块"}</small></div>{view === "overall" ? <section className="tertiary-ranking-result"><div className="tertiary-ranking-result-title"><strong>全部三级方向</strong><span>显示全市场排名，不改变原有评分与名次</span></div>{rankingTable(entries, `${title}全市场总榜`)}</section> : <section className="tertiary-ranking-browser"><nav className="selection-catalog" aria-label="三级板块所属目录"><header><span>产业板块目录</span><b>{groups.length} 组</b></header><div className="selection-catalog-list">{catalog.map(({ primary, secondaryGroups }) => { const expanded = expandedPrimaryNames.includes(primary); return <section className="selection-tree-primary" key={primary}><button className="selection-tree-primary-trigger" type="button" aria-expanded={expanded} onClick={() => togglePrimary(primary)}><span>{primary}</span>{expanded ? <ChevronDown size={15} /> : <ChevronRight size={15} />}</button>{expanded && <div className="selection-tree-secondary-list">{secondaryGroups.map((group) => <section className={`selection-tree-secondary ${activeGroup?.key === group.key ? "active" : ""}`} key={group.key}><div><span className="tertiary-ranking-tree-spacer" aria-hidden="true" /><button className="selection-tree-secondary-select" type="button" aria-pressed={activeGroup?.key === group.key} onClick={() => selectGroup(group)}><strong>{group.secondary}</strong><small><b>#{group.entries[0].overallRank}</b>{group.entries.length} 个方向</small></button></div></section>)}</div>}</section>; })}</div></nav>{activeGroup ? <section className="tertiary-ranking-group-detail"><header><div><span>{activeGroup.primary}</span><h3>{activeGroup.secondary}</h3></div><div><b>{activeGroup.entries.length}</b><small>三级方向</small></div></header><p>以下方向保留其在全市场总榜中的原始排名。</p>{rankingTable(activeGroup.entries, `${activeGroup.primary} ${activeGroup.secondary}三级板块排序`)}</section> : <p className="tertiary-ranking-empty">当前筛选下没有可参与评分的三级板块。</p>}</section>}</> : <p className="tertiary-ranking-empty">当前没有可参与评分的三级板块。请先完成“读取当日涨幅”和主线评分。</p>}
       <p className="tertiary-ranking-footnote">确认主线须满足：首日相对市场走强且板块内有新增首板；次日市值中军无负反馈，且首板股多数高开。缺少涨停或任何确认数据时不授予标识。展示与名次不受该标识影响。</p>
     </section>
     {historyItem && <div className="modal-backdrop tertiary-ranking-calendar-backdrop" onMouseDown={(event) => { event.stopPropagation(); setHistoryItem(null); }}><section className="modal cycle-timeline-modal tertiary-ranking-calendar-modal" role="dialog" aria-modal="true" aria-labelledby="tertiary-ranking-calendar-title" onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" type="button" aria-label="关闭三级板块评分日历" onClick={() => setHistoryItem(null)}><X size={18} /></button><h2 id="tertiary-ranking-calendar-title">{historyItem.primary} · {historyItem.secondary} · {historyItem.name}</h2><p className="modal-sub">历史综合评分与每日强度；仅使用所选交易日及此前的行情。</p><ScoreHistoryCalendar item={historyItem} /></section></div>}
