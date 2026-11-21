@@ -24,7 +24,7 @@ import { normalizeNumericHeadingPrefixes } from "./lib/noteHeadingSyntax";
 import { buildPrimaryLimitUpCalendar } from "./lib/primaryLimitUpCalendar";
 import { buildScoreHistoryChart, scoreHistoryLineSegments } from "./lib/scoreHistoryChart";
 import { sortByMarketChange } from "./lib/marketChangeSorting";
-import { rankTertiaryThemesByScore } from "./lib/tertiaryRanking";
+import { rankTertiaryThemesByScore, tertiaryDailyStrengthScore } from "./lib/tertiaryRanking";
 import { sortStocksByScopeRelevance } from "./lib/relevanceSorting";
 import { relevanceAdjustedAverageChange } from "../lib/relevance-adjusted-return";
 import { buildDailyQuoteMeta, buildLiveQuoteMeta, formatQuoteClock } from "./lib/quoteTime";
@@ -242,10 +242,10 @@ function TertiaryRankingModal({ result, date, mode, onClose }) {
     <div className="tertiary-ranking-table-head" role="row"><span>总榜排名</span><span>三级板块</span><span>{daily ? "当日评分" : "综合评分"}</span><span>{daily ? "当日相对强度" : "近3日强度"}</span></div>
     {tableEntries.map(({ item, overallRank }) => {
       const score = Number(item[scoreField]);
-      const related = daily ? Number(item.score_history?.at(-1)?.metrics?.theme_relative_return) : Number(item.recent_strength_score);
+      const related = daily ? tertiaryDailyStrengthScore(item) : Number(item.recent_strength_score);
       const memberCount = Number(item.breadth?.member_count);
       const historyAvailable = Array.isArray(item.score_history) && item.score_history.length > 0;
-      return <div className="tertiary-ranking-row" role="row" key={`${item.primary}-${item.secondary}-${item.name}`}><span className="tertiary-ranking-rank">{overallRank}</span><span><button type="button" className="tertiary-ranking-history-link" disabled={!historyAvailable} onClick={() => setHistoryItem(item)} aria-label={`查看${item.primary}、${item.secondary}、${item.name}的三级板块评分日历`}><strong>{item.name}{item.mainline_confirmation?.confirmed && <mark className="mainline-confirmation-badge">确认主线</mark>}</strong><small>{item.primary} · {item.secondary}{Number.isFinite(memberCount) ? ` · ${memberCount} 只股票` : ""}</small></button></span><b>{score.toFixed(1)}<small>/100</small></b><em className={marketClass(related)}>{Number.isFinite(related) ? (daily ? formatPct(related) : `${related.toFixed(1)} 分`) : "数据不足"}</em></div>;
+      return <div className="tertiary-ranking-row" role="row" key={`${item.primary}-${item.secondary}-${item.name}`}><span className="tertiary-ranking-rank">{overallRank}</span><span><button type="button" className="tertiary-ranking-history-link" disabled={!historyAvailable} onClick={() => setHistoryItem(item)} aria-label={`查看${item.primary}、${item.secondary}、${item.name}的三级板块评分日历`}><strong>{item.name}{item.mainline_confirmation?.confirmed && <mark className="mainline-confirmation-badge">确认主线</mark>}</strong><small>{item.primary} · {item.secondary}{Number.isFinite(memberCount) ? ` · ${memberCount} 只股票` : ""}</small></button></span><b>{score.toFixed(1)}<small>/100</small></b><em className={daily ? "flat" : marketClass(related)}>{Number.isFinite(related) ? `${related.toFixed(1)} 分` : "数据不足"}</em></div>;
     })}
   </div>;
   useEffect(() => {

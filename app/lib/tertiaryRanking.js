@@ -7,3 +7,10 @@ export function rankTertiaryThemesByScore(themes = [], scoreField) {
       || String(left.secondary || "").localeCompare(String(right.secondary || ""), "zh-CN")
       || String(left.name || "").localeCompare(String(right.name || ""), "zh-CN"));
 }
+
+// The daily ranking view must show the same 0-100 daily strength score used
+// by its ranking and calendar, never the raw percentage-point market return.
+export function tertiaryDailyStrengthScore(theme) {
+  const score = Number(theme?.daily_strength_score);
+  return Number.isFinite(score) ? score : null;
+}

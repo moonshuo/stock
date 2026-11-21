@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { rankTertiaryThemesByScore } from "../app/lib/tertiaryRanking.js";
+import { rankTertiaryThemesByScore, tertiaryDailyStrengthScore } from "../app/lib/tertiaryRanking.js";
 
 const themes = [
   { primary: "电子", secondary: "元件", name: "PCB", mainline_rank_score: 72.5, daily_strength_score: 41 },
@@ -13,6 +13,13 @@ assert.deepEqual(
   ["PCB", "高速", "设备"],
   "三级综合排序必须使用既有综合分，分数相同按产业路径稳定排序",
 );
+
+assert.equal(
+  tertiaryDailyStrengthScore({ daily_strength_score: 100, score_details: { relative_strength: 7.5 }, score_history: [{ metrics: { theme_relative_return: 6.62 } }] }),
+  100,
+  "三级当日相对强度展示必须读取当日强度分数，不能把相对市场收益百分点或10分权重分量伪装成它",
+);
+assert.equal(tertiaryDailyStrengthScore({ daily_strength_score: "-" }), null);
 assert.deepEqual(
   rankTertiaryThemesByScore(themes, "daily_strength_score").map((theme) => theme.name),
   ["设备", "高速", "PCB"],
