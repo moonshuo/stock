@@ -13,6 +13,7 @@ export const runtime = "nodejs";
 
 const ROOT = process.cwd();
 const STOCK_MAP_PATH = path.join(ROOT, "data", "stock_sector_map.json");
+const CACHE_VERSION = "3.7";
 
 const numberOrNull = (value) => Number.isFinite(Number(value)) ? Number(value) : null;
 const amount = (value) => numberOrNull(value) || 0;
