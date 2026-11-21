@@ -1,0 +1,46 @@
+{
+  "version": "0.1",
+  "status": "experimental_pending_validation",
+  "disclaimer": "综合分只表示对当前规则的匹配程度，不代表上涨概率；权重与曲线均待真实样本验证。",
+  "weights": {
+    "sector_strength": 30,
+    "recent_initiation": 25,
+    "pullback_quality": 25,
+    "trend_structure": 20
+  },
+  "pool": {
+    "exclude_st": true,
+    "minimum_listing_days": null
+  },
+  "display_filter": {
+    "green_day_max_loss_enabled": true,
+    "maximum_loss_pct": 5
+  },
+  "windows": {
+    "history_trading_days": 60,
+    "initiation_search_days": 20,
+    "initiation_reference_days": 10,
+    "price_position_days": 60,
+    "relative_volume_days": 5,
+    "relative_turnover_days": 5,
+    "trend_long_ma_days": 20,
+    "intraday_minimum_comparison_days": 5
+  },
+  "references": {
+    "volume_contraction_ratio": 0.8,
+    "breakout_volume_ratio": 2,
+    "bottom_price_position": 0.35,
+    "pullback_target_pct": -1.5,
+    "pullback_width_pct": 2.5
+  },
+  "pullback_subweights": {
+    "price_change": 50,
+    "relative_volume": 30,
+    "relative_turnover": 20
+  },
+  "trend_subweights": {
+    "ma_direction": 30,
+    "ma_alignment": 35,
+    "price_vs_ma": 35
+  }
+}

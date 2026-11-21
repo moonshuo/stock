@@ -1250,3 +1250,46 @@ button.primary { background: var(--green); border-color: var(--green); color: #f
   .mainline-history-modal-days { grid-template-columns: 1fr; } .trade-plan-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }.trade-plan-row { grid-template-columns: 1fr; gap: 6px; }
   .strategy-backtest-header { display: block; }.strategy-backtest-actions { margin-top: 14px; }.strategy-backtest-actions button { flex: 1; justify-content: center; }.strategy-backtest-controls { display: grid; grid-template-columns: 1fr 1fr; }.strategy-backtest-controls > span { min-height: 44px; }.strategy-summary { grid-template-columns: 1fr 1fr; }.strategy-summary > div { border-bottom: 1px solid #e4ece7; }.strategy-summary > div:nth-child(2n) { border-right: 0; }.strategy-summary > div:last-child { border-bottom: 0; }.strategy-backtest-grid { grid-template-columns: 1fr; }.strategy-day-table { overflow-x: auto; }.strategy-day-table > div { min-width: 570px; }
 }
+
+.sector-ladder > section {
+  margin-block: 24px;
+}
+.sector-ladder .strategy-backtest-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+}
+.sector-ladder-stocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+.sector-ladder-stocks li {
+  display: grid;
+  justify-items: start;
+  gap: 6px;
+}
+.sector-ladder-table {
+  overflow-x: auto;
+}
+.sector-ladder-chart {
+  max-width: 640px;
+  margin: 12px 0;
+}
+.sector-ladder-chart svg {
+  display: block;
+  width: 100%;
+}
+.sector-ladder-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.sector-ladder-table th,
+.sector-ladder-table td {
+  text-align: left;
+  padding: 8px;
+  white-space: nowrap;
+}

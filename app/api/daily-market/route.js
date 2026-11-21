@@ -204,6 +204,7 @@ async function readLocalParquetRows(parquetPath) {
       byCode.set(code, {
         code,
         marketCode: String(row.code || code),
+        quoteName: String(row.name || ""),
         firstTradeTime: tradeTime,
         lastTradeTime: tradeTime,
         firstPreClose: preClose,
@@ -236,6 +237,7 @@ async function readLocalParquetRows(parquetPath) {
     const rows = Array.from(byCode.values()).map((row) => ({
     code: row.code,
     marketCode: row.marketCode,
+    quoteName: row.quoteName,
     tradeTime: row.lastTradeTime,
     price: row.price,
     preClose: row.firstPreClose,
@@ -1081,6 +1083,7 @@ async function loadDailyMarketUncached(dateValue, { localOnly = false, strictTra
     return {
       code,
       marketCode: row.marketCode,
+      quoteName: row.quoteName || row.name || null,
       name: stockNames.names?.[code] || existing?.name || row.name || "",
       tradeTime: row.tradeTime,
       snapshotAt: row.snapshotAt || null,
