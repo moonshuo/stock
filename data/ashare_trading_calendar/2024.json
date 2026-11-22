@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "market": "沪深北A股",
+  "year": 2024,
+  "source": "上海证券交易所休市安排",
+  "source_url": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20240919_10762012.shtml",
+  "fetched_at": "2026-11-22T11:04:32.289Z",
+  "closed_dates": [
+    "2024-10-01",
+    "2024-10-02",
+    "2024-10-03",
+    "2024-10-04",
+    "2024-10-05",
+    "2024-10-06",
+    "2024-10-07"
+  ]
+}

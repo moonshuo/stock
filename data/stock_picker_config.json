@@ -1,0 +1,12 @@
+{
+  "version": "stock-picker/v1",
+  "evidence_end": "2026-06-30",
+  "cost": 0.0025,
+  "max_candidates": 8,
+  "universe": {"main_board": true, "chinext": false, "star": false, "min_amount_yuan": 50000000},
+  "market_gate": {"min_observed_stocks": 3000, "weak_up_ratio": 0.33, "weak_median_pct": -1, "strong_up_ratio": 0.60, "strong_median_pct": 0.5},
+  "risk": {"history_days": 5, "stop_rule": "lowest observed low of last five complete sessions, strictly below current close"},
+  "dimensions": [],
+  "disabled_dimensions": {"mainline-leader":"no order-eligible historical sample", "green-limit-up":"verified qfq/timestamped ST evidence missing", "strong-pullback":"IS turnover and historic eligible snapshots missing", "uptrend-score":"no complete audited qfq window", "green-raw-diagnostic":"not a tradeable signal: negative net mean and negative paired excess at both T+3 and T+5"},
+  "design_note":"Market thresholds and liquidity floor are conservative ex-ante operational constraints, not estimates of a return optimum. An empty set of validated dimensions means no order candidates in any market. Occupying no positions is not evidence of positive expectancy."
+}

@@ -29,6 +29,7 @@ import { sortStocksByScopeRelevance } from "./lib/relevanceSorting";
 import { relevanceAdjustedAverageChange } from "../lib/relevance-adjusted-return";
 import { buildDailyQuoteMeta, buildLiveQuoteMeta, formatQuoteClock } from "./lib/quoteTime";
 import AgentWorkspace from "./components/AgentWorkspace";
+import StockPickerPanel from "./components/StockPickerPanel";
 import SectorLimitLadder from "./components/SectorLimitLadder";
 
 const emptyTaxonomy = { version: "1.0", sectors: [] };
@@ -3452,6 +3453,7 @@ export default function Home() {
             <span><b>{dailyThemes.length}</b> 动态题材日</span>
             <span className={`quote-clock ${quoteStatus}`} title={quoteTimestampTitle} aria-label={quoteTimestampTitle || quoteUpdatedAt || "行情时间未知"}><b>{quoteMode === "daily" ? "定" : "实"}</b> {quoteUpdatedAt || "行情时间未知"}</span>
             <button type="button" className="notes-toggle agent-topbar" onClick={() => setAgentOpen(true)}><Bot size={15} /> GPT 研判</button>
+            <button type="button" className={`notes-toggle ${workspaceView === "stock-picker" ? "active" : ""}`} aria-pressed={workspaceView === "stock-picker"} onClick={() => setWorkspaceView(view => view === "stock-picker" ? "library" : "stock-picker")}>每日选股</button>
             <button type="button" className={`notes-toggle ${workspaceView === "ladder" ? "active" : ""}`} onClick={() => setWorkspaceView((view) => view === "ladder" ? "library" : "ladder")}><Layers3 size={15} /> 连板梯队</button>
             <button className={`notes-toggle ${workspaceView === "watchlist" ? "active" : ""}`} onClick={() => setWorkspaceView((view) => view === "watchlist" ? "library" : "watchlist")}><Eye size={15} /> 观察池</button>
             <button className={`notes-toggle ${workspaceView === "notes" ? "active" : ""}`} onClick={() => setWorkspaceView((view) => view === "notes" ? "library" : "notes")}><LockKeyhole size={15} /> 笔记</button>
@@ -3459,7 +3461,9 @@ export default function Home() {
         </header>
 
         <div className="content taxonomy-content">
-          {workspaceView === "ladder" ? (
+          {workspaceView === "stock-picker" ? (
+            <StockPickerPanel />
+          ) : workspaceView === "ladder" ? (
             <SectorLimitLadder taxonomy={taxonomy} initialDate={dailyScan?.date || dailyScanDate} initialPrimary={primary?.name} onOpenStock={(stock, date) => setKlineStock({ code: stock.code, name: stock.name, ladderDate: date })} />
           ) : workspaceView === "watchlist" ? (
             <WatchlistPanel stocks={watchlist} stockUniverse={stockUniverse} stockMap={stockMap} quotes={quotes} onAdd={addWatchStock} onRemove={removeWatchStock} onReorder={reorderWatchStocks} onAddRelation={addWatchRelation} onRemoveRelation={removeWatchRelation} onUpdateRelationNote={updateWatchRelationNote} />
